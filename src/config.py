@@ -87,3 +87,17 @@ def save_json(path, data):
         os.makedirs(d, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def pip_size(pair):
+    """Ukuran 1 pip: pair JPY = 0.01, selain JPY = 0.0001."""
+    return 0.01 if "JPY" in pair.upper() else 0.0001
+
+
+def gerak(pair, awal, kini, keputusan=""):
+    """Pergerakan searah sinyal: + = menguntungkan, - = merugikan.
+    BUY: harga naik = +. SELL: harga turun = +. Tanpa keputusan: arah harga apa adanya."""
+    tanda = -1 if keputusan == "SELL" else 1
+    pip = (kini - awal) / pip_size(pair) * tanda
+    pct = (kini - awal) / awal * 100 * tanda
+    return pip, pct
