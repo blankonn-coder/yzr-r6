@@ -1,0 +1,46 @@
+name: Forex Screening
+
+on:
+  schedule:
+    - cron: "*/15 * * * 1-5"   # tiap 15 menit, Senin-Jumat (UTC)
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: "Uji coba: pair dipisah koma (kosong = semua pair)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forex-screening
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Jalankan screening
+        env:
+          OANDA_API_KEY: ${{ secrets.OANDA_API_KEY }}
+          FINEX_REFERENCE_JSON: ${{ secrets.FINEX_REFERENCE_JSON }}
+        run: python -m src.main --pairs "${{ github.event.inputs.pairs }}"
+      - name: Commit state, database, laporan
+        if: always()
+        run: |
+          mkdir -p state database reports
+          git config user.name "forex-bot"
+          git config user.email "forex-bot@users.noreply.github.com"
+          git add -A state database reports
+          if ! git diff --cached --quiet; then
+            git commit -m "update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase --autostash
+            git push
+          fi
