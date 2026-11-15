@@ -7,6 +7,7 @@ from . import config as C
 from . import signal_store as store
 from .analysis import evaluate
 from .calibration import get_offsets, save_offsets, shift
+from .discord_notify import notify
 from .monitor import update as monitor_update
 from .oanda_client import fetch_candles
 from .report import build_report
@@ -100,6 +101,7 @@ def main():
     # 6. Laporan
     info = {"total": len(db["signals"]), "tambah": added, "hapus": pruned}
     tulis_laporan(build_report(now, status, calib, rows, gagal, mon, info))
+    print(notify(now, status, calib, rows, gagal, mon, info))
     print(f"Selesai: {len(rows)} pair dianalisa, {len(sinyal)} sinyal, {len(gagal)} gagal.")
     return 0 if rows else 1
 
