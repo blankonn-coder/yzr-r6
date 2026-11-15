@@ -68,7 +68,7 @@ def main():
         off = offsets.get(p, 0.0)
         cal = {tf: shift(cs, off) for tf, cs in data.items()}
         price = round(cal["5m"][-1]["c"], 5)
-        res = evaluate(cal, price)
+        res = evaluate(cal, price, p)
         rows.append({"pair": C.disp(p), "keputusan": res["keputusan"], "skor_akhir": res["skor"],
                      "alasan": res["alasan"], "harga": price, "level": res["level"],
                      "rsi": res["rsi"], "tren": res["tren"]})
