@@ -40,6 +40,8 @@ def mark_expired(db, ids):
 
 
 def save(db, now):
+    if not db["metadata"].get("created_at"):
+        db["metadata"]["created_at"] = C.fmt(now)
     db["metadata"]["last_updated"] = C.fmt(now)
     db["metadata"]["total_entri"] = len(db["signals"])
     C.save_json(C.DB_PATH, db)
