@@ -22,7 +22,7 @@ TF_GRAN = {"5m": "5m", "15m": "15m", "30m": "30m", "1h": "1h", "4h": "4h"}  # in
 SR_TFS = ["5m", "15m", "30m"]
 SR_LOOKBACK = 5
 SR_MIN_TOUCH = 2
-SR_TOL_PCT = 0.15
+SR_TOL_PIPS = 4  # toleransi 'dekat' dalam pip, berlaku untuk semua pair
 SR_MAX_AGE = 48
 SR_WEIGHTS = {"5m": 30, "15m": 25, "30m": 15}
 
