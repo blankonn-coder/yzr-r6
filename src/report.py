@@ -23,15 +23,16 @@ def build_report(now, status, calib, rows, gagal, mon, info_db):
             L.append("Tidak ada.")
         L.append("")
 
-    L.append("## Pemantauan (maks 1 jam)")
+    L.append("## Pemantauan (maks 1 jam, + = searah sinyal)")
     if mon:
-        L += ["| Pair | Harga Awal | Harga Sekarang | Selisih % | Umur (menit) |",
-              "|---|---|---|---|---|"]
+        L += ["| Pair | Arah | Harga Awal | Harga Sekarang | Pip | % | Umur (menit) |",
+              "|---|---|---|---|---|---|---|"]
         for m in mon.values():
             awal, kini = m["harga_awal"], m["harga_sekarang"]
-            pct = (kini - awal) / awal * 100
+            pip, pct = C.gerak(m["pair"], awal, kini, m.get("keputusan", ""))
             umur = (now - C.parse(m["waktu_mulai"])).total_seconds() / 60
-            L.append(f"| {m['pair']} | {awal} | {kini} | {pct:+.3f} | {umur:.0f} |")
+            L.append(f"| {m['pair']} | {m.get('keputusan', '-')} | {awal} | {kini} "
+                     f"| {pip:+.1f} | {pct:+.3f}% | {umur:.0f} |")
     else:
         L.append("Tidak ada pair aktif.")
     L.append("")
