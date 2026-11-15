@@ -12,6 +12,8 @@ import time
 
 import requests
 
+from . import config as C
+
 WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"
 MODE_ENV = "DISCORD_NOTIFY_MODE"
 FIELD_MAX = 1024
@@ -69,10 +71,10 @@ def build_payload(now, status, calib, rows, gagal, mon, info):
     if mon:
         baris = []
         for m in mon.values():
-            awal, kini = m["harga_awal"], m["harga_sekarang"]
-            pct = (kini - awal) / awal * 100
+            pip, pct = C.gerak(m["pair"], m["harga_awal"], m["harga_sekarang"], m.get("keputusan", ""))
             umur = (now - _parse(m["waktu_mulai"])).total_seconds() / 60
-            baris.append(f"**{m['pair']}** {pct:+.3f}% · {umur:.0f} menit")
+            baris.append(f"**{m['pair']}** ({m.get('keputusan', '-')}) "
+                         f"{pip:+.1f} pip · {pct:+.3f}% · {umur:.0f} menit")
         fields.append({"name": f"📈 Pemantauan 1 jam ({len(mon)})",
                        "value": _cut("\n".join(baris), FIELD_MAX), "inline": False})
     fields.append({"name": f"⚪ NETRAL ({len(netral)})",
