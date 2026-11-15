@@ -1,1 +1,10 @@
-{}
+{
+  "USD/JPY": {
+    "pair": "USD/JPY",
+    "keputusan": "BUY",
+    "harga_awal": 159.809,
+    "waktu_mulai": "2026-11-15T23:29:43Z",
+    "signal_id": "20261115T232943Z_USDJPY",
+    "harga_sekarang": 159.809
+  }
+}

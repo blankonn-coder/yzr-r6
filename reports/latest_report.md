@@ -1,26 +1,29 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-15T23:15:21Z
-- Status: TEPAT WAKTU
+- Waktu eksekusi: 2026-11-15T23:29:43Z
+- Status: TERLAMBAT
 - Kalibrasi: TANPA KALIBRASI
-- Pair dianalisa: 0
-- Gagal ambil data: EUR/USD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/USD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); USD/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); USD/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); AUD/USD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); USD/CAD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); NZD/USD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/GBP (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/AUD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/CAD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); EUR/NZD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/AUD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/CAD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); GBP/NZD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); AUD/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); AUD/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); AUD/CAD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); AUD/NZD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); NZD/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); NZD/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); NZD/CAD (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); CAD/JPY (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"}); CAD/CHF (HTTP 400: {"errorMessage":"Invalid value specified for 'Authorization'","errorCode":"oanda::rest::core::InvalidParameterException"})
+- Pair dianalisa: 27
 
 ## Sinyal BUY
-Tidak ada.
+| Pair | Keputusan | Skor | Alasan |
+|---|---|---|---|
+| USD/JPY | BUY | 70 | Dekat support 5m (159.74550); Dekat resistance 5m (159.81050); Dekat support 15m (159.72650); Dekat resistance 15m (159.84950); Dekat support 30m (159.79250) |
 
 ## Sinyal SELL
 Tidak ada.
 
 ## Pemantauan (maks 1 jam, + = searah sinyal)
-Tidak ada pair aktif.
+| Pair | Arah | Harga Awal | Harga Sekarang | Pip | % | Umur (menit) |
+|---|---|---|---|---|---|---|
+| USD/JPY | BUY | 159.809 | 159.809 | +0.0 | +0.000% | 0 |
 
 ## Pair NETRAL
--
+EUR/USD, GBP/USD, USD/CHF, AUD/USD, USD/CAD, NZD/USD, EUR/GBP, EUR/JPY, EUR/CHF, EUR/AUD, EUR/CAD, EUR/NZD, GBP/JPY, GBP/CHF, GBP/AUD, GBP/CAD, GBP/NZD, AUD/JPY, AUD/CHF, AUD/CAD, AUD/NZD, NZD/JPY, NZD/CHF, NZD/CAD, CAD/JPY, CAD/CHF
 
 ## Info Database
-- Total entri: 0
-- Ditambahkan run ini: 0
+- Total entri: 1
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 

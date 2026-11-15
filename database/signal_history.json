@@ -1,9 +1,39 @@
 {
   "metadata": {
     "created_at": null,
-    "last_updated": "2026-11-15T23:15:21Z",
+    "last_updated": "2026-11-15T23:29:43Z",
     "retensi_hari": 30,
-    "total_entri": 0
+    "total_entri": 1
   },
-  "signals": []
+  "signals": [
+    {
+      "id": "20261115T232943Z_USDJPY",
+      "waktu": "2026-11-15T23:29:43Z",
+      "tanggal": "2026-11-15",
+      "jam_utc": "23:29",
+      "pair": "USD/JPY",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 159.809,
+      "level_terdekat": {
+        "type": "S",
+        "price": 159.7925,
+        "tf": "30m"
+      },
+      "rsi": {
+        "5m": 60.92,
+        "15m": 53.34,
+        "30m": 42.16
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (159.74550)",
+        "Dekat resistance 5m (159.81050)",
+        "Dekat support 15m (159.72650)",
+        "Dekat resistance 15m (159.84950)",
+        "Dekat support 30m (159.79250)"
+      ],
+      "status_pantau": "AKTIF"
+    }
+  ]
 }
