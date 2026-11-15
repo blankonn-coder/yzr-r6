@@ -1,1 +1,11 @@
-# yzr-r6
+# Forex Screening Bot
+
+Struktur repositori (semua folder berada di root):
+
+- `src/` kode bot (jalankan dengan `python -m src.main`)
+- `state/` status kalibrasi dan pemantauan
+- `database/signal_history.json` database sinyal mentah
+- `reports/latest_report.md` laporan run terakhir
+- `.github/workflows/forex_scalper.yml` jadwal GitHub Actions
+
+Secret yang dibutuhkan: `OANDA_API_KEY` (wajib), `FINEX_REFERENCE_JSON` (opsional).
