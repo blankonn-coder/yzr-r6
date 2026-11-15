@@ -1,5 +1,6 @@
 """S/R, RSI, EMA, filter tren, dan skoring keputusan tunggal."""
 from . import config as C
+from .config import pip_size
 
 
 def rsi(closes, period=C.RSI_PERIOD):
@@ -30,8 +31,13 @@ def ema(values, period=C.EMA_PERIOD):
     return e
 
 
-def find_levels(cs, tf):
-    tol = C.SR_TOL_PCT / 100
+def _tol(pair):
+    """Toleransi dalam harga, dari jumlah pip (JPY dan non-JPY otomatis benar)."""
+    return C.SR_TOL_PIPS * pip_size(pair)
+
+
+def find_levels(cs, tf, pair):
+    tol = _tol(pair)
     n, lb = len(cs), C.SR_LOOKBACK
     levels = []
     for i in range(lb, n - lb):
@@ -44,20 +50,21 @@ def find_levels(cs, tf):
         if cs[i]["l"] == min(x["l"] for x in win):
             kandidat.append(("S", cs[i]["l"]))
         for jenis, harga in kandidat:
-            sentuh = sum(1 for x in cs
-                         if x["l"] <= harga * (1 + tol) and x["h"] >= harga * (1 - tol))
+            sentuh = sum(1 for x in cs if x["l"] <= harga + tol and x["h"] >= harga - tol)
             if sentuh >= C.SR_MIN_TOUCH:
                 levels.append({"type": jenis, "price": harga, "tf": tf})
     return levels
 
 
-def level_terdekat(price, levels, jenis):
-    tol = C.SR_TOL_PCT / 100
-    kand = [lv for lv in levels if lv["type"] == jenis]
-    if not kand:
-        return None
-    best = min(kand, key=lambda lv: abs(price - lv["price"]))
-    return best if abs(price - best["price"]) / price <= tol else None
+def nearest_level(price, levels, pair):
+    """Satu level terdekat dari harga (support atau resistance) dalam toleransi, atau None."""
+    tol = _tol(pair)
+    best = None
+    for lv in levels:
+        d = abs(price - lv["price"])
+        if d <= tol and (best is None or d < best[0]):
+            best = (d, lv)
+    return best[1] if best else None
 
 
 def get_trend(data, price):
@@ -74,23 +81,24 @@ def get_trend(data, price):
     return "SIDEWAYS"
 
 
-def evaluate(data, price):
+def evaluate(data, price, pair):
     """data: {timeframe: candles} sudah terkalibrasi. Hasil: satu keputusan BUY/SELL/NETRAL."""
     buy = sell = 0
     alasan = []
     semua_level = []
     for tf in C.SR_TFS:
-        lv = find_levels(data[tf], tf)
+        lv = find_levels(data[tf], tf, pair)
         semua_level += lv
         w = C.SR_WEIGHTS[tf]
-        s = level_terdekat(price, lv, "S")
-        r = level_terdekat(price, lv, "R")
-        if s:
+        dekat = nearest_level(price, lv, pair)  # hanya satu level per timeframe
+        if dekat is None:
+            continue
+        if dekat["type"] == "S":
             buy += w
-            alasan.append(f"Dekat support {tf} ({s['price']:.5f})")
-        if r:
+            alasan.append(f"Dekat support {tf} ({dekat['price']:.5f})")
+        else:
             sell += w
-            alasan.append(f"Dekat resistance {tf} ({r['price']:.5f})")
+            alasan.append(f"Dekat resistance {tf} ({dekat['price']:.5f})")
 
     rsi_map = {}
     for tf in C.RSI_TFS:
