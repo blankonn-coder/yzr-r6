@@ -3,10 +3,8 @@ import json
 import os
 from datetime import datetime, timezone
 
-# ---- Sumber data: OANDA v20 practice (gratis) ----
-OANDA_HOST = "https://api-fxpractice.oanda.com/v3"
-OANDA_API_KEY = os.environ.get("OANDA_API_KEY", "")
-PRICE_TYPE = "MBA"
+# ---- Sumber data: biquote (publik, tanpa API key) ----
+BIQUOTE_HOST = "https://biquote.io"
 CANDLE_COUNT = 200
 
 # ---- 27 pair. Sesuaikan dengan daftar pair Finex Anda ----
@@ -18,7 +16,7 @@ PAIRS = [
     "NZD_JPY", "NZD_CHF", "NZD_CAD", "CAD_JPY", "CAD_CHF",
 ]
 
-TF_GRAN = {"5m": "M5", "15m": "M15", "30m": "M30", "1h": "H1", "4h": "H4"}
+TF_GRAN = {"5m": "5m", "15m": "15m", "30m": "30m", "1h": "1h", "4h": "4h"}  # interval biquote
 
 # ---- Support & Resistance ----
 SR_TFS = ["5m", "15m", "30m"]
