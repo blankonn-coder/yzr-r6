@@ -87,7 +87,7 @@ def main():
                         "status_pantau": "AKTIF"})
     mon = C.load_json(C.MONITOR_PATH, {})
     mon, expired = monitor_update(
-        mon, [{"pair": r["pair"], "id": r["id"], "harga": r["harga"]} for r in sinyal],
+        mon, [{"pair": r["pair"], "id": r["id"], "harga": r["harga"], "keputusan": r["keputusan"]} for r in sinyal],
         prices, now)
     C.save_json(C.MONITOR_PATH, mon)
 
