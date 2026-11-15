@@ -2,7 +2,10 @@ name: Forex Screening
 
 on:
   schedule:
-    - cron: "*/15 * * * 1-5"   # tiap 15 menit, Senin-Jumat (UTC)
+    # Jadwal mengikuti jam buka pasar forex (UTC): Minggu 22:00 s/d Jumat 22:00
+    - cron: "*/15 * * * 1-4"     # Senin-Kamis, sepanjang hari
+    - cron: "*/15 0-21 * * 5"    # Jumat sampai 21:45 (tutup 22:00)
+    - cron: "*/15 22-23 * * 0"   # Minggu 22:00 sampai 23:45 (buka)
   workflow_dispatch:
     inputs:
       pairs:
@@ -31,6 +34,8 @@ jobs:
         env:
           OANDA_API_KEY: ${{ secrets.OANDA_API_KEY }}
           FINEX_REFERENCE_JSON: ${{ secrets.FINEX_REFERENCE_JSON }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_NOTIFY_MODE: ${{ vars.DISCORD_NOTIFY_MODE }}
         run: python -m src.main --pairs "${{ github.event.inputs.pairs }}"
       - name: Commit state, database, laporan
         if: always()
