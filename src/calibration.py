@@ -1,4 +1,4 @@
-"""Kalibrasi harga OANDA -> Finex (offset per pair)."""
+"""Kalibrasi harga biquote -> Finex (offset per pair)."""
 import json
 import os
 
@@ -21,7 +21,7 @@ def fetch_finex_reference():
 
 
 def get_offsets(oanda_mid):
-    """oanda_mid: {pair: harga mid OANDA terakhir}. Return (offsets, status)."""
+    """oanda_mid: {pair: harga mid terakhir dari feed}. Return (offsets, status)."""
     state = C.load_json(C.CALIB_PATH, {"offsets": {}})
     offsets = {k: float(v) for k, v in state.get("offsets", {}).items()}
     ref = fetch_finex_reference()
