@@ -9,7 +9,7 @@ from .analysis import evaluate
 from .calibration import get_offsets, save_offsets, shift
 from .discord_notify import notify
 from .monitor import update as monitor_update
-from .oanda_client import fetch_candles
+from .biquote_client import fetch_candles
 from .report import build_report
 
 
