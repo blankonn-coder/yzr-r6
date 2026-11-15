@@ -1,4 +1,9 @@
 {
-  "metadata": {"created_at": null, "last_updated": null, "retensi_hari": 30, "total_entri": 0},
+  "metadata": {
+    "created_at": null,
+    "last_updated": "2026-11-15T22:00:38Z",
+    "retensi_hari": 30,
+    "total_entri": 0
+  },
   "signals": []
 }
