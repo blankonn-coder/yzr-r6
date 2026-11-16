@@ -1,27 +1,11 @@
 {
-  "EUR/CAD": {
-    "pair": "EUR/CAD",
-    "keputusan": "SELL",
-    "harga_awal": 1.57309,
-    "waktu_mulai": "2026-11-16T06:00:45Z",
-    "signal_id": "20261116T060045Z_EURCAD",
-    "harga_sekarang": 1.57228
-  },
-  "CAD/CHF": {
-    "pair": "CAD/CHF",
-    "keputusan": "BUY",
-    "harga_awal": 0.58751,
-    "waktu_mulai": "2026-11-16T06:00:45Z",
-    "signal_id": "20261116T060045Z_CADCHF",
-    "harga_sekarang": 0.58792
-  },
   "USD/CHF": {
     "pair": "USD/CHF",
     "keputusan": "BUY",
     "harga_awal": 0.83886,
     "waktu_mulai": "2026-11-16T06:30:30Z",
     "signal_id": "20261116T063030Z_USDCHF",
-    "harga_sekarang": 0.83947
+    "harga_sekarang": 0.83925
   },
   "GBP/CHF": {
     "pair": "GBP/CHF",
@@ -29,7 +13,7 @@
     "harga_awal": 1.10786,
     "waktu_mulai": "2026-11-16T06:30:30Z",
     "signal_id": "20261116T063030Z_GBPCHF",
-    "harga_sekarang": 1.10788
+    "harga_sekarang": 1.10826
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -45,7 +29,7 @@
     "harga_awal": 0.92432,
     "waktu_mulai": "2026-11-16T06:45:20Z",
     "signal_id": "20261116T064520Z_EURCHF",
-    "harga_sekarang": 0.92437
+    "harga_sekarang": 0.92468
   },
   "GBP/NZD": {
     "pair": "GBP/NZD",
@@ -53,7 +37,7 @@
     "harga_awal": 2.39086,
     "waktu_mulai": "2026-11-16T06:45:20Z",
     "signal_id": "20261116T064520Z_GBPNZD",
-    "harga_sekarang": 2.3908
+    "harga_sekarang": 2.39136
   },
   "NZD/CHF": {
     "pair": "NZD/CHF",
@@ -61,6 +45,22 @@
     "harga_awal": 0.46339,
     "waktu_mulai": "2026-11-16T07:00:38Z",
     "signal_id": "20261116T070038Z_NZDCHF",
-    "harga_sekarang": 0.46339
+    "harga_sekarang": 0.46344
+  },
+  "EUR/CAD": {
+    "pair": "EUR/CAD",
+    "keputusan": "SELL",
+    "harga_awal": 1.57298,
+    "waktu_mulai": "2026-11-16T07:15:30Z",
+    "signal_id": "20261116T071530Z_EURCAD",
+    "harga_sekarang": 1.57298
+  },
+  "NZD/CAD": {
+    "pair": "NZD/CAD",
+    "keputusan": "SELL",
+    "harga_awal": 0.78834,
+    "waktu_mulai": "2026-11-16T07:15:30Z",
+    "signal_id": "20261116T071530Z_NZDCAD",
+    "harga_sekarang": 0.78834
   }
 }
