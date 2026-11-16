@@ -5,7 +5,7 @@
     "harga_awal": 159.809,
     "waktu_mulai": "2026-11-15T23:29:43Z",
     "signal_id": "20261115T232943Z_USDJPY",
-    "harga_sekarang": 159.794
+    "harga_sekarang": 159.6505
   },
   "EUR/AUD": {
     "pair": "EUR/AUD",
@@ -13,7 +13,7 @@
     "harga_awal": 1.6267,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_EURAUD",
-    "harga_sekarang": 1.62637
+    "harga_sekarang": 1.62727
   },
   "GBP/JPY": {
     "pair": "GBP/JPY",
@@ -21,7 +21,7 @@
     "harga_awal": 211.1465,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_GBPJPY",
-    "harga_sekarang": 211.1825
+    "harga_sekarang": 211.005
   },
   "NZD/JPY": {
     "pair": "NZD/JPY",
@@ -29,7 +29,7 @@
     "harga_awal": 88.28,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_NZDJPY",
-    "harga_sekarang": 88.3225
+    "harga_sekarang": 88.214
   },
   "NZD/CHF": {
     "pair": "NZD/CHF",
@@ -37,7 +37,7 @@
     "harga_awal": 0.46371,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_NZDCHF",
-    "harga_sekarang": 0.4638
+    "harga_sekarang": 0.46357
   },
   "NZD/CAD": {
     "pair": "NZD/CAD",
@@ -45,7 +45,7 @@
     "harga_awal": 0.78836,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_NZDCAD",
-    "harga_sekarang": 0.78868
+    "harga_sekarang": 0.78843
   },
   "CAD/CHF": {
     "pair": "CAD/CHF",
@@ -53,7 +53,7 @@
     "harga_awal": 0.5882,
     "waktu_mulai": "2026-11-15T23:45:26Z",
     "signal_id": "20261115T234526Z_CADCHF",
-    "harga_sekarang": 0.5881
+    "harga_sekarang": 0.58799
   },
   "GBP/USD": {
     "pair": "GBP/USD",
@@ -61,7 +61,7 @@
     "harga_awal": 1.32163,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_GBPUSD",
-    "harga_sekarang": 1.32163
+    "harga_sekarang": 1.32174
   },
   "AUD/USD": {
     "pair": "AUD/USD",
@@ -69,7 +69,7 @@
     "harga_awal": 0.67788,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_AUDUSD",
-    "harga_sekarang": 0.67788
+    "harga_sekarang": 0.67757
   },
   "EUR/JPY": {
     "pair": "EUR/JPY",
@@ -77,7 +77,7 @@
     "harga_awal": 176.1645,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_EURJPY",
-    "harga_sekarang": 176.1645
+    "harga_sekarang": 176.0225
   },
   "EUR/CAD": {
     "pair": "EUR/CAD",
@@ -85,7 +85,7 @@
     "harga_awal": 1.57307,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_EURCAD",
-    "harga_sekarang": 1.57307
+    "harga_sekarang": 1.57324
   },
   "AUD/JPY": {
     "pair": "AUD/JPY",
@@ -93,7 +93,7 @@
     "harga_awal": 108.318,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_AUDJPY",
-    "harga_sekarang": 108.318
+    "harga_sekarang": 108.173
   },
   "AUD/CAD": {
     "pair": "AUD/CAD",
@@ -101,6 +101,6 @@
     "harga_awal": 0.9672,
     "waktu_mulai": "2026-11-16T00:00:37Z",
     "signal_id": "20261116T000037Z_AUDCAD",
-    "harga_sekarang": 0.9672
+    "harga_sekarang": 0.96679
   }
 }
