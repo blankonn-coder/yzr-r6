@@ -1,5 +1,6 @@
-"""Laporan run singkat (tanpa ringkasan 7 hari)."""
+"""Laporan run singkat: sinyal BUY/SELL dan pemantauan aktif (NETRAL tidak ditampilkan)."""
 from . import config as C
+from .monitor import aktif, umur, teks_gerak
 
 
 def build_report(now, status, calib, rows, gagal, mon, info_db):
@@ -23,22 +24,19 @@ def build_report(now, status, calib, rows, gagal, mon, info_db):
             L.append("Tidak ada.")
         L.append("")
 
-    L.append("## Pemantauan (maks 1 jam, + = searah sinyal)")
-    if mon:
-        L += ["| Pair | Arah | Harga Awal | Harga Sekarang | Pip | % | Umur (menit) |",
-              "|---|---|---|---|---|---|---|"]
-        for m in mon.values():
+    L.append("## Pemantauan (maks 60 menit)")
+    pantau = aktif(mon, now)
+    if pantau:
+        L += ["| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |",
+              "|---|---|---|---|---|---|"]
+        for m in pantau.values():
             awal, kini = m["harga_awal"], m["harga_sekarang"]
             pip, pct = C.gerak(m["pair"], awal, kini, m.get("keputusan", ""))
-            umur = (now - C.parse(m["waktu_mulai"])).total_seconds() / 60
             L.append(f"| {m['pair']} | {m.get('keputusan', '-')} | {awal} | {kini} "
-                     f"| {pip:+.1f} | {pct:+.3f}% | {umur:.0f} |")
+                     f"| {teks_gerak(pip, pct)} | {int(umur(m, now))} |")
     else:
         L.append("Tidak ada pair aktif.")
     L.append("")
-
-    netral = [r["pair"] for r in rows if r["keputusan"] == "NETRAL"]
-    L += ["## Pair NETRAL", ", ".join(netral) or "-", ""]
 
     if info_db:
         L += ["## Info Database",
