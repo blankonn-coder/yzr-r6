@@ -11,9 +11,7 @@ CANDLE_COUNT = 200
 PAIRS = [
     "EUR_USD", "GBP_USD", "USD_JPY", "USD_CHF", "AUD_USD", "USD_CAD", "NZD_USD",
     "EUR_GBP", "EUR_JPY", "EUR_CHF", "EUR_AUD", "EUR_CAD", "EUR_NZD",
-    "GBP_JPY", "GBP_CHF", "GBP_AUD", "GBP_CAD", "GBP_NZD",
-    "AUD_JPY", "AUD_CHF", "AUD_CAD", "AUD_NZD",
-    "NZD_JPY", "NZD_CHF", "NZD_CAD", "CAD_JPY", "CAD_CHF",
+    "XAU_USD",
 ]
 
 TF_GRAN = {"5m": "5m", "15m": "15m", "30m": "30m", "1h": "1h", "4h": "4h"}  # interval biquote
@@ -88,8 +86,11 @@ def save_json(path, data):
 
 
 def pip_size(pair):
-    """Ukuran 1 pip: pair JPY = 0.01, selain JPY = 0.0001."""
-    return 0.01 if "JPY" in pair.upper() else 0.0001
+    """Ukuran 1 pip: XAU = 0.1, pair JPY = 0.01, selain itu = 0.0001."""
+    p = pair.upper()
+    if p.startswith("XAU"):
+        return 0.1
+    return 0.01 if "JPY" in p else 0.0001
 
 
 def gerak(pair, awal, kini, keputusan=""):
