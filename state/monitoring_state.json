@@ -5,7 +5,7 @@
     "harga_awal": 0.83893,
     "waktu_mulai": "2026-11-16T05:15:22Z",
     "signal_id": "20261116T051522Z_USDCHF",
-    "harga_sekarang": 0.83861
+    "harga_sekarang": 0.83849
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -13,7 +13,7 @@
     "harga_awal": 0.83429,
     "waktu_mulai": "2026-11-16T05:15:22Z",
     "signal_id": "20261116T051522Z_EURGBP",
-    "harga_sekarang": 0.83442
+    "harga_sekarang": 0.8343
   },
   "EUR/CHF": {
     "pair": "EUR/CHF",
@@ -21,7 +21,7 @@
     "harga_awal": 0.92459,
     "waktu_mulai": "2026-11-16T05:15:22Z",
     "signal_id": "20261116T051522Z_EURCHF",
-    "harga_sekarang": 0.92419
+    "harga_sekarang": 0.92412
   },
   "EUR/USD": {
     "pair": "EUR/USD",
@@ -29,7 +29,7 @@
     "harga_awal": 1.10245,
     "waktu_mulai": "2026-11-16T05:30:29Z",
     "signal_id": "20261116T053029Z_EURUSD",
-    "harga_sekarang": 1.1021
+    "harga_sekarang": 1.10215
   },
   "EUR/CAD": {
     "pair": "EUR/CAD",
@@ -37,7 +37,7 @@
     "harga_awal": 1.57309,
     "waktu_mulai": "2026-11-16T06:00:45Z",
     "signal_id": "20261116T060045Z_EURCAD",
-    "harga_sekarang": 1.57309
+    "harga_sekarang": 1.57299
   },
   "CAD/CHF": {
     "pair": "CAD/CHF",
@@ -45,6 +45,6 @@
     "harga_awal": 0.58751,
     "waktu_mulai": "2026-11-16T06:00:45Z",
     "signal_id": "20261116T060045Z_CADCHF",
-    "harga_sekarang": 0.58751
+    "harga_sekarang": 0.5875
   }
 }
