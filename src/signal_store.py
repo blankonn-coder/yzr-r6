@@ -39,6 +39,18 @@ def mark_expired(db, ids):
             s["status_pantau"] = "EXPIRED"
 
 
+def expire_stale(db, now):
+    """Sinyal AKTIF yang sudah melewati batas pemantauan ditutup otomatis.
+    Ini juga membereskan data lama yang tertinggal berstatus AKTIF."""
+    n = 0
+    for s in db["signals"]:
+        umur = (now - C.parse(s["waktu"])).total_seconds() / 60
+        if s.get("status_pantau") == "AKTIF" and umur >= C.MONITOR_MINUTES:
+            s["status_pantau"] = "EXPIRED"
+            n += 1
+    return n
+
+
 def save(db, now):
     if not db["metadata"].get("created_at"):
         db["metadata"]["created_at"] = C.fmt(now)
