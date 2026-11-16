@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T18:15:21Z",
+    "last_updated": "2026-11-16T18:30:31Z",
     "retensi_hari": 30,
     "total_entri": 251
   },
@@ -6632,7 +6632,7 @@
         "Dekat resistance 15m (0.83464)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T173034Z_EURGBP",
