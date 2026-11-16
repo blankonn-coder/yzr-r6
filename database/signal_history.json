@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T07:15:30Z",
+    "last_updated": "2026-11-16T07:30:29Z",
     "retensi_hari": 30,
-    "total_entri": 141
+    "total_entri": 148
   },
   "signals": [
     {
@@ -3748,6 +3748,193 @@
         "Dekat resistance 5m (0.78839)",
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_USDCHF",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.83915,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.83901,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 52.0,
+        "15m": 51.6,
+        "30m": 53.04
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.83901)",
+        "Dekat support 15m (0.83876)",
+        "Dekat resistance 30m (0.83898)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_EURGBP",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.83444,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83444,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 58.16,
+        "15m": 57.26,
+        "30m": 50.32
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83444)",
+        "Dekat resistance 15m (0.83435)",
+        "Dekat support 30m (0.83406)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_EURCAD",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57318,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57328,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 59.37,
+        "15m": 53.21,
+        "30m": 49.39
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57328)",
+        "Dekat resistance 15m (1.57329)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_GBPCHF",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "GBP/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.10824,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.10826,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 57.98,
+        "15m": 49.48,
+        "30m": 49.14
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.10826)",
+        "Dekat support 15m (1.10831)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_NZDCHF",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "NZD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.46335,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.46324,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 53.27,
+        "15m": 50.28,
+        "30m": 48.67
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.46324)",
+        "Dekat support 15m (0.46320)",
+        "Dekat support 30m (0.46306)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_NZDCAD",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "NZD/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.78824,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.78839,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 52.27,
+        "15m": 50.11,
+        "30m": 47.62
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.78839)",
+        "Dekat resistance 15m (0.78846)",
+        "Dekat resistance 30m (0.78846)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T073029Z_CADCHF",
+      "waktu": "2026-11-16T07:30:29Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "07:30",
+      "pair": "CAD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.58782,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.58767,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 51.68,
+        "15m": 50.07,
+        "30m": 49.95
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.58767)",
+        "Dekat support 15m (0.58762)",
+        "Dekat resistance 30m (0.58810)"
       ],
       "status_pantau": "AKTIF"
     }
