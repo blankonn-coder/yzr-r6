@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-16T20:30:44Z
+- Waktu eksekusi: 2026-11-16T20:45:22Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/GBP | SELL | 0.83444 | 0.8343 | PROFIT 1.4 pip · 0.017% | 15 |
+| EUR/GBP | SELL | 0.83444 | 0.8343 | PROFIT 1.4 pip · 0.017% | 29 |
 
 ## Info Database
 - Total entri: 252
