@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-16T01:15:21Z
+- Waktu eksekusi: 2026-11-16T01:30:31Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 27
@@ -8,30 +8,30 @@
 ## Sinyal BUY
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| NZD/CHF | BUY | 55 | Dekat support 5m (0.46360); Dekat support 15m (0.46367) |
-| CAD/CHF | BUY | 55 | Dekat support 5m (0.58793); Dekat support 15m (0.58817) |
+| CAD/CHF | BUY | 70 | Dekat support 5m (0.58793); Dekat support 15m (0.58746); Dekat support 30m (0.58732) |
 
 ## Sinyal SELL
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| EUR/CAD | SELL | 55 | Dekat resistance 5m (1.57326); Dekat resistance 15m (1.57329) |
-| NZD/CAD | SELL | 70 | Dekat resistance 5m (0.78843); Dekat resistance 15m (0.78846); Dekat resistance 30m (0.78846) |
+| EUR/CAD | SELL | 70 | Dekat resistance 5m (1.57369); Dekat resistance 15m (1.57369); Dekat resistance 30m (1.57395) |
+| GBP/CAD | SELL | 70 | Dekat resistance 5m (1.88607); Dekat resistance 15m (1.88635); Dekat resistance 30m (1.88635) |
 
 ## Pemantauan (maks 1 jam, + = searah sinyal)
 | Pair | Arah | Harga Awal | Harga Sekarang | Pip | % | Umur (menit) |
 |---|---|---|---|---|---|---|
-| USD/JPY | BUY | 159.7195 | 159.7785 | +5.9 | +0.037% | 45 |
-| NZD/CAD | SELL | 0.78843 | 0.78839 | +0.4 | +0.005% | 15 |
-| EUR/CAD | SELL | 1.57327 | 1.57327 | -0.0 | -0.000% | 0 |
-| NZD/CHF | BUY | 0.46354 | 0.46354 | +0.0 | +0.000% | 0 |
-| CAD/CHF | BUY | 0.58799 | 0.58799 | +0.0 | +0.000% | 0 |
+| USD/JPY | BUY | 159.7195 | 159.7085 | -1.1 | -0.007% | 60 |
+| NZD/CAD | SELL | 0.78843 | 0.78812 | +3.1 | +0.039% | 30 |
+| EUR/CAD | SELL | 1.57327 | 1.57357 | -3.0 | -0.019% | 15 |
+| NZD/CHF | BUY | 0.46354 | 0.46316 | -3.8 | -0.082% | 15 |
+| CAD/CHF | BUY | 0.58799 | 0.58769 | -3.0 | -0.051% | 15 |
+| GBP/CAD | SELL | 1.8861 | 1.8861 | -0.0 | -0.000% | 0 |
 
 ## Pair NETRAL
-EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD, EUR/GBP, EUR/JPY, EUR/CHF, EUR/AUD, EUR/NZD, GBP/JPY, GBP/CHF, GBP/AUD, GBP/CAD, GBP/NZD, AUD/JPY, AUD/CHF, AUD/CAD, AUD/NZD, NZD/JPY, CAD/JPY
+EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD, EUR/GBP, EUR/JPY, EUR/CHF, EUR/AUD, EUR/NZD, GBP/JPY, GBP/CHF, GBP/AUD, GBP/NZD, AUD/JPY, AUD/CHF, AUD/CAD, AUD/NZD, NZD/JPY, NZD/CHF, NZD/CAD, CAD/JPY
 
 ## Info Database
-- Total entri: 33
-- Ditambahkan run ini: 4
+- Total entri: 36
+- Ditambahkan run ini: 3
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
