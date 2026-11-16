@@ -13,6 +13,7 @@ import time
 import requests
 
 from . import config as C
+from .monitor import aktif, umur, teks_gerak
 
 WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"
 MODE_ENV = "DISCORD_NOTIFY_MODE"
@@ -47,7 +48,6 @@ def _sinyal_lines(rows, kep):
 def build_payload(now, status, calib, rows, gagal, mon, info):
     buy = [r for r in rows if r["keputusan"] == "BUY"]
     sell = [r for r in rows if r["keputusan"] == "SELL"]
-    netral = [r["pair"] for r in rows if r["keputusan"] == "NETRAL"]
 
     if buy and sell:
         warna = 0xF1C40F
@@ -68,17 +68,16 @@ def build_payload(now, status, calib, rows, gagal, mon, info):
         {"name": f"🔴 SELL ({len(sell)})",
          "value": _cut("\n\n".join(_sinyal_lines(rows, "SELL")) or "—", FIELD_MAX), "inline": False},
     ]
-    if mon:
+
+    pantau = aktif(mon, now)
+    if pantau:
         baris = []
-        for m in mon.values():
+        for m in pantau.values():
             pip, pct = C.gerak(m["pair"], m["harga_awal"], m["harga_sekarang"], m.get("keputusan", ""))
-            umur = (now - _parse(m["waktu_mulai"])).total_seconds() / 60
-            baris.append(f"**{m['pair']}** ({m.get('keputusan', '-')}) "
-                         f"{pip:+.1f} pip · {pct:+.3f}% · {umur:.0f} menit")
-        fields.append({"name": f"📈 Pemantauan 1 jam ({len(mon)})",
+            baris.append(f"**{m['pair']}** ({m.get('keputusan', '-')}) · {teks_gerak(pip, pct)} "
+                         f"· {int(umur(m, now))} menit")
+        fields.append({"name": f"📈 Pemantauan 1 jam ({len(pantau)})",
                        "value": _cut("\n".join(baris), FIELD_MAX), "inline": False})
-    fields.append({"name": f"⚪ NETRAL ({len(netral)})",
-                   "value": _cut(", ".join(netral) or "—", FIELD_MAX), "inline": False})
 
     return {
         "title": f"📊 Screening Forex · {now:%H:%M} UTC",
@@ -89,11 +88,6 @@ def build_payload(now, status, calib, rows, gagal, mon, info):
                            f"laporan lengkap di reports/latest_report.md"},
         "timestamp": now.isoformat(),
     }
-
-
-def _parse(s):
-    from datetime import datetime, timezone
-    return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
 def _post(url, embed):
