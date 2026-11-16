@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T01:00:35Z",
+    "last_updated": "2026-11-16T01:15:21Z",
     "retensi_hari": 30,
-    "total_entri": 29
+    "total_entri": 33
   },
   "signals": [
     {
@@ -218,7 +218,7 @@
         "Dekat resistance 15m (1.32176)",
         "Dekat support 30m (1.32180)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_AUDUSD",
@@ -244,7 +244,7 @@
         "Dekat resistance 5m (0.67783)",
         "Dekat resistance 15m (0.67816)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_EURJPY",
@@ -270,7 +270,7 @@
         "Dekat resistance 5m (176.17300)",
         "Dekat resistance 15m (176.17300)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_EURAUD",
@@ -322,7 +322,7 @@
         "Dekat resistance 5m (1.57322)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_GBPJPY",
@@ -374,7 +374,7 @@
         "Dekat resistance 5m (108.31250)",
         "Dekat resistance 15m (108.31250)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_AUDCAD",
@@ -401,7 +401,7 @@
         "Dekat resistance 15m (0.96731)",
         "Dekat resistance 30m (0.96731)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_NZDCAD",
@@ -772,6 +772,111 @@
         "Dekat resistance 5m (0.78843)",
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T011521Z_EURCAD",
+      "waktu": "2026-11-16T01:15:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "01:15",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57327,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57326,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 57.4,
+        "15m": 52.91,
+        "30m": 43.69
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57326)",
+        "Dekat resistance 15m (1.57329)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T011521Z_NZDCHF",
+      "waktu": "2026-11-16T01:15:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "01:15",
+      "pair": "NZD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.46354,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.4636,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 45.25,
+        "15m": 47.68,
+        "30m": 53.26
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.46360)",
+        "Dekat support 15m (0.46367)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T011521Z_NZDCAD",
+      "waktu": "2026-11-16T01:15:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "01:15",
+      "pair": "NZD/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.78839,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.78843,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 48.81,
+        "15m": 49.95,
+        "30m": 47.88
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.78843)",
+        "Dekat resistance 15m (0.78846)",
+        "Dekat resistance 30m (0.78846)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T011521Z_CADCHF",
+      "waktu": "2026-11-16T01:15:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "01:15",
+      "pair": "CAD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.58799,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.58793,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 46.99,
+        "15m": 48.24,
+        "30m": 56.61
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.58793)",
+        "Dekat support 15m (0.58817)"
       ],
       "status_pantau": "AKTIF"
     }
