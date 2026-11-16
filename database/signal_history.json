@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T12:15:21Z",
+    "last_updated": "2026-11-16T12:30:30Z",
     "retensi_hari": 30,
-    "total_entri": 227
+    "total_entri": 228
   },
   "signals": [
     {
@@ -296,7 +296,7 @@
         "Dekat support 5m (1.62636)",
         "Dekat support 15m (1.62636)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_EURCAD",
@@ -348,7 +348,7 @@
         "Dekat resistance 5m (211.17800)",
         "Dekat resistance 15m (211.17800)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_AUDJPY",
@@ -428,7 +428,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T000037Z_CADCHF",
@@ -454,7 +454,7 @@
         "Dekat support 5m (0.58785)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T001521Z_GBPUSD",
@@ -481,7 +481,7 @@
         "Dekat resistance 15m (1.32176)",
         "Dekat support 30m (1.32180)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T001521Z_EURCAD",
@@ -507,7 +507,7 @@
         "Dekat resistance 5m (1.57322)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T001521Z_NZDCHF",
@@ -534,7 +534,7 @@
         "Dekat support 15m (0.46367)",
         "Dekat resistance 30m (0.46368)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T001521Z_NZDCAD",
@@ -561,7 +561,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T001521Z_CADCHF",
@@ -587,7 +587,7 @@
         "Dekat support 5m (0.58785)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T003033Z_USDJPY",
@@ -640,7 +640,7 @@
         "Dekat resistance 5m (1.57322)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T003033Z_NZDCHF",
@@ -667,7 +667,7 @@
         "Dekat support 15m (0.46367)",
         "Dekat resistance 30m (0.46368)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T004520Z_NZDCHF",
@@ -694,7 +694,7 @@
         "Dekat support 15m (0.46367)",
         "Dekat resistance 30m (0.46368)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T010035Z_GBPUSD",
@@ -720,7 +720,7 @@
         "Dekat resistance 5m (1.32162)",
         "Dekat resistance 15m (1.32176)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T010035Z_EURCAD",
@@ -746,7 +746,7 @@
         "Dekat resistance 5m (1.57322)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T010035Z_NZDCAD",
@@ -852,7 +852,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T011521Z_CADCHF",
@@ -905,7 +905,7 @@
         "Dekat resistance 15m (1.57369)",
         "Dekat resistance 30m (1.57395)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T013031Z_GBPCAD",
@@ -959,7 +959,7 @@
         "Dekat support 15m (0.58746)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T014518Z_EURCAD",
@@ -985,7 +985,7 @@
         "Dekat resistance 5m (1.57322)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T014518Z_NZDCHF",
@@ -1012,7 +1012,7 @@
         "Dekat support 15m (0.46311)",
         "Dekat support 30m (0.46305)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T014518Z_CADCHF",
@@ -1038,7 +1038,7 @@
         "Dekat support 5m (0.58793)",
         "Dekat support 15m (0.58746)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T020039Z_GBPUSD",
@@ -1092,7 +1092,7 @@
         "Dekat resistance 15m (1.57329)",
         "Dekat resistance 30m (1.57369)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T020039Z_GBPCAD",
@@ -1119,7 +1119,7 @@
         "Dekat resistance 15m (1.88635)",
         "Dekat resistance 30m (1.88635)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T020039Z_NZDCHF",
@@ -1146,7 +1146,7 @@
         "Dekat support 15m (0.46367)",
         "Dekat resistance 30m (0.46398)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T020039Z_NZDCAD",
@@ -1199,7 +1199,7 @@
         "Dekat support 5m (0.58762)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T021521Z_GBPUSD",
@@ -1226,7 +1226,7 @@
         "Dekat resistance 15m (1.32176)",
         "Dekat support 30m (1.32180)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T021521Z_EURCAD",
@@ -1280,7 +1280,7 @@
         "Dekat resistance 15m (1.88635)",
         "Dekat resistance 30m (1.88635)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T021521Z_NZDCAD",
@@ -1307,7 +1307,7 @@
         "Dekat resistance 15m (0.78915)",
         "Dekat resistance 30m (0.78915)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T021521Z_CADCHF",
@@ -1360,7 +1360,7 @@
         "Dekat resistance 15m (1.57369)",
         "Dekat resistance 30m (1.57369)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T023029Z_GBPCAD",
@@ -1387,7 +1387,7 @@
         "Dekat resistance 15m (1.88635)",
         "Dekat resistance 30m (1.88635)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T023029Z_NZDCHF",
@@ -1440,7 +1440,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T023029Z_CADCHF",
@@ -1466,7 +1466,7 @@
         "Dekat support 5m (0.58793)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T024519Z_EURGBP",
@@ -1545,7 +1545,7 @@
         "Dekat support 5m (0.46360)",
         "Dekat support 15m (0.46367)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T024519Z_CADCHF",
@@ -1571,7 +1571,7 @@
         "Dekat support 5m (0.58793)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T030041Z_EURGBP",
@@ -1598,7 +1598,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T030041Z_EURCHF",
@@ -1650,7 +1650,7 @@
         "Dekat resistance 5m (1.57338)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T030041Z_GBPCHF",
@@ -1676,7 +1676,7 @@
         "Dekat support 5m (1.10880)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T030041Z_NZDCHF",
@@ -1702,7 +1702,7 @@
         "Dekat support 5m (0.46340)",
         "Dekat support 15m (0.46367)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T030041Z_CADCHF",
@@ -1728,7 +1728,7 @@
         "Dekat support 5m (0.58793)",
         "Dekat support 15m (0.58762)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T031530Z_EURCHF",
@@ -1754,7 +1754,7 @@
         "Dekat support 5m (0.92497)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T031530Z_GBPCHF",
@@ -1780,7 +1780,7 @@
         "Dekat support 5m (1.10880)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T031530Z_CADCHF",
@@ -1832,7 +1832,7 @@
         "Dekat support 5m (0.92466)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T033028Z_GBPCHF",
@@ -1858,7 +1858,7 @@
         "Dekat support 5m (1.10880)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T033028Z_NZDCHF",
@@ -1885,7 +1885,7 @@
         "Dekat support 15m (0.46367)",
         "Dekat support 30m (0.46305)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T033028Z_CADCHF",
@@ -1911,7 +1911,7 @@
         "Dekat support 5m (0.58793)",
         "Dekat support 15m (0.58817)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T034518Z_EURCHF",
@@ -1937,7 +1937,7 @@
         "Dekat support 5m (0.92466)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T034518Z_EURCAD",
@@ -1989,7 +1989,7 @@
         "Dekat support 5m (1.10845)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T034518Z_NZDCHF",
@@ -2068,7 +2068,7 @@
         "Dekat support 5m (0.58775)",
         "Dekat support 15m (0.58762)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T040035Z_EURCHF",
@@ -2094,7 +2094,7 @@
         "Dekat support 5m (0.92466)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T040035Z_GBPCHF",
@@ -2147,7 +2147,7 @@
         "Dekat support 15m (0.46311)",
         "Dekat support 30m (0.46306)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T041521Z_EURGBP",
@@ -2226,7 +2226,7 @@
         "Dekat support 5m (1.10845)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T041521Z_NZDCHF",
@@ -2253,7 +2253,7 @@
         "Dekat support 15m (0.46311)",
         "Dekat support 30m (0.46306)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T043036Z_EURCHF",
@@ -2279,7 +2279,7 @@
         "Dekat support 5m (0.92466)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T043036Z_GBPCHF",
@@ -2305,7 +2305,7 @@
         "Dekat support 5m (1.10845)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T044524Z_GBPCHF",
@@ -2331,7 +2331,7 @@
         "Dekat support 5m (1.10845)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T050036Z_EURGBP",
@@ -2358,7 +2358,7 @@
         "Dekat resistance 15m (0.83434)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T050036Z_EURCHF",
@@ -2384,7 +2384,7 @@
         "Dekat support 5m (0.92466)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T050036Z_EURCAD",
@@ -2622,7 +2622,7 @@
         "Dekat resistance 5m (1.57328)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T051522Z_GBPCHF",
@@ -2648,7 +2648,7 @@
         "Dekat support 5m (1.10826)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T051522Z_CADCHF",
@@ -2675,7 +2675,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_EURUSD",
@@ -2729,7 +2729,7 @@
         "Dekat support 30m (0.83814)",
         "RSI 5m oversold (25.13)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_EURGBP",
@@ -2757,7 +2757,7 @@
         "Dekat support 30m (0.83406)",
         "RSI 5m overbought (70.03)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_EURCAD",
@@ -2784,7 +2784,7 @@
         "Dekat resistance 15m (1.57329)",
         "Dekat resistance 30m (1.57369)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_GBPCHF",
@@ -2811,7 +2811,7 @@
         "Dekat support 30m (1.10748)",
         "RSI 5m oversold (23.72)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_NZDCAD",
@@ -2838,7 +2838,7 @@
         "Dekat support 15m (0.78797)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T053029Z_CADCHF",
@@ -2866,7 +2866,7 @@
         "Dekat support 30m (0.58732)",
         "RSI 5m oversold (27.88)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_EURUSD",
@@ -2893,7 +2893,7 @@
         "Dekat resistance 15m (1.10274)",
         "Dekat support 30m (1.10258)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_USDCHF",
@@ -2920,7 +2920,7 @@
         "Dekat support 30m (0.83814)",
         "RSI 5m oversold (29.04)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_EURGBP",
@@ -2947,7 +2947,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_EURCAD",
@@ -2974,7 +2974,7 @@
         "Dekat resistance 15m (1.57329)",
         "Dekat resistance 30m (1.57369)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_GBPCHF",
@@ -3001,7 +3001,7 @@
         "Dekat support 30m (1.10748)",
         "RSI 5m oversold (28.75)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_NZDCAD",
@@ -3028,7 +3028,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T054520Z_CADCHF",
@@ -3056,7 +3056,7 @@
         "Dekat support 30m (0.58732)",
         "RSI 5m oversold (29.09)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T060045Z_USDCHF",
@@ -3083,7 +3083,7 @@
         "Dekat support 15m (0.83876)",
         "Dekat resistance 30m (0.83898)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T060045Z_EURGBP",
@@ -3110,7 +3110,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T060045Z_EURCAD",
@@ -3190,7 +3190,7 @@
         "Dekat support 15m (0.83876)",
         "Dekat support 30m (0.83814)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T061519Z_EURGBP",
@@ -3217,7 +3217,7 @@
         "Dekat resistance 15m (0.83434)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T061519Z_EURCAD",
@@ -3243,7 +3243,7 @@
         "Dekat resistance 5m (1.57328)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T061519Z_CADCHF",
@@ -3270,7 +3270,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T063030Z_USDCHF",
@@ -3351,7 +3351,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T064520Z_EURGBP",
@@ -3431,7 +3431,7 @@
         "Dekat support 5m (1.10826)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T064520Z_GBPNZD",
@@ -3484,7 +3484,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T070038Z_EURCHF",
@@ -3511,7 +3511,7 @@
         "Dekat support 15m (0.92458)",
         "Dekat support 30m (0.92402)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T070038Z_GBPCHF",
@@ -3538,7 +3538,7 @@
         "Dekat support 15m (1.10748)",
         "Dekat support 30m (1.10748)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T070038Z_GBPNZD",
@@ -3564,7 +3564,7 @@
         "Dekat support 5m (2.39118)",
         "Dekat support 15m (2.39118)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T070038Z_NZDCHF",
@@ -3618,7 +3618,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T071530Z_EURCHF",
@@ -3644,7 +3644,7 @@
         "Dekat support 5m (0.92458)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T071530Z_EURCAD",
@@ -3696,7 +3696,7 @@
         "Dekat support 5m (1.10826)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T071530Z_GBPNZD",
@@ -3722,7 +3722,7 @@
         "Dekat support 5m (2.39150)",
         "Dekat support 15m (2.39118)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T071530Z_NZDCAD",
@@ -3776,7 +3776,7 @@
         "Dekat support 15m (0.83876)",
         "Dekat resistance 30m (0.83898)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_EURGBP",
@@ -3803,7 +3803,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_EURCAD",
@@ -3829,7 +3829,7 @@
         "Dekat resistance 5m (1.57328)",
         "Dekat resistance 15m (1.57329)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_GBPCHF",
@@ -3855,7 +3855,7 @@
         "Dekat support 5m (1.10826)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_NZDCHF",
@@ -3882,7 +3882,7 @@
         "Dekat support 15m (0.46320)",
         "Dekat support 30m (0.46306)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_NZDCAD",
@@ -3909,7 +3909,7 @@
         "Dekat resistance 15m (0.78846)",
         "Dekat resistance 30m (0.78846)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T073029Z_CADCHF",
@@ -4044,7 +4044,7 @@
         "Dekat resistance 15m (1.57343)",
         "Dekat resistance 30m (1.57369)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T074522Z_GBPCHF",
@@ -4098,7 +4098,7 @@
         "Dekat support 15m (0.58732)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T080038Z_EURGBP",
@@ -4125,7 +4125,7 @@
         "Dekat resistance 15m (0.83435)",
         "Dekat support 30m (0.83406)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T080038Z_CADCHF",
@@ -4152,7 +4152,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat support 30m (0.58732)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T081522Z_EURCHF",
@@ -4178,7 +4178,7 @@
         "Dekat support 5m (0.92419)",
         "Dekat support 15m (0.92458)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T081522Z_CADCHF",
@@ -4205,7 +4205,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat resistance 30m (0.58810)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T084519Z_GBPUSD",
@@ -4339,7 +4339,7 @@
         "Dekat resistance 15m (1.32166)",
         "Dekat support 30m (1.32180)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T090037Z_AUDUSD",
@@ -4419,7 +4419,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T090037Z_AUDCAD",
@@ -4527,7 +4527,7 @@
         "Dekat resistance 15m (1.10255)",
         "Dekat resistance 30m (1.10255)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T091520Z_GBPUSD",
@@ -4554,7 +4554,7 @@
         "Dekat resistance 15m (1.32142)",
         "Dekat resistance 30m (1.32142)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T091520Z_EURJPY",
@@ -4580,7 +4580,7 @@
         "Dekat resistance 5m (175.78950)",
         "Dekat resistance 15m (175.78950)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T091520Z_AUDCAD",
@@ -4607,7 +4607,7 @@
         "Dekat resistance 15m (0.96537)",
         "Dekat support 30m (0.96514)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T091520Z_CADCHF",
@@ -4634,7 +4634,7 @@
         "Dekat support 15m (0.58762)",
         "Dekat resistance 30m (0.58810)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T093030Z_EURGBP",
@@ -4687,7 +4687,7 @@
         "Dekat resistance 15m (1.57369)",
         "Dekat resistance 30m (1.57395)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T093030Z_GBPCAD",
@@ -4740,7 +4740,7 @@
         "Dekat resistance 5m (0.83464)",
         "Dekat resistance 15m (0.83456)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T094520Z_AUDCHF",
@@ -4793,7 +4793,7 @@
         "Dekat resistance 5m (0.83483)",
         "Dekat resistance 15m (0.83464)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T100049Z_AUDCHF",
@@ -4820,7 +4820,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T101531Z_EURGBP",
@@ -4846,7 +4846,7 @@
         "Dekat resistance 5m (0.83464)",
         "Dekat resistance 15m (0.83464)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T101531Z_AUDCHF",
@@ -4873,7 +4873,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T101531Z_NZDJPY",
@@ -5005,7 +5005,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T103030Z_AUDNZD",
@@ -5058,7 +5058,7 @@
         "Dekat resistance 5m (88.06600)",
         "Dekat resistance 15m (88.06600)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T103030Z_CADJPY",
@@ -5111,7 +5111,7 @@
         "Dekat resistance 5m (0.83464)",
         "Dekat resistance 15m (0.83435)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T104521Z_EURJPY",
@@ -5137,7 +5137,7 @@
         "Dekat resistance 5m (175.78850)",
         "Dekat resistance 15m (175.78950)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T104521Z_EURAUD",
@@ -5217,7 +5217,7 @@
         "Dekat resistance 5m (107.88700)",
         "Dekat resistance 15m (107.88700)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T104521Z_AUDNZD",
@@ -5244,7 +5244,7 @@
         "Dekat resistance 15m (1.22500)",
         "Dekat support 30m (1.22487)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T104521Z_NZDJPY",
@@ -5270,7 +5270,7 @@
         "Dekat resistance 5m (88.06600)",
         "Dekat resistance 15m (88.06600)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T104521Z_CADJPY",
@@ -5297,7 +5297,7 @@
         "Dekat resistance 15m (111.80600)",
         "Dekat support 30m (111.83500)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T110052Z_EURGBP",
@@ -5323,7 +5323,7 @@
         "Dekat resistance 5m (0.83464)",
         "Dekat resistance 15m (0.83464)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T110052Z_GBPCHF",
@@ -5376,7 +5376,7 @@
         "Dekat support 15m (1.95253)",
         "Dekat support 30m (1.95253)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T110052Z_AUDCHF",
@@ -5430,7 +5430,7 @@
         "Dekat resistance 15m (1.22500)",
         "Dekat support 30m (1.22487)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T111519Z_EURGBP",
@@ -5456,7 +5456,7 @@
         "Dekat resistance 5m (0.83464)",
         "Dekat resistance 15m (0.83464)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T111519Z_GBPCHF",
@@ -5482,7 +5482,7 @@
         "Dekat support 5m (1.10803)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T111519Z_GBPAUD",
@@ -5509,7 +5509,7 @@
         "Dekat support 15m (1.95253)",
         "Dekat support 30m (1.95253)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T111519Z_AUDCHF",
@@ -5536,7 +5536,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T111519Z_AUDNZD",
@@ -5563,7 +5563,7 @@
         "Dekat resistance 15m (1.22500)",
         "Dekat support 30m (1.22487)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T113027Z_EURAUD",
@@ -5590,7 +5590,7 @@
         "Dekat support 15m (1.62888)",
         "Dekat resistance 30m (1.62929)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T113027Z_GBPAUD",
@@ -5617,7 +5617,7 @@
         "Dekat support 15m (1.95253)",
         "Dekat support 30m (1.95253)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T113027Z_AUDCHF",
@@ -5643,7 +5643,7 @@
         "Dekat resistance 5m (0.56784)",
         "Dekat resistance 15m (0.56763)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T113027Z_AUDNZD",
@@ -5670,7 +5670,7 @@
         "Dekat resistance 15m (1.22500)",
         "Dekat support 30m (1.22487)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T114524Z_EURGBP",
@@ -6041,6 +6041,34 @@
         "Dekat support 5m (0.46337)",
         "Dekat resistance 15m (0.46354)",
         "Dekat support 30m (0.46306)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T123030Z_USDCHF",
+      "waktu": "2026-11-16T12:30:30Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "12:30",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 65,
+      "harga_saat_itu": 0.83879,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.83876,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 24.13,
+        "15m": 37.56,
+        "30m": 44.73
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.83871)",
+        "Dekat support 15m (0.83876)",
+        "Dekat resistance 30m (0.83898)",
+        "RSI 5m oversold (24.13)"
       ],
       "status_pantau": "AKTIF"
     }

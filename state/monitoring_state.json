@@ -13,7 +13,7 @@
     "harga_awal": 0.92497,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_EURCHF",
-    "harga_sekarang": 0.92473
+    "harga_sekarang": 0.92375
   },
   "GBP/AUD": {
     "pair": "GBP/AUD",
@@ -70,5 +70,13 @@
     "waktu_mulai": "2026-11-16T12:15:21Z",
     "signal_id": "20261116T121521Z_GBPCHF",
     "harga_sekarang": 1.10838
+  },
+  "USD/CHF": {
+    "pair": "USD/CHF",
+    "keputusan": "BUY",
+    "harga_awal": 0.83879,
+    "waktu_mulai": "2026-11-16T12:30:30Z",
+    "signal_id": "20261116T123030Z_USDCHF",
+    "harga_sekarang": 0.83879
   }
 }
