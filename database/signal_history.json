@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T11:45:24Z",
+    "last_updated": "2026-11-16T12:00:42Z",
     "retensi_hari": 30,
-    "total_entri": 222
+    "total_entri": 223
   },
   "signals": [
     {
@@ -5908,6 +5908,33 @@
         "Dekat support 5m (0.46334)",
         "Dekat resistance 15m (0.46354)",
         "Dekat support 30m (0.46306)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T120042Z_GBPCAD",
+      "waktu": "2026-11-16T12:00:42Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "12:00",
+      "pair": "GBP/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 45,
+      "harga_saat_itu": 1.88502,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.88502,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 59.27,
+        "15m": 50.92,
+        "30m": 49.04
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.88502)",
+        "Dekat support 15m (1.88508)",
+        "Dekat resistance 30m (1.88528)"
       ],
       "status_pantau": "AKTIF"
     }

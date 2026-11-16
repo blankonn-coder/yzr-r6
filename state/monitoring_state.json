@@ -5,7 +5,7 @@
     "harga_awal": 1.10827,
     "waktu_mulai": "2026-11-16T11:00:52Z",
     "signal_id": "20261116T110052Z_GBPCHF",
-    "harga_sekarang": 1.10828
+    "harga_sekarang": 1.10881
   },
   "AUD/CHF": {
     "pair": "AUD/CHF",
@@ -13,7 +13,7 @@
     "harga_awal": 0.56754,
     "waktu_mulai": "2026-11-16T11:00:52Z",
     "signal_id": "20261116T110052Z_AUDCHF",
-    "harga_sekarang": 0.56769
+    "harga_sekarang": 0.56741
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -21,7 +21,7 @@
     "harga_awal": 0.83459,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_EURGBP",
-    "harga_sekarang": 0.83459
+    "harga_sekarang": 0.83442
   },
   "EUR/CHF": {
     "pair": "EUR/CHF",
@@ -29,7 +29,7 @@
     "harga_awal": 0.92497,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_EURCHF",
-    "harga_sekarang": 0.92497
+    "harga_sekarang": 0.92522
   },
   "GBP/AUD": {
     "pair": "GBP/AUD",
@@ -37,7 +37,7 @@
     "harga_awal": 1.95227,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_GBPAUD",
-    "harga_sekarang": 1.95227
+    "harga_sekarang": 1.95419
   },
   "GBP/NZD": {
     "pair": "GBP/NZD",
@@ -45,7 +45,7 @@
     "harga_awal": 2.39141,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_GBPNZD",
-    "harga_sekarang": 2.39141
+    "harga_sekarang": 2.39217
   },
   "AUD/NZD": {
     "pair": "AUD/NZD",
@@ -53,7 +53,7 @@
     "harga_awal": 1.22494,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_AUDNZD",
-    "harga_sekarang": 1.22494
+    "harga_sekarang": 1.22415
   },
   "NZD/JPY": {
     "pair": "NZD/JPY",
@@ -61,7 +61,7 @@
     "harga_awal": 88.036,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_NZDJPY",
-    "harga_sekarang": 88.036
+    "harga_sekarang": 87.993
   },
   "NZD/CHF": {
     "pair": "NZD/CHF",
@@ -69,6 +69,14 @@
     "harga_awal": 0.46344,
     "waktu_mulai": "2026-11-16T11:45:24Z",
     "signal_id": "20261116T114524Z_NZDCHF",
-    "harga_sekarang": 0.46344
+    "harga_sekarang": 0.46352
+  },
+  "GBP/CAD": {
+    "pair": "GBP/CAD",
+    "keputusan": "SELL",
+    "harga_awal": 1.88502,
+    "waktu_mulai": "2026-11-16T12:00:42Z",
+    "signal_id": "20261116T120042Z_GBPCAD",
+    "harga_sekarang": 1.88502
   }
 }
