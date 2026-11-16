@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T13:00:44Z",
+    "last_updated": "2026-11-16T13:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 228
+    "total_entri": 229
   },
   "signals": [
     {
@@ -5962,7 +5962,7 @@
         "Dekat support 5m (0.92478)",
         "Dekat support 15m (0.92466)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T121521Z_GBPCHF",
@@ -5988,7 +5988,7 @@
         "Dekat support 5m (1.10823)",
         "Dekat support 15m (1.10831)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T121521Z_GBPCAD",
@@ -6015,7 +6015,7 @@
         "Dekat support 15m (1.88508)",
         "Dekat resistance 30m (1.88528)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T121521Z_NZDCHF",
@@ -6042,7 +6042,7 @@
         "Dekat resistance 15m (0.46354)",
         "Dekat support 30m (0.46306)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T123030Z_USDCHF",
@@ -6069,6 +6069,32 @@
         "Dekat support 15m (0.83876)",
         "Dekat resistance 30m (0.83898)",
         "RSI 5m oversold (24.13)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T131522Z_EURCAD",
+      "waktu": "2026-11-16T13:15:22Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "13:15",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57325,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57308,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 58.1,
+        "15m": 54.86,
+        "30m": 54.3
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57308)",
+        "Dekat resistance 15m (1.57343)"
       ],
       "status_pantau": "AKTIF"
     }
