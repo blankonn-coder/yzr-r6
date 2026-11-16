@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T16:15:27Z",
+    "last_updated": "2026-11-16T16:30:42Z",
     "retensi_hari": 30,
-    "total_entri": 244
+    "total_entri": 245
   },
   "signals": [
     {
@@ -6498,6 +6498,33 @@
         "Dekat resistance 30m (1.57470)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T163042Z_EURGBP",
+      "waktu": "2026-11-16T16:30:42Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "16:30",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.83469,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83464,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 57.88,
+        "15m": 56.93,
+        "30m": 56.75
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83479)",
+        "Dekat resistance 15m (0.83464)",
+        "Dekat resistance 30m (0.83486)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
