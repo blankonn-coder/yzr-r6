@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T08:30:29Z",
+    "last_updated": "2026-11-16T08:45:19Z",
     "retensi_hari": 30,
-    "total_entri": 158
+    "total_entri": 161
   },
   "signals": [
     {
@@ -4204,6 +4204,86 @@
         "Dekat support 5m (0.58776)",
         "Dekat support 15m (0.58762)",
         "Dekat resistance 30m (0.58810)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T084519Z_GBPUSD",
+      "waktu": "2026-11-16T08:45:19Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "08:45",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.32129,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.32123,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 63.79,
+        "15m": 56.83,
+        "30m": 45.41
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.32123)",
+        "Dekat resistance 15m (1.32142)",
+        "Dekat resistance 30m (1.32142)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T084519Z_EURCAD",
+      "waktu": "2026-11-16T08:45:19Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "08:45",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57319,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57329,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 55.38,
+        "15m": 53.06,
+        "30m": 45.08
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57343)",
+        "Dekat resistance 15m (1.57329)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T084519Z_AUDCHF",
+      "waktu": "2026-11-16T08:45:19Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "08:45",
+      "pair": "AUD/CHF",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.5674,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.56744,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 57.7,
+        "15m": 51.19,
+        "30m": 44.48
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.56744)",
+        "Dekat resistance 15m (0.56763)",
+        "Dekat support 30m (0.56730)"
       ],
       "status_pantau": "AKTIF"
     }
