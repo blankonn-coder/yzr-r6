@@ -1,19 +1,11 @@
 {
-  "AUD/CHF": {
-    "pair": "AUD/CHF",
-    "keputusan": "SELL",
-    "harga_awal": 0.56738,
-    "waktu_mulai": "2026-11-16T09:45:20Z",
-    "signal_id": "20261116T094520Z_AUDCHF",
-    "harga_sekarang": 0.5676
-  },
   "NZD/JPY": {
     "pair": "NZD/JPY",
     "keputusan": "SELL",
     "harga_awal": 88.035,
     "waktu_mulai": "2026-11-16T10:15:31Z",
     "signal_id": "20261116T101531Z_NZDJPY",
-    "harga_sekarang": 88.089
+    "harga_sekarang": 88.067
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -21,7 +13,7 @@
     "harga_awal": 0.83442,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_EURGBP",
-    "harga_sekarang": 0.83442
+    "harga_sekarang": 0.83447
   },
   "EUR/JPY": {
     "pair": "EUR/JPY",
@@ -29,7 +21,7 @@
     "harga_awal": 175.8265,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_EURJPY",
-    "harga_sekarang": 175.8265
+    "harga_sekarang": 175.7665
   },
   "AUD/JPY": {
     "pair": "AUD/JPY",
@@ -37,7 +29,7 @@
     "harga_awal": 107.881,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_AUDJPY",
-    "harga_sekarang": 107.881
+    "harga_sekarang": 107.883
   },
   "AUD/NZD": {
     "pair": "AUD/NZD",
@@ -45,7 +37,7 @@
     "harga_awal": 1.2247,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_AUDNZD",
-    "harga_sekarang": 1.2247
+    "harga_sekarang": 1.225
   },
   "CAD/JPY": {
     "pair": "CAD/JPY",
@@ -53,6 +45,22 @@
     "harga_awal": 111.795,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_CADJPY",
-    "harga_sekarang": 111.795
+    "harga_sekarang": 111.798
+  },
+  "EUR/AUD": {
+    "pair": "EUR/AUD",
+    "keputusan": "BUY",
+    "harga_awal": 1.62928,
+    "waktu_mulai": "2026-11-16T10:45:21Z",
+    "signal_id": "20261116T104521Z_EURAUD",
+    "harga_sekarang": 1.62928
+  },
+  "GBP/AUD": {
+    "pair": "GBP/AUD",
+    "keputusan": "BUY",
+    "harga_awal": 1.95238,
+    "waktu_mulai": "2026-11-16T10:45:21Z",
+    "signal_id": "20261116T104521Z_GBPAUD",
+    "harga_sekarang": 1.95238
   }
 }

@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T10:30:30Z",
+    "last_updated": "2026-11-16T10:45:21Z",
     "retensi_hari": 30,
-    "total_entri": 191
+    "total_entri": 199
   },
   "signals": [
     {
@@ -4767,7 +4767,7 @@
         "Dekat resistance 15m (0.56763)",
         "Dekat support 30m (0.56730)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T100049Z_EURGBP",
@@ -5082,6 +5082,218 @@
       "tren": "TURUN",
       "alasan": [
         "Dekat resistance 5m (111.80600)",
+        "Dekat resistance 15m (111.80600)",
+        "Dekat support 30m (111.83500)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_EURGBP",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.83447,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83435,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 49.72,
+        "15m": 53.08,
+        "30m": 49.87
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83464)",
+        "Dekat resistance 15m (0.83435)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_EURJPY",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "EUR/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 175.7665,
+      "level_terdekat": {
+        "type": "R",
+        "price": 175.7885,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 54.17,
+        "15m": 49.32,
+        "30m": 44.09
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (175.78850)",
+        "Dekat resistance 15m (175.78950)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_EURAUD",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.62928,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.62949,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 31.01,
+        "15m": 42.62,
+        "30m": 52.88
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.62949)",
+        "Dekat support 15m (1.62888)",
+        "Dekat resistance 30m (1.62929)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_GBPAUD",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "GBP/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.95238,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.95253,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 33.85,
+        "15m": 41.5,
+        "30m": 53.3
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.95253)",
+        "Dekat support 15m (1.95253)",
+        "Dekat support 30m (1.95253)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_AUDJPY",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "AUD/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 107.883,
+      "level_terdekat": {
+        "type": "R",
+        "price": 107.887,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 64.32,
+        "15m": 53.78,
+        "30m": 44.78
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (107.88700)",
+        "Dekat resistance 15m (107.88700)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_AUDNZD",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "AUD/NZD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.225,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.225,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 63.37,
+        "15m": 56.87,
+        "30m": 47.09
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.22500)",
+        "Dekat resistance 15m (1.22500)",
+        "Dekat support 30m (1.22487)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_NZDJPY",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "NZD/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 88.067,
+      "level_terdekat": {
+        "type": "R",
+        "price": 88.066,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 57.06,
+        "15m": 50.49,
+        "30m": 45.38
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (88.06600)",
+        "Dekat resistance 15m (88.06600)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261116T104521Z_CADJPY",
+      "waktu": "2026-11-16T10:45:21Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "10:45",
+      "pair": "CAD/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 111.798,
+      "level_terdekat": {
+        "type": "R",
+        "price": 111.806,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 67.62,
+        "15m": 55.68,
+        "30m": 48.11
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (111.76100)",
         "Dekat resistance 15m (111.80600)",
         "Dekat support 30m (111.83500)"
       ],
