@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-16T13:45:23Z
+- Waktu eksekusi: 2026-11-16T14:00:39Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,9 +14,9 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/CAD | SELL | 1.57325 | 1.57468 | RUGI 14.3 pip · 0.091% | 30 |
-| EUR/JPY | SELL | 175.7565 | 175.7195 | PROFIT 3.7 pip · 0.021% | 14 |
-| EUR/CHF | BUY | 0.92441 | 0.92439 | RUGI 0.2 pip · 0.002% | 14 |
+| EUR/CAD | SELL | 1.57325 | 1.57442 | RUGI 11.7 pip · 0.074% | 45 |
+| EUR/JPY | SELL | 175.7565 | 175.7855 | RUGI 2.9 pip · 0.017% | 30 |
+| EUR/CHF | BUY | 0.92441 | 0.92444 | PROFIT 0.3 pip · 0.003% | 30 |
 
 ## Info Database
 - Total entri: 232
