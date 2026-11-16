@@ -90,11 +90,16 @@ def main():
         mon, [{"pair": r["pair"], "id": r["id"], "harga": r["harga"], "keputusan": r["keputusan"]} for r in sinyal],
         prices, now)
     C.save_json(C.MONITOR_PATH, mon)
+    # Hanya sinyal yang benar-benar masuk pemantauan yang berstatus AKTIF
+    tracked = {m["signal_id"] for m in mon.values()}
+    for r in records:
+        r["status_pantau"] = "AKTIF" if r["id"] in tracked else "TIDAK DIPANTAU"
 
     # 5. Database mentah (prune dulu, lalu append)
     db = store.load(now)
     pruned = store.prune(db, now)
     store.mark_expired(db, set(expired))
+    store.expire_stale(db, now)
     added = store.add(db, records)
     store.save(db, now)
 
