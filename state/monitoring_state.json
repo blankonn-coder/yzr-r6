@@ -1,27 +1,11 @@
 {
-  "EUR/GBP": {
-    "pair": "EUR/GBP",
-    "keputusan": "SELL",
-    "harga_awal": 0.83466,
-    "waktu_mulai": "2026-11-16T09:30:30Z",
-    "signal_id": "20261116T093030Z_EURGBP",
-    "harga_sekarang": 0.83466
-  },
-  "GBP/CAD": {
-    "pair": "GBP/CAD",
-    "keputusan": "SELL",
-    "harga_awal": 1.88563,
-    "waktu_mulai": "2026-11-16T09:30:30Z",
-    "signal_id": "20261116T093030Z_GBPCAD",
-    "harga_sekarang": 1.88433
-  },
   "AUD/CHF": {
     "pair": "AUD/CHF",
     "keputusan": "SELL",
     "harga_awal": 0.56738,
     "waktu_mulai": "2026-11-16T09:45:20Z",
     "signal_id": "20261116T094520Z_AUDCHF",
-    "harga_sekarang": 0.56754
+    "harga_sekarang": 0.5676
   },
   "NZD/JPY": {
     "pair": "NZD/JPY",
@@ -29,6 +13,46 @@
     "harga_awal": 88.035,
     "waktu_mulai": "2026-11-16T10:15:31Z",
     "signal_id": "20261116T101531Z_NZDJPY",
-    "harga_sekarang": 88.035
+    "harga_sekarang": 88.089
+  },
+  "EUR/GBP": {
+    "pair": "EUR/GBP",
+    "keputusan": "SELL",
+    "harga_awal": 0.83442,
+    "waktu_mulai": "2026-11-16T10:30:30Z",
+    "signal_id": "20261116T103030Z_EURGBP",
+    "harga_sekarang": 0.83442
+  },
+  "EUR/JPY": {
+    "pair": "EUR/JPY",
+    "keputusan": "SELL",
+    "harga_awal": 175.8265,
+    "waktu_mulai": "2026-11-16T10:30:30Z",
+    "signal_id": "20261116T103030Z_EURJPY",
+    "harga_sekarang": 175.8265
+  },
+  "AUD/JPY": {
+    "pair": "AUD/JPY",
+    "keputusan": "SELL",
+    "harga_awal": 107.881,
+    "waktu_mulai": "2026-11-16T10:30:30Z",
+    "signal_id": "20261116T103030Z_AUDJPY",
+    "harga_sekarang": 107.881
+  },
+  "AUD/NZD": {
+    "pair": "AUD/NZD",
+    "keputusan": "SELL",
+    "harga_awal": 1.2247,
+    "waktu_mulai": "2026-11-16T10:30:30Z",
+    "signal_id": "20261116T103030Z_AUDNZD",
+    "harga_sekarang": 1.2247
+  },
+  "CAD/JPY": {
+    "pair": "CAD/JPY",
+    "keputusan": "SELL",
+    "harga_awal": 111.795,
+    "waktu_mulai": "2026-11-16T10:30:30Z",
+    "signal_id": "20261116T103030Z_CADJPY",
+    "harga_sekarang": 111.795
   }
 }
