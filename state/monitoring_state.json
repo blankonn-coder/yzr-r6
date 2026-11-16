@@ -1,19 +1,11 @@
 {
-  "NZD/JPY": {
-    "pair": "NZD/JPY",
-    "keputusan": "SELL",
-    "harga_awal": 88.035,
-    "waktu_mulai": "2026-11-16T10:15:31Z",
-    "signal_id": "20261116T101531Z_NZDJPY",
-    "harga_sekarang": 88.02
-  },
   "EUR/GBP": {
     "pair": "EUR/GBP",
     "keputusan": "SELL",
     "harga_awal": 0.83442,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_EURGBP",
-    "harga_sekarang": 0.83466
+    "harga_sekarang": 0.83437
   },
   "EUR/JPY": {
     "pair": "EUR/JPY",
@@ -21,7 +13,7 @@
     "harga_awal": 175.8265,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_EURJPY",
-    "harga_sekarang": 175.7005
+    "harga_sekarang": 175.6875
   },
   "AUD/JPY": {
     "pair": "AUD/JPY",
@@ -29,7 +21,7 @@
     "harga_awal": 107.881,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_AUDJPY",
-    "harga_sekarang": 107.811
+    "harga_sekarang": 107.832
   },
   "AUD/NZD": {
     "pair": "AUD/NZD",
@@ -37,7 +29,7 @@
     "harga_awal": 1.2247,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_AUDNZD",
-    "harga_sekarang": 1.22486
+    "harga_sekarang": 1.22506
   },
   "CAD/JPY": {
     "pair": "CAD/JPY",
@@ -45,7 +37,7 @@
     "harga_awal": 111.795,
     "waktu_mulai": "2026-11-16T10:30:30Z",
     "signal_id": "20261116T103030Z_CADJPY",
-    "harga_sekarang": 111.759
+    "harga_sekarang": 111.748
   },
   "EUR/AUD": {
     "pair": "EUR/AUD",
@@ -53,7 +45,7 @@
     "harga_awal": 1.62928,
     "waktu_mulai": "2026-11-16T10:45:21Z",
     "signal_id": "20261116T104521Z_EURAUD",
-    "harga_sekarang": 1.62972
+    "harga_sekarang": 1.62927
   },
   "GBP/AUD": {
     "pair": "GBP/AUD",
@@ -61,7 +53,7 @@
     "harga_awal": 1.95238,
     "waktu_mulai": "2026-11-16T10:45:21Z",
     "signal_id": "20261116T104521Z_GBPAUD",
-    "harga_sekarang": 1.95254
+    "harga_sekarang": 1.95267
   },
   "GBP/CHF": {
     "pair": "GBP/CHF",
@@ -69,7 +61,7 @@
     "harga_awal": 1.10827,
     "waktu_mulai": "2026-11-16T11:00:52Z",
     "signal_id": "20261116T110052Z_GBPCHF",
-    "harga_sekarang": 1.10826
+    "harga_sekarang": 1.10866
   },
   "AUD/CHF": {
     "pair": "AUD/CHF",
@@ -77,6 +69,6 @@
     "harga_awal": 0.56754,
     "waktu_mulai": "2026-11-16T11:00:52Z",
     "signal_id": "20261116T110052Z_AUDCHF",
-    "harga_sekarang": 0.5676
+    "harga_sekarang": 0.56777
   }
 }
