@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T17:00:41Z",
+    "last_updated": "2026-11-16T17:15:45Z",
     "retensi_hari": 30,
-    "total_entri": 248
+    "total_entri": 249
   },
   "signals": [
     {
@@ -6443,7 +6443,7 @@
         "Dekat resistance 15m (0.83464)",
         "Dekat resistance 30m (0.83486)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T161527Z_EURGBP",
@@ -6497,7 +6497,7 @@
         "Dekat resistance 15m (1.57470)",
         "Dekat resistance 30m (1.57470)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261116T163042Z_EURGBP",
@@ -6606,6 +6606,33 @@
         "Dekat resistance 30m (0.83486)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261116T171545Z_EURGBP",
+      "waktu": "2026-11-16T17:15:45Z",
+      "tanggal": "2026-11-16",
+      "jam_utc": "17:15",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.83444,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83447,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 44.46,
+        "15m": 49.23,
+        "30m": 53.23
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83447)",
+        "Dekat resistance 15m (0.83464)",
+        "Dekat support 30m (0.83406)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
