@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T10:00:40Z",
+    "last_updated": "2026-11-17T10:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 347
+    "total_entri": 350
   },
   "signals": [
     {
@@ -8982,7 +8982,7 @@
         "Dekat support 15m (0.83849)",
         "Dekat support 30m (0.83849)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T091520Z_USDCAD",
@@ -9251,6 +9251,86 @@
         "Dekat resistance 30m (0.55032)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T101522Z_USDCHF",
+      "waktu": "2026-11-17T10:15:22Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "10:15",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.83864,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.83849,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 48.85,
+        "15m": 42.99,
+        "30m": 38.35
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.83881)",
+        "Dekat support 15m (0.83849)",
+        "Dekat support 30m (0.83849)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T101522Z_NZDUSD",
+      "waktu": "2026-11-17T10:15:22Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "10:15",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.54984,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.5499,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 48.01,
+        "15m": 51.05,
+        "30m": 54.05
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.55016)",
+        "Dekat resistance 15m (0.54990)",
+        "Dekat support 30m (0.55009)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T101522Z_EURAUD",
+      "waktu": "2026-11-17T10:15:22Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "10:15",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.63232,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.63199,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 35.77,
+        "15m": 44.32,
+        "30m": 53.63
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.63267)",
+        "Dekat support 15m (1.63199)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
