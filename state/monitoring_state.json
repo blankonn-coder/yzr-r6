@@ -5,7 +5,7 @@
     "harga_awal": 1.31967,
     "waktu_mulai": "2026-11-17T12:45:21Z",
     "signal_id": "20261117T124521Z_GBPUSD",
-    "harga_sekarang": 1.3196
+    "harga_sekarang": 1.31915
   },
   "USD/CAD": {
     "pair": "USD/CAD",
@@ -13,6 +13,6 @@
     "harga_awal": 1.42966,
     "waktu_mulai": "2026-11-17T12:45:21Z",
     "signal_id": "20261117T124521Z_USDCAD",
-    "harga_sekarang": 1.42922
+    "harga_sekarang": 1.42934
   }
 }

@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T13:00:39Z
+- Waktu eksekusi: 2026-11-17T13:15:22Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -8,22 +8,20 @@
 ## Sinyal BUY
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| USD/CAD | BUY | 70 | Dekat support 5m (1.42894); Dekat support 15m (1.42959); Dekat support 30m (1.42901) |
+| USD/CAD | BUY | 70 | Dekat support 5m (1.42961); Dekat support 15m (1.42959); Dekat support 30m (1.42949) |
 
 ## Sinyal SELL
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| GBP/USD | SELL | 55 | Dekat resistance 5m (1.31947); Dekat resistance 15m (1.31974) |
+Tidak ada.
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| GBP/USD | SELL | 1.31967 | 1.3196 | PROFIT 0.7 pip · 0.005% | 15 |
-| USD/CAD | BUY | 1.42966 | 1.42922 | RUGI 4.4 pip · 0.031% | 15 |
+| GBP/USD | SELL | 1.31967 | 1.31915 | PROFIT 5.2 pip · 0.039% | 30 |
+| USD/CAD | BUY | 1.42966 | 1.42934 | RUGI 3.2 pip · 0.022% | 30 |
 
 ## Info Database
-- Total entri: 367
-- Ditambahkan run ini: 2
+- Total entri: 368
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
