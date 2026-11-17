@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T22:30:33Z
+- Waktu eksekusi: 2026-11-17T22:45:22Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -9,16 +9,19 @@
 Tidak ada.
 
 ## Sinyal SELL
-Tidak ada.
+| Pair | Keputusan | Skor | Alasan |
+|---|---|---|---|
+| AUD/USD | SELL | 55 | Dekat resistance 5m (0.67367); Dekat resistance 15m (0.67382) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/CHF | BUY | 0.92423 | 0.92439 | PROFIT 1.6 pip · 0.017% | 15 |
+| EUR/CHF | BUY | 0.92423 | 0.92453 | PROFIT 3.0 pip · 0.032% | 30 |
+| AUD/USD | SELL | 0.67366 | 0.67366 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 430
-- Ditambahkan run ini: 0
+- Total entri: 431
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
