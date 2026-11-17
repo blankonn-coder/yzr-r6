@@ -1,26 +1,34 @@
 {
-  "GBP/USD": {
-    "pair": "GBP/USD",
-    "keputusan": "SELL",
-    "harga_awal": 1.31934,
-    "waktu_mulai": "2026-11-17T07:30:31Z",
-    "signal_id": "20261117T073031Z_GBPUSD",
-    "harga_sekarang": 1.31886
-  },
-  "NZD/USD": {
-    "pair": "NZD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.54998,
-    "waktu_mulai": "2026-11-17T07:30:31Z",
-    "signal_id": "20261117T073031Z_NZDUSD",
-    "harga_sekarang": 0.54945
-  },
   "EUR/NZD": {
     "pair": "EUR/NZD",
     "keputusan": "BUY",
     "harga_awal": 2.00194,
     "waktu_mulai": "2026-11-17T08:00:41Z",
     "signal_id": "20261117T080041Z_EURNZD",
-    "harga_sekarang": 2.00203
+    "harga_sekarang": 2.00081
+  },
+  "AUD/USD": {
+    "pair": "AUD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.67372,
+    "waktu_mulai": "2026-11-17T08:30:42Z",
+    "signal_id": "20261117T083042Z_AUDUSD",
+    "harga_sekarang": 0.67372
+  },
+  "USD/CAD": {
+    "pair": "USD/CAD",
+    "keputusan": "BUY",
+    "harga_awal": 1.42962,
+    "waktu_mulai": "2026-11-17T08:30:42Z",
+    "signal_id": "20261117T083042Z_USDCAD",
+    "harga_sekarang": 1.42962
+  },
+  "NZD/USD": {
+    "pair": "NZD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.54992,
+    "waktu_mulai": "2026-11-17T08:30:42Z",
+    "signal_id": "20261117T083042Z_NZDUSD",
+    "harga_sekarang": 0.54992
   }
 }
