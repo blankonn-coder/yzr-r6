@@ -5,7 +5,7 @@
     "harga_awal": 1.42944,
     "waktu_mulai": "2026-11-17T14:00:44Z",
     "signal_id": "20261117T140044Z_USDCAD",
-    "harga_sekarang": 1.42988
+    "harga_sekarang": 1.42935
   },
   "GBP/USD": {
     "pair": "GBP/USD",
@@ -13,7 +13,7 @@
     "harga_awal": 1.31932,
     "waktu_mulai": "2026-11-17T14:15:22Z",
     "signal_id": "20261117T141522Z_GBPUSD",
-    "harga_sekarang": 1.32003
+    "harga_sekarang": 1.31978
   },
   "AUD/USD": {
     "pair": "AUD/USD",
@@ -21,6 +21,6 @@
     "harga_awal": 0.67387,
     "waktu_mulai": "2026-11-17T14:30:35Z",
     "signal_id": "20261117T143035Z_AUDUSD",
-    "harga_sekarang": 0.67387
+    "harga_sekarang": 0.67409
   }
 }

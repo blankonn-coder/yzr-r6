@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T14:30:35Z",
+    "last_updated": "2026-11-17T14:45:25Z",
     "retensi_hari": 30,
-    "total_entri": 375
+    "total_entri": 378
   },
   "signals": [
     {
@@ -10001,6 +10001,86 @@
         "Dekat support 5m (1.42961)",
         "Dekat support 15m (1.42959)",
         "Dekat support 30m (1.42959)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T144525Z_GBPUSD",
+      "waktu": "2026-11-17T14:45:25Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "14:45",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.31978,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.31974,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 57.76,
+        "15m": 55.52,
+        "30m": 57.06
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.31991)",
+        "Dekat resistance 15m (1.31974)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T144525Z_AUDUSD",
+      "waktu": "2026-11-17T14:45:25Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "14:45",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.67409,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67418,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 61.72,
+        "15m": 56.63,
+        "30m": 51.39
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67432)",
+        "Dekat resistance 15m (0.67418)",
+        "Dekat support 30m (0.67419)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T144525Z_USDCAD",
+      "waktu": "2026-11-17T14:45:25Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "14:45",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.42935,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42949,
+        "tf": "30m"
+      },
+      "rsi": {
+        "5m": 45.08,
+        "15m": 44.53,
+        "30m": 50.35
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.42914)",
+        "Dekat support 15m (1.42959)",
+        "Dekat support 30m (1.42949)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
