@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T19:30:33Z",
+    "last_updated": "2026-11-17T19:45:24Z",
     "retensi_hari": 30,
-    "total_entri": 426
+    "total_entri": 427
   },
   "signals": [
     {
@@ -11185,7 +11185,7 @@
         "Dekat resistance 5m (175.48250)",
         "Dekat resistance 30m (175.48450)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T184526Z_EURUSD",
@@ -11365,6 +11365,33 @@
       "rsi": {
         "5m": 40.89,
         "15m": 54.44,
+        "30m": 55.96
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.10105)",
+        "Dekat resistance 15m (1.10094)",
+        "Dekat resistance 30m (1.10132)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T194524Z_EURUSD",
+      "waktu": "2026-11-17T19:45:24Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "19:45",
+      "pair": "EUR/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.10107,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.10105,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 43.3,
+        "15m": 55.02,
         "30m": 55.96
       },
       "tren": "TURUN",
