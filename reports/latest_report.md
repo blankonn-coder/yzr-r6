@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T09:45:20Z
+- Waktu eksekusi: 2026-11-17T10:00:40Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -13,19 +13,21 @@
 ## Sinyal SELL
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| NZD/USD | SELL | 55 | Dekat resistance 5m (0.55016); Dekat resistance 15m (0.55006); Dekat support 30m (0.55009) |
+| GBP/USD | SELL | 55 | Dekat resistance 5m (1.32007); Dekat resistance 15m (1.31974) |
+| NZD/USD | SELL | 70 | Dekat resistance 5m (0.55016); Dekat resistance 15m (0.55032); Dekat resistance 30m (0.55032) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/CHF | BUY | 0.83878 | 0.83796 | RUGI 8.2 pip · 0.098% | 30 |
-| EUR/CAD | SELL | 1.57295 | 1.57269 | PROFIT 2.6 pip · 0.017% | 14 |
-| USD/CAD | BUY | 1.42935 | 1.42935 | 0.0 pip · 0.000% | 0 |
-| NZD/USD | SELL | 0.55019 | 0.55019 | 0.0 pip · 0.000% | 0 |
+| USD/CHF | BUY | 0.83878 | 0.83822 | RUGI 5.6 pip · 0.067% | 45 |
+| EUR/CAD | SELL | 1.57295 | 1.57238 | PROFIT 5.7 pip · 0.036% | 30 |
+| USD/CAD | BUY | 1.42935 | 1.42935 | 0.0 pip · 0.000% | 15 |
+| NZD/USD | SELL | 0.55019 | 0.55023 | RUGI 0.4 pip · 0.007% | 15 |
+| GBP/USD | SELL | 1.31976 | 1.31976 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 344
-- Ditambahkan run ini: 2
+- Total entri: 347
+- Ditambahkan run ini: 3
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
