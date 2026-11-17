@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T09:30:30Z",
+    "last_updated": "2026-11-17T09:45:20Z",
     "retensi_hari": 30,
-    "total_entri": 342
+    "total_entri": 344
   },
   "signals": [
     {
@@ -8820,7 +8820,7 @@
         "Dekat resistance 5m (0.67371)",
         "Dekat resistance 15m (0.67403)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T083042Z_USDCAD",
@@ -8847,7 +8847,7 @@
         "Dekat support 15m (1.42959)",
         "Dekat support 30m (1.42959)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T083042Z_NZDUSD",
@@ -8874,7 +8874,7 @@
         "Dekat resistance 15m (0.54990)",
         "Dekat support 30m (0.55009)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T084520Z_NZDUSD",
@@ -9115,6 +9115,60 @@
       "alasan": [
         "Dekat resistance 5m (1.57316)",
         "Dekat resistance 15m (1.57290)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T094520Z_USDCAD",
+      "waktu": "2026-11-17T09:45:20Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "09:45",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.42935,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42949,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 44.32,
+        "15m": 39.89,
+        "30m": 44.74
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.42959)",
+        "Dekat support 15m (1.42949)",
+        "Dekat support 30m (1.42949)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T094520Z_NZDUSD",
+      "waktu": "2026-11-17T09:45:20Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "09:45",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.55019,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.55016,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 57.49,
+        "15m": 56.57,
+        "30m": 50.52
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.55016)",
+        "Dekat resistance 15m (0.55006)",
+        "Dekat support 30m (0.55009)"
       ],
       "status_pantau": "AKTIF"
     }
