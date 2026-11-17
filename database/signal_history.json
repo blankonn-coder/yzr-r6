@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-16T23:45:22Z",
+    "last_updated": "2026-11-17T00:00:38Z",
     "retensi_hari": 30,
     "total_entri": 253
   },
@@ -6739,7 +6739,7 @@
         "Dekat resistance 5m (1.31885)",
         "Dekat resistance 15m (1.31933)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     }
   ]
 }
