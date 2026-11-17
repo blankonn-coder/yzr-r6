@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T10:45:22Z",
+    "last_updated": "2026-11-17T11:00:41Z",
     "retensi_hari": 30,
-    "total_entri": 354
+    "total_entri": 355
   },
   "signals": [
     {
@@ -9196,7 +9196,7 @@
         "Dekat resistance 5m (1.32007)",
         "Dekat resistance 15m (1.31974)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T100040Z_USDCAD",
@@ -9439,6 +9439,32 @@
         "Dekat support 30m (0.55009)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T110041Z_AUDUSD",
+      "waktu": "2026-11-17T11:00:41Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "11:00",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.67378,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67384,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 56.32,
+        "15m": 52.28,
+        "30m": 49.54
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67384)",
+        "Dekat resistance 15m (0.67403)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
