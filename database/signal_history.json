@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T20:00:43Z",
+    "last_updated": "2026-11-17T20:15:30Z",
     "retensi_hari": 30,
-    "total_entri": 427
+    "total_entri": 428
   },
   "signals": [
     {
@@ -11293,7 +11293,7 @@
         "Dekat resistance 15m (0.55015)",
         "Dekat resistance 30m (0.55032)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T190045Z_EURJPY",
@@ -11401,6 +11401,33 @@
         "Dekat resistance 30m (1.10132)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T201530Z_USDCHF",
+      "waktu": "2026-11-17T20:15:30Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "20:15",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.83966,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.83961,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 62.96,
+        "15m": 54.56,
+        "30m": 51.66
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.83937)",
+        "Dekat support 15m (0.83961)",
+        "Dekat support 30m (0.83959)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }

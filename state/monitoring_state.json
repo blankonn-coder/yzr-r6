@@ -1,10 +1,10 @@
 {
-  "NZD/USD": {
-    "pair": "NZD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.55014,
-    "waktu_mulai": "2026-11-17T19:00:45Z",
-    "signal_id": "20261117T190045Z_NZDUSD",
-    "harga_sekarang": 0.54969
+  "USD/CHF": {
+    "pair": "USD/CHF",
+    "keputusan": "BUY",
+    "harga_awal": 0.83966,
+    "waktu_mulai": "2026-11-17T20:15:30Z",
+    "signal_id": "20261117T201530Z_USDCHF",
+    "harga_sekarang": 0.83966
   }
 }
