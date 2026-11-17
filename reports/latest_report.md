@@ -1,14 +1,12 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T21:15:36Z
+- Waktu eksekusi: 2026-11-17T21:30:32Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
 
 ## Sinyal BUY
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| USD/CHF | BUY | 70 | Dekat support 5m (0.83974); Dekat support 15m (0.83961); Dekat support 30m (0.83959) |
+Tidak ada.
 
 ## Sinyal SELL
 Tidak ada.
@@ -16,11 +14,11 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/CHF | BUY | 0.83991 | 0.83991 | 0.0 pip · 0.000% | 0 |
+| USD/CHF | BUY | 0.83991 | 0.84066 | PROFIT 7.5 pip · 0.089% | 14 |
 
 ## Info Database
 - Total entri: 429
-- Ditambahkan run ini: 1
+- Ditambahkan run ini: 0
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
