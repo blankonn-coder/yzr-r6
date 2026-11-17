@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T07:00:35Z",
+    "last_updated": "2026-11-17T07:15:29Z",
     "retensi_hari": 30,
     "total_entri": 327
   },
@@ -8342,7 +8342,7 @@
         "Dekat support 30m (1.42949)",
         "RSI 5m oversold (29.73)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T060036Z_NZDUSD",
