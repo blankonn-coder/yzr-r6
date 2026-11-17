@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T19:15:23Z
+- Waktu eksekusi: 2026-11-17T19:30:33Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -16,12 +16,12 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/JPY | SELL | 175.4695 | 175.4335 | PROFIT 3.6 pip · 0.021% | 44 |
-| EUR/USD | SELL | 1.10129 | 1.10107 | PROFIT 2.2 pip · 0.020% | 29 |
-| NZD/USD | SELL | 0.55014 | 0.54999 | PROFIT 1.5 pip · 0.027% | 14 |
+| EUR/JPY | SELL | 175.4695 | 175.4285 | PROFIT 4.1 pip · 0.023% | 59 |
+| EUR/USD | SELL | 1.10129 | 1.10103 | PROFIT 2.6 pip · 0.024% | 45 |
+| NZD/USD | SELL | 0.55014 | 0.54993 | PROFIT 2.1 pip · 0.038% | 29 |
 
 ## Info Database
-- Total entri: 425
+- Total entri: 426
 - Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
