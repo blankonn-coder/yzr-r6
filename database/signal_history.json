@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T22:45:22Z",
+    "last_updated": "2026-11-17T23:00:48Z",
     "retensi_hari": 30,
-    "total_entri": 431
+    "total_entri": 432
   },
   "signals": [
     {
@@ -11508,6 +11508,32 @@
         "Dekat resistance 15m (0.67382)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T230048Z_AUDUSD",
+      "waktu": "2026-11-17T23:00:48Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "23:00",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.67358,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67367,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 50.71,
+        "15m": 48.33,
+        "30m": 47.69
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67367)",
+        "Dekat resistance 15m (0.67382)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
