@@ -1,34 +1,31 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T05:15:24Z
+- Waktu eksekusi: 2026-11-17T05:30:28Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
 
 ## Sinyal BUY
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| USD/CHF | BUY | 70 | Dekat support 5m (0.83913); Dekat support 15m (0.83927); Dekat support 30m (0.83959) |
+Tidak ada.
 
 ## Sinyal SELL
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| EUR/USD | SELL | 70 | Dekat resistance 5m (1.10087); Dekat resistance 15m (1.10093); Dekat resistance 30m (1.10036) |
 | GBP/USD | SELL | 55 | Dekat resistance 5m (1.31970); Dekat resistance 15m (1.31933) |
-| AUD/USD | SELL | 55 | Dekat resistance 5m (0.67427); Dekat resistance 15m (0.67403); Dekat support 30m (0.67419) |
+| AUD/USD | SELL | 55 | Dekat resistance 5m (0.67427); Dekat resistance 15m (0.67433); Dekat support 30m (0.67485) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/CHF | BUY | 0.83945 | 0.8394 | RUGI 0.5 pip · 0.006% | 44 |
-| AUD/USD | SELL | 0.67421 | 0.67392 | PROFIT 2.9 pip · 0.043% | 44 |
-| EUR/GBP | SELL | 0.83425 | 0.83417 | PROFIT 0.8 pip · 0.010% | 44 |
-| EUR/USD | SELL | 1.10069 | 1.10069 | 0.0 pip · 0.000% | 0 |
-| GBP/USD | SELL | 1.3195 | 1.3195 | 0.0 pip · 0.000% | 0 |
+| USD/CHF | BUY | 0.83945 | 0.83954 | PROFIT 0.9 pip · 0.011% | 59 |
+| AUD/USD | SELL | 0.67421 | 0.67452 | RUGI 3.1 pip · 0.046% | 59 |
+| EUR/GBP | SELL | 0.83425 | 0.8341 | PROFIT 1.5 pip · 0.018% | 59 |
+| EUR/USD | SELL | 1.10069 | 1.10059 | PROFIT 1.0 pip · 0.009% | 15 |
+| GBP/USD | SELL | 1.3195 | 1.3195 | 0.0 pip · 0.000% | 15 |
 
 ## Info Database
-- Total entri: 302
-- Ditambahkan run ini: 4
+- Total entri: 304
+- Ditambahkan run ini: 2
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 

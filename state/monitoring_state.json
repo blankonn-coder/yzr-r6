@@ -5,7 +5,7 @@
     "harga_awal": 0.83945,
     "waktu_mulai": "2026-11-17T04:30:33Z",
     "signal_id": "20261117T043033Z_USDCHF",
-    "harga_sekarang": 0.8394
+    "harga_sekarang": 0.83954
   },
   "AUD/USD": {
     "pair": "AUD/USD",
@@ -13,7 +13,7 @@
     "harga_awal": 0.67421,
     "waktu_mulai": "2026-11-17T04:30:33Z",
     "signal_id": "20261117T043033Z_AUDUSD",
-    "harga_sekarang": 0.67392
+    "harga_sekarang": 0.67452
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -21,7 +21,7 @@
     "harga_awal": 0.83425,
     "waktu_mulai": "2026-11-17T04:30:33Z",
     "signal_id": "20261117T043033Z_EURGBP",
-    "harga_sekarang": 0.83417
+    "harga_sekarang": 0.8341
   },
   "EUR/USD": {
     "pair": "EUR/USD",
@@ -29,7 +29,7 @@
     "harga_awal": 1.10069,
     "waktu_mulai": "2026-11-17T05:15:24Z",
     "signal_id": "20261117T051524Z_EURUSD",
-    "harga_sekarang": 1.10069
+    "harga_sekarang": 1.10059
   },
   "GBP/USD": {
     "pair": "GBP/USD",
