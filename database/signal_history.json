@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T13:15:22Z",
+    "last_updated": "2026-11-17T13:30:33Z",
     "retensi_hari": 30,
-    "total_entri": 368
+    "total_entri": 369
   },
   "signals": [
     {
@@ -9812,6 +9812,33 @@
         "Dekat support 5m (1.42961)",
         "Dekat support 15m (1.42959)",
         "Dekat support 30m (1.42949)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T133033Z_USDCAD",
+      "waktu": "2026-11-17T13:30:33Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "13:30",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.42965,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42961,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 49.69,
+        "15m": 46.62,
+        "30m": 47.14
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.42961)",
+        "Dekat support 15m (1.42959)",
+        "Dekat support 30m (1.42959)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
