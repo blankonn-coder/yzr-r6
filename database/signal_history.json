@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T16:15:29Z",
+    "last_updated": "2026-11-17T16:30:33Z",
     "retensi_hari": 30,
-    "total_entri": 394
+    "total_entri": 397
   },
   "signals": [
     {
@@ -10513,6 +10513,87 @@
         "Dekat resistance 5m (0.55026)",
         "Dekat resistance 15m (0.55054)",
         "Dekat resistance 30m (0.55054)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T163033Z_EURUSD",
+      "waktu": "2026-11-17T16:30:33Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "16:30",
+      "pair": "EUR/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.10124,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.10132,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 68.61,
+        "15m": 66.64,
+        "30m": 61.56
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.10105)",
+        "Dekat resistance 15m (1.10132)",
+        "Dekat resistance 30m (1.10132)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T163033Z_AUDUSD",
+      "waktu": "2026-11-17T16:30:33Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "16:30",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.67418,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67418,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 55.58,
+        "15m": 54.91,
+        "30m": 54.57
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67424)",
+        "Dekat resistance 15m (0.67418)",
+        "Dekat resistance 30m (0.67432)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T163033Z_NZDUSD",
+      "waktu": "2026-11-17T16:30:33Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "16:30",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.55018,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.55015,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 56.33,
+        "15m": 56.19,
+        "30m": 55.31
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.55015)",
+        "Dekat resistance 15m (0.55015)",
+        "Dekat resistance 30m (0.55032)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
