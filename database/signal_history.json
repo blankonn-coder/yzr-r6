@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T19:45:24Z",
+    "last_updated": "2026-11-17T20:00:43Z",
     "retensi_hari": 30,
     "total_entri": 427
   },
@@ -11212,7 +11212,7 @@
         "Dekat resistance 15m (1.10094)",
         "Dekat resistance 30m (1.10132)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T184526Z_NZDUSD",
