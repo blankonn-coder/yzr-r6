@@ -1,19 +1,11 @@
 {
-  "USD/CHF": {
-    "pair": "USD/CHF",
-    "keputusan": "BUY",
-    "harga_awal": 0.83893,
-    "waktu_mulai": "2026-11-17T06:45:22Z",
-    "signal_id": "20261117T064522Z_USDCHF",
-    "harga_sekarang": 0.83945
-  },
   "GBP/USD": {
     "pair": "GBP/USD",
     "keputusan": "SELL",
     "harga_awal": 1.31934,
     "waktu_mulai": "2026-11-17T07:30:31Z",
     "signal_id": "20261117T073031Z_GBPUSD",
-    "harga_sekarang": 1.31934
+    "harga_sekarang": 1.31893
   },
   "NZD/USD": {
     "pair": "NZD/USD",
@@ -21,6 +13,6 @@
     "harga_awal": 0.54998,
     "waktu_mulai": "2026-11-17T07:30:31Z",
     "signal_id": "20261117T073031Z_NZDUSD",
-    "harga_sekarang": 0.54998
+    "harga_sekarang": 0.5495
   }
 }
