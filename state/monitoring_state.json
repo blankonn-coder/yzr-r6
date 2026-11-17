@@ -1,35 +1,11 @@
 {
-  "USD/CHF": {
-    "pair": "USD/CHF",
-    "keputusan": "BUY",
-    "harga_awal": 0.83945,
-    "waktu_mulai": "2026-11-17T04:30:33Z",
-    "signal_id": "20261117T043033Z_USDCHF",
-    "harga_sekarang": 0.83954
-  },
-  "AUD/USD": {
-    "pair": "AUD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.67421,
-    "waktu_mulai": "2026-11-17T04:30:33Z",
-    "signal_id": "20261117T043033Z_AUDUSD",
-    "harga_sekarang": 0.67452
-  },
-  "EUR/GBP": {
-    "pair": "EUR/GBP",
-    "keputusan": "SELL",
-    "harga_awal": 0.83425,
-    "waktu_mulai": "2026-11-17T04:30:33Z",
-    "signal_id": "20261117T043033Z_EURGBP",
-    "harga_sekarang": 0.8341
-  },
   "EUR/USD": {
     "pair": "EUR/USD",
     "keputusan": "SELL",
     "harga_awal": 1.10069,
     "waktu_mulai": "2026-11-17T05:15:24Z",
     "signal_id": "20261117T051524Z_EURUSD",
-    "harga_sekarang": 1.10059
+    "harga_sekarang": 1.10112
   },
   "GBP/USD": {
     "pair": "GBP/USD",
@@ -37,6 +13,46 @@
     "harga_awal": 1.3195,
     "waktu_mulai": "2026-11-17T05:15:24Z",
     "signal_id": "20261117T051524Z_GBPUSD",
-    "harga_sekarang": 1.3195
+    "harga_sekarang": 1.32014
+  },
+  "USD/CHF": {
+    "pair": "USD/CHF",
+    "keputusan": "BUY",
+    "harga_awal": 0.83896,
+    "waktu_mulai": "2026-11-17T05:45:19Z",
+    "signal_id": "20261117T054519Z_USDCHF",
+    "harga_sekarang": 0.83896
+  },
+  "AUD/USD": {
+    "pair": "AUD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.67451,
+    "waktu_mulai": "2026-11-17T05:45:19Z",
+    "signal_id": "20261117T054519Z_AUDUSD",
+    "harga_sekarang": 0.67451
+  },
+  "NZD/USD": {
+    "pair": "NZD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.54985,
+    "waktu_mulai": "2026-11-17T05:45:19Z",
+    "signal_id": "20261117T054519Z_NZDUSD",
+    "harga_sekarang": 0.54985
+  },
+  "EUR/CAD": {
+    "pair": "EUR/CAD",
+    "keputusan": "SELL",
+    "harga_awal": 1.57418,
+    "waktu_mulai": "2026-11-17T05:45:19Z",
+    "signal_id": "20261117T054519Z_EURCAD",
+    "harga_sekarang": 1.57418
+  },
+  "XAU/USD": {
+    "pair": "XAU/USD",
+    "keputusan": "SELL",
+    "harga_awal": 3879.791,
+    "waktu_mulai": "2026-11-17T05:45:19Z",
+    "signal_id": "20261117T054519Z_XAUUSD",
+    "harga_sekarang": 3879.791
   }
 }
