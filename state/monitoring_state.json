@@ -1,19 +1,11 @@
 {
-  "AUD/USD": {
-    "pair": "AUD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.67387,
-    "waktu_mulai": "2026-11-17T14:30:35Z",
-    "signal_id": "20261117T143035Z_AUDUSD",
-    "harga_sekarang": 0.67364
-  },
   "USD/CAD": {
     "pair": "USD/CAD",
     "keputusan": "BUY",
     "harga_awal": 1.42955,
     "waktu_mulai": "2026-11-17T15:00:47Z",
     "signal_id": "20261117T150047Z_USDCAD",
-    "harga_sekarang": 1.4303
+    "harga_sekarang": 1.42999
   },
   "EUR/AUD": {
     "pair": "EUR/AUD",
@@ -21,7 +13,7 @@
     "harga_awal": 1.63051,
     "waktu_mulai": "2026-11-17T15:00:47Z",
     "signal_id": "20261117T150047Z_EURAUD",
-    "harga_sekarang": 1.63197
+    "harga_sekarang": 1.63202
   },
   "GBP/USD": {
     "pair": "GBP/USD",
@@ -29,6 +21,22 @@
     "harga_awal": 1.31925,
     "waktu_mulai": "2026-11-17T15:15:22Z",
     "signal_id": "20261117T151522Z_GBPUSD",
-    "harga_sekarang": 1.31925
+    "harga_sekarang": 1.32011
+  },
+  "EUR/USD": {
+    "pair": "EUR/USD",
+    "keputusan": "SELL",
+    "harga_awal": 1.09969,
+    "waktu_mulai": "2026-11-17T15:30:37Z",
+    "signal_id": "20261117T153037Z_EURUSD",
+    "harga_sekarang": 1.09969
+  },
+  "AUD/USD": {
+    "pair": "AUD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.67384,
+    "waktu_mulai": "2026-11-17T15:30:37Z",
+    "signal_id": "20261117T153037Z_AUDUSD",
+    "harga_sekarang": 0.67384
   }
 }

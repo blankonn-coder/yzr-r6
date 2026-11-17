@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T15:15:22Z",
+    "last_updated": "2026-11-17T15:30:37Z",
     "retensi_hari": 30,
-    "total_entri": 383
+    "total_entri": 386
   },
   "signals": [
     {
@@ -9975,7 +9975,7 @@
         "Dekat resistance 15m (0.67418)",
         "Dekat support 30m (0.67419)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T143035Z_USDCAD",
@@ -10216,6 +10216,86 @@
         "Dekat resistance 5m (1.31947)",
         "Dekat support 15m (1.31892)",
         "Dekat resistance 30m (1.31900)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T153037Z_EURUSD",
+      "waktu": "2026-11-17T15:30:37Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "15:30",
+      "pair": "EUR/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.09969,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.09958,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 63.19,
+        "15m": 54.99,
+        "30m": 50.55
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.09958)",
+        "Dekat resistance 15m (1.09958)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T153037Z_GBPUSD",
+      "waktu": "2026-11-17T15:30:37Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "15:30",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.32011,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.3201,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 61.74,
+        "15m": 57.74,
+        "30m": 56.55
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.32010)",
+        "Dekat resistance 15m (1.32028)",
+        "Dekat resistance 30m (1.32028)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T153037Z_AUDUSD",
+      "waktu": "2026-11-17T15:30:37Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "15:30",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.67384,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67383,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 54.41,
+        "15m": 52.66,
+        "30m": 50.78
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67383)",
+        "Dekat resistance 15m (0.67418)",
+        "Dekat support 30m (0.67419)"
       ],
       "status_pantau": "AKTIF"
     }
