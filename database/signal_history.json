@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T08:45:20Z",
+    "last_updated": "2026-11-17T09:00:38Z",
     "retensi_hari": 30,
-    "total_entri": 334
+    "total_entri": 336
   },
   "signals": [
     {
@@ -8900,6 +8900,60 @@
         "Dekat resistance 5m (0.55016)",
         "Dekat resistance 15m (0.55032)",
         "Dekat resistance 30m (0.55032)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T090038Z_USDCAD",
+      "waktu": "2026-11-17T09:00:38Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "09:00",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.42952,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42949,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 41.37,
+        "15m": 41.39,
+        "30m": 44.39
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.42959)",
+        "Dekat support 15m (1.42949)",
+        "Dekat support 30m (1.42949)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T090038Z_NZDUSD",
+      "waktu": "2026-11-17T09:00:38Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "09:00",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.54978,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.5499,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 51.26,
+        "15m": 51.9,
+        "30m": 49.49
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.55006)",
+        "Dekat resistance 15m (0.54990)",
+        "Dekat support 30m (0.54951)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
