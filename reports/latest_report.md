@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T06:15:22Z
+- Waktu eksekusi: 2026-11-17T06:30:31Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -8,29 +8,31 @@
 ## Sinyal BUY
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| USD/CHF | BUY | 55 | Dekat support 5m (0.83913); Dekat support 15m (0.83913) |
+| USD/CHF | BUY | 70 | Dekat support 5m (0.83913); Dekat support 15m (0.83927); Dekat support 30m (0.83959) |
 
 ## Sinyal SELL
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| EUR/USD | SELL | 55 | Dekat resistance 5m (1.10087); Dekat resistance 15m (1.10093) |
-| GBP/USD | SELL | 55 | Dekat resistance 5m (1.31970); Dekat resistance 15m (1.31974) |
+| EUR/USD | SELL | 70 | Dekat resistance 5m (1.10087); Dekat resistance 15m (1.10093); Dekat resistance 30m (1.10036) |
+| GBP/USD | SELL | 70 | Dekat resistance 5m (1.31970); Dekat resistance 15m (1.31933); Dekat resistance 30m (1.31900) |
+| EUR/GBP | SELL | 70 | Dekat resistance 5m (0.83430); Dekat resistance 15m (0.83434); Dekat resistance 30m (0.83447) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/USD | SELL | 1.10069 | 1.10079 | RUGI 1.0 pip · 0.009% | 59 |
-| GBP/USD | SELL | 1.3195 | 1.3196 | RUGI 1.0 pip · 0.008% | 59 |
-| USD/CHF | BUY | 0.83896 | 0.83896 | 0.0 pip · 0.000% | 30 |
-| AUD/USD | SELL | 0.67451 | 0.67358 | PROFIT 9.3 pip · 0.138% | 30 |
-| NZD/USD | SELL | 0.54985 | 0.54935 | PROFIT 5.0 pip · 0.091% | 30 |
-| EUR/CAD | SELL | 1.57418 | 1.57436 | RUGI 1.8 pip · 0.011% | 30 |
-| XAU/USD | SELL | 3879.791 | 3874.871 | PROFIT 49.2 pip · 0.127% | 30 |
-| USD/CAD | BUY | 1.42962 | 1.43026 | PROFIT 6.4 pip · 0.045% | 14 |
+| USD/CHF | BUY | 0.83896 | 0.83927 | PROFIT 3.1 pip · 0.037% | 45 |
+| AUD/USD | SELL | 0.67451 | 0.67349 | PROFIT 10.2 pip · 0.151% | 45 |
+| NZD/USD | SELL | 0.54985 | 0.54941 | PROFIT 4.4 pip · 0.080% | 45 |
+| EUR/CAD | SELL | 1.57418 | 1.5743 | RUGI 1.2 pip · 0.008% | 45 |
+| XAU/USD | SELL | 3879.791 | 3876.016 | PROFIT 37.8 pip · 0.097% | 45 |
+| USD/CAD | BUY | 1.42962 | 1.43036 | PROFIT 7.4 pip · 0.052% | 29 |
+| EUR/USD | SELL | 1.1007 | 1.1007 | 0.0 pip · 0.000% | 0 |
+| GBP/USD | SELL | 1.31934 | 1.31934 | 0.0 pip · 0.000% | 0 |
+| EUR/GBP | SELL | 0.83427 | 0.83427 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 318
-- Ditambahkan run ini: 3
+- Total entri: 322
+- Ditambahkan run ini: 4
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
