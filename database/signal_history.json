@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T11:30:29Z",
+    "last_updated": "2026-11-17T11:45:31Z",
     "retensi_hari": 30,
-    "total_entri": 358
+    "total_entri": 360
   },
   "signals": [
     {
@@ -9357,7 +9357,7 @@
         "Dekat resistance 15m (0.67403)",
         "Dekat support 30m (0.67419)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T103032Z_NZDUSD",
@@ -9438,7 +9438,7 @@
         "Dekat resistance 15m (0.54990)",
         "Dekat support 30m (0.55009)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261117T110041Z_AUDUSD",
@@ -9546,6 +9546,60 @@
         "Dekat support 30m (0.55009)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T114531Z_AUDUSD",
+      "waktu": "2026-11-17T11:45:31Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "11:45",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.67423,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67418,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 62.79,
+        "15m": 58.66,
+        "30m": 53.83
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67418)",
+        "Dekat resistance 15m (0.67418)",
+        "Dekat support 30m (0.67419)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T114531Z_NZDUSD",
+      "waktu": "2026-11-17T11:45:31Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "11:45",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.54991,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.5499,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 51.76,
+        "15m": 51.92,
+        "30m": 50.31
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.55005)",
+        "Dekat resistance 15m (0.54990)",
+        "Dekat support 30m (0.55009)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }

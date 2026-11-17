@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-17T11:30:29Z
+- Waktu eksekusi: 2026-11-17T11:45:31Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -17,11 +17,11 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| AUD/USD | SELL | 0.6738 | 0.6742 | RUGI 4.0 pip · 0.059% | 59 |
-| NZD/USD | SELL | 0.54997 | 0.54989 | PROFIT 0.8 pip · 0.015% | 45 |
+| AUD/USD | SELL | 0.67423 | 0.67423 | 0.0 pip · 0.000% | 0 |
+| NZD/USD | SELL | 0.54991 | 0.54991 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 358
+- Total entri: 360
 - Ditambahkan run ini: 2
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
