@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T23:15:32Z",
+    "last_updated": "2026-11-17T23:30:29Z",
     "retensi_hari": 30,
-    "total_entri": 433
+    "total_entri": 434
   },
   "signals": [
     {
@@ -11557,6 +11557,33 @@
       "tren": "TURUN",
       "alasan": [
         "Dekat resistance 5m (0.67400)",
+        "Dekat resistance 15m (0.67382)",
+        "Dekat resistance 30m (0.67432)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T233029Z_AUDUSD",
+      "waktu": "2026-11-17T23:30:29Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "23:30",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.67404,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67382,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 65.09,
+        "15m": 57.57,
+        "30m": 54.7
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.67382)",
         "Dekat resistance 15m (0.67382)",
         "Dekat resistance 30m (0.67432)"
       ],
