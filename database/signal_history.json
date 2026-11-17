@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T05:45:19Z",
+    "last_updated": "2026-11-17T06:00:36Z",
     "retensi_hari": 30,
-    "total_entri": 310
+    "total_entri": 315
   },
   "signals": [
     {
@@ -8264,6 +8264,139 @@
         "Dekat resistance 15m (3879.96100)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T060036Z_EURUSD",
+      "waktu": "2026-11-17T06:00:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "06:00",
+      "pair": "EUR/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.10113,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.10096,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 62.65,
+        "15m": 64.17,
+        "30m": 58.81
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.10096)",
+        "Dekat resistance 15m (1.10096)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T060036Z_GBPUSD",
+      "waktu": "2026-11-17T06:00:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "06:00",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.32004,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.31974,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 63.87,
+        "15m": 65.91,
+        "30m": 59.58
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.31974)",
+        "Dekat resistance 15m (1.31974)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T060036Z_USDCAD",
+      "waktu": "2026-11-17T06:00:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "06:00",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 50,
+      "harga_saat_itu": 1.42962,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42949,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 29.73,
+        "15m": 37.17,
+        "30m": 45.69
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 15m (1.42949)",
+        "Dekat support 30m (1.42949)",
+        "RSI 5m oversold (29.73)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T060036Z_NZDUSD",
+      "waktu": "2026-11-17T06:00:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "06:00",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.54998,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.5499,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 61.71,
+        "15m": 56.65,
+        "30m": 50.56
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.54990)",
+        "Dekat resistance 15m (0.54990)",
+        "Dekat support 30m (0.55009)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261117T060036Z_EURCAD",
+      "waktu": "2026-11-17T06:00:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "06:00",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.57412,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57429,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 51.43,
+        "15m": 57.99,
+        "30m": 58.73
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57429)",
+        "Dekat resistance 15m (1.57449)",
+        "Dekat resistance 30m (1.57449)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
