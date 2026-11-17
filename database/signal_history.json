@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T21:00:43Z",
+    "last_updated": "2026-11-17T21:15:36Z",
     "retensi_hari": 30,
-    "total_entri": 428
+    "total_entri": 429
   },
   "signals": [
     {
@@ -11424,6 +11424,33 @@
       "tren": "NAIK",
       "alasan": [
         "Dekat support 5m (0.83937)",
+        "Dekat support 15m (0.83961)",
+        "Dekat support 30m (0.83959)"
+      ],
+      "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261117T211536Z_USDCHF",
+      "waktu": "2026-11-17T21:15:36Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "21:15",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.83991,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.83974,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 64.91,
+        "15m": 57.94,
+        "30m": 54.51
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.83974)",
         "Dekat support 15m (0.83961)",
         "Dekat support 30m (0.83959)"
       ],
