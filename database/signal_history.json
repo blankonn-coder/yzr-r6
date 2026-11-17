@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T14:00:44Z",
+    "last_updated": "2026-11-17T14:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 370
+    "total_entri": 372
   },
   "signals": [
     {
@@ -9868,6 +9868,60 @@
         "Dekat support 30m (1.42949)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T141522Z_GBPUSD",
+      "waktu": "2026-11-17T14:15:22Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "14:15",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 45,
+      "harga_saat_itu": 1.31932,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.31947,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 54.78,
+        "15m": 52.0,
+        "30m": 46.87
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.31947)",
+        "Dekat support 15m (1.31892)",
+        "Dekat resistance 30m (1.31900)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T141522Z_USDCAD",
+      "waktu": "2026-11-17T14:15:22Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "14:15",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 70,
+      "harga_saat_itu": 1.42955,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.42959,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 47.45,
+        "15m": 46.5,
+        "30m": 44.82
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.42961)",
+        "Dekat support 15m (1.42959)",
+        "Dekat support 30m (1.42959)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
