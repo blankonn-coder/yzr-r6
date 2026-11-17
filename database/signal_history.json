@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-17T01:00:35Z",
+    "last_updated": "2026-11-17T01:15:31Z",
     "retensi_hari": 30,
-    "total_entri": 254
+    "total_entri": 255
   },
   "signals": [
     {
@@ -6765,6 +6765,32 @@
         "Dekat resistance 5m (0.55020)",
         "Dekat resistance 15m (0.55051)",
         "Dekat support 30m (0.55009)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261117T011531Z_EURAUD",
+      "waktu": "2026-11-17T01:15:31Z",
+      "tanggal": "2026-11-17",
+      "jam_utc": "01:15",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.63187,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.63199,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 42.21,
+        "15m": 46.51,
+        "30m": 53.98
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.63199)",
+        "Dekat support 15m (1.63199)"
       ],
       "status_pantau": "AKTIF"
     }

@@ -5,6 +5,14 @@
     "harga_awal": 0.55032,
     "waktu_mulai": "2026-11-17T00:45:21Z",
     "signal_id": "20261117T004521Z_NZDUSD",
-    "harga_sekarang": 0.55011
+    "harga_sekarang": 0.54955
+  },
+  "EUR/AUD": {
+    "pair": "EUR/AUD",
+    "keputusan": "BUY",
+    "harga_awal": 1.63187,
+    "waktu_mulai": "2026-11-17T01:15:31Z",
+    "signal_id": "20261117T011531Z_EURAUD",
+    "harga_sekarang": 1.63187
   }
 }
