@@ -5,7 +5,7 @@
     "harga_awal": 0.67423,
     "waktu_mulai": "2026-11-17T11:45:31Z",
     "signal_id": "20261117T114531Z_AUDUSD",
-    "harga_sekarang": 0.67417
+    "harga_sekarang": 0.6738
   },
   "NZD/USD": {
     "pair": "NZD/USD",
@@ -13,6 +13,6 @@
     "harga_awal": 0.54991,
     "waktu_mulai": "2026-11-17T11:45:31Z",
     "signal_id": "20261117T114531Z_NZDUSD",
-    "harga_sekarang": 0.5499
+    "harga_sekarang": 0.54983
   }
 }
