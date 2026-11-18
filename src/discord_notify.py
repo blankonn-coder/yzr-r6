@@ -41,7 +41,7 @@ def _cut(text, limit):
 
 
 def _sinyal_lines(rows, kep):
-    return [f"**{r['pair']}** · skor {r['skor_akhir']}\n{'; '.join(r['alasan'])}"
+    return [f"**{r['pair']}** · skor {r['skor_akhir']}\n" + "\n".join(f"• {a}" for a in r["alasan"])
             for r in rows if r["keputusan"] == kep]
 
 
@@ -76,7 +76,7 @@ def build_payload(now, status, calib, rows, gagal, mon, info):
             pip, pct = C.gerak(m["pair"], m["harga_awal"], m["harga_sekarang"], m.get("keputusan", ""))
             baris.append(f"**{m['pair']}** ({m.get('keputusan', '-')}) · {teks_gerak(pip, pct)} "
                          f"· {int(umur(m, now))} menit")
-        fields.append({"name": f"📈 Pemantauan 1 jam ({len(pantau)})",
+        fields.append({"name": f"📈 Pemantauan {C.MONITOR_MINUTES} menit ({len(pantau)})",
                        "value": _cut("\n".join(baris), FIELD_MAX), "inline": False})
 
     return {
