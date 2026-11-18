@@ -5,7 +5,7 @@
     "harga_awal": 0.55015,
     "waktu_mulai": "2026-11-18T01:00:37Z",
     "signal_id": "20261118T010037Z_NZDUSD",
-    "harga_sekarang": 0.54997
+    "harga_sekarang": 0.54963
   },
   "EUR/JPY": {
     "pair": "EUR/JPY",
@@ -13,7 +13,7 @@
     "harga_awal": 175.3815,
     "waktu_mulai": "2026-11-18T01:15:31Z",
     "signal_id": "20261118T011531Z_EURJPY",
-    "harga_sekarang": 175.3775
+    "harga_sekarang": 175.2915
   },
   "EUR/CHF": {
     "pair": "EUR/CHF",
@@ -21,6 +21,6 @@
     "harga_awal": 0.92432,
     "waktu_mulai": "2026-11-18T01:30:30Z",
     "signal_id": "20261118T013030Z_EURCHF",
-    "harga_sekarang": 0.92422
+    "harga_sekarang": 0.92375
   }
 }
