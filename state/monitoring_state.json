@@ -5,7 +5,7 @@
     "harga_awal": 1.6332,
     "waktu_mulai": "2026-11-18T08:15:21Z",
     "signal_id": "20261118T081521Z_EURAUD",
-    "harga_sekarang": 1.63272
+    "harga_sekarang": 1.63248
   },
   "EUR/GBP": {
     "pair": "EUR/GBP",
@@ -13,6 +13,6 @@
     "harga_awal": 0.83312,
     "waktu_mulai": "2026-11-18T08:30:32Z",
     "signal_id": "20261118T083032Z_EURGBP",
-    "harga_sekarang": 0.83312
+    "harga_sekarang": 0.83315
   }
 }
