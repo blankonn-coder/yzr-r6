@@ -3,7 +3,7 @@
 Konfigurasi di GitHub:
   Secret   DISCORD_WEBHOOK_URL   URL webhook (wajib agar notifikasi aktif)
   Variable DISCORD_NOTIFY_MODE   signal (default) | always | off
-    signal : kirim hanya jika ada sinyal BUY/SELL
+    signal : kirim jika ada sinyal BUY/SELL baru ATAU ada pair yang masih dipantau
     always : kirim setiap run (termasuk tanpa sinyal)
     off    : tidak pernah kirim
 """
@@ -25,12 +25,12 @@ def _mode():
     return os.environ.get(MODE_ENV, "").strip().lower() or "signal"
 
 
-def should_send(mode, n_buy, n_sell):
+def should_send(mode, n_buy, n_sell, n_pantau=0):
     if mode == "off":
         return False
     if mode == "always":
         return True
-    return (n_buy + n_sell) > 0
+    return (n_buy + n_sell + n_pantau) > 0
 
 
 def _cut(text, limit):
@@ -111,7 +111,8 @@ def notify(now, status, calib, rows, gagal, mon, info):
         return "Discord: webhook belum diatur, dilewati"
     n_buy = sum(1 for r in rows if r["keputusan"] == "BUY")
     n_sell = sum(1 for r in rows if r["keputusan"] == "SELL")
-    if not should_send(_mode(), n_buy, n_sell):
+    n_pantau = len(aktif(mon, now))
+    if not should_send(_mode(), n_buy, n_sell, n_pantau):
         return f"Discord: mode {_mode()}, tidak ada yang dikirim"
     try:
         embed = build_payload(now, status, calib, rows, gagal, mon, info)
