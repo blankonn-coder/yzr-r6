@@ -1,10 +1,18 @@
 {
+  "EUR/GBP": {
+    "pair": "EUR/GBP",
+    "keputusan": "SELL",
+    "harga_awal": 0.83454,
+    "waktu_mulai": "2026-11-18T19:30:35Z",
+    "signal_id": "20261118T193035Z_EURGBP",
+    "harga_sekarang": 0.83454
+  },
   "EUR/CHF": {
     "pair": "EUR/CHF",
     "keputusan": "SELL",
-    "harga_awal": 0.92534,
-    "waktu_mulai": "2026-11-18T18:45:36Z",
-    "signal_id": "20261118T184536Z_EURCHF",
-    "harga_sekarang": 0.92529
+    "harga_awal": 0.92546,
+    "waktu_mulai": "2026-11-18T19:30:35Z",
+    "signal_id": "20261118T193035Z_EURCHF",
+    "harga_sekarang": 0.92546
   }
 }
