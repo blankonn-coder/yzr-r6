@@ -1,7 +1,7 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T23:35:24Z
-- Status: TERLAMBAT
+- Waktu eksekusi: 2026-11-18T23:45:41Z
+- Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
 
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/JPY | SELL | 174.8855 | 174.9135 | RUGI 2.8 pip · 0.016% | 19 |
+| EUR/JPY | SELL | 174.8855 | 174.9365 | RUGI 5.1 pip · 0.029% | 30 |
 
 ## Info Database
 - Total entri: 528
