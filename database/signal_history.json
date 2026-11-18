@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T17:45:31Z",
+    "last_updated": "2026-11-18T18:00:40Z",
     "retensi_hari": 30,
     "total_entri": 509
   },
@@ -13498,7 +13498,7 @@
         "Dekat resistance 5m (1.09750)",
         "Dekat resistance 15m (1.09776)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T173031Z_NZDUSD",
@@ -13525,7 +13525,7 @@
         "Dekat resistance 15m (0.54937)",
         "Dekat support 30m (0.54922)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T173031Z_EURJPY",
@@ -13551,7 +13551,7 @@
         "Dekat resistance 5m (174.82950)",
         "Dekat resistance 15m (174.86850)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T174112Z_AUDUSD",
