@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T19:45:23Z",
+    "last_updated": "2026-11-18T20:00:38Z",
     "retensi_hari": 30,
     "total_entri": 517
   },
@@ -13740,7 +13740,7 @@
         "RR minimal 1:2",
         "Entry 0.83454 / SL 0.83549 / TP 0.83262 (RR 1:2, risiko 9.6 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T193035Z_EURCHF",
@@ -13767,7 +13767,7 @@
         "RR minimal 1:2",
         "Entry 0.92546 / SL 0.92619 / TP 0.924 (RR 1:2, risiko 7.3 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T194523Z_EURGBP",
