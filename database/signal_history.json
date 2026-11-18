@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T00:30:33Z",
+    "last_updated": "2026-11-18T00:45:21Z",
     "retensi_hari": 30,
     "total_entri": 437
   },
@@ -11640,7 +11640,7 @@
         "Dekat resistance 5m (175.39050)",
         "Dekat resistance 30m (175.35150)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T000039Z_AUDUSD",
