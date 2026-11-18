@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T01:00:37Z",
+    "last_updated": "2026-11-18T01:15:31Z",
     "retensi_hari": 30,
-    "total_entri": 438
+    "total_entri": 440
   },
   "signals": [
     {
@@ -11667,7 +11667,7 @@
         "Dekat resistance 15m (0.67382)",
         "Dekat resistance 30m (0.67432)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T010037Z_NZDUSD",
@@ -11693,6 +11693,60 @@
         "Dekat resistance 5m (0.54985)",
         "Dekat resistance 15m (0.55015)",
         "Dekat resistance 30m (0.55032)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T011531Z_NZDUSD",
+      "waktu": "2026-11-18T01:15:31Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "01:15",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.55004,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.55015,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 58.03,
+        "15m": 58.55,
+        "30m": 57.23
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.54985)",
+        "Dekat resistance 15m (0.55015)",
+        "Dekat resistance 30m (0.55032)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T011531Z_EURJPY",
+      "waktu": "2026-11-18T01:15:31Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "01:15",
+      "pair": "EUR/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 175.3815,
+      "level_terdekat": {
+        "type": "R",
+        "price": 175.3905,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 59.41,
+        "15m": 55.77,
+        "30m": 48.9
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (175.39050)",
+        "Dekat resistance 15m (175.40050)",
+        "Dekat resistance 30m (175.35150)"
       ],
       "status_pantau": "AKTIF"
     }
