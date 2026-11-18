@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T05:30:31Z
+- Waktu eksekusi: 2026-11-18T05:45:20Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/CHF | BUY | 0.84034 | 0.84093 | PROFIT 5.9 pip · 0.070% | 29 |
+| USD/CHF | BUY | 0.84034 | 0.84096 | PROFIT 6.2 pip · 0.074% | 44 |
 
 ## Info Database
 - Total entri: 452
