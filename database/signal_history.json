@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T03:15:24Z",
+    "last_updated": "2026-11-18T03:30:29Z",
     "retensi_hari": 30,
-    "total_entri": 446
+    "total_entri": 447
   },
   "signals": [
     {
@@ -11908,6 +11908,32 @@
         "Dekat resistance 30m (1.32048)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T033029Z_EURCAD",
+      "waktu": "2026-11-18T03:30:29Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "03:30",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57267,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57299,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 56.41,
+        "15m": 53.89,
+        "30m": 51.72
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57299)",
+        "Dekat resistance 15m (1.57299)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
