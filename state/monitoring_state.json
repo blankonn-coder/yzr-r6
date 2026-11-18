@@ -1,18 +1,18 @@
 {
-  "GBP/USD": {
-    "pair": "GBP/USD",
-    "keputusan": "SELL",
-    "harga_awal": 1.32055,
-    "waktu_mulai": "2026-11-18T02:30:38Z",
-    "signal_id": "20261118T023038Z_GBPUSD",
-    "harga_sekarang": 1.32014
-  },
   "EUR/CAD": {
     "pair": "EUR/CAD",
     "keputusan": "SELL",
     "harga_awal": 1.57267,
     "waktu_mulai": "2026-11-18T03:30:29Z",
     "signal_id": "20261118T033029Z_EURCAD",
-    "harga_sekarang": 1.57267
+    "harga_sekarang": 1.57265
+  },
+  "EUR/USD": {
+    "pair": "EUR/USD",
+    "keputusan": "SELL",
+    "harga_awal": 1.0992,
+    "waktu_mulai": "2026-11-18T03:45:19Z",
+    "signal_id": "20261118T034519Z_EURUSD",
+    "harga_sekarang": 1.0992
   }
 }
