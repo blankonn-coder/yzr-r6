@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T07:00:37Z",
+    "last_updated": "2026-11-18T07:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 454
+    "total_entri": 456
   },
   "signals": [
     {
@@ -12109,6 +12109,60 @@
       "rsi": {
         "5m": 41.08,
         "15m": 46.84,
+        "30m": 49.7
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.63351)",
+        "Dekat support 15m (1.63351)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T071522Z_EURGBP",
+      "waktu": "2026-11-18T07:15:22Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "07:15",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 80,
+      "harga_saat_itu": 0.83308,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83323,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 75.43,
+        "15m": 66.24,
+        "30m": 38.6
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83278)",
+        "Dekat resistance 15m (0.83323)",
+        "Dekat resistance 30m (0.83323)",
+        "RSI 5m overbought (75.43)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T071522Z_EURAUD",
+      "waktu": "2026-11-18T07:15:22Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "07:15",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.63386,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.63351,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 47.81,
+        "15m": 49.1,
         "30m": 49.7
       },
       "tren": "NAIK",
