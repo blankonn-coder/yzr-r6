@@ -1,18 +1,10 @@
 {
-  "EUR/GBP": {
-    "pair": "EUR/GBP",
-    "keputusan": "SELL",
-    "harga_awal": 0.8333,
-    "waktu_mulai": "2026-11-18T09:30:33Z",
-    "signal_id": "20261118T093033Z_EURGBP",
-    "harga_sekarang": 0.83303
-  },
   "NZD/USD": {
     "pair": "NZD/USD",
     "keputusan": "SELL",
     "harga_awal": 0.54937,
     "waktu_mulai": "2026-11-18T10:00:40Z",
     "signal_id": "20261118T100040Z_NZDUSD",
-    "harga_sekarang": 0.54969
+    "harga_sekarang": 0.54959
   }
 }
