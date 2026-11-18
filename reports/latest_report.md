@@ -1,7 +1,7 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T17:30:31Z
-- Status: TEPAT WAKTU
+- Waktu eksekusi: 2026-11-18T17:41:12Z
+- Status: TERLAMBAT
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
 
@@ -11,21 +11,19 @@ Tidak ada.
 ## Sinyal SELL
 | Pair | Keputusan | Skor | Alasan |
 |---|---|---|---|
-| EUR/USD | SELL | 55 | Dekat resistance 5m (1.09750); Dekat resistance 15m (1.09776) |
-| NZD/USD | SELL | 55 | Dekat resistance 5m (0.54930); Dekat resistance 15m (0.54937); Dekat support 30m (0.54922) |
-| EUR/JPY | SELL | 55 | Dekat resistance 5m (174.82950); Dekat resistance 15m (174.86850) |
+| AUD/USD | SELL | 100 | Continuation bearish (zona FVG H1 0.67161-0.67212); Trend searah bias TURUN; Ada area FVG H1; Harga retest zona; Ada konfirmasi candle (bearish engulfing); RR minimal 1:2; Entry 0.6719 / SL 0.67282 / TP 0.67006 (RR 1:2, risiko 9.2 pip) |
 
-## Pemantauan (maks 60 menit)
+## Pemantauan (maks 30 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/CAD | SELL | 1.57204 | 1.57302 | RUGI 9.8 pip · 0.062% | 29 |
-| EUR/USD | SELL | 1.09748 | 1.09748 | 0.0 pip · 0.000% | 0 |
-| NZD/USD | SELL | 0.54934 | 0.54934 | 0.0 pip · 0.000% | 0 |
-| EUR/JPY | SELL | 174.8325 | 174.8325 | 0.0 pip · 0.000% | 0 |
+| EUR/USD | SELL | 1.09748 | 1.09749 | RUGI 0.1 pip · 0.001% | 10 |
+| NZD/USD | SELL | 0.54934 | 0.54924 | PROFIT 1.0 pip · 0.018% | 10 |
+| EUR/JPY | SELL | 174.8325 | 174.8235 | PROFIT 0.9 pip · 0.005% | 10 |
+| AUD/USD | SELL | 0.6719 | 0.6719 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 508
-- Ditambahkan run ini: 3
+- Total entri: 509
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 

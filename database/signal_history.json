@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T17:30:31Z",
+    "last_updated": "2026-11-18T17:41:12Z",
     "retensi_hari": 30,
-    "total_entri": 508
+    "total_entri": 509
   },
   "signals": [
     {
@@ -13472,7 +13472,7 @@
         "Dekat resistance 5m (1.57195)",
         "Dekat resistance 15m (1.57242)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T173031Z_EURUSD",
@@ -13550,6 +13550,33 @@
       "alasan": [
         "Dekat resistance 5m (174.82950)",
         "Dekat resistance 15m (174.86850)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T174112Z_AUDUSD",
+      "waktu": "2026-11-18T17:41:12Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "17:41",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.6719,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67187,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 0.67161-0.67212)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bearish engulfing)",
+        "RR minimal 1:2",
+        "Entry 0.6719 / SL 0.67282 / TP 0.67006 (RR 1:2, risiko 9.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }
