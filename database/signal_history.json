@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T21:00:42Z",
+    "last_updated": "2026-11-18T21:15:30Z",
     "retensi_hari": 30,
-    "total_entri": 524
+    "total_entri": 525
   },
   "signals": [
     {
@@ -13984,6 +13984,33 @@
         "Entry 174.8585 / SL 174.9895 / TP 174.5965 (RR 1:2, risiko 13.1 pip)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T211530Z_USDCAD",
+      "waktu": "2026-11-18T21:15:30Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "21:15",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.4325,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.43249,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.43202-1.43297)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.4325 / SL 1.43132 / TP 1.43485 (RR 1:2, risiko 11.8 pip)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
