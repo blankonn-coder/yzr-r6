@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T15:15:25Z",
+    "last_updated": "2026-11-18T15:30:34Z",
     "retensi_hari": 30,
-    "total_entri": 503
+    "total_entri": 504
   },
   "signals": [
     {
@@ -13420,6 +13420,33 @@
         "Dekat resistance 15m (1.09776)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T153034Z_EURGBP",
+      "waktu": "2026-11-18T15:30:34Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "15:30",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 70,
+      "harga_saat_itu": 0.8333,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83325,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 45.74,
+        "15m": 52.33,
+        "30m": 53.61
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83325)",
+        "Dekat resistance 15m (0.83364)",
+        "Dekat resistance 30m (0.83323)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
