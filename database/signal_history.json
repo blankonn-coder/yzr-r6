@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T20:30:31Z",
+    "last_updated": "2026-11-18T20:45:37Z",
     "retensi_hari": 30,
-    "total_entri": 518
+    "total_entri": 521
   },
   "signals": [
     {
@@ -13822,6 +13822,87 @@
         "Entry 174.8075 / SL 174.9895 / TP 174.4435 (RR 1:2, risiko 18.2 pip)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T204537Z_AUDUSD",
+      "waktu": "2026-11-18T20:45:37Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "20:45",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.67154,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67187,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 0.67161-0.67212)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.67154 / SL 0.67282 / TP 0.66898 (RR 1:2, risiko 12.8 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T204537Z_USDCAD",
+      "waktu": "2026-11-18T20:45:37Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "20:45",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.43294,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.43249,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.43202-1.43297)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.43294 / SL 1.43132 / TP 1.43617 (RR 1:2, risiko 16.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T204537Z_EURJPY",
+      "waktu": "2026-11-18T20:45:37Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "20:45",
+      "pair": "EUR/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 174.8385,
+      "level_terdekat": {
+        "type": "R",
+        "price": 174.8485,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 174.7775-174.9195)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 174.8385 / SL 174.9895 / TP 174.5365 (RR 1:2, risiko 15.1 pip)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
