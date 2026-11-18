@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T10:15:22Z",
+    "last_updated": "2026-11-18T10:30:32Z",
     "retensi_hari": 30,
-    "total_entri": 472
+    "total_entri": 473
   },
   "signals": [
     {
@@ -12595,6 +12595,32 @@
       "alasan": [
         "Dekat resistance 5m (0.83339)",
         "Dekat resistance 30m (0.83323)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T103032Z_NZDUSD",
+      "waktu": "2026-11-18T10:30:32Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "10:30",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.54969,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.54949,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 62.78,
+        "15m": 60.54,
+        "30m": 55.67
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.54937)",
+        "Dekat resistance 15m (0.54949)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
