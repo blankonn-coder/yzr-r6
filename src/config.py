@@ -1,4 +1,4 @@
-"""Konfigurasi bot screening forex (Skema v6.0)."""
+"""Konfigurasi bot screening forex (Skema SMC Scalping 30 Menit v7.0)."""
 import json
 import os
 from datetime import datetime, timezone
@@ -7,40 +7,30 @@ from datetime import datetime, timezone
 BIQUOTE_HOST = "https://biquote.io"
 CANDLE_COUNT = 200
 
-# ---- 27 pair. Sesuaikan dengan daftar pair Finex Anda ----
+# ---- 14 pair. Sesuaikan dengan daftar pair Finex Anda ----
 PAIRS = [
     "EUR_USD", "GBP_USD", "USD_JPY", "USD_CHF", "AUD_USD", "USD_CAD", "NZD_USD",
     "EUR_GBP", "EUR_JPY", "EUR_CHF", "EUR_AUD", "EUR_CAD", "EUR_NZD",
     "XAU_USD",
 ]
 
-TF_GRAN = {"5m": "5m", "15m": "15m", "30m": "30m", "1h": "1h", "4h": "4h"}  # interval biquote
+# Timeframe yang dipakai strategi: D1 (trend utama), H4 (konfirmasi bias),
+# H1 (liquidity, OB/FVG), M5 (entry). "1d" diasumsikan didukung biquote, verifikasi saat uji.
+TF_GRAN = {"5m": "5m", "1h": "1h", "4h": "4h", "1d": "1d"}
 
-# ---- Support & Resistance ----
-SR_TFS = ["5m", "15m", "30m"]
-SR_LOOKBACK = 5
-SR_MIN_TOUCH = 2
-SR_TOL_PIPS = 4  # toleransi 'dekat' dalam pip, berlaku untuk semua pair
-SR_MAX_AGE = 48
-SR_WEIGHTS = {"5m": 30, "15m": 25, "30m": 15}
+# ---- Struktur pasar & likuiditas ----
+SWING_LB = 2          # jumlah candle kiri/kanan untuk swing high/low (pivot)
+SWEEP_BARS = 8        # sweep harus terjadi dalam N candle H1 terakhir
+ZONE_BARS = 48        # OB/FVG H1 yang dipakai dibatasi N candle terakhir (~2 hari)
 
-# ---- RSI ----
-RSI_TFS = ["5m", "15m", "30m"]
-RSI_PERIOD = 14
-RSI_OVERSOLD = 30
-RSI_OVERBOUGHT = 70
-RSI_WEIGHTS = {"5m": 10, "15m": 10, "30m": 10}
-
-# ---- Filter tren ----
-TREND_TFS = ["1h", "4h"]
-EMA_PERIOD = 50
-
-# ---- Keputusan ----
-THRESHOLD = 45
-MIN_DIFF = 10
+# ---- Entry M5 ----
+RETEST_BARS = 12      # harga harus menyentuh zona dalam N candle M5 terakhir (~1 jam)
+SL_BUFFER_PIPS = 7    # SL di luar zona (strategi: +/- 5-10 pip)
+MAX_RISK_PIPS = 30    # jika jarak SL lebih dari ini, setup dibatalkan
+RR = 2                # target profit = RR x risiko (RR 1:2)
 
 # ---- Pemantauan & waktu ----
-MONITOR_MINUTES = 60
+MONITOR_MINUTES = 30  # strategi: target tercapai +/- 30 menit
 LATE_MINUTES = 5
 
 # ---- Database ----
