@@ -1,1 +1,10 @@
-{}
+{
+  "EUR/JPY": {
+    "pair": "EUR/JPY",
+    "keputusan": "SELL",
+    "harga_awal": 174.8855,
+    "waktu_mulai": "2026-11-18T23:15:31Z",
+    "signal_id": "20261118T231531Z_EURJPY",
+    "harga_sekarang": 174.8855
+  }
+}
