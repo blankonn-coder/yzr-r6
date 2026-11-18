@@ -5,7 +5,7 @@
     "harga_awal": 175.3825,
     "waktu_mulai": "2026-11-17T23:45:20Z",
     "signal_id": "20261117T234520Z_EURJPY",
-    "harga_sekarang": 175.2815
+    "harga_sekarang": 175.2615
   },
   "AUD/USD": {
     "pair": "AUD/USD",
@@ -13,6 +13,6 @@
     "harga_awal": 0.67397,
     "waktu_mulai": "2026-11-18T00:00:39Z",
     "signal_id": "20261118T000039Z_AUDUSD",
-    "harga_sekarang": 0.67342
+    "harga_sekarang": 0.67339
   }
 }
