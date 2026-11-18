@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T06:45:29Z",
+    "last_updated": "2026-11-18T07:00:37Z",
     "retensi_hari": 30,
-    "total_entri": 453
+    "total_entri": 454
   },
   "signals": [
     {
@@ -12091,6 +12091,32 @@
         "Dekat support 15m (1.63351)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T070037Z_EURAUD",
+      "waktu": "2026-11-18T07:00:37Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "07:00",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.63357,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.63351,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 41.08,
+        "15m": 46.84,
+        "30m": 49.7
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (1.63351)",
+        "Dekat support 15m (1.63351)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }
