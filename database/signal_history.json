@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T07:45:22Z",
+    "last_updated": "2026-11-18T08:00:51Z",
     "retensi_hari": 30,
-    "total_entri": 459
+    "total_entri": 460
   },
   "signals": [
     {
@@ -12090,7 +12090,7 @@
         "Dekat support 5m (1.63351)",
         "Dekat support 15m (1.63351)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T070037Z_EURAUD",
@@ -12249,6 +12249,33 @@
         "Dekat resistance 5m (0.83276)",
         "Dekat resistance 15m (0.83323)",
         "Dekat resistance 30m (0.83323)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T080051Z_EURGBP",
+      "waktu": "2026-11-18T08:00:51Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "08:00",
+      "pair": "EUR/GBP",
+      "keputusan": "SELL",
+      "skor_akhir": 45,
+      "harga_saat_itu": 0.833,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.83278,
+        "tf": "15m"
+      },
+      "rsi": {
+        "5m": 57.34,
+        "15m": 60.87,
+        "30m": 55.61
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (0.83276)",
+        "Dekat support 15m (0.83286)",
+        "Dekat resistance 30m (0.83278)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
