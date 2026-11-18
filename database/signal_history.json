@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T04:30:28Z",
+    "last_updated": "2026-11-18T04:45:20Z",
     "retensi_hari": 30,
     "total_entri": 451
   },
@@ -11933,7 +11933,7 @@
         "Dekat resistance 5m (1.57299)",
         "Dekat resistance 15m (1.57299)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T034519Z_EURUSD",
@@ -11959,7 +11959,7 @@
         "Dekat resistance 5m (1.09953)",
         "Dekat resistance 15m (1.09953)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T034519Z_EURCAD",
