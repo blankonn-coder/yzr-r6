@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T04:45:20Z",
+    "last_updated": "2026-11-18T05:00:39Z",
     "retensi_hari": 30,
-    "total_entri": 451
+    "total_entri": 452
   },
   "signals": [
     {
@@ -12038,6 +12038,33 @@
         "Dekat resistance 15m (1.57299)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T050039Z_USDCHF",
+      "waktu": "2026-11-18T05:00:39Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "05:00",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 55,
+      "harga_saat_itu": 0.84034,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.84039,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 41.72,
+        "15m": 45.73,
+        "30m": 49.62
+      },
+      "tren": "NAIK",
+      "alasan": [
+        "Dekat support 5m (0.84039)",
+        "Dekat support 15m (0.84001)",
+        "Dekat resistance 30m (0.84025)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
