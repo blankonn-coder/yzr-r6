@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T14:15:24Z
+- Waktu eksekusi: 2026-11-18T14:30:36Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -9,20 +9,16 @@
 Tidak ada.
 
 ## Sinyal SELL
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| NZD/USD | SELL | 55 | Dekat resistance 5m (0.54968); Dekat resistance 15m (0.54949); Dekat support 30m (0.54922) |
-| EUR/GBP | SELL | 70 | Dekat resistance 5m (0.83325); Dekat resistance 15m (0.83364); Dekat resistance 30m (0.83323) |
+Tidak ada.
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/GBP | SELL | 0.83337 | 0.83332 | PROFIT 0.5 pip · 0.006% | 44 |
-| NZD/USD | SELL | 0.54955 | 0.54955 | 0.0 pip · 0.000% | 0 |
+| NZD/USD | SELL | 0.54955 | 0.54946 | PROFIT 0.9 pip · 0.016% | 15 |
 
 ## Info Database
 - Total entri: 498
-- Ditambahkan run ini: 2
+- Ditambahkan run ini: 0
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
