@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T03:45:19Z",
+    "last_updated": "2026-11-18T04:00:38Z",
     "retensi_hari": 30,
-    "total_entri": 449
+    "total_entri": 451
   },
   "signals": [
     {
@@ -11983,6 +11983,58 @@
       "tren": "TURUN",
       "alasan": [
         "Dekat resistance 5m (1.57299)",
+        "Dekat resistance 15m (1.57299)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T040038Z_EURUSD",
+      "waktu": "2026-11-18T04:00:38Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "04:00",
+      "pair": "EUR/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.09913,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.09949,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 49.08,
+        "15m": 44.66,
+        "30m": 43.37
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.09949)",
+        "Dekat resistance 15m (1.09953)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T040038Z_EURCAD",
+      "waktu": "2026-11-18T04:00:38Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "04:00",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 55,
+      "harga_saat_itu": 1.57269,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.57281,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 56.31,
+        "15m": 54.21,
+        "30m": 51.95
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.57281)",
         "Dekat resistance 15m (1.57299)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
