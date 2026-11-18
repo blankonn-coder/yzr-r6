@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T22:45:22Z
+- Waktu eksekusi: 2026-11-18T23:00:47Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -12,9 +12,7 @@ Tidak ada.
 Tidak ada.
 
 ## Pemantauan (maks 30 menit)
-| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
-|---|---|---|---|---|---|
-| EUR/JPY | SELL | 174.903 | 174.875 | PROFIT 2.8 pip · 0.016% | 14 |
+Tidak ada pair aktif.
 
 ## Info Database
 - Total entri: 527
