@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T12:30:33Z
+- Waktu eksekusi: 2026-11-18T12:45:20Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -16,10 +16,10 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/CAD | BUY | 1.4304 | 1.43047 | PROFIT 0.7 pip · 0.005% | 15 |
+| USD/CAD | BUY | 1.4304 | 1.43067 | PROFIT 2.7 pip · 0.019% | 29 |
 
 ## Info Database
-- Total entri: 481
+- Total entri: 482
 - Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
