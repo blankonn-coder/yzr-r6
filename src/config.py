@@ -30,7 +30,8 @@ MAX_RISK_PIPS = 30    # jika jarak SL lebih dari ini, setup dibatalkan
 RR = 2                # target profit = RR x risiko (RR 1:2)
 
 # ---- Pemantauan & waktu ----
-MONITOR_MINUTES = 30  # strategi: target tercapai +/- 30 menit
+MONITOR_MINUTES = 60  # lama pemantauan pair (menit)
+COOLDOWN_MINUTES = 60  # sejak sinyal pertama: sinyal searah di pair yang sama tidak masuk hasil screening (sama dengan lama pemantauan)
 LATE_MINUTES = 5
 
 # ---- Database ----
@@ -40,6 +41,7 @@ MIN_RETENSI_HARI = 7
 # ---- Path ----
 DB_PATH = "database/signal_history.json"
 MONITOR_PATH = "state/monitoring_state.json"
+COOLDOWN_PATH = "state/cooldown_state.json"
 CALIB_PATH = "state/calibration_state.json"
 REPORT_PATH = "reports/latest_report.md"
 
