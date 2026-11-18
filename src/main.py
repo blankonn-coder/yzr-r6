@@ -8,7 +8,7 @@ from . import signal_store as store
 from .analysis import evaluate
 from .calibration import get_offsets, save_offsets, shift
 from .discord_notify import notify
-from .monitor import update as monitor_update
+from .monitor import update as monitor_update, saring_cooldown, catat_cooldown
 from .biquote_client import fetch_candles
 from .report import build_report
 
@@ -74,7 +74,12 @@ def main():
                      "rsi": res["rsi"], "tren": res["tren"]})
         prices[C.disp(p)] = price
 
-    # 4. Pemantauan 1 jam
+    # 4. Cooldown: sinyal searah di pair yang masih cooldown tidak masuk hasil screening
+    mon = C.load_json(C.MONITOR_PATH, {})
+    cooldown = C.load_json(C.COOLDOWN_PATH, {})
+    cooldown, ditahan = saring_cooldown(cooldown, mon, rows, now)
+
+    # 5. Pemantauan
     sinyal = [r for r in rows if r["keputusan"] in ("BUY", "SELL")]
     records = []
     for r in sinyal:
@@ -85,17 +90,17 @@ def main():
                         "harga_saat_itu": r["harga"], "level_terdekat": r["level"],
                         "rsi": r["rsi"], "tren": r["tren"], "alasan": r["alasan"],
                         "status_pantau": "AKTIF"})
-    mon = C.load_json(C.MONITOR_PATH, {})
     mon, expired = monitor_update(
         mon, [{"pair": r["pair"], "id": r["id"], "harga": r["harga"], "keputusan": r["keputusan"]} for r in sinyal],
         prices, now)
     C.save_json(C.MONITOR_PATH, mon)
+    C.save_json(C.COOLDOWN_PATH, catat_cooldown(cooldown, sinyal, now))
     # Hanya sinyal yang benar-benar masuk pemantauan yang berstatus AKTIF
     tracked = {m["signal_id"] for m in mon.values()}
     for r in records:
         r["status_pantau"] = "AKTIF" if r["id"] in tracked else "TIDAK DIPANTAU"
 
-    # 5. Database mentah (prune dulu, lalu append)
+    # 6. Database mentah (prune dulu, lalu append)
     db = store.load(now)
     pruned = store.prune(db, now)
     store.mark_expired(db, set(expired))
@@ -103,11 +108,11 @@ def main():
     added = store.add(db, records)
     store.save(db, now)
 
-    # 6. Laporan
+    # 7. Laporan
     info = {"total": len(db["signals"]), "tambah": added, "hapus": pruned}
     tulis_laporan(build_report(now, status, calib, rows, gagal, mon, info))
     print(notify(now, status, calib, rows, gagal, mon, info))
-    print(f"Selesai: {len(rows)} pair dianalisa, {len(sinyal)} sinyal, {len(gagal)} gagal.")
+    print(f"Selesai: {len(rows)} pair dianalisa, {len(sinyal)} sinyal, {ditahan} ditahan cooldown, {len(gagal)} gagal.")
     return 0 if rows else 1
 
 
