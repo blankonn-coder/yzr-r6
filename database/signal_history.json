@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T02:30:38Z",
+    "last_updated": "2026-11-18T02:45:22Z",
     "retensi_hari": 30,
-    "total_entri": 445
+    "total_entri": 446
   },
   "signals": [
     {
@@ -11882,6 +11882,32 @@
         "Dekat resistance 30m (1.32048)"
       ],
       "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T024522Z_GBPUSD",
+      "waktu": "2026-11-18T02:45:22Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "02:45",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 45,
+      "harga_saat_itu": 1.32058,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.32052,
+        "tf": "5m"
+      },
+      "rsi": {
+        "5m": 55.02,
+        "15m": 49.37,
+        "30m": 49.67
+      },
+      "tren": "TURUN",
+      "alasan": [
+        "Dekat resistance 5m (1.32052)",
+        "Dekat resistance 30m (1.32048)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T02:30:38Z
+- Waktu eksekusi: 2026-11-18T02:45:22Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -16,10 +16,10 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| GBP/USD | SELL | 1.32055 | 1.32055 | 0.0 pip · 0.000% | 0 |
+| GBP/USD | SELL | 1.32055 | 1.32058 | RUGI 0.3 pip · 0.002% | 14 |
 
 ## Info Database
-- Total entri: 445
+- Total entri: 446
 - Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
