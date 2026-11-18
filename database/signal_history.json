@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T21:15:30Z",
+    "last_updated": "2026-11-18T21:30:30Z",
     "retensi_hari": 30,
-    "total_entri": 525
+    "total_entri": 526
   },
   "signals": [
     {
@@ -13848,7 +13848,7 @@
         "RR minimal 1:2",
         "Entry 0.67154 / SL 0.67282 / TP 0.66898 (RR 1:2, risiko 12.8 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T204537Z_USDCAD",
@@ -13875,7 +13875,7 @@
         "RR minimal 1:2",
         "Entry 1.43294 / SL 1.43132 / TP 1.43617 (RR 1:2, risiko 16.2 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T204537Z_EURJPY",
@@ -14009,6 +14009,33 @@
         "Ada konfirmasi candle (pin bar bullish)",
         "RR minimal 1:2",
         "Entry 1.4325 / SL 1.43132 / TP 1.43485 (RR 1:2, risiko 11.8 pip)"
+      ],
+      "status_pantau": "TIDAK DIPANTAU"
+    },
+    {
+      "id": "20261118T213030Z_EURJPY",
+      "waktu": "2026-11-18T21:30:30Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "21:30",
+      "pair": "EUR/JPY",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 174.864,
+      "level_terdekat": {
+        "type": "R",
+        "price": 174.8485,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 174.7775-174.9195)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 174.864 / SL 174.9895 / TP 174.613 (RR 1:2, risiko 12.5 pip)"
       ],
       "status_pantau": "TIDAK DIPANTAU"
     }
