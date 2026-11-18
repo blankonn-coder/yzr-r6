@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-18T18:30:37Z",
+    "last_updated": "2026-11-18T18:45:36Z",
     "retensi_hari": 30,
-    "total_entri": 511
+    "total_entri": 512
   },
   "signals": [
     {
@@ -13605,7 +13605,7 @@
         "RR minimal 1:2",
         "Entry 0.6718 / SL 0.67282 / TP 0.66976 (RR 1:2, risiko 10.2 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261118T183037Z_NZDUSD",
@@ -13631,6 +13631,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 0.54954 / SL 0.55096 / TP 0.5467 (RR 1:2, risiko 14.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261118T184536Z_EURCHF",
+      "waktu": "2026-11-18T18:45:36Z",
+      "tanggal": "2026-11-18",
+      "jam_utc": "18:45",
+      "pair": "EUR/CHF",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.92534,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.92511,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 0.92473-0.92549)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.92534 / SL 0.92619 / TP 0.92362 (RR 1:2, risiko 8.6 pip)"
       ],
       "status_pantau": "AKTIF"
     }
