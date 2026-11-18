@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-18T02:15:33Z
+- Waktu eksekusi: 2026-11-18T02:30:38Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -9,16 +9,18 @@
 Tidak ada.
 
 ## Sinyal SELL
-Tidak ada.
+| Pair | Keputusan | Skor | Alasan |
+|---|---|---|---|
+| GBP/USD | SELL | 45 | Dekat resistance 5m (1.32052); Dekat resistance 30m (1.32048) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/CHF | BUY | 0.92432 | 0.92375 | RUGI 5.7 pip · 0.062% | 45 |
+| GBP/USD | SELL | 1.32055 | 1.32055 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 444
-- Ditambahkan run ini: 0
+- Total entri: 445
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
