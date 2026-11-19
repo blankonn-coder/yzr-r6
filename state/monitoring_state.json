@@ -1,1 +1,10 @@
-{}
+{
+  "NZD/USD": {
+    "pair": "NZD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.54988,
+    "waktu_mulai": "2026-11-19T06:30:30Z",
+    "signal_id": "20261119T063030Z_NZDUSD",
+    "harga_sekarang": 0.54988
+  }
+}

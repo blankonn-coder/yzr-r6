@@ -1,1 +1,7 @@
-{}
+{
+  "NZD/USD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-19T06:30:30Z",
+    "signal_id": "20261119T063030Z_NZDUSD"
+  }
+}
