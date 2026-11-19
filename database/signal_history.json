@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T10:45:24Z",
+    "last_updated": "2026-11-19T11:00:42Z",
     "retensi_hari": 30,
-    "total_entri": 539
+    "total_entri": 540
   },
   "signals": [
     {
@@ -14308,7 +14308,7 @@
         "RR minimal 1:2",
         "Entry 1.31458 / SL 1.31354 / TP 1.31668 (RR 1:2, risiko 10.5 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261119T101522Z_AUDUSD",
@@ -14388,6 +14388,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.57386 / SL 1.57448 / TP 1.57262 (RR 1:2, risiko 6.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261119T110042Z_USDCHF",
+      "waktu": "2026-11-19T11:00:42Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "11:00",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.8421,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.84225,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 0.84205-0.84247)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 0.8421 / SL 0.84135 / TP 0.84362 (RR 1:2, risiko 7.6 pip)"
       ],
       "status_pantau": "AKTIF"
     }
