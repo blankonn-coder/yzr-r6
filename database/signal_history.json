@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T09:00:48Z",
+    "last_updated": "2026-11-19T09:15:25Z",
     "retensi_hari": 30,
     "total_entri": 535
   },
@@ -14280,7 +14280,7 @@
         "RR minimal 1:2",
         "Entry 0.55036 / SL 0.55137 / TP 0.54834 (RR 1:2, risiko 10.1 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     }
   ]
 }
