@@ -1,1 +1,7 @@
-{}
+{
+  "USD/CHF": {
+    "keputusan": "BUY",
+    "waktu_mulai": "2026-11-19T12:30:36Z",
+    "signal_id": "20261119T123036Z_USDCHF"
+  }
+}

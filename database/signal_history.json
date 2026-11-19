@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T12:15:25Z",
+    "last_updated": "2026-11-19T12:30:36Z",
     "retensi_hari": 30,
-    "total_entri": 540
+    "total_entri": 541
   },
   "signals": [
     {
@@ -14417,6 +14417,33 @@
         "Entry 0.8421 / SL 0.84135 / TP 0.84362 (RR 1:2, risiko 7.6 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261119T123036Z_USDCHF",
+      "waktu": "2026-11-19T12:30:36Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "12:30",
+      "pair": "USD/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.84274,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.84225,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 0.84205-0.84247)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 0.84274 / SL 0.84135 / TP 0.84552 (RR 1:2, risiko 13.9 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
