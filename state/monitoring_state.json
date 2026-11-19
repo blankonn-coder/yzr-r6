@@ -1,1 +1,10 @@
-{}
+{
+  "AUD/USD": {
+    "pair": "AUD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.66799,
+    "waktu_mulai": "2026-11-19T04:15:21Z",
+    "signal_id": "20261119T041521Z_AUDUSD",
+    "harga_sekarang": 0.66799
+  }
+}
