@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T14:00:46Z",
+    "last_updated": "2026-11-19T14:15:27Z",
     "retensi_hari": 30,
     "total_entri": 544
   },
@@ -14470,7 +14470,7 @@
         "RR minimal 1:2",
         "Entry 1.09943 / SL 1.09822 / TP 1.10185 (RR 1:2, risiko 12.1 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261119T134525Z_USDCHF",
