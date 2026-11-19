@@ -5,7 +5,7 @@
     "harga_awal": 1.57238,
     "waktu_mulai": "2026-11-19T18:00:39Z",
     "signal_id": "20261119T180039Z_EURCAD",
-    "harga_sekarang": 1.57329
+    "harga_sekarang": 1.57374
   },
   "EUR/USD": {
     "pair": "EUR/USD",
@@ -13,6 +13,6 @@
     "harga_awal": 1.09783,
     "waktu_mulai": "2026-11-19T18:30:33Z",
     "signal_id": "20261119T183033Z_EURUSD",
-    "harga_sekarang": 1.09783
+    "harga_sekarang": 1.098
   }
 }
