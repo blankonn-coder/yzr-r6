@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T18:15:22Z",
+    "last_updated": "2026-11-19T18:30:33Z",
     "retensi_hari": 30,
-    "total_entri": 547
+    "total_entri": 548
   },
   "signals": [
     {
@@ -14578,7 +14578,7 @@
         "RR minimal 1:2",
         "Entry 1.09768 / SL 1.09627 / TP 1.1005 (RR 1:2, risiko 14.1 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261119T180039Z_EURCAD",
@@ -14605,6 +14605,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.57238 / SL 1.57322 / TP 1.5707 (RR 1:2, risiko 8.4 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261119T183033Z_EURUSD",
+      "waktu": "2026-11-19T18:30:33Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "18:30",
+      "pair": "EUR/USD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.09783,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.09744,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.09697-1.09791)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.09783 / SL 1.09627 / TP 1.10095 (RR 1:2, risiko 15.6 pip)"
       ],
       "status_pantau": "AKTIF"
     }
