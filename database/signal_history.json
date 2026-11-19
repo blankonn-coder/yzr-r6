@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T10:00:40Z",
+    "last_updated": "2026-11-19T10:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 536
+    "total_entri": 538
   },
   "signals": [
     {
@@ -14307,6 +14307,60 @@
         "Ada konfirmasi candle (pin bar bullish)",
         "RR minimal 1:2",
         "Entry 1.31458 / SL 1.31354 / TP 1.31668 (RR 1:2, risiko 10.5 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261119T101522Z_AUDUSD",
+      "waktu": "2026-11-19T10:15:22Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "10:15",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.67089,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.67136,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 0.67095-0.67178)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.67089 / SL 0.67248 / TP 0.66771 (RR 1:2, risiko 15.9 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261119T101522Z_USDCAD",
+      "waktu": "2026-11-19T10:15:22Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "10:15",
+      "pair": "USD/CAD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.43067,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.43071,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 1.43032-1.43111)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.43067 / SL 1.42962 / TP 1.43279 (RR 1:2, risiko 10.6 pip)"
       ],
       "status_pantau": "AKTIF"
     }
