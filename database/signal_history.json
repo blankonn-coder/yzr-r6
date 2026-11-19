@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T17:00:42Z",
+    "last_updated": "2026-11-19T17:15:24Z",
     "retensi_hari": 30,
-    "total_entri": 545
+    "total_entri": 546
   },
   "signals": [
     {
@@ -14552,6 +14552,33 @@
         "Entry 1.57229 / SL 1.57322 / TP 1.57043 (RR 1:2, risiko 9.3 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261119T171524Z_EURUSD",
+      "waktu": "2026-11-19T17:15:24Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "17:15",
+      "pair": "EUR/USD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.09768,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.09744,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.09697-1.09791)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.09768 / SL 1.09627 / TP 1.1005 (RR 1:2, risiko 14.1 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
