@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-19T15:30:36Z
+- Waktu eksekusi: 2026-11-19T15:45:21Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/CAD | SELL | 1.57229 | 1.57197 | PROFIT 3.2 pip · 0.020% | 29 |
+| EUR/CAD | SELL | 1.57229 | 1.57274 | RUGI 4.5 pip · 0.029% | 44 |
 
 ## Info Database
 - Total entri: 545
