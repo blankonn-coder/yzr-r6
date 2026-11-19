@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T00:45:20Z",
+    "last_updated": "2026-11-19T01:00:46Z",
     "retensi_hari": 30,
-    "total_entri": 528
+    "total_entri": 529
   },
   "signals": [
     {
@@ -14092,6 +14092,33 @@
         "Entry 174.8855 / SL 174.9895 / TP 174.6775 (RR 1:2, risiko 10.4 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261119T010046Z_NZDUSD",
+      "waktu": "2026-11-19T01:00:46Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "01:00",
+      "pair": "NZD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.55001,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.54983,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 0.5494-0.55026)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.55001 / SL 0.55096 / TP 0.54811 (RR 1:2, risiko 9.5 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
