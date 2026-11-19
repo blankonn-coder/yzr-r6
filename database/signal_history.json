@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T09:45:33Z",
+    "last_updated": "2026-11-19T10:00:40Z",
     "retensi_hari": 30,
-    "total_entri": 535
+    "total_entri": 536
   },
   "signals": [
     {
@@ -14281,6 +14281,34 @@
         "Entry 0.55036 / SL 0.55137 / TP 0.54834 (RR 1:2, risiko 10.1 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261119T100040Z_GBPUSD",
+      "waktu": "2026-11-19T10:00:40Z",
+      "tanggal": "2026-11-19",
+      "jam_utc": "10:00",
+      "pair": "GBP/USD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.31458,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.31448,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Reversal bullish (zona FVG H1 1.31424-1.31472)",
+        "Ada sweep liquidity",
+        "Ada BOS/CHoCH",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.31458 / SL 1.31354 / TP 1.31668 (RR 1:2, risiko 10.5 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
