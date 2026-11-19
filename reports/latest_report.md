@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-19T07:30:29Z
+- Waktu eksekusi: 2026-11-19T07:45:22Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -9,17 +9,19 @@
 Tidak ada.
 
 ## Sinyal SELL
-Tidak ada.
+| Pair | Keputusan | Skor | Alasan |
+|---|---|---|---|
+| EUR/CAD | SELL | 100 | Continuation bearish (zona FVG H1 1.57233-1.5724); Trend searah bias TURUN; Ada area FVG H1; Harga retest zona; Ada konfirmasi candle (bearish engulfing); RR minimal 1:2; Entry 1.57213 / SL 1.5731 / TP 1.57019 (RR 1:2, risiko 9.7 pip) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| NZD/USD | SELL | 0.54988 | 0.55021 | RUGI 3.3 pip · 0.060% | 59 |
-| USD/CHF | BUY | 0.84374 | 0.84322 | RUGI 5.2 pip · 0.062% | 29 |
+| USD/CHF | BUY | 0.84374 | 0.84345 | RUGI 2.9 pip · 0.034% | 44 |
+| EUR/CAD | SELL | 1.57213 | 1.57213 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 533
-- Ditambahkan run ini: 0
+- Total entri: 534
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
