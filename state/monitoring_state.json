@@ -1,18 +1,10 @@
 {
-  "USD/CHF": {
-    "pair": "USD/CHF",
-    "keputusan": "BUY",
-    "harga_awal": 0.84374,
-    "waktu_mulai": "2026-11-19T07:00:41Z",
-    "signal_id": "20261119T070041Z_USDCHF",
-    "harga_sekarang": 0.84345
-  },
   "EUR/CAD": {
     "pair": "EUR/CAD",
     "keputusan": "SELL",
     "harga_awal": 1.57213,
     "waktu_mulai": "2026-11-19T07:45:22Z",
     "signal_id": "20261119T074522Z_EURCAD",
-    "harga_sekarang": 1.57213
+    "harga_sekarang": 1.5732
   }
 }
