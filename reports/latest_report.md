@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-19T17:30:36Z
+- Waktu eksekusi: 2026-11-19T17:45:25Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/USD | BUY | 1.09768 | 1.09797 | PROFIT 2.9 pip · 0.026% | 15 |
+| EUR/USD | BUY | 1.09768 | 1.09819 | PROFIT 5.1 pip · 0.046% | 30 |
 
 ## Info Database
 - Total entri: 546
