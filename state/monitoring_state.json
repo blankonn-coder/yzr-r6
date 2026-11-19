@@ -5,6 +5,14 @@
     "harga_awal": 1.57213,
     "waktu_mulai": "2026-11-19T07:45:22Z",
     "signal_id": "20261119T074522Z_EURCAD",
-    "harga_sekarang": 1.5732
+    "harga_sekarang": 1.57316
+  },
+  "NZD/USD": {
+    "pair": "NZD/USD",
+    "keputusan": "SELL",
+    "harga_awal": 0.55036,
+    "waktu_mulai": "2026-11-19T08:15:24Z",
+    "signal_id": "20261119T081524Z_NZDUSD",
+    "harga_sekarang": 0.55036
   }
 }
