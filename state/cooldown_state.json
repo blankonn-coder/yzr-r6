@@ -8,5 +8,10 @@
     "keputusan": "BUY",
     "waktu_mulai": "2026-11-19T13:45:25Z",
     "signal_id": "20261119T134525Z_USDCHF"
+  },
+  "USD/CAD": {
+    "keputusan": "BUY",
+    "waktu_mulai": "2026-11-19T14:00:46Z",
+    "signal_id": "20261119T140046Z_USDCAD"
   }
 }
