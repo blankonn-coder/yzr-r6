@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-19T11:00:42Z",
+    "last_updated": "2026-11-19T11:15:23Z",
     "retensi_hari": 30,
     "total_entri": 540
   },
@@ -14335,7 +14335,7 @@
         "RR minimal 1:2",
         "Entry 0.67089 / SL 0.67248 / TP 0.66771 (RR 1:2, risiko 15.9 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261119T101522Z_USDCAD",
@@ -14362,7 +14362,7 @@
         "RR minimal 1:2",
         "Entry 1.43067 / SL 1.42962 / TP 1.43279 (RR 1:2, risiko 10.6 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261119T104524Z_EURCAD",
