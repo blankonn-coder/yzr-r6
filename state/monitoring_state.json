@@ -1,10 +1,1 @@
-{
-  "EUR/USD": {
-    "pair": "EUR/USD",
-    "keputusan": "BUY",
-    "harga_awal": 1.09783,
-    "waktu_mulai": "2026-11-19T18:30:33Z",
-    "signal_id": "20261119T183033Z_EURUSD",
-    "harga_sekarang": 1.09773
-  }
-}
+{}
