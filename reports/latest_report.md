@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T15:30:34Z
+- Waktu eksekusi: 2026-11-20T15:45:24Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -12,9 +12,7 @@ Tidak ada.
 Tidak ada.
 
 ## Pemantauan (maks 60 menit)
-| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
-|---|---|---|---|---|---|
-| AUD/USD | SELL | 0.66656 | 0.6655 | PROFIT 10.6 pip · 0.159% | 59 |
+Tidak ada pair aktif.
 
 ## Info Database
 - Total entri: 561
