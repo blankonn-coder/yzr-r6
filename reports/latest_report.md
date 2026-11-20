@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T02:45:20Z
+- Waktu eksekusi: 2026-11-20T03:00:38Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| USD/JPY | BUY | 159.2605 | 159.2265 | RUGI 3.4 pip · 0.021% | 14 |
+| USD/JPY | BUY | 159.2605 | 159.2585 | RUGI 0.2 pip · 0.001% | 30 |
 
 ## Info Database
 - Total entri: 550
