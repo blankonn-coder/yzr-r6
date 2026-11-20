@@ -5,6 +5,14 @@
     "harga_awal": 1.65452,
     "waktu_mulai": "2026-11-20T19:00:50Z",
     "signal_id": "20261120T190050Z_EURAUD",
-    "harga_sekarang": 1.65653
+    "harga_sekarang": 1.65712
+  },
+  "USD/CAD": {
+    "pair": "USD/CAD",
+    "keputusan": "SELL",
+    "harga_awal": 1.43308,
+    "waktu_mulai": "2026-11-20T20:00:42Z",
+    "signal_id": "20261120T200042Z_USDCAD",
+    "harga_sekarang": 1.43308
   }
 }
