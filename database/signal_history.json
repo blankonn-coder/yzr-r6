@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T16:15:26Z",
+    "last_updated": "2026-11-20T16:30:36Z",
     "retensi_hari": 30,
-    "total_entri": 561
+    "total_entri": 562
   },
   "signals": [
     {
@@ -14985,6 +14985,33 @@
         "Entry 0.66656 / SL 0.66801 / TP 0.66366 (RR 1:2, risiko 14.5 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261120T163036Z_USDCAD",
+      "waktu": "2026-11-20T16:30:36Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "16:30",
+      "pair": "USD/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.43219,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.4323,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 1.43156-1.43304)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 1.43219 / SL 1.43373 / TP 1.42909 (RR 1:2, risiko 15.5 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
