@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T19:15:24Z
+- Waktu eksekusi: 2026-11-20T19:30:35Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/AUD | BUY | 1.65452 | 1.65589 | PROFIT 13.7 pip · 0.083% | 14 |
+| EUR/AUD | BUY | 1.65452 | 1.65709 | PROFIT 25.7 pip · 0.155% | 29 |
 
 ## Info Database
 - Total entri: 564
