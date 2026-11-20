@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T17:45:33Z",
+    "last_updated": "2026-11-20T18:00:55Z",
     "retensi_hari": 30,
-    "total_entri": 562
+    "total_entri": 563
   },
   "signals": [
     {
@@ -15012,6 +15012,34 @@
         "Entry 1.43219 / SL 1.43373 / TP 1.42909 (RR 1:2, risiko 15.5 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261120T180055Z_USDCAD",
+      "waktu": "2026-11-20T18:00:55Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "18:00",
+      "pair": "USD/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.43317,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.43317,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Reversal bearish (zona FVG H1 1.43301-1.43334)",
+        "Ada sweep liquidity",
+        "Ada BOS/CHoCH",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bearish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.43317 / SL 1.43403 / TP 1.43143 (RR 1:2, risiko 8.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }

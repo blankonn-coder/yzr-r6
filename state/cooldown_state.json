@@ -1,1 +1,7 @@
-{}
+{
+  "USD/CAD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-20T18:00:55Z",
+    "signal_id": "20261120T180055Z_USDCAD"
+  }
+}
