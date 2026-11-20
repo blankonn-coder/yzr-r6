@@ -5,7 +5,7 @@
     "harga_awal": 159.1985,
     "waktu_mulai": "2026-11-20T04:15:30Z",
     "signal_id": "20261120T041530Z_USDJPY",
-    "harga_sekarang": 159.1565
+    "harga_sekarang": 159.1435
   },
   "EUR/CHF": {
     "pair": "EUR/CHF",
@@ -21,6 +21,6 @@
     "harga_awal": 1.31056,
     "waktu_mulai": "2026-11-20T04:30:31Z",
     "signal_id": "20261120T043031Z_GBPUSD",
-    "harga_sekarang": 1.31078
+    "harga_sekarang": 1.31082
   }
 }
