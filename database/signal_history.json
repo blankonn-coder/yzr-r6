@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T02:15:21Z",
+    "last_updated": "2026-11-20T02:30:33Z",
     "retensi_hari": 30,
-    "total_entri": 549
+    "total_entri": 550
   },
   "signals": [
     {
@@ -14661,6 +14661,33 @@
         "Entry 159.4355 / SL 159.2035 / TP 159.8995 (RR 1:2, risiko 23.2 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261120T023033Z_USDJPY",
+      "waktu": "2026-11-20T02:30:33Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "02:30",
+      "pair": "USD/JPY",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 159.2605,
+      "level_terdekat": {
+        "type": "S",
+        "price": 159.3665,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 159.2735-159.4595)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 159.2605 / SL 159.2035 / TP 159.3745 (RR 1:2, risiko 5.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
