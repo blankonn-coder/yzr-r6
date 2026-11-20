@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T06:45:22Z",
+    "last_updated": "2026-11-20T07:00:39Z",
     "retensi_hari": 30,
-    "total_entri": 556
+    "total_entri": 557
   },
   "signals": [
     {
@@ -14848,6 +14848,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.31062 / SL 1.3116 / TP 1.30864 (RR 1:2, risiko 9.9 pip)"
+      ],
+      "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261120T070039Z_EURCHF",
+      "waktu": "2026-11-20T07:00:39Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "07:00",
+      "pair": "EUR/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.92492,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.92473,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 0.92419-0.92527)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 0.92492 / SL 0.92349 / TP 0.92778 (RR 1:2, risiko 14.3 pip)"
       ],
       "status_pantau": "AKTIF"
     }
