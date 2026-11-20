@@ -1,9 +1,9 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T21:45:22Z
-- Status: TEPAT WAKTU
-- Kalibrasi: TANPA KALIBRASI
-- Pair dianalisa: 15
+- Waktu eksekusi: 2026-11-20T22:00:44Z
+- Status: PASAR TUTUP
+- Kalibrasi: -
+- Pair dianalisa: 0
 
 ## Sinyal BUY
 Tidak ada.
@@ -13,10 +13,4 @@ Tidak ada.
 
 ## Pemantauan (maks 60 menit)
 Tidak ada pair aktif.
-
-## Info Database
-- Total entri: 565
-- Ditambahkan run ini: 0
-- Dihapus karena retensi: 0
-- File untuk diunduh: database/signal_history.json
 
