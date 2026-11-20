@@ -13,5 +13,10 @@
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-20T04:30:31Z",
     "signal_id": "20261120T043031Z_GBPUSD"
+  },
+  "USD/CHF": {
+    "keputusan": "BUY",
+    "waktu_mulai": "2026-11-20T05:15:29Z",
+    "signal_id": "20261120T051529Z_USDCHF"
   }
 }
