@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T04:00:36Z",
+    "last_updated": "2026-11-20T04:15:30Z",
     "retensi_hari": 30,
-    "total_entri": 551
+    "total_entri": 553
   },
   "signals": [
     {
@@ -14713,6 +14713,60 @@
         "Ada konfirmasi candle (bearish engulfing)",
         "RR minimal 1:2",
         "Entry 1.99987 / SL 2.00158 / TP 1.99643 (RR 1:2, risiko 17.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261120T041530Z_USDJPY",
+      "waktu": "2026-11-20T04:15:30Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "04:15",
+      "pair": "USD/JPY",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 159.1985,
+      "level_terdekat": {
+        "type": "S",
+        "price": 159.2565,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 159.1895-159.3235)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 159.1985 / SL 159.1195 / TP 159.3565 (RR 1:2, risiko 7.9 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261120T041530Z_EURCHF",
+      "waktu": "2026-11-20T04:15:30Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "04:15",
+      "pair": "EUR/CHF",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.9248,
+      "level_terdekat": {
+        "type": "S",
+        "price": 0.92473,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 0.92419-0.92527)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 0.9248 / SL 0.92349 / TP 0.92742 (RR 1:2, risiko 13.1 pip)"
       ],
       "status_pantau": "AKTIF"
     }
