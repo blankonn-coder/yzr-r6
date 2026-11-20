@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T06:15:22Z",
+    "last_updated": "2026-11-20T06:30:33Z",
     "retensi_hari": 30,
     "total_entri": 556
   },
@@ -14822,7 +14822,7 @@
         "RR minimal 1:2",
         "Entry 0.84196 / SL 0.84052 / TP 0.84484 (RR 1:2, risiko 14.4 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261120T060038Z_GBPUSD",
