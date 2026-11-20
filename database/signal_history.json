@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T03:15:20Z",
+    "last_updated": "2026-11-20T03:30:28Z",
     "retensi_hari": 30,
-    "total_entri": 550
+    "total_entri": 551
   },
   "signals": [
     {
@@ -14686,6 +14686,33 @@
         "Ada konfirmasi candle (bullish engulfing)",
         "RR minimal 1:2",
         "Entry 159.2605 / SL 159.2035 / TP 159.3745 (RR 1:2, risiko 5.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261120T033028Z_EURNZD",
+      "waktu": "2026-11-20T03:30:28Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "03:30",
+      "pair": "EUR/NZD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.99987,
+      "level_terdekat": {
+        "type": "R",
+        "price": 2.00046,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 2.00004-2.00088)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bearish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.99987 / SL 2.00158 / TP 1.99643 (RR 1:2, risiko 17.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }
