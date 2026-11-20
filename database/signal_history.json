@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T18:45:25Z",
+    "last_updated": "2026-11-20T19:00:50Z",
     "retensi_hari": 30,
-    "total_entri": 563
+    "total_entri": 564
   },
   "signals": [
     {
@@ -15038,6 +15038,33 @@
         "Ada konfirmasi candle (bearish engulfing)",
         "RR minimal 1:2",
         "Entry 1.43317 / SL 1.43403 / TP 1.43143 (RR 1:2, risiko 8.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261120T190050Z_EURAUD",
+      "waktu": "2026-11-20T19:00:50Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "19:00",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.65452,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.65372,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.6532-1.65423)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.65452 / SL 1.6525 / TP 1.65856 (RR 1:2, risiko 20.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }
