@@ -1,10 +1,1 @@
-{
-  "USD/CHF": {
-    "pair": "USD/CHF",
-    "keputusan": "BUY",
-    "harga_awal": 0.84228,
-    "waktu_mulai": "2026-11-20T07:15:25Z",
-    "signal_id": "20261120T071525Z_USDCHF",
-    "harga_sekarang": 0.84227
-  }
-}
+{}
