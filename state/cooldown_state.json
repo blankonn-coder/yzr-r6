@@ -1,9 +1,4 @@
 {
-  "EUR/AUD": {
-    "keputusan": "BUY",
-    "waktu_mulai": "2026-11-20T19:00:50Z",
-    "signal_id": "20261120T190050Z_EURAUD"
-  },
   "USD/CAD": {
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-20T20:00:42Z",
