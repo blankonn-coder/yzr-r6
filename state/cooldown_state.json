@@ -1,9 +1,4 @@
 {
-  "EUR/NZD": {
-    "keputusan": "SELL",
-    "waktu_mulai": "2026-11-20T03:30:28Z",
-    "signal_id": "20261120T033028Z_EURNZD"
-  },
   "USD/JPY": {
     "keputusan": "BUY",
     "waktu_mulai": "2026-11-20T04:15:30Z",
