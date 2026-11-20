@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T20:45:23Z
+- Waktu eksekusi: 2026-11-20T21:00:43Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -12,9 +12,7 @@ Tidak ada.
 Tidak ada.
 
 ## Pemantauan (maks 60 menit)
-| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
-|---|---|---|---|---|---|
-| USD/CAD | SELL | 1.43308 | 1.4345 | RUGI 14.2 pip · 0.099% | 44 |
+Tidak ada pair aktif.
 
 ## Info Database
 - Total entri: 565
