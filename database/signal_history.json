@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T14:45:26Z",
+    "last_updated": "2026-11-20T15:00:48Z",
     "retensi_hari": 30,
     "total_entri": 561
   },
@@ -14957,7 +14957,7 @@
         "RR minimal 1:2",
         "Entry 1.43074 / SL 1.43226 / TP 1.42771 (RR 1:2, risiko 15.2 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261120T143039Z_AUDUSD",

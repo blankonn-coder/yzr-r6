@@ -1,18 +1,10 @@
 {
-  "USD/CAD": {
-    "pair": "USD/CAD",
-    "keputusan": "SELL",
-    "harga_awal": 1.43074,
-    "waktu_mulai": "2026-11-20T14:00:44Z",
-    "signal_id": "20261120T140044Z_USDCAD",
-    "harga_sekarang": 1.43264
-  },
   "AUD/USD": {
     "pair": "AUD/USD",
     "keputusan": "SELL",
     "harga_awal": 0.66656,
     "waktu_mulai": "2026-11-20T14:30:39Z",
     "signal_id": "20261120T143039Z_AUDUSD",
-    "harga_sekarang": 0.66589
+    "harga_sekarang": 0.66691
   }
 }
