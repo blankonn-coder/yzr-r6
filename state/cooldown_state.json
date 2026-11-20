@@ -1,1 +1,7 @@
-{}
+{
+  "GBP/USD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-20T13:30:44Z",
+    "signal_id": "20261120T133044Z_GBPUSD"
+  }
+}
