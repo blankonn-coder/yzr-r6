@@ -7,11 +7,11 @@ from datetime import datetime, timezone
 BIQUOTE_HOST = "https://biquote.io"
 CANDLE_COUNT = 200
 
-# ---- 14 pair. Sesuaikan dengan daftar pair Finex Anda ----
+# ---- 15 pair. Sesuaikan dengan daftar pair Finex Anda ----
 PAIRS = [
     "EUR_USD", "GBP_USD", "USD_JPY", "USD_CHF", "AUD_USD", "USD_CAD", "NZD_USD",
     "EUR_GBP", "EUR_JPY", "EUR_CHF", "EUR_AUD", "EUR_CAD", "EUR_NZD",
-    "XAU_USD",
+    "XAU_USD", "XAU_AUD",
 ]
 
 # Timeframe yang dipakai strategi: D1 (trend utama), H4 (konfirmasi bias),
