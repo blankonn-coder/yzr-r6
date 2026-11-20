@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-20T04:15:30Z",
+    "last_updated": "2026-11-20T04:30:31Z",
     "retensi_hari": 30,
-    "total_entri": 553
+    "total_entri": 554
   },
   "signals": [
     {
@@ -14714,7 +14714,7 @@
         "RR minimal 1:2",
         "Entry 1.99987 / SL 2.00158 / TP 1.99643 (RR 1:2, risiko 17.2 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261120T041530Z_USDJPY",
@@ -14767,6 +14767,33 @@
         "Ada konfirmasi candle (pin bar bullish)",
         "RR minimal 1:2",
         "Entry 0.9248 / SL 0.92349 / TP 0.92742 (RR 1:2, risiko 13.1 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261120T043031Z_GBPUSD",
+      "waktu": "2026-11-20T04:30:31Z",
+      "tanggal": "2026-11-20",
+      "jam_utc": "04:30",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.31056,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.31025,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 1.3096-1.3109)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bearish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.31056 / SL 1.3116 / TP 1.30849 (RR 1:2, risiko 10.4 pip)"
       ],
       "status_pantau": "AKTIF"
     }

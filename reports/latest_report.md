@@ -1,29 +1,28 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-20T04:15:30Z
+- Waktu eksekusi: 2026-11-20T04:30:31Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 14
 
 ## Sinyal BUY
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| USD/JPY | BUY | 100 | Continuation bullish (zona OB H1 159.1895-159.3235); Trend searah bias NAIK; Ada area OB H1; Harga retest zona; Ada konfirmasi candle (pin bar bullish); RR minimal 1:2; Entry 159.1985 / SL 159.1195 / TP 159.3565 (RR 1:2, risiko 7.9 pip) |
-| EUR/CHF | BUY | 100 | Continuation bullish (zona OB H1 0.92419-0.92527); Trend searah bias NAIK; Ada area OB H1; Harga retest zona; Ada konfirmasi candle (pin bar bullish); RR minimal 1:2; Entry 0.9248 / SL 0.92349 / TP 0.92742 (RR 1:2, risiko 13.1 pip) |
+Tidak ada.
 
 ## Sinyal SELL
-Tidak ada.
+| Pair | Keputusan | Skor | Alasan |
+|---|---|---|---|
+| GBP/USD | SELL | 100 | Continuation bearish (zona OB H1 1.3096-1.3109); Trend searah bias TURUN; Ada area OB H1; Harga retest zona; Ada konfirmasi candle (bearish engulfing); RR minimal 1:2; Entry 1.31056 / SL 1.3116 / TP 1.30849 (RR 1:2, risiko 10.4 pip) |
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/NZD | SELL | 1.99987 | 1.99846 | PROFIT 14.1 pip · 0.071% | 45 |
-| USD/JPY | BUY | 159.1985 | 159.1985 | 0.0 pip · 0.000% | 0 |
-| EUR/CHF | BUY | 0.9248 | 0.9248 | 0.0 pip · 0.000% | 0 |
+| USD/JPY | BUY | 159.1985 | 159.1945 | RUGI 0.4 pip · 0.003% | 15 |
+| EUR/CHF | BUY | 0.9248 | 0.92468 | RUGI 1.2 pip · 0.013% | 15 |
+| GBP/USD | SELL | 1.31056 | 1.31056 | 0.0 pip · 0.000% | 0 |
 
 ## Info Database
-- Total entri: 553
-- Ditambahkan run ini: 2
+- Total entri: 554
+- Ditambahkan run ini: 1
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
