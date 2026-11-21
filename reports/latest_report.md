@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-21T05:45:23Z
+- Waktu eksekusi: 2026-11-21T06:00:40Z
 - Status: PASAR TUTUP
 - Kalibrasi: -
 - Pair dianalisa: 0
