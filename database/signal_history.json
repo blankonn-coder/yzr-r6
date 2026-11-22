@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-22T22:45:24Z",
+    "last_updated": "2026-11-22T23:00:46Z",
     "retensi_hari": 30,
-    "total_entri": 565
+    "total_entri": 566
   },
   "signals": [
     {
@@ -15095,6 +15095,33 @@
         "Entry 1.43308 / SL 1.43403 / TP 1.43118 (RR 1:2, risiko 9.5 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261122T230046Z_EURAUD",
+      "waktu": "2026-11-22T23:00:46Z",
+      "tanggal": "2026-11-22",
+      "jam_utc": "23:00",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.65698,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.65638,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.65608-1.65668)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (bullish engulfing)",
+        "RR minimal 1:2",
+        "Entry 1.65698 / SL 1.65538 / TP 1.66017 (RR 1:2, risiko 16.0 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
