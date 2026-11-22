@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-22T23:15:26Z
+- Waktu eksekusi: 2026-11-22T23:30:32Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| EUR/AUD | BUY | 1.65698 | 1.65541 | RUGI 15.7 pip · 0.095% | 14 |
+| EUR/AUD | BUY | 1.65698 | 1.65382 | RUGI 31.6 pip · 0.191% | 29 |
 
 ## Info Database
 - Total entri: 566
