@@ -1,12 +1,17 @@
 {
-  "EUR/AUD": {
-    "keputusan": "BUY",
-    "waktu_mulai": "2026-11-22T23:00:46Z",
-    "signal_id": "20261122T230046Z_EURAUD"
-  },
   "GBP/USD": {
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-23T00:00:38Z",
     "signal_id": "20261123T000038Z_GBPUSD"
+  },
+  "AUD/USD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-23T00:15:26Z",
+    "signal_id": "20261123T001526Z_AUDUSD"
+  },
+  "EUR/CAD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-23T00:15:26Z",
+    "signal_id": "20261123T001526Z_EURCAD"
   }
 }

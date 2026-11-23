@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-23T00:00:38Z",
+    "last_updated": "2026-11-23T00:15:26Z",
     "retensi_hari": 30,
-    "total_entri": 567
+    "total_entri": 569
   },
   "signals": [
     {
@@ -15121,7 +15121,7 @@
         "RR minimal 1:2",
         "Entry 1.65698 / SL 1.65538 / TP 1.66017 (RR 1:2, risiko 16.0 pip)"
       ],
-      "status_pantau": "AKTIF"
+      "status_pantau": "EXPIRED"
     },
     {
       "id": "20261123T000038Z_GBPUSD",
@@ -15147,6 +15147,60 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.30943 / SL 1.3104 / TP 1.3075 (RR 1:2, risiko 9.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T001526Z_AUDUSD",
+      "waktu": "2026-11-23T00:15:26Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "00:15",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.66406,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.66417,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 0.6638-0.66454)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.66406 / SL 0.66524 / TP 0.6617 (RR 1:2, risiko 11.8 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T001526Z_EURCAD",
+      "waktu": "2026-11-23T00:15:26Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "00:15",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.57371,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.5734,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 1.57235-1.57446)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 1.57371 / SL 1.57516 / TP 1.57081 (RR 1:2, risiko 14.5 pip)"
       ],
       "status_pantau": "AKTIF"
     }
