@@ -3,5 +3,10 @@
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-23T18:45:32Z",
     "signal_id": "20261123T184532Z_NZDUSD"
+  },
+  "GBP/USD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-23T19:45:23Z",
+    "signal_id": "20261123T194523Z_GBPUSD"
   }
 }
