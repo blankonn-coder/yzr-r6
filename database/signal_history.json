@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-23T08:30:32Z",
+    "last_updated": "2026-11-23T08:45:22Z",
     "retensi_hari": 30,
-    "total_entri": 577
+    "total_entri": 578
   },
   "signals": [
     {
@@ -15417,6 +15417,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.57391 / SL 1.57523 / TP 1.57127 (RR 1:2, risiko 13.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T084522Z_GBPUSD",
+      "waktu": "2026-11-23T08:45:22Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "08:45",
+      "pair": "GBP/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.3139,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.31292,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 1.31204-1.3138)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 1.3139 / SL 1.3145 / TP 1.31268 (RR 1:2, risiko 6.1 pip)"
       ],
       "status_pantau": "AKTIF"
     }
