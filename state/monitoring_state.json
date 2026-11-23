@@ -1,18 +1,10 @@
 {
-  "NZD/USD": {
-    "pair": "NZD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.54433,
-    "waktu_mulai": "2026-11-23T18:45:32Z",
-    "signal_id": "20261123T184532Z_NZDUSD",
-    "harga_sekarang": 0.54433
-  },
   "GBP/USD": {
     "pair": "GBP/USD",
     "keputusan": "SELL",
     "harga_awal": 1.30299,
     "waktu_mulai": "2026-11-23T19:45:23Z",
     "signal_id": "20261123T194523Z_GBPUSD",
-    "harga_sekarang": 1.30299
+    "harga_sekarang": 1.30353
   }
 }
