@@ -1,1 +1,10 @@
-{}
+{
+  "USD/CAD": {
+    "pair": "USD/CAD",
+    "keputusan": "BUY",
+    "harga_awal": 1.43345,
+    "waktu_mulai": "2026-11-23T04:00:47Z",
+    "signal_id": "20261123T040047Z_USDCAD",
+    "harga_sekarang": 1.43345
+  }
+}
