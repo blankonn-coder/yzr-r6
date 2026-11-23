@@ -1,12 +1,1 @@
-{
-  "AUD/USD": {
-    "keputusan": "SELL",
-    "waktu_mulai": "2026-11-23T15:00:41Z",
-    "signal_id": "20261123T150041Z_AUDUSD"
-  },
-  "EUR/AUD": {
-    "keputusan": "BUY",
-    "waktu_mulai": "2026-11-23T15:00:41Z",
-    "signal_id": "20261123T150041Z_EURAUD"
-  }
-}
+{}
