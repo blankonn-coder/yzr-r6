@@ -1,19 +1,11 @@
 {
-  "NZD/USD": {
-    "pair": "NZD/USD",
-    "keputusan": "SELL",
-    "harga_awal": 0.54552,
-    "waktu_mulai": "2026-11-23T14:45:25Z",
-    "signal_id": "20261123T144525Z_NZDUSD",
-    "harga_sekarang": 0.54489
-  },
   "AUD/USD": {
     "pair": "AUD/USD",
     "keputusan": "SELL",
     "harga_awal": 0.66389,
     "waktu_mulai": "2026-11-23T15:00:41Z",
     "signal_id": "20261123T150041Z_AUDUSD",
-    "harga_sekarang": 0.6634
+    "harga_sekarang": 0.66384
   },
   "EUR/AUD": {
     "pair": "EUR/AUD",
@@ -21,6 +13,6 @@
     "harga_awal": 1.64598,
     "waktu_mulai": "2026-11-23T15:00:41Z",
     "signal_id": "20261123T150041Z_EURAUD",
-    "harga_sekarang": 1.64464
+    "harga_sekarang": 1.64404
   }
 }

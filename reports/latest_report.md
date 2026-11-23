@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-23T15:30:36Z
+- Waktu eksekusi: 2026-11-23T15:45:25Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -14,9 +14,8 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| NZD/USD | SELL | 0.54552 | 0.54489 | PROFIT 6.3 pip · 0.115% | 45 |
-| AUD/USD | SELL | 0.66389 | 0.6634 | PROFIT 4.9 pip · 0.074% | 29 |
-| EUR/AUD | BUY | 1.64598 | 1.64464 | RUGI 13.4 pip · 0.081% | 29 |
+| AUD/USD | SELL | 0.66389 | 0.66384 | PROFIT 0.5 pip · 0.008% | 44 |
+| EUR/AUD | BUY | 1.64598 | 1.64404 | RUGI 19.4 pip · 0.118% | 44 |
 
 ## Info Database
 - Total entri: 582
