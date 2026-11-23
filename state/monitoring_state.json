@@ -1,1 +1,10 @@
-{}
+{
+  "GBP/USD": {
+    "pair": "GBP/USD",
+    "keputusan": "SELL",
+    "harga_awal": 1.31231,
+    "waktu_mulai": "2026-11-23T06:30:34Z",
+    "signal_id": "20261123T063034Z_GBPUSD",
+    "harga_sekarang": 1.31231
+  }
+}
