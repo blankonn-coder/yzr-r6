@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-23T14:45:25Z",
+    "last_updated": "2026-11-23T15:00:41Z",
     "retensi_hari": 30,
-    "total_entri": 580
+    "total_entri": 582
   },
   "signals": [
     {
@@ -15498,6 +15498,61 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 0.54552 / SL 0.54704 / TP 0.54248 (RR 1:2, risiko 15.2 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T150041Z_AUDUSD",
+      "waktu": "2026-11-23T15:00:41Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "15:00",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.66389,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.66368,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Reversal bearish (zona FVG H1 0.66336-0.664)",
+        "Ada sweep liquidity",
+        "Ada BOS/CHoCH",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.66389 / SL 0.6647 / TP 0.66227 (RR 1:2, risiko 8.1 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T150041Z_EURAUD",
+      "waktu": "2026-11-23T15:00:41Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "15:00",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.64598,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.64664,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona OB H1 1.64486-1.64842)",
+        "Trend searah bias NAIK",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.64598 / SL 1.64416 / TP 1.64962 (RR 1:2, risiko 18.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }
