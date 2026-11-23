@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-23T20:30:32Z
+- Waktu eksekusi: 2026-11-23T20:45:25Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -12,9 +12,7 @@ Tidak ada.
 Tidak ada.
 
 ## Pemantauan (maks 60 menit)
-| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
-|---|---|---|---|---|---|
-| GBP/USD | SELL | 1.30299 | 1.30357 | RUGI 5.8 pip · 0.045% | 45 |
+Tidak ada pair aktif.
 
 ## Info Database
 - Total entri: 584
