@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-23T09:30:33Z",
+    "last_updated": "2026-11-23T09:45:24Z",
     "retensi_hari": 30,
-    "total_entri": 578
+    "total_entri": 579
   },
   "signals": [
     {
@@ -15444,6 +15444,33 @@
         "Ada konfirmasi candle (pin bar bearish)",
         "RR minimal 1:2",
         "Entry 1.3139 / SL 1.3145 / TP 1.31268 (RR 1:2, risiko 6.1 pip)"
+      ],
+      "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261123T094524Z_AUDUSD",
+      "waktu": "2026-11-23T09:45:24Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "09:45",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.66502,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.66536,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 0.66499-0.66574)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.66502 / SL 0.66644 / TP 0.66218 (RR 1:2, risiko 14.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }
