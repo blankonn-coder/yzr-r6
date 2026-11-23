@@ -5,7 +5,7 @@
     "harga_awal": 1.57391,
     "waktu_mulai": "2026-11-23T08:15:28Z",
     "signal_id": "20261123T081528Z_EURCAD",
-    "harga_sekarang": 1.57385
+    "harga_sekarang": 1.57275
   },
   "GBP/USD": {
     "pair": "GBP/USD",
@@ -13,6 +13,6 @@
     "harga_awal": 1.3139,
     "waktu_mulai": "2026-11-23T08:45:22Z",
     "signal_id": "20261123T084522Z_GBPUSD",
-    "harga_sekarang": 1.31344
+    "harga_sekarang": 1.31252
   }
 }
