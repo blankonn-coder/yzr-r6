@@ -5,7 +5,7 @@
     "harga_awal": 1.43345,
     "waktu_mulai": "2026-11-23T04:00:47Z",
     "signal_id": "20261123T040047Z_USDCAD",
-    "harga_sekarang": 1.43335
+    "harga_sekarang": 1.43301
   },
   "EUR/CAD": {
     "pair": "EUR/CAD",
@@ -13,6 +13,6 @@
     "harga_awal": 1.57368,
     "waktu_mulai": "2026-11-23T04:15:23Z",
     "signal_id": "20261123T041523Z_EURCAD",
-    "harga_sekarang": 1.57354
+    "harga_sekarang": 1.57352
   }
 }
