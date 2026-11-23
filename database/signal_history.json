@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-23T08:00:40Z",
+    "last_updated": "2026-11-23T08:15:28Z",
     "retensi_hari": 30,
-    "total_entri": 576
+    "total_entri": 577
   },
   "signals": [
     {
@@ -15390,6 +15390,33 @@
         "Ada konfirmasi candle (bullish engulfing)",
         "RR minimal 1:2",
         "Entry 1.43175 / SL 1.43034 / TP 1.43455 (RR 1:2, risiko 14.0 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261123T081528Z_EURCAD",
+      "waktu": "2026-11-23T08:15:28Z",
+      "tanggal": "2026-11-23",
+      "jam_utc": "08:15",
+      "pair": "EUR/CAD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.57391,
+      "level_terdekat": {
+        "type": "R",
+        "price": 1.5738,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona OB H1 1.57306-1.57453)",
+        "Trend searah bias TURUN",
+        "Ada area OB H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 1.57391 / SL 1.57523 / TP 1.57127 (RR 1:2, risiko 13.2 pip)"
       ],
       "status_pantau": "AKTIF"
     }

@@ -8,5 +8,10 @@
     "keputusan": "BUY",
     "waktu_mulai": "2026-11-23T08:00:40Z",
     "signal_id": "20261123T080040Z_USDCAD"
+  },
+  "EUR/CAD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-23T08:15:28Z",
+    "signal_id": "20261123T081528Z_EURCAD"
   }
 }
