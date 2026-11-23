@@ -1,10 +1,1 @@
-{
-  "EUR/CAD": {
-    "pair": "EUR/CAD",
-    "keputusan": "SELL",
-    "harga_awal": 1.57437,
-    "waktu_mulai": "2026-11-23T02:00:39Z",
-    "signal_id": "20261123T020039Z_EURCAD",
-    "harga_sekarang": 1.57404
-  }
-}
+{}
