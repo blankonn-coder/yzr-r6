@@ -3,5 +3,10 @@
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-23T06:30:34Z",
     "signal_id": "20261123T063034Z_GBPUSD"
+  },
+  "EUR/CAD": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-23T06:45:21Z",
+    "signal_id": "20261123T064521Z_EURCAD"
   }
 }
