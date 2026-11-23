@@ -5,6 +5,14 @@
     "harga_awal": 0.66504,
     "waktu_mulai": "2026-11-23T07:45:28Z",
     "signal_id": "20261123T074528Z_AUDUSD",
-    "harga_sekarang": 0.66504
+    "harga_sekarang": 0.66479
+  },
+  "USD/CAD": {
+    "pair": "USD/CAD",
+    "keputusan": "BUY",
+    "harga_awal": 1.43175,
+    "waktu_mulai": "2026-11-23T08:00:40Z",
+    "signal_id": "20261123T080040Z_USDCAD",
+    "harga_sekarang": 1.43175
   }
 }
