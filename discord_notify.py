@@ -24,14 +24,16 @@ def _mode():
 
 
 def should_send(mode, rows, heartbeat=False):
-    """signal: kirim jika ada ENTRY/WATCHLIST/DATA INVALID, atau heartbeat harian (run jam 00 UTC)."""
+    """signal: kirim jika ada ENTRY/WATCHLIST/DATA INVALID, atau ada analisa cadangan (NO TRADE/WATCHLIST),
+    atau heartbeat harian (run jam 00 UTC)."""
     if mode == "off":
         return False
     if mode == "always":
         return True
     if heartbeat:
         return True
-    return any(r["label"] in ("WATCHLIST", "DATA INVALID") or r["label"].startswith("ENTRY") for r in rows)
+    return any(r["label"] in ("WATCHLIST", "DATA INVALID") or r["label"].startswith("ENTRY")
+               or r.get("cadangan") for r in rows)
 
 
 def _cut(text, limit=FIELD_MAX):
@@ -54,6 +56,22 @@ def _cad_baris(r):
             continue
         bagian.append(f"{key.upper()}: {_cad_lvl('Res', t.get('resistance'))} · {_cad_lvl('Sup', t.get('support'))}")
     return f"**{r['pair']}**\n" + "\n".join(bagian)
+
+
+def _potong_baris(blok, limit=FIELD_MAX):
+    """Gabungkan blok per pair menjadi teks per field, tiap field maksimal limit karakter."""
+    hasil, cur = [], ""
+    for b in blok:
+        calon = b if not cur else cur + "\n\n" + b
+        if len(calon) <= limit:
+            cur = calon
+        else:
+            if cur:
+                hasil.append(cur)
+            cur = b
+    if cur:
+        hasil.append(cur)
+    return hasil or ["—"]
 
 
 def build_embed(now, status, rows, ranking_ok):
@@ -86,8 +104,13 @@ def build_embed(now, status, rows, ranking_ok):
     ]
     cad = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
     if cad:
-        fields.append({"name": "🔎 Analisa cadangan (bukan sinyal, tanpa entry)",
-                       "value": _cut("\n".join(map(_cad_baris, cad))), "inline": False})
+        # Dipecah per pair agar tidak terpotong oleh batas 1024 karakter per field
+        potongan = _potong_baris(list(map(_cad_baris, cad)))
+        for i, teks in enumerate(potongan, 1):
+            judul = "🔎 Analisa cadangan (bukan sinyal, tanpa entry)"
+            if len(potongan) > 1:
+                judul += f" {i}/{len(potongan)}"
+            fields.append({"name": judul, "value": teks, "inline": False})
     if invalid:
         fields.append({"name": f"⚠️ DATA INVALID ({len(invalid)})",
                        "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})
