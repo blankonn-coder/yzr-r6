@@ -93,10 +93,11 @@ def _pantau_md(tampil):
 def _evaluasi_md(selesai):
     if not selesai:
         return ["Belum ada evaluasi yang selesai di run ini."]
-    L = ["| Sumber | Pair | Arah | Hasil | Pip akhir | MFE (pip) | MAE (pip) | Ditutup (UTC) |",
-         "|---|---|---|---|---|---|---|---|"]
+    L = ["| Sumber | Pair | Arah | 15m | 30m | 45m | 60m | Hasil | Pip akhir | MFE (pip) | MAE (pip) | Ditutup (UTC) |",
+         "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for e in selesai:
-        L.append(f"| {e['sumber']} | {e['pair']} | {e['arah']} | {e['hasil']}"
+        L.append(f"| {e['sumber']} | {e['pair']} | {e['arah']} | {_titik_txt(e, 15)} | {_titik_txt(e, 30)} "
+                 f"| {_titik_txt(e, 45)} | {_titik_txt(e, 60)} | {e['hasil']}"
                  f"{' · menit ' + str(e['menit_kena']) if e['menit_kena'] else ''} | {_pip_txt(e['pip'])} "
                  f"| {e['mfe'] if e['mfe'] is not None else '-'} | {e['mae'] if e['mae'] is not None else '-'} "
                  f"| {e['ditutup']} |")
