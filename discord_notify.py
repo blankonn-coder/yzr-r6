@@ -142,8 +142,14 @@ def build_embed(now, status, rows, ranking_ok, info=None):
         {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
     if cad_saran := info["saran"]:
-        fields.append({"name": "🔁 Pair lag (keterlambatan 5-60 menit, BUKAN sinyal)",
-                       "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
+        ll = [s for s in cad_saran if s.get("metode") == "LEAD-LAG"]
+        if ll:
+            fields.append({"name": "🔁 Pair (BUKAN sinyal)",
+                           "value": _cut("\n".join(f"**{s['pair']}** · {s['lag_menit']}m" for s in ll)),
+                           "inline": False})
+        else:
+            fields.append({"name": "💡 Saran cadangan (BUKAN sinyal, belum divalidasi backtest)",
+                           "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
     if tampil := info["tampil"]:
         fields.append({"name": "⏱ Pemantauan 15 menit (entry & analisa cadangan)",
                        "value": _cut("\n".join(map(_pantau_baris, tampil))), "inline": False})
