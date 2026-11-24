@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-24T02:15:25Z
+- Waktu eksekusi: 2026-11-24T02:30:33Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -14,7 +14,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| NZD/USD | SELL | 0.54516 | 0.54531 | RUGI 1.5 pip · 0.028% | 14 |
+| NZD/USD | SELL | 0.54516 | 0.54527 | RUGI 1.1 pip · 0.020% | 29 |
 
 ## Info Database
 - Total entri: 588
