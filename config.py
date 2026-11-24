@@ -67,7 +67,8 @@ CADANGAN_OUTCOME_PATH = "database/analisa_cadangan_hasil.jsonl"
 CADANGAN_OUTCOME_BARS = (1, 4, 12)
 
 # ---- Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest, tidak mengubah label) ----
-CADANGAN_SARAN_N = 5              # jumlah pair saran per run
+CADANGAN_SARAN_N = 3              # jumlah pair saran per run
+CADANGAN_TAMPIL_MAKS = 3          # maks pair level cadangan yang tampil di Discord (urut jarak terdekat)
 CADANGAN_SARAN_MAX_ATR = 1.0      # hanya level H1 dengan jarak maksimal 1 ATR dari harga
 CADANGAN_SARAN_SL_ATR = 0.5       # SL = level dikurangi/ditambah 0,5 ATR H1 (sisi seberang harga)
 CADANGAN_SARAN_TP_R = 1.5         # TP = entry ± 1,5 R (R = jarak entry ke SL)
