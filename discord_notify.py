@@ -46,6 +46,13 @@ def _cad_lvl(tag, x):
     return f"{tag} {x['harga']} ({x['jarak_atr']} ATR)"
 
 
+def _jarak_terdekat(r):
+    """Jarak level H1 terdekat (ATR) dari harga; besar jika tidak ada level."""
+    h1 = (r.get("cadangan") or {}).get("h1") or {}
+    jarak = [x["jarak_atr"] for x in (h1.get("support"), h1.get("resistance")) if x]
+    return min(jarak) if jarak else float("inf")
+
+
 def _cad_baris(r):
     cad = r["cadangan"]
     bagian = []
@@ -123,6 +130,8 @@ def build_embed(now, status, rows, ranking_ok, info=None):
         {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
     cad = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
+    cad_sisa = max(0, len(cad) - C.CADANGAN_TAMPIL_MAKS)
+    cad = sorted(cad, key=_jarak_terdekat)[:C.CADANGAN_TAMPIL_MAKS]
     if cad:
         # Dipecah per pair agar tidak terpotong oleh batas 1024 karakter per field
         potongan = _potong_baris(list(map(_cad_baris, cad)))
@@ -145,7 +154,8 @@ def build_embed(now, status, rows, ranking_ok, info=None):
                        "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})
     return {"title": f"📊 Adaptive Forex Scanner · {now:%H:%M} UTC", "description": desc,
             "color": warna, "fields": fields,
-            "footer": {"text": "Laporan lengkap: reports/scanner_latest.md"},
+            "footer": {"text": "Laporan lengkap: reports/scanner_latest.md"
+                       + (f" · +{cad_sisa} pair level cadangan lainnya" if cad_sisa else "")},
             "timestamp": now.isoformat()}
 
 
