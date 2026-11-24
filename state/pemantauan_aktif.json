@@ -95,6 +95,54 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T19:15:23Z"
+    },
+    {
+      "pair": "EUR/AUD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 1.64946,
+      "jarak_atr": 0.53,
+      "sentuhan": 18,
+      "entry": 1.65099,
+      "sl": 1.64803,
+      "tp": 1.65543,
+      "sl_pip": 29.6,
+      "bar_terakhir": "2026-11-24T18:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T19:30:33Z"
+    },
+    {
+      "pair": "EUR/CHF",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.91556,
+      "jarak_atr": 0.58,
+      "sentuhan": 1,
+      "entry": 0.91616,
+      "sl": 0.91504,
+      "tp": 0.91784,
+      "sl_pip": 11.2,
+      "bar_terakhir": "2026-11-24T18:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T19:30:33Z"
+    },
+    {
+      "pair": "EUR/JPY",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 174.505,
+      "jarak_atr": 0.66,
+      "sentuhan": 25,
+      "entry": 174.6665,
+      "sl": 174.38202,
+      "tp": 175.09321,
+      "sl_pip": 28.4,
+      "bar_terakhir": "2026-11-24T18:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T19:30:33Z"
     }
   ]
 }
