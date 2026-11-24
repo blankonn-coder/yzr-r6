@@ -80,6 +80,16 @@ def test_kandidat_leader_bergerak_follower_belum_menghasilkan_saran():
     assert s["mulai"] == C.fmt(datetime.fromtimestamp(t_akhir + C.TF_LEADLAG_SEC, timezone.utc))
 
 
+def test_pasangan_belum_dipicu_tetap_punya_arah_dan_sl_tp():
+    candles = buat_sintetis()
+    end = max(cs[-1][0] for cs in candles.values())
+    _, lag_terbaik, ret, sigma = LL.hitung_backtest(candles, end)
+    rows = [_row("NZD/JPY", candles["NZD_JPY"][-1][1], atr=0.05)]
+    kand = LL.kandidat(rows, candles, ret, sigma, lag_terbaik, end)
+    assert kand and all(k["arah"] in ("BUY", "SELL") and k["sl"] != k["tp"] for k in kand)
+    assert all(isinstance(k["dipicu"], bool) for k in kand)
+
+
 def test_kandidat_follower_sudah_bergerak_dilewati():
     kand, _ = _kasus_pemicu(follower_bergerak=True)
     assert kand == []
@@ -234,5 +244,4 @@ def test_discord_hanya_pair_lag_dan_saran():
     nama = [f["name"] for f in emb["fields"]]
     assert not any("Level cadangan" in n or "Saran cadangan" in n for n in nama)
     teks = " ".join(f["value"] for f in emb["fields"])
-    assert "**EUR/JPY** · lag 15 mnt" in teks and "GBP/JPY" not in teks
-    assert "LEAD-LAG" not in teks  # saran tidak lagi ditampilkan di Discord
+    assert "**EUR/JPY** · BUY" in teks and "SL 0.99" in teks and "TP 1.015" in teks
