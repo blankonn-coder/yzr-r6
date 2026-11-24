@@ -1,9 +1,9 @@
-name: Forex Screening
+name: Adaptive Forex Scanner
 
-# Dipicu oleh cron-job.org (repository_dispatch) atau tombol Run workflow (manual).
+# Scanner per jam (menit ke-5, setelah bar H1 tutup). Bisa juga dipicu manual.
 on:
-  repository_dispatch:
-    types: [forex-screening]
+  schedule:
+    - cron: "5 * * * *"
   workflow_dispatch:
     inputs:
       pairs:
@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: forex-screening
+  group: forex-scanner
   cancel-in-progress: false
 
 jobs:
@@ -28,20 +28,19 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Jalankan screening
+      - name: Jalankan scanner
         env:
-          FINEX_REFERENCE_JSON: ${{ secrets.FINEX_REFERENCE_JSON }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_NOTIFY_MODE: ${{ vars.DISCORD_NOTIFY_MODE }}
-          PAIRS: ${{ github.event.inputs.pairs || github.event.client_payload.pairs }}
+          PAIRS: ${{ github.event.inputs.pairs }}
         run: python main.py --pairs "$PAIRS"
       - name: Commit state, database, laporan
         if: always()
         run: |
-          mkdir -p state database reports
+          mkdir -p state database reports scanner
           git config user.name "forex-bot"
           git config user.email "forex-bot@users.noreply.github.com"
-          git add -A state database reports
+          git add -A state database reports scanner
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan untuk di-commit"
             exit 0
@@ -51,10 +50,9 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               # Konflik hanya pada file hasil bot: pakai versi run ini
-              # (saat rebase, --theirs = commit bot).
               for f in $(git diff --name-only --diff-filter=U); do
                 case "$f" in
-                  state/*|database/*|reports/*) git checkout --theirs -- "$f"; git add "$f" ;;
+                  state/*|database/*|reports/*|scanner/*) git checkout --theirs -- "$f"; git add "$f" ;;
                   *) echo "Konflik di luar file bot: $f"; git rebase --abort; exit 1 ;;
                 esac
               done
