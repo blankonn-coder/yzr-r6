@@ -95,6 +95,54 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T18:15:39Z"
+    },
+    {
+      "pair": "EUR/GBP",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.83594,
+      "jarak_atr": 0.6,
+      "sentuhan": 10,
+      "entry": 0.83625,
+      "sl": 0.83568,
+      "tp": 0.83711,
+      "sl_pip": 5.7,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:30:33Z"
+    },
+    {
+      "pair": "NZD/USD",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 0.54933,
+      "jarak_atr": 0.64,
+      "sentuhan": 55,
+      "entry": 0.54877,
+      "sl": 0.54977,
+      "tp": 0.54727,
+      "sl_pip": 10.0,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:30:33Z"
+    },
+    {
+      "pair": "AUD/USD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.66346,
+      "jarak_atr": 0.65,
+      "sentuhan": 28,
+      "entry": 0.6643,
+      "sl": 0.66281,
+      "tp": 0.66653,
+      "sl_pip": 14.9,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:30:33Z"
     }
   ]
 }
