@@ -59,7 +59,9 @@ RANK_MIN_SAMPLE = 30
 RANK_PF_MIN = 1.0
 RANK_EXP_MIN = 0.0
 RANK_DD_MAX = 15.0
-RANK_PRIORITY_STARS = 3
+# KEPUTUSAN: semua bintang (1-5) boleh dipakai. Bintang dan statistik sel ditampilkan di laporan.
+# Penguci (PF > 1, expectancy > 0, DD <= 15R) dan sampel >= 30 tetap berlaku.
+RANK_PRIORITY_STARS = 1
 
 # ---- Waktu & path ----
 NEWS_ARCHIVE_PATH = "database/news_archive.jsonl"

@@ -18,6 +18,14 @@ def _ringkasan(rows):
     return ", ".join(f"{k} {hitung.get(k, 0)}" for k in ("ENTRY", "WATCHLIST", "NO TRADE", "DATA INVALID"))
 
 
+def _sel_cell(r):
+    sel = r.get("sel")
+    if not sel:
+        return "—"
+    return (f"{'★' * sel['bintang']} ({sel['bintang']}/5) · skor {sel['skor']} · n {sel['n']} · "
+            f"PF {sel['pf']} · Exp {sel['exp']}R · DD {sel['dd']}R · fold {sel['fold']} · WR {sel['wr']}%")
+
+
 def _entry_cell(r):
     if r["label"].startswith("ENTRY"):
         return f"{r['entry']} / {r['sl']} / {r['tp']}"
@@ -48,13 +56,13 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
          ""]
 
     if rows:
-        L += ["| Pair | Regime | Bias H4 | Label | Status | Metode | Arah | Harga (mid) | Entry / SL / TP "
-              "| Bar H1/H4 | Bar terakhir (UTC) | Catatan |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        L += ["| Pair | Regime | Bias H4 | Label | Status | Mode | Arah | Kekuatan sel (backtest) | Harga (mid) "
+              "| Entry / SL / TP | Bar H1/H4 | Bar terakhir (UTC) | Catatan |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for r in rows:
             bar = r.get("bar") or {}
             L.append(f"| {r['pair']} | {r['regime']} | {r['bias']} | {r['label']} | {r.get('status') or '-'} "
-                     f"| {r['metode'] or '-'} | {r['arah'] or '-'} "
+                     f"| {r['metode'] or '-'} | {r['arah'] or '-'} | {_sel_cell(r)} "
                      f"| {r['harga'] if r['harga'] is not None else '-'} | {_entry_cell(r)} "
                      f"| {bar.get('h1', '-')}/{bar.get('h4', '-')} | {r.get('bar_terakhir') or '-'} "
                      f"| {'; '.join(r['catatan']) or '-'} |")
@@ -66,6 +74,10 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
           "- **WATCHLIST**: metode ada, tetapi BELUM boleh entry. Lihat kolom Status. Tidak ada harga rencana.",
           "  - *Menunggu trigger*: belum ada sinyal dari metode prioritas.",
           "  - *Trigger ada - ditahan*: sinyal sudah muncul, tetapi dihentikan oleh news, kalender, atau spread.",
+          "- **Mode**: metode entry (FISHER, EMA_TREND, MACD, STOCH_MR, BB_SQUEEZE).",
+          "- **Kekuatan sel**: hasil backtest untuk pair + regime + mode + arah ini. ★ = bintang 1 sampai 5 "
+          "(skor 0-100). n = jumlah trade, PF = profit factor, Exp = rata-rata R per trade, "
+          "DD = penurunan terbesar dalam R, fold = fold yang untung dari 4, WR = win rate.",
           "- **NO TRADE**: regime ini belum punya metode prioritas di ranking. Bukan sinyal jual atau beli.",
           "- **DATA INVALID**: candle gagal diambil atau tidak lolos validasi.",
           "- **Harga (mid)**: close candle H1 terakhir yang sudah tutup, rata-rata bid dan ask. Bukan harga live.",

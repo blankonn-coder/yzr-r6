@@ -106,7 +106,8 @@ def load_active(path=C.RANKING_HISTORY_PATH):
     for r in latest.values():
         if r["lolos"] and not r["provisional"] and (r["bintang"] or 0) >= C.RANK_PRIORITY_STARS:
             out.setdefault((r["pair"], r["regime"]), []).append(
-                {"metode": r["metode"], "arah": r["arah"], "bintang": r["bintang"], "skor": r["skor"]})
+                {"metode": r["metode"], "arah": r["arah"], "bintang": r["bintang"], "skor": r["skor"],
+                 "n": r["n"], "pf": r["pf"], "exp": r["exp"], "dd": r["dd"], "fold": r["fold"], "wr": r["wr"]})
     for lst in out.values():
         lst.sort(key=lambda x: (-x["bintang"], -x["skor"]))
     return out

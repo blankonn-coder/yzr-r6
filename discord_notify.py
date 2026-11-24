@@ -47,14 +47,20 @@ def build_embed(now, status, rows, ranking_ok):
     if not ranking_ok:
         desc += "\nBelum ada metode yang lolos backtest, jadi tidak ada sinyal. Ini normal."
 
+    def kekuatan(r):
+        sel = r.get("sel")
+        if not sel:
+            return ""
+        return f" · {'★' * sel['bintang']} skor {sel['skor']}, n {sel['n']}"
+
     def baris_entry(r):
-        return (f"**{r['pair']}** · {r['metode']} {r['arah']}\n"
+        return (f"**{r['pair']}** · {r['metode']} {r['arah']}{kekuatan(r)}\n"
                 f"Entry {r['entry']} · SL {r['sl']} · TP {r['tp']}")
 
     def baris_watch(r):
         if not r["metode"]:
             return f"**{r['pair']}** · {r['status']}"
-        return f"**{r['pair']}** · {r['metode']} {r['arah']} · {r['status']}"
+        return f"**{r['pair']}** · {r['metode']} {r['arah']}{kekuatan(r)} · {r['status']}"
 
     fields = [
         {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris_entry, entry)) or "—"), "inline": False},

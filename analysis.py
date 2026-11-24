@@ -83,6 +83,7 @@ def evaluate(ctx, pair, ranking, news_bersih):
 
     c, s, d, strat = picked
     out["metode"], out["arah"] = c["metode"], DIR_TXT[s]
+    out["sel"] = {"regime": reg["label"], **{k: c[k] for k in ("bintang", "skor", "n", "pf", "exp", "dd", "fold", "wr")}}
     if news_bersih is None:
         out["label"] = "WATCHLIST"
         out["status"] = "Trigger ada - ditahan: kalender gagal"

@@ -36,5 +36,10 @@ Spesifikasi lengkap ada di dokumen skema; file ini merangkum cara kerja dan bata
 - Secret `DISCORD_WEBHOOK_URL`
 - Variable `DISCORD_NOTIFY_MODE` (`signal` default | `always` | `off`)
 
+## Keputusan: ambang bintang
+- Semua bintang 1 sampai 5 boleh dipakai scanner (`RANK_PRIORITY_STARS = 1`). Spesifikasi §7b awalnya hanya bintang 3 ke atas.
+- Penguci tetap berlaku: PF > 1, expectancy > 0, DD ≤ 15R, dan sampel ≥ 30 trade (sel PROVISIONAL tidak dipakai).
+- Setiap sinyal menampilkan mode dan kekuatan sel di laporan dan Discord, sehingga pembaca bisa menilai dasarnya.
+
 ## Tes
     python -m pytest tests/
