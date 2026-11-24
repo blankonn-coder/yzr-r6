@@ -49,22 +49,6 @@
       "dibuat": "2026-11-24T16:00:49Z"
     },
     {
-      "pair": "AUD/USD",
-      "arah": "BUY",
-      "level": "support",
-      "level_harga": 0.66346,
-      "jarak_atr": 0.2,
-      "sentuhan": 26,
-      "entry": 0.66372,
-      "sl": 0.6628,
-      "tp": 0.6651,
-      "sl_pip": 9.2,
-      "bar_terakhir": "2026-11-24T15:00:00Z",
-      "sumber": "ANALISA CADANGAN (bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-24T16:00:49Z"
-    },
-    {
       "pair": "NZD/USD",
       "arah": "BUY",
       "level": "support",
@@ -129,22 +113,6 @@
       "dibuat": "2026-11-24T16:15:29Z"
     },
     {
-      "pair": "EUR/GBP",
-      "arah": "SELL",
-      "level": "resistance",
-      "level_harga": 0.83661,
-      "jarak_atr": 0.31,
-      "sentuhan": 31,
-      "entry": 0.83644,
-      "sl": 0.83688,
-      "tp": 0.83577,
-      "sl_pip": 4.5,
-      "bar_terakhir": "2026-11-24T15:00:00Z",
-      "sumber": "ANALISA CADANGAN (bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-24T16:30:34Z"
-    },
-    {
       "pair": "EUR/CHF",
       "arah": "SELL",
       "level": "resistance",
@@ -175,6 +143,38 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T16:30:34Z"
+    },
+    {
+      "pair": "AUD/USD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.66346,
+      "jarak_atr": 0.2,
+      "sentuhan": 26,
+      "entry": 0.66372,
+      "sl": 0.6628,
+      "tp": 0.6651,
+      "sl_pip": 9.2,
+      "bar_terakhir": "2026-11-24T15:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T16:45:28Z"
+    },
+    {
+      "pair": "EUR/GBP",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 0.83661,
+      "jarak_atr": 0.31,
+      "sentuhan": 31,
+      "entry": 0.83644,
+      "sl": 0.83688,
+      "tp": 0.83577,
+      "sl_pip": 4.5,
+      "bar_terakhir": "2026-11-24T15:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T16:45:28Z"
     }
   ]
 }
