@@ -5,6 +5,14 @@
     "harga_awal": 0.54506,
     "waktu_mulai": "2026-11-24T03:45:34Z",
     "signal_id": "20261124T034534Z_NZDUSD",
-    "harga_sekarang": 0.54499
+    "harga_sekarang": 0.54472
+  },
+  "USD/JPY": {
+    "pair": "USD/JPY",
+    "keputusan": "SELL",
+    "harga_awal": 158.9915,
+    "waktu_mulai": "2026-11-24T04:15:22Z",
+    "signal_id": "20261124T041522Z_USDJPY",
+    "harga_sekarang": 158.9915
   }
 }

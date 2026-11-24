@@ -3,5 +3,10 @@
     "keputusan": "SELL",
     "waktu_mulai": "2026-11-24T03:45:34Z",
     "signal_id": "20261124T034534Z_NZDUSD"
+  },
+  "USD/JPY": {
+    "keputusan": "SELL",
+    "waktu_mulai": "2026-11-24T04:15:22Z",
+    "signal_id": "20261124T041522Z_USDJPY"
   }
 }
