@@ -96,8 +96,13 @@ def _pantau_baris(p):
 
 def _evaluasi_baris(e):
     f = lambda x: "-" if x is None else f"{x:+.1f}"
-    return (f"**{e['pair']}** · {e['arah']} · {e['hasil']} · pip akhir {f(e['pip'])} · "
-            f"MFE {f(e['mfe'])} · MAE {f(e['mae'])}")
+    titik = " ".join(f"{m}m {e['titik'][str(m)]:+.1f}" if str(m) in e.get("titik", {}) else f"{m}m -"
+                     for m in (15, 30, 45, 60))
+    pip = e["pip"]
+    akhir = "-" if pip is None else f"{'PROFIT' if pip >= 0 else 'LOSS'} {abs(pip)} pip"
+    kena = f" (menit {e['menit_kena']})" if e.get("menit_kena") else ""
+    return (f"**{e['pair']}** · {e['arah']} · {titik}\n"
+            f"Hasil: {e['hasil']}{kena} · **{akhir}** · MFE {f(e['mfe'])} · MAE {f(e['mae'])}")
 
 
 def build_embed(now, status, rows, ranking_ok, info=None):
