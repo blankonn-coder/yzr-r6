@@ -1,9 +1,10 @@
 name: Adaptive Forex Scanner
 
-# Scanner per jam (menit ke-5, setelah bar H1 tutup). Bisa juga dipicu manual.
+# Dipicu oleh cron-job.org (repository_dispatch, tiap jam menit ke-5 UTC) atau manual.
+# Trigger schedule dihapus agar tidak ada run ganda.
 on:
-  schedule:
-    - cron: "5 * * * *"
+  repository_dispatch:
+    types: [forex-scanner]
   workflow_dispatch:
     inputs:
       pairs:
@@ -32,7 +33,7 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_NOTIFY_MODE: ${{ vars.DISCORD_NOTIFY_MODE }}
-          PAIRS: ${{ github.event.inputs.pairs }}
+          PAIRS: ${{ github.event.inputs.pairs || github.event.client_payload.pairs }}
         run: python main.py --pairs "$PAIRS"
       - name: Commit state, database, laporan
         if: always()
