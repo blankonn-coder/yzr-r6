@@ -21,12 +21,13 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
          "maupun korelasi mata uang.",
          f"- Pair dianalisa: {len(rows)}", ""]
     if rows:
-        L += ["| Pair | Regime | Bias H4 | Label | Metode | Arah | Harga | Entry | SL | TP | Catatan |",
-              "|---|---|---|---|---|---|---|---|---|---|---|"]
+        L += ["| Pair | Regime | Bias H4 | Label | Metode | Arah | Harga | Entry | SL | TP | Bar H1/H4 | Catatan |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for r in rows:
             L.append(f"| {r['pair']} | {r['regime']} | {r['bias']} | {r['label']} | {r['metode'] or '-'} "
                      f"| {r['arah'] or '-'} | {r['harga'] if r['harga'] is not None else '-'} "
                      f"| {r['entry'] or '-'} | {r['sl'] or '-'} | {r['tp'] or '-'} "
+                     f"| {(r.get('bar') or {}).get('h1', '-')}/{(r.get('bar') or {}).get('h4', '-')} "
                      f"| {'; '.join(r['catatan']) or '-'} |")
     else:
         L.append("Tidak ada pair yang dianalisa.")
