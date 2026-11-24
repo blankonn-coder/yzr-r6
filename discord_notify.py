@@ -81,18 +81,7 @@ def _potong_baris(blok, limit=FIELD_MAX):
     return hasil or ["—"]
 
 
-def _lag_baris(p):
-    return f"**{p['follower']}** · lag {p['lag_menit']} mnt"
 
-
-def _lag_unik(lag):
-    """Satu baris per pair lag; jika pair yang sama muncul dari beberapa leader, ambil yang pertama (terkuat)."""
-    lihat, hasil = set(), []
-    for p in lag:
-        if p["follower"] not in lihat:
-            lihat.add(p["follower"])
-            hasil.append(p)
-    return hasil
 
 
 def _saran_baris(sr):
@@ -152,9 +141,9 @@ def build_embed(now, status, rows, ranking_ok, info=None):
         {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris_entry, entry)) or "—"), "inline": False},
         {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
-    if lag := info.get("lag"):
+    if cad_saran := info["saran"]:
         fields.append({"name": "🔁 Pair lag (keterlambatan 5-60 menit, BUKAN sinyal)",
-                       "value": _cut("\n".join(map(_lag_baris, _lag_unik(lag)))), "inline": False})
+                       "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
     if tampil := info["tampil"]:
         fields.append({"name": "⏱ Pemantauan 15 menit (entry & analisa cadangan)",
                        "value": _cut("\n".join(map(_pantau_baris, tampil))), "inline": False})

@@ -66,10 +66,7 @@ def main():
     _tulis(C.SCANNER_MD_PATH, report.build_scanner_md(now, status, rows, ranking_ok, news_bersih,
                                                        news_err, is_open, ranking.load_meta(), cad, ll=ll))
     C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows, cad, ll=ll))
-    info_notif = cad
-    if cad is not None and ll and ll.get("backtest") and ll["status"] == "dianalisa" and cad["cadangan_aktif"]:
-        info_notif = {**cad, "lag": ll["backtest"]["pasangan_lolos"][:5]}
-    print(notify(now, status, rows, ranking_ok, info_notif))
+    print(notify(now, status, rows, ranking_ok, cad))
 
     if C.CADANGAN_ENABLED:
         print(f"Snapshot analisa cadangan baru: {CD.simpan_snapshot(now, rows)}")

@@ -174,37 +174,40 @@ def _buat_saran(pair_disp, bar_terakhir, a, b, info, arah_dir, atr, harga, t_ter
 
 
 def kandidat(rows, candles, ret, sigma, lag_terbaik, end):
-    """Satu kandidat terbaik per follower, diurut dari skor tertinggi.
-    Skor = |korelasi| x |z leader|. ATR H1 dan bar terakhir diambil dari baris scanner follower."""
+    """Satu kandidat terbaik per follower. Setiap pasangan lag yang lolos diberi arah dan SL/TP.
+    Arah = arah gerak leader di lag terbaik x tanda korelasi.
+    Pasangan yang dipicu (leader sudah bergerak >= LEADLAG_TRIGGER_Z dan follower belum searah)
+    diurutkan lebih dulu, lalu menurut skor = |korelasi| x |z leader|.
+    Follower harus ada di scanner; ENTRY dan DATA INVALID dilewati. ATR H1 dari baris scanner."""
     peta_row = {r["pair"]: r for r in rows}
     terbaik = {}
     for (a, b), info in lag_terbaik.items():
         row = peta_row.get(C.disp(b))
         if not row or row["label"].startswith("ENTRY") or row["label"] == "DATA INVALID":
-            continue  # follower hanya dari scanner; ENTRY dan data tidak valid dilewati
+            continue
         if not candles.get(b):
-            continue
-        k = info["lag_bar"]
-        za = _z(ret[a], end, k, sigma[a])
-        zb = _z(ret[b], end, k, sigma[b])
-        if za is None or zb is None or abs(za) < C.LEADLAG_TRIGGER_Z:
-            continue
-        arah_dir = (1 if za > 0 else -1) * (1 if info["korelasi"] > 0 else -1)
-        if arah_dir * zb >= C.LEADLAG_FOLLOW_MAX_Z:
-            continue  # follower sudah bergerak searah, tidak lagi tertinggal
-        skor = abs(info["korelasi"]) * abs(za)
-        if b in terbaik and terbaik[b][0] >= skor:
             continue
         atr = ((row.get("cadangan") or {}).get("h1") or {}).get("atr")
         if not atr or atr <= 0:
             continue
-        bar_terakhir = row["bar_terakhir"]
+        k = info["lag_bar"]
+        za = _z(ret[a], end, k, sigma[a])
+        zb = _z(ret[b], end, k, sigma[b])
+        if za is None or zb is None:
+            continue
+        arah_dir = (1 if za >= 0 else -1) * (1 if info["korelasi"] > 0 else -1)
+        dipicu = abs(za) >= C.LEADLAG_TRIGGER_Z and arah_dir * zb < C.LEADLAG_FOLLOW_MAX_Z
+        skor = abs(info["korelasi"]) * (abs(za) if dipicu else 1.0)
+        kunci = (dipicu, skor)
+        if b in terbaik and terbaik[b][0] >= kunci:
+            continue
         t_akhir, c_akhir = candles[b][-1]
-        saran = _buat_saran(C.disp(b), bar_terakhir, a, b, info, arah_dir, atr, c_akhir, t_akhir)
+        saran = _buat_saran(C.disp(b), row["bar_terakhir"], a, b, info, arah_dir, atr, c_akhir, t_akhir)
         saran["skor"] = round(skor, 3)
         saran["z_leader"] = round(za, 2)
-        terbaik[b] = (skor, saran)
-    return [s for _, s in sorted(terbaik.values(), key=lambda x: -x[0])]
+        saran["dipicu"] = dipicu
+        terbaik[b] = (kunci, saran)
+    return [s for _, s in sorted(terbaik.values(), key=lambda x: x[0], reverse=True)]
 
 
 # ---------- Titik masuk utama ----------
