@@ -7,7 +7,7 @@ from indicators import compute
 from strategies import REGISTRY
 
 DIR_TXT = {1: "LONG", -1: "SHORT"}
-BIAS_TXT = {1: "NAIK", -1: "TURUN", 0: "SIDEWAYS"}
+BIAS_TXT = {1: "NAIK", -1: "TURUN", 0: "SIDEWAYS", None: "BELUM SIAP"}
 
 
 def bias_series(h1_times, h4_times, h4_ind):
@@ -25,7 +25,8 @@ def bias_series(h1_times, h4_times, h4_ind):
     out = []
     for t in h1_times:
         j = bisect.bisect_right(h4_times, t - 3 * 3600) - 1
-        out.append(sign[j] if j >= 0 and sign[j] is not None else 0)
+        # None = belum bisa dihitung (EMA H4 belum siap / bar H4 belum ada), BUKAN sideways
+        out.append(sign[j] if j >= 0 else None)
     return out
 
 
@@ -33,7 +34,7 @@ def build(h1, h4):
     ind4 = compute(h4)
     ind1 = compute(h1)
     bias = bias_series([c["t"] for c in h1], [c["t"] for c in h4], ind4)
-    return {"cs": h1, "ind": ind1, "bias": bias, "closes": [c["c"] for c in h1]}
+    return {"cs": h1, "ind": ind1, "bias": bias, "closes": [c["c"] for c in h1], "n_h4": len(h4)}
 
 
 def evaluate(ctx, pair, ranking, news_bersih):
@@ -41,10 +42,13 @@ def evaluate(ctx, pair, ranking, news_bersih):
     cs = ctx["cs"]
     i = len(cs) - 1
     reg = R.classify(ctx["ind"], i, ctx["closes"])
-    out = {"regime": reg["label"], "bias": BIAS_TXT[ctx["bias"][i]], "label": "NO TRADE",
+    bias_val = ctx["bias"][i]
+    out = {"regime": reg["label"], "bias": BIAS_TXT[bias_val], "label": "NO TRADE",
            "metode": None, "arah": None, "harga": round(cs[i]["c"], 5),
            "entry": None, "sl": None, "tp": None, "catatan": []}
 
+    if bias_val is None:
+        out["catatan"].append(f"bias H4 belum bisa dihitung (bar H4: {ctx['n_h4']}, butuh EMA200 = 200 bar)")
     kandidat = ranking.get((pair, reg["label"]), [])
     if not kandidat:
         out["catatan"].append(f"tidak ada metode PRIORITAS untuk regime {reg['label']}")
