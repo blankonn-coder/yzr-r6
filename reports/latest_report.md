@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-24T02:00:50Z
+- Waktu eksekusi: 2026-11-24T02:15:25Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 15
@@ -9,20 +9,16 @@
 Tidak ada.
 
 ## Sinyal SELL
-| Pair | Keputusan | Skor | Alasan |
-|---|---|---|---|
-| NZD/USD | SELL | 100 | Continuation bearish (zona OB H1 0.54487-0.54618); Trend searah bias TURUN; Ada area OB H1; Harga retest zona; Ada konfirmasi candle (bearish engulfing); RR minimal 1:2; Entry 0.54516 / SL 0.54688 / TP 0.54172 (RR 1:2, risiko 17.2 pip) |
+Tidak ada.
 
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| AUD/USD | SELL | 0.66335 | 0.66279 | PROFIT 5.6 pip · 0.084% | 45 |
-| EUR/AUD | BUY | 1.64463 | 1.64677 | PROFIT 21.4 pip · 0.130% | 45 |
-| NZD/USD | SELL | 0.54516 | 0.54516 | 0.0 pip · 0.000% | 0 |
+| NZD/USD | SELL | 0.54516 | 0.54531 | RUGI 1.5 pip · 0.028% | 14 |
 
 ## Info Database
 - Total entri: 588
-- Ditambahkan run ini: 1
+- Ditambahkan run ini: 0
 - Dihapus karena retensi: 0
 - File untuk diunduh: database/signal_history.json
 
