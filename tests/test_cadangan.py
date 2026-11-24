@@ -55,9 +55,9 @@ def test_pilih_saran_nearest_level_and_direction():
         _row("GBP/USD", 1.3, resistance=_lvl(1.3078, 0.53, 7), label="ENTRY LONG"),  # dilewati
     ]
     saran = CD.pilih_saran(rows)
-    assert [s["pair"] for s in saran] == ["USD/CAD", "EUR/CHF", "AUD/USD", "EUR/GBP"]
-    assert {s["pair"]: s["arah"] for s in saran} == {"USD/CAD": "BUY", "EUR/CHF": "SELL",
-                                                      "AUD/USD": "BUY", "EUR/GBP": "BUY"}
+    # CADANGAN_SARAN_N = 3: tiga level terdekat; EUR/GBP (jarak 0,40 ATR) berada di luar tiga teratas
+    assert [s["pair"] for s in saran] == ["USD/CAD", "EUR/CHF", "AUD/USD"]
+    assert {s["pair"]: s["arah"] for s in saran} == {"USD/CAD": "BUY", "EUR/CHF": "SELL", "AUD/USD": "BUY"}
     assert next(s for s in saran if s["pair"] == "AUD/USD")["level"] == "support"
 
 
@@ -146,9 +146,13 @@ def test_jalankan_tidak_menduplikasi_pair_cadangan_yang_masih_dipantau(tmp_path,
     monkeypatch.setattr(C, "PANTAU_ARSIP_PATH", str(tmp_path / "arsip.jsonl"))
     rows = [_row("USD/CAD", 1.43396, support=_lvl(1.43386, 0.09)),
             _row("EUR/CHF", 0.91922, resistance=_lvl(0.91953, 0.34))]
-    run1 = PT.jalankan(_now("2026-11-24T11:05:00Z"), rows, lambda k: None)
+    # Saran analisa cadangan kini berasal dari lead-lag (prioritas)
+    ll = [{"pair": p, "arah": "BUY", "metode": "LEAD-LAG", "entry": 1.0, "sl": 0.99, "tp": 1.015,
+           "sl_pip": 100.0, "bar_terakhir": "2026-11-24T10:00:00Z", "mulai": "2026-11-24T11:00:00Z"}
+          for p in ("USD/CAD", "EUR/CHF")]
+    run1 = PT.jalankan(_now("2026-11-24T11:05:00Z"), rows, lambda k: None, prioritas=ll)
     assert [s["pair"] for s in run1["saran"]] == ["USD/CAD", "EUR/CHF"]
-    run2 = PT.jalankan(_now("2026-11-24T11:50:00Z"), rows, lambda k: None)  # masih aktif, belum ada candle
+    run2 = PT.jalankan(_now("2026-11-24T11:50:00Z"), rows, lambda k: None, prioritas=ll)  # masih aktif, belum ada candle
     assert run2["saran"] == []
     st = C.load_json(C.PANTAU_AKTIF_PATH, {})
     assert len(st["aktif"]) == 2
