@@ -42,10 +42,14 @@ def main():
         news, news_err = scanner.fetch_news()
         news_bersih = scanner.news_clean(news, now)
         rows = [scanner.scan_pair(p, ranking_map, news_bersih, now) for p in pairs]
-    status = "SCAN" if is_open else "PASAR TUTUP"
+    if is_open:
+        n_invalid = sum(1 for r in rows if r["label"] == "DATA INVALID")
+        status = f"OK, {len(rows) - n_invalid} pair dianalisa, {n_invalid} data tidak valid"
+    else:
+        status = "PASAR TUTUP, tidak ada analisa"
 
     _tulis(C.SCANNER_MD_PATH, report.build_scanner_md(now, status, rows, ranking_ok, news_bersih,
-                                                       news_err, is_open))
+                                                       news_err, is_open, ranking.load_meta()))
     C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows))
     print(notify(now, status, rows, ranking_ok))
 

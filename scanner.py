@@ -23,9 +23,18 @@ def news_clean(news, now):
     return not any(abs(t - x) <= w for x in news)
 
 
+def _gap_count(warnings):
+    for w in warnings:
+        if w.startswith("gap"):
+            return int(w.split(":")[1])
+    return 0
+
+
 def _invalid(pair, alasan):
-    return {"pair": C.disp(pair), "regime": "-", "bias": "-", "label": "DATA INVALID", "metode": None,
-            "arah": None, "harga": None, "entry": None, "sl": None, "tp": None, "catatan": [alasan]}
+    return {"pair": C.disp(pair), "regime": "-", "bias": "-", "label": "DATA INVALID",
+            "status": "Data tidak valid", "metode": None, "arah": None, "harga": None,
+            "entry": None, "sl": None, "tp": None, "catatan": [alasan],
+            "gap": {"H1": 0, "H4": 0}, "bar": {}, "bar_terakhir": None}
 
 
 def scan_pair(pair, ranking, news_bersih, now):
@@ -38,9 +47,12 @@ def scan_pair(pair, ranking, news_bersih, now):
     ok4, e4, w4 = validate(h4, 14400)
     if not (ok1 and ok4):
         return _invalid(pair, "validasi data gagal: " + "; ".join(e1 + e4))
+
     row = {"pair": C.disp(pair), **evaluate(build(h1, h4), pair, ranking, news_bersih)}
-    row["catatan"] = row["catatan"] + [f"peringatan data H1 {x}" for x in w1] + \
-        [f"peringatan data H4 {x}" for x in w4]
+    # Celah waktu (gap) biasanya akhir pekan/libur: dihitung di laporan, tidak diulang per pair
+    row["gap"] = {"H1": _gap_count(w1), "H4": _gap_count(w4)}
+    row["catatan"] += [f"data H1 {x}" for x in w1 if not x.startswith("gap")]
+    row["catatan"] += [f"data H4 {x}" for x in w4 if not x.startswith("gap")]
     row["bar"] = {"h1": len(h1), "h4": len(h4)}
-    row["waktu_bar_terakhir"] = C.fmt(datetime.fromtimestamp(h1[-1]["t"], timezone.utc))
+    row["bar_terakhir"] = C.fmt(datetime.fromtimestamp(h1[-1]["t"], timezone.utc))
     return row

@@ -23,10 +23,13 @@ def _mode():
     return os.environ.get(MODE_ENV, "").strip().lower() or "signal"
 
 
-def should_send(mode, rows):
+def should_send(mode, rows, heartbeat=False):
+    """signal: kirim jika ada ENTRY/WATCHLIST/DATA INVALID, atau heartbeat harian (run jam 00 UTC)."""
     if mode == "off":
         return False
     if mode == "always":
+        return True
+    if heartbeat:
         return True
     return any(r["label"] in ("WATCHLIST", "DATA INVALID") or r["label"].startswith("ENTRY") for r in rows)
 
@@ -40,15 +43,22 @@ def build_embed(now, status, rows, ranking_ok):
     watch = [r for r in rows if r["label"] == "WATCHLIST"]
     invalid = [r for r in rows if r["label"] == "DATA INVALID"]
     warna = 0x2ECC71 if entry else (0xF1C40F if watch else 0x95A5A6)
-    desc = f"Status: **{status}** · Ranking: **{'ada' if ranking_ok else 'kosong'}** · Pair: **{len(rows)}**"
+    desc = f"Status: **{status}** · Ranking: **{'ada' if ranking_ok else 'kosong (semua NO TRADE)'}**"
+    if not ranking_ok:
+        desc += "\nBelum ada metode yang lolos backtest, jadi tidak ada sinyal. Ini normal."
 
-    def baris(r):
-        extra = f" · {r['metode']} {r['arah']}" if r["metode"] else ""
-        return f"**{r['pair']}** · {r['regime']} · {r['bias']}{extra}\n" + "\n".join(f"• {c}" for c in r["catatan"][:2])
+    def baris_entry(r):
+        return (f"**{r['pair']}** · {r['metode']} {r['arah']}\n"
+                f"Entry {r['entry']} · SL {r['sl']} · TP {r['tp']}")
+
+    def baris_watch(r):
+        if not r["metode"]:
+            return f"**{r['pair']}** · {r['status']}"
+        return f"**{r['pair']}** · {r['metode']} {r['arah']} · {r['status']}"
 
     fields = [
-        {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris, entry)) or "—"), "inline": False},
-        {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n\n".join(map(baris, watch)) or "—"), "inline": False},
+        {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris_entry, entry)) or "—"), "inline": False},
+        {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
     if invalid:
         fields.append({"name": f"⚠️ DATA INVALID ({len(invalid)})",
@@ -77,7 +87,7 @@ def notify(now, status, rows, ranking_ok):
     url = os.environ.get(WEBHOOK_ENV, "").strip()
     if not url:
         return "Discord: webhook belum diatur, dilewati"
-    if not should_send(_mode(), rows):
+    if not should_send(_mode(), rows, heartbeat=(now.hour == 0)):
         return f"Discord: mode {_mode()}, tidak ada yang dikirim"
     try:
         ok = _post(url, build_embed(now, status, rows, ranking_ok))

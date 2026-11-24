@@ -131,12 +131,30 @@ def render_md(records, meta, warnings):
               "|---|---|---|---|---|---|---|---|---|---|---|"]
         for r in sorted(grup[(pair, reg)], key=lambda x: (-(x["bintang"] or 0), -x["skor"])):
             bint = "—" if r["bintang"] is None else str(r["bintang"])
-            status = "PROVISIONAL" if r["provisional"] else ("lolos" if r["lolos"] else f"gagal ({r['gagal']})")
-            L.append(f"| {r['metode']} | {r['arah']} | {bint} | {r['skor']} | {r['pf']} | {r['exp']} "
+            skor = "—" if r["provisional"] else str(r["skor"])
+            pf = "99+" if r["pf"] >= 99 else str(r["pf"])
+            status = "PROVISIONAL (n<30)" if r["provisional"] else ("lolos" if r["lolos"] else f"gagal ({r['gagal']})")
+            L.append(f"| {r['metode']} | {r['arah']} | {bint} | {skor} | {pf} | {r['exp']} "
                      f"| {r['dd']} | {r['fold']} | {r['n']} | {r['wr']}% | {status} |")
         L.append("")
     L += ["Catatan kaki:",
           "- Parameter tidak dioptimasi; semua fold out-of-sample.",
           "- XAU_USD: satuan harga USD, 1 pip = 0.1 USD.",
-          "- Bintang kosong (—) = PROVISIONAL (n < 30), tidak dipakai scanner.", ""]
+          "- Bintang dan skor kosong (—) = PROVISIONAL (n < 30), tidak dipakai scanner.",
+          "- PF 99+ = tidak ada trade rugi (batas atas 99), bukan angka nyata.",
+          "- Exp = rata-rata R per trade. DD = penurunan terbesar dalam R. Fold = fold yang untung dari 4.", ""]
     return "\n".join(L) + "\n"
+
+
+def load_meta(path=C.RANKING_HISTORY_PATH):
+    """Info run ranking terakhir (untuk laporan scanner). None jika belum ada."""
+    if not os.path.exists(path):
+        return None
+    last = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                last = json.loads(line)
+    if last is None:
+        return None
+    return {"waktu": last["waktu"], "news_filter": last["news_filter"]}
