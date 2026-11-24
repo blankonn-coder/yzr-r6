@@ -1,276 +1,396 @@
 {
-  "waktu": "2026-11-24T09:30:51Z",
-  "status": "SCAN",
+  "waktu": "2026-11-24T10:03:03Z",
+  "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
       "pair": "EUR/USD",
       "regime": "TRENDING KUAT",
-      "bias": "SIDEWAYS",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 1.09171,
+      "harga": 1.09345,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING KUAT",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING KUAT belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "GBP/USD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "TRENDING LEMAH",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 1.30533,
+      "harga": 1.30666,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING LEMAH belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "USD/JPY",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 159.3515,
+      "harga": 159.5565,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "USD/CHF",
-      "regime": "TRENDING LEMAH",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.84181,
+      "harga": 0.84093,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING LEMAH",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "AUD/USD",
       "regime": "TRENDING LEMAH",
-      "bias": "SIDEWAYS",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.66264,
+      "harga": 0.66282,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING LEMAH",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING LEMAH belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "USD/CAD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 1.43497,
+      "harga": 1.43447,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "NZD/USD",
       "regime": "TRENDING LEMAH",
-      "bias": "SIDEWAYS",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.54501,
+      "harga": 0.54534,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING LEMAH",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING LEMAH belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/GBP",
-      "regime": "TRENDING LEMAH",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.83634,
+      "harga": 0.83683,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING LEMAH",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/JPY",
       "regime": "TRENDING KUAT",
-      "bias": "SIDEWAYS",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 173.9605,
+      "harga": 174.4715,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING KUAT",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING KUAT belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/CHF",
       "regime": "TRENDING LEMAH",
-      "bias": "SIDEWAYS",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.919,
+      "harga": 0.91956,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TRENDING LEMAH",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING LEMAH belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/AUD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 1.64749,
+      "harga": 1.64975,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/CAD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "TRENDING KUAT",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 1.56641,
+      "harga": 1.56839,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime TRENDING KUAT belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "EUR/NZD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 2.00299,
+      "harga": 2.00508,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "XAU/USD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 3619.2705,
+      "harga": 3622.2145,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     },
     {
       "pair": "XAU/AUD",
-      "regime": "TIDAK JELAS",
-      "bias": "SIDEWAYS",
+      "regime": "RANGING",
+      "bias": "BELUM SIAP",
       "label": "NO TRADE",
+      "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 5461.6175,
+      "harga": 5465.1935,
       "entry": null,
       "sl": null,
       "tp": null,
       "catatan": [
-        "tidak ada metode PRIORITAS untuk regime TIDAK JELAS",
-        "peringatan data: gap: 2",
-        "peringatan data: gap: 6"
+        "bias H4 belum bisa dihitung (bar H4: 180, butuh 200)",
+        "regime RANGING belum punya metode prioritas di ranking"
       ],
-      "waktu_bar_terakhir": "2026-11-24T08:00:00Z"
+      "gap": {
+        "H1": 2,
+        "H4": 6
+      },
+      "bar": {
+        "h1": 168,
+        "h4": 180
+      },
+      "bar_terakhir": "2026-11-24T09:00:00Z"
     }
   ]
 }
