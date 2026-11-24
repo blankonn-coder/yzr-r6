@@ -24,6 +24,31 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T22:30:35Z"
+    },
+    {
+      "pair": "EUR/CAD",
+      "arah": "BUY",
+      "metode": "LEAD-LAG",
+      "leader": "GBP/CHF",
+      "lag_menit": 35,
+      "korelasi": -0.59,
+      "n": 61,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 1.5645,
+      "sl": 1.56376,
+      "tp": 1.56561,
+      "sl_pip": 7.4,
+      "bar_terakhir": "2026-11-24T22:00:00Z",
+      "mulai": "2026-11-24T23:15:00Z",
+      "skor": 0.589,
+      "z_leader": -0.95,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T23:15:22Z"
     }
   ]
 }
