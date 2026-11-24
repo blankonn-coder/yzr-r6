@@ -79,6 +79,32 @@ PANTAU_TIMEOUT_MENIT = 90         # jika candle M15 belum lengkap sampai 90 meni
 PANTAU_AKTIF_PATH = "state/pemantauan_aktif.json"
 PANTAU_ARSIP_PATH = "database/pemantauan.jsonl"
 
+# ---- Lead-lag (analisa cadangan, BUKAN sinyal) ----
+# Pair leader memicu follower yang merespons lebih lambat (5-60 menit). Data M5 dari biquote.
+LEADLAG_ENABLED = True
+TF_LEADLAG = "5m"                    # ASUMSI: interval M5 biquote belum diverifikasi. Jika gagal, pair dilewati.
+TF_LEADLAG_SEC = 300
+LEADLAG_FETCH_COUNT = 100            # bar M5 per pair per run (3 bar baru masuk, 3 terlama keluar)
+LEADLAG_WINDOW_BARS = 72             # jendela backtest 6 jam = 72 bar M5
+LEADLAG_LAGS = tuple(range(1, 13))   # lag 5..60 menit (1..12 bar M5)
+LEADLAG_MIN_SAMPLE = 20              # sampel minimal per lag
+LEADLAG_MIN_CORR = 0.5               # |korelasi| minimal di lag terbaik
+LEADLAG_TRIGGER_Z = 1.0              # leader sudah bergerak >= 1 sigma (dinormalkan ke k bar) dalam lag
+LEADLAG_FOLLOW_MAX_Z = 0.3           # follower belum bergerak lebih dari 0,3 sigma searah
+# Store bergulir: hanya jendela terakhir yang disimpan. Tiap update 15 menit, 3 bar terlama dibuang
+# dan 3 bar baru masuk, sehingga ukuran file tetap (tidak membengkak).
+LEADLAG_RETENSI_BARS = LEADLAG_WINDOW_BARS
+LEADLAG_SARAN_N = 3                  # saran lead-lag per run, terpisah dari saran analisa cadangan (CADANGAN_SARAN_N)
+LEADLAG_STABIL_MIN_CORR = 0.3        # korelasi di tiap paruh jendela (3 jam) harus searah dan >= ini
+LEADLAG_PATH = "database/leadlag_backtest.json"
+LEADLAG_PAIRS = [
+    "GBP_JPY", "GBP_CHF", "GBP_AUD", "GBP_CAD", "GBP_NZD",
+    "AUD_JPY", "AUD_CHF", "AUD_CAD", "AUD_NZD",
+    "CAD_JPY", "CAD_CHF", "CHF_JPY", "NZD_JPY", "NZD_CAD", "NZD_CHF",
+]
+# Semua pair yang dipakai lead-lag (leader dan follower). Follower hanya dari PAIRS (scanner).
+LEADLAG_UNIVERSE = LEADLAG_PAIRS + [p for p in PAIRS if p not in LEADLAG_PAIRS]
+
 # ---- §7 Ranking ----
 RANK_MIN_SAMPLE = 30
 RANK_PF_MIN = 1.0

@@ -62,14 +62,52 @@ def _pip_txt(pip):
 def _saran_md(saran):
     if not saran:
         return ["Tidak ada saran (tidak ada level H1 dalam jarak "
-                f"{C.CADANGAN_SARAN_MAX_ATR} ATR)."]
-    L = ["| Pair | Arah | Level H1 (jarak, sentuhan) | Entry | SL | TP | Risiko SL |",
+                f"{C.CADANGAN_SARAN_MAX_ATR} ATR, dan tidak ada kandidat lead-lag)."]
+    L = ["| Pair | Arah | Dasar | Entry | SL | TP | Risiko SL |",
          "|---|---|---|---|---|---|---|"]
     for s in saran:
-        lvl = "support" if s["level"] == "support" else "resistance"
-        L.append(f"| {s['pair']} | **{s['arah']}** | {s['level_harga']} {lvl} "
-                 f"({s['jarak_atr']} ATR, {s['sentuhan']} sentuh) | {s['entry']} | {s['sl']} | {s['tp']} "
+        if s.get("metode") == "LEAD-LAG":
+            dasar = (f"LEAD-LAG: {s['leader']} memimpin {s['lag_menit']} mnt, "
+                     f"korelasi {s['korelasi']}, n {s['n']}")
+        else:
+            lvl = "support" if s["level"] == "support" else "resistance"
+            dasar = f"Level H1 {s['level_harga']} {lvl} ({s['jarak_atr']} ATR, {s['sentuhan']} sentuh)"
+        L.append(f"| {s['pair']} | **{s['arah']}** | {dasar} | {s['entry']} | {s['sl']} | {s['tp']} "
                  f"| {s['sl_pip']} pip |")
+    return L
+
+
+def _ll_md(ll):
+    if ll is None:
+        return ["Lead-lag tidak dijalankan di run ini (pasar tutup)."]
+    L = [f"- Status: {ll['status']}",
+         f"- Pair gagal diambil (M5): {', '.join(ll['gagal']) or 'tidak ada'}"]
+    bt = ll.get("backtest")
+    if not bt:
+        L.append("- Backtest belum ada: data M5 belum cukup.")
+        return L
+    L += [f"- Backtest jendela {bt['jendela_menit']} menit, diperbarui {bt['diperbarui']}, "
+          f"pasangan lolos {bt['jumlah_lolos']}.", ""]
+    if bt["pasangan_lolos"]:
+        L += ["Pasangan lolos (10 teratas, urut |korelasi|):", "",
+              "| Leader | Follower | Lag (menit) | Korelasi | Korelasi lag 0 | n |",
+              "|---|---|---|---|---|---|"]
+        for p in bt["pasangan_lolos"][:10]:
+            L.append(f"| {p['leader']} | {p['follower']} | {p['lag_menit']} | {p['korelasi']} "
+                     f"| {p['korelasi_lag0'] if p['korelasi_lag0'] is not None else '-'} | {p['n']} |")
+        L.append("")
+    else:
+        L.append("Tidak ada pasangan yang lolos ambang.")
+        L.append("")
+    if bt["kandidat"]:
+        L += ["Kandidat (follower yang tertinggal, urut skor):", "",
+              "| Follower | Arah | Leader | Lag (menit) | z leader | Skor |",
+              "|---|---|---|---|---|---|"]
+        for k in bt["kandidat"]:
+            L.append(f"| {k['pair']} | {k['arah']} | {k['leader']} | {k['lag_menit']} | {k['z_leader']} "
+                     f"| {k['skor']} |")
+    else:
+        L.append("Tidak ada kandidat di run ini.")
     return L
 
 
@@ -105,7 +143,7 @@ def _evaluasi_md(selesai):
 
 
 def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, market_open=True, rank_meta=None,
-                     cad=None):
+                     cad=None, ll=None):
     cad = cad or {"saran": [], "entry": [], "tampil": [], "selesai": []}
     gap_h1 = sum(1 for r in rows if (r.get("gap") or {}).get("H1"))
     gap_h4 = sum(1 for r in rows if (r.get("gap") or {}).get("H4"))
@@ -146,13 +184,19 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
 
     cad_rows = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
     L += ["", "## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)"]
-    if market_open:
-        L.append(f"{C.CADANGAN_SARAN_N} pair dengan level H1 terdekat. BUY dari support, SELL dari resistance. "
-                 f"SL {C.CADANGAN_SARAN_SL_ATR} ATR di seberang level, TP {C.CADANGAN_SARAN_TP_R}R. "
-                 "Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.")
-        L += _saran_md(cad["saran"])
-    else:
+    if not market_open:
         L.append("Pasar tutup, saran tidak dibuat.")
+    elif not cad.get("cadangan_aktif", True):
+        L.append("Analisa cadangan NONAKTIF: ada sinyal ENTRY di run ini, jadi tidak ada saran baru. "
+                 "Pemantauan saran yang sudah berjalan tetap dilanjutkan.")
+    else:
+        L.append(f"Dari lead-lag, maks {C.LEADLAG_SARAN_N} pair: leader bergerak, follower tertinggal 5-60 menit. "
+                 f"BUY/SELL mengikuti arah leader. SL {C.CADANGAN_SARAN_SL_ATR} ATR H1, "
+                 f"TP {C.CADANGAN_SARAN_TP_R}R. Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.")
+        L += _saran_md(cad["saran"])
+
+    L += ["", "## Lead-lag (backtest 6 jam, BUKAN sinyal)"]
+    L += _ll_md(ll)
 
     L += ["", "## Pemantauan 15 menit (entry dan analisa cadangan)",
           "Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. "
@@ -192,7 +236,8 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
     return "\n".join(L) + "\n"
 
 
-def build_scanner_json(now, status, rows, cad=None):
+def build_scanner_json(now, status, rows, cad=None, ll=None):
     cad = cad or {"saran": [], "entry": [], "tampil": [], "selesai": []}
     return {"waktu": C.fmt(now), "status": status, "rows": rows,
-            "saran_cadangan": cad["saran"], "pemantauan": cad["tampil"], "evaluasi_1_jam": cad["selesai"]}
+            "saran_cadangan": cad["saran"], "pemantauan": cad["tampil"], "evaluasi_1_jam": cad["selesai"],
+            "leadlag": ll}

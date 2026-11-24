@@ -81,8 +81,26 @@ def _potong_baris(blok, limit=FIELD_MAX):
     return hasil or ["—"]
 
 
+def _lag_baris(p):
+    return f"**{p['follower']}** · lag {p['lag_menit']} mnt"
+
+
+def _lag_unik(lag):
+    """Satu baris per pair lag; jika pair yang sama muncul dari beberapa leader, ambil yang pertama (terkuat)."""
+    lihat, hasil = set(), []
+    for p in lag:
+        if p["follower"] not in lihat:
+            lihat.add(p["follower"])
+            hasil.append(p)
+    return hasil
+
+
 def _saran_baris(sr):
-    return (f"**{sr['pair']}** · {sr['arah']} · Entry {sr['entry']} · SL {sr['sl']} · TP {sr['tp']} "
+    if sr.get("metode") == "LEAD-LAG":
+        dasar = f" · LEAD-LAG dari {sr['leader']} {sr['lag_menit']} mnt"
+    else:
+        dasar = f" · {sr['metode']}" if sr.get("metode") else ""
+    return (f"**{sr['pair']}** · {sr['arah']}{dasar} · Entry {sr['entry']} · SL {sr['sl']} · TP {sr['tp']} "
             f"(SL {sr['sl_pip']} pip)")
 
 
@@ -134,20 +152,9 @@ def build_embed(now, status, rows, ranking_ok, info=None):
         {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris_entry, entry)) or "—"), "inline": False},
         {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
-    cad = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
-    cad_sisa = max(0, len(cad) - C.CADANGAN_TAMPIL_MAKS)
-    cad = sorted(cad, key=_jarak_terdekat)[:C.CADANGAN_TAMPIL_MAKS]
-    if cad:
-        # Dipecah per pair agar tidak terpotong oleh batas 1024 karakter per field
-        potongan = _potong_baris(list(map(_cad_baris, cad)))
-        for i, teks in enumerate(potongan, 1):
-            judul = "🔎 Level cadangan (bukan sinyal)"
-            if len(potongan) > 1:
-                judul += f" {i}/{len(potongan)}"
-            fields.append({"name": judul, "value": teks, "inline": False})
-    if cad_saran := info["saran"]:
-        fields.append({"name": "💡 Saran cadangan (BUKAN sinyal, belum divalidasi backtest)",
-                       "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
+    if lag := info.get("lag"):
+        fields.append({"name": "🔁 Pair lag (keterlambatan 5-60 menit, BUKAN sinyal)",
+                       "value": _cut("\n".join(map(_lag_baris, _lag_unik(lag)))), "inline": False})
     if tampil := info["tampil"]:
         fields.append({"name": "⏱ Pemantauan 15 menit (entry & analisa cadangan)",
                        "value": _cut("\n".join(map(_pantau_baris, tampil))), "inline": False})
@@ -159,8 +166,7 @@ def build_embed(now, status, rows, ranking_ok, info=None):
                        "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})
     return {"title": f"📊 Adaptive Forex Scanner · {now:%H:%M} UTC", "description": desc,
             "color": warna, "fields": fields,
-            "footer": {"text": "Laporan lengkap: reports/scanner_latest.md"
-                       + (f" · +{cad_sisa} pair level cadangan lainnya" if cad_sisa else "")},
+            "footer": {"text": "Laporan lengkap: reports/scanner_latest.md"},
             "timestamp": now.isoformat()}
 
 

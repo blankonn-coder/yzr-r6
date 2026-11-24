@@ -4,7 +4,9 @@ import os
 import sys
 
 import analisa_cadangan as CD
+import biquote_client as bq
 import config as C
+import leadlag
 import pantauan
 import ranking
 import report
@@ -51,14 +53,23 @@ def main():
         status = "PASAR TUTUP, tidak ada analisa"
 
     # Saran dan pemantauan cadangan hanya dihitung saat pasar buka. Saat tutup, state tidak diubah.
-    cad = None
+    # Lead-lag: data M5 selalu diperbarui saat pasar buka. Backtest dan saran lead-lag hanya
+    # dihitung jika tidak ada ENTRY di run ini, agar analisa 5 mode entry tidak terganggu.
+    ll, cad = None, None
     if is_open:
-        cad = pantauan.jalankan(now, rows, scanner.fetch_m15)
+        ll = leadlag.jalankan(now, rows, lambda p: bq.fetch_candles(p, C.TF_LEADLAG, C.LEADLAG_FETCH_COUNT),
+                              analisa=not any(r["label"].startswith("ENTRY") for r in rows))
+        ada_entry = any(r["label"].startswith("ENTRY") for r in rows)
+        cad = pantauan.jalankan(now, rows, scanner.fetch_m15, prioritas=ll["saran"],
+                                cadangan_aktif=not ada_entry)
 
     _tulis(C.SCANNER_MD_PATH, report.build_scanner_md(now, status, rows, ranking_ok, news_bersih,
-                                                       news_err, is_open, ranking.load_meta(), cad))
-    C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows, cad))
-    print(notify(now, status, rows, ranking_ok, cad))
+                                                       news_err, is_open, ranking.load_meta(), cad, ll=ll))
+    C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows, cad, ll=ll))
+    info_notif = cad
+    if cad is not None and ll and ll.get("backtest") and ll["status"] == "dianalisa" and cad["cadangan_aktif"]:
+        info_notif = {**cad, "lag": ll["backtest"]["pasangan_lolos"][:5]}
+    print(notify(now, status, rows, ranking_ok, info_notif))
 
     if C.CADANGAN_ENABLED:
         print(f"Snapshot analisa cadangan baru: {CD.simpan_snapshot(now, rows)}")

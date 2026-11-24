@@ -15,6 +15,7 @@ CANDLE_SEC = 900
 TITIK = C.PANTAU_TOTAL_MENIT // C.PANTAU_TITIK_MENIT  # 4 titik: 15, 30, 45, 60 menit
 SUMBER_ENTRY = "ENTRY"
 SUMBER_CADANGAN = "ANALISA CADANGAN (bukan sinyal)"
+SUMBER_LEADLAG = "LEAD-LAG (analisa cadangan, bukan sinyal)"
 
 
 def _pair_key(pair):
@@ -62,7 +63,8 @@ def perbarui(now, aktif, ambil_m15):
         if key not in cache:
             cache[key] = ambil_m15(key)
         m15 = cache[key] or []
-        awal = C.to_epoch(s["bar_terakhir"]) + C.TF_MAIN_SEC
+        # Saran lead-lag punya titik awal sendiri (close M5 terakhir); saran lain mulai di close H1
+        awal = C.to_epoch(s["mulai"]) if s.get("mulai") else C.to_epoch(s["bar_terakhir"]) + C.TF_MAIN_SEC
         bars = [b for b in m15 if b["t"] >= awal][:TITIK]
 
         buy = s["arah"] == "BUY"
@@ -110,17 +112,29 @@ def perbarui(now, aktif, ambil_m15):
     return hasil
 
 
-def jalankan(now, rows, ambil_m15):
+def jalankan(now, rows, ambil_m15, prioritas=None, cadangan_aktif=True):
     """Satu run: pantau catatan aktif, lalu catat entry dan saran cadangan baru dari run ini.
-    Catatan baru belum punya candle sesudahnya, jadi baru dinilai di run berikutnya."""
+    Catatan baru belum punya candle sesudahnya, jadi baru dinilai di run berikutnya.
+
+    prioritas: saran lead-lag (sudah berurutan). Diisi dulu, sisanya diisi saran cadangan biasa
+    Saran analisa cadangan kini berasal dari lead-lag (menggantikan saran level H1 lama).
+    cadangan_aktif=False saat ada ENTRY di run ini: tidak ada saran baru. Pemantauan saran
+    yang sudah berjalan tetap dilanjutkan agar evaluasinya selesai.
+    """
     state = C.load_json(C.PANTAU_AKTIF_PATH, {"aktif": []})
     hasil = perbarui(now, state.get("aktif", []), ambil_m15)
 
     entry = buat_entry(now, rows)
-    # Pair yang masih dipantau sebagai saran cadangan tidak diberi saran baru
+    # Pair yang masih dipantau sebagai saran tidak diberi saran baru
     aktif_cadangan = {s["pair"] for s in hasil["aktif"] if s["sumber"] == SUMBER_CADANGAN}
-    saran = CD.pilih_saran(rows, dikecualikan=aktif_cadangan)
-    baru_cadangan = [{**s, "sumber": SUMBER_CADANGAN, "titik": {}, "dibuat": C.fmt(now)} for s in saran]
-    C.save_json(C.PANTAU_AKTIF_PATH, {"aktif": hasil["aktif"] + entry + baru_cadangan})
+    aktif_leadlag = {s["pair"] for s in hasil["aktif"] if s["sumber"] == SUMBER_LEADLAG}
+    ll = []
+    if cadangan_aktif:
+        ll = [s for s in (prioritas or []) if s["pair"] not in aktif_cadangan | aktif_leadlag][:C.LEADLAG_SARAN_N]
+    std = []  # saran level H1 tidak dipakai lagi: lead-lag menggantikannya
+    baru_leadlag = [{**s, "sumber": SUMBER_LEADLAG, "titik": {}, "dibuat": C.fmt(now)} for s in ll]
+    baru_cadangan = [{**s, "sumber": SUMBER_CADANGAN, "titik": {}, "dibuat": C.fmt(now)} for s in std]
+    C.save_json(C.PANTAU_AKTIF_PATH, {"aktif": hasil["aktif"] + entry + baru_leadlag + baru_cadangan})
     CD._append_jsonl(C.PANTAU_ARSIP_PATH, hasil["selesai"])
-    return {"saran": saran, "entry": entry, "tampil": hasil["tampil"], "selesai": hasil["selesai"]}
+    return {"saran": ll + std, "entry": entry, "tampil": hasil["tampil"], "selesai": hasil["selesai"],
+            "cadangan_aktif": cadangan_aktif}
