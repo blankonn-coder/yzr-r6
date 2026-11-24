@@ -1,1 +1,4 @@
 requests>=2.31
+dukascopy-downloader>=1.1.0
+pandas>=2.0
+pyarrow>=14.0
