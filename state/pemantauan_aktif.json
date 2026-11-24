@@ -143,6 +143,38 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T18:30:33Z"
+    },
+    {
+      "pair": "EUR/CHF",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 0.91743,
+      "jarak_atr": 0.71,
+      "sentuhan": 12,
+      "entry": 0.91666,
+      "sl": 0.91797,
+      "tp": 0.9147,
+      "sl_pip": 13.1,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:45:25Z"
+    },
+    {
+      "pair": "EUR/JPY",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 174.5197,
+      "jarak_atr": 0.72,
+      "sentuhan": 27,
+      "entry": 174.7055,
+      "sl": 174.39115,
+      "tp": 175.17702,
+      "sl_pip": 31.4,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:45:25Z"
     }
   ]
 }
