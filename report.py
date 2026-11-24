@@ -1,47 +1,37 @@
-"""Laporan run singkat: sinyal BUY/SELL dan pemantauan aktif (NETRAL tidak ditampilkan)."""
+"""Laporan scanner: reports/scanner_latest.md dan scanner/latest.json."""
 import config as C
-from monitor import aktif, umur, teks_gerak
 
 
-def build_report(now, status, calib, rows, gagal, mon, info_db):
-    L = ["# Laporan Run Screening Forex", "",
+def _news_status(market_open, news_bersih, news_err):
+    if not market_open:
+        return "PASAR TUTUP"
+    if news_bersih is None:
+        return f"GAGAL diperiksa ({news_err}): tidak ada ENTRY baru"
+    return "tidak ada news ±30 menit" if news_bersih else "ADA news high-impact ±30 menit"
+
+
+def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, market_open=True):
+    L = ["# Laporan Scanner Adaptive Forex", "",
          f"- Waktu eksekusi: {C.fmt(now)}",
          f"- Status: {status}",
-         f"- Kalibrasi: {calib}",
-         f"- Pair dianalisa: {len(rows)}"]
-    if gagal:
-        L.append(f"- Gagal ambil data: {'; '.join(gagal)}")
-    L.append("")
-
-    for judul, kep in (("Sinyal BUY", "BUY"), ("Sinyal SELL", "SELL")):
-        L.append(f"## {judul}")
-        sel = [r for r in rows if r["keputusan"] == kep]
-        if sel:
-            L += ["| Pair | Keputusan | Skor | Alasan |", "|---|---|---|---|"]
-            L += [f"| {r['pair']} | {r['keputusan']} | {r['skor_akhir']} | {'; '.join(r['alasan'])} |"
-                  for r in sel]
-        else:
-            L.append("Tidak ada.")
-        L.append("")
-
-    L.append(f"## Pemantauan (maks {C.MONITOR_MINUTES} menit)")
-    pantau = aktif(mon, now)
-    if pantau:
-        L += ["| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |",
-              "|---|---|---|---|---|---|"]
-        for m in pantau.values():
-            awal, kini = m["harga_awal"], m["harga_sekarang"]
-            pip, pct = C.gerak(m["pair"], awal, kini, m.get("keputusan", ""))
-            L.append(f"| {m['pair']} | {m.get('keputusan', '-')} | {awal} | {kini} "
-                     f"| {teks_gerak(pip, pct)} | {int(umur(m, now))} |")
+         f"- Ranking aktif: {'ada' if ranking_ok else 'KOSONG (belum ada backtest) -> hanya NO TRADE'}",
+         f"- Kalender: {_news_status(market_open, news_bersih, news_err)}",
+         f"- Spread: {'terverifikasi' if C.SPREAD_TERSEDIA else 'BELUM terverifikasi (OANDA belum tersambung): sinyal jadi WATCHLIST'}",
+         "- Manajemen risiko §9: BELUM diimplementasi. Scanner tidak membatasi 3 trade/pair/hari "
+         "maupun korelasi mata uang.",
+         f"- Pair dianalisa: {len(rows)}", ""]
+    if rows:
+        L += ["| Pair | Regime | Bias H4 | Label | Metode | Arah | Harga | Entry | SL | TP | Catatan |",
+              "|---|---|---|---|---|---|---|---|---|---|---|"]
+        for r in rows:
+            L.append(f"| {r['pair']} | {r['regime']} | {r['bias']} | {r['label']} | {r['metode'] or '-'} "
+                     f"| {r['arah'] or '-'} | {r['harga'] if r['harga'] is not None else '-'} "
+                     f"| {r['entry'] or '-'} | {r['sl'] or '-'} | {r['tp'] or '-'} "
+                     f"| {'; '.join(r['catatan']) or '-'} |")
     else:
-        L.append("Tidak ada pair aktif.")
-    L.append("")
-
-    if info_db:
-        L += ["## Info Database",
-              f"- Total entri: {info_db['total']}",
-              f"- Ditambahkan run ini: {info_db['tambah']}",
-              f"- Dihapus karena retensi: {info_db['hapus']}",
-              f"- File untuk diunduh: {C.DB_PATH}", ""]
+        L.append("Tidak ada pair yang dianalisa.")
     return "\n".join(L) + "\n"
+
+
+def build_scanner_json(now, status, rows):
+    return {"waktu": C.fmt(now), "status": status, "rows": rows}

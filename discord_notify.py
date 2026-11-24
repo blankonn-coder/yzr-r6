@@ -1,10 +1,10 @@
-"""Kirim ringkasan run ke Discord lewat webhook (embed).
+"""Kirim ringkasan scanner ke Discord lewat webhook (embed). Tidak pernah melempar error.
 
-Konfigurasi di GitHub:
-  Secret   DISCORD_WEBHOOK_URL   URL webhook (wajib agar notifikasi aktif)
+Konfigurasi GitHub:
+  Secret   DISCORD_WEBHOOK_URL   URL webhook
   Variable DISCORD_NOTIFY_MODE   signal (default) | always | off
-    signal : kirim jika ada sinyal BUY/SELL baru ATAU ada pair yang masih dipantau
-    always : kirim setiap run (termasuk tanpa sinyal)
+    signal : kirim jika ada ENTRY, WATCHLIST, atau DATA INVALID
+    always : kirim setiap run
     off    : tidak pernah kirim
 """
 import os
@@ -13,81 +13,50 @@ import time
 import requests
 
 import config as C
-from monitor import aktif, umur, teks_gerak
 
 WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"
 MODE_ENV = "DISCORD_NOTIFY_MODE"
 FIELD_MAX = 1024
-DESC_MAX = 300
 
 
 def _mode():
     return os.environ.get(MODE_ENV, "").strip().lower() or "signal"
 
 
-def should_send(mode, n_buy, n_sell, n_pantau=0):
+def should_send(mode, rows):
     if mode == "off":
         return False
     if mode == "always":
         return True
-    return (n_buy + n_sell + n_pantau) > 0
+    return any(r["label"] in ("WATCHLIST", "DATA INVALID") or r["label"].startswith("ENTRY") for r in rows)
 
 
-def _cut(text, limit):
-    if len(text) <= limit:
-        return text
-    akhiran = "\n… (dipotong)"
-    return text[:limit - len(akhiran)].rstrip() + akhiran
+def _cut(text, limit=FIELD_MAX):
+    return text if len(text) <= limit else text[:limit - 12].rstrip() + "\n… (dipotong)"
 
 
-def _sinyal_lines(rows, kep):
-    return [f"**{r['pair']}** · skor {r['skor_akhir']}\n" + "\n".join(f"• {a}" for a in r["alasan"])
-            for r in rows if r["keputusan"] == kep]
+def build_embed(now, status, rows, ranking_ok):
+    entry = [r for r in rows if r["label"].startswith("ENTRY")]
+    watch = [r for r in rows if r["label"] == "WATCHLIST"]
+    invalid = [r for r in rows if r["label"] == "DATA INVALID"]
+    warna = 0x2ECC71 if entry else (0xF1C40F if watch else 0x95A5A6)
+    desc = f"Status: **{status}** · Ranking: **{'ada' if ranking_ok else 'kosong'}** · Pair: **{len(rows)}**"
 
-
-def build_payload(now, status, calib, rows, gagal, mon, info):
-    buy = [r for r in rows if r["keputusan"] == "BUY"]
-    sell = [r for r in rows if r["keputusan"] == "SELL"]
-
-    if buy and sell:
-        warna = 0xF1C40F
-    elif buy:
-        warna = 0x2ECC71
-    elif sell:
-        warna = 0xE74C3C
-    else:
-        warna = 0x95A5A6
-
-    deskripsi = f"Status: **{status}** · Kalibrasi: **{calib}** · Pair dianalisa: **{len(rows)}**"
-    if gagal:
-        deskripsi += "\nGagal ambil data: " + ", ".join(gagal)
+    def baris(r):
+        extra = f" · {r['metode']} {r['arah']}" if r["metode"] else ""
+        return f"**{r['pair']}** · {r['regime']} · {r['bias']}{extra}\n" + "\n".join(f"• {c}" for c in r["catatan"][:2])
 
     fields = [
-        {"name": f"🟢 BUY ({len(buy)})",
-         "value": _cut("\n\n".join(_sinyal_lines(rows, "BUY")) or "—", FIELD_MAX), "inline": False},
-        {"name": f"🔴 SELL ({len(sell)})",
-         "value": _cut("\n\n".join(_sinyal_lines(rows, "SELL")) or "—", FIELD_MAX), "inline": False},
+        {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris, entry)) or "—"), "inline": False},
+        {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n\n".join(map(baris, watch)) or "—"), "inline": False},
     ]
-
-    pantau = aktif(mon, now)
-    if pantau:
-        baris = []
-        for m in pantau.values():
-            pip, pct = C.gerak(m["pair"], m["harga_awal"], m["harga_sekarang"], m.get("keputusan", ""))
-            baris.append(f"**{m['pair']}** ({m.get('keputusan', '-')}) · {teks_gerak(pip, pct)} "
-                         f"· {int(umur(m, now))} menit")
-        fields.append({"name": f"📈 Pemantauan {C.MONITOR_MINUTES} menit ({len(pantau)})",
-                       "value": _cut("\n".join(baris), FIELD_MAX), "inline": False})
-
-    return {
-        "title": f"📊 Screening Forex · {now:%H:%M} UTC",
-        "description": _cut(deskripsi, DESC_MAX),
-        "color": warna,
-        "fields": fields,
-        "footer": {"text": f"Database: {info['total']} entri (+{info['tambah']}) · "
-                           f"laporan lengkap di reports/latest_report.md"},
-        "timestamp": now.isoformat(),
-    }
+    if invalid:
+        fields.append({"name": f"⚠️ DATA INVALID ({len(invalid)})",
+                       "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})
+    return {"title": f"📊 Adaptive Forex Scanner · {now:%H:%M} UTC", "description": desc,
+            "color": warna, "fields": fields,
+            "footer": {"text": "Laporan lengkap: reports/scanner_latest.md"},
+            "timestamp": now.isoformat()}
 
 
 def _post(url, embed):
@@ -104,19 +73,14 @@ def _post(url, embed):
     return False
 
 
-def notify(now, status, calib, rows, gagal, mon, info):
-    """Return pesan status untuk log. Tidak pernah melempar error agar run tidak gagal."""
+def notify(now, status, rows, ranking_ok):
     url = os.environ.get(WEBHOOK_ENV, "").strip()
     if not url:
         return "Discord: webhook belum diatur, dilewati"
-    n_buy = sum(1 for r in rows if r["keputusan"] == "BUY")
-    n_sell = sum(1 for r in rows if r["keputusan"] == "SELL")
-    n_pantau = len(aktif(mon, now))
-    if not should_send(_mode(), n_buy, n_sell, n_pantau):
+    if not should_send(_mode(), rows):
         return f"Discord: mode {_mode()}, tidak ada yang dikirim"
     try:
-        embed = build_payload(now, status, calib, rows, gagal, mon, info)
-        ok = _post(url, embed)
+        ok = _post(url, build_embed(now, status, rows, ranking_ok))
         return "Discord: terkirim" if ok else "Discord: gagal kirim (cek URL webhook)"
-    except Exception as e:  # jangan sampai URL ikut tercetak
+    except Exception as e:  # URL tidak boleh ikut tercetak
         return f"Discord: error {type(e).__name__}"
