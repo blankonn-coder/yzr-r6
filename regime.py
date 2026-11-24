@@ -24,6 +24,15 @@ def classify(ind, i, closes):
 
     matches = [name for name, flag in (("TRENDING KUAT", strong), ("TRENDING LEMAH", weak),
                                        ("RANGING", ranging), ("VOLATIL/CHOPPY", choppy)) if flag]
+    # Fallback untuk kombinasi yang tidak tercakup aturan di atas (celah spesifikasi):
+    #   ADX > 25 tanpa label lain  -> TRENDING LEMAH  (ada arah, Hurst tidak mendukung persistensi)
+    #   ADX < 20 tanpa label lain  -> RANGING         (tidak ada kekuatan arah)
+    # ADX selalu di salah satu zona (<20, 20-25, >25), jadi TIDAK JELAS tidak lagi tercapai.
+    if not matches:
+        if adx > C.REG_ADX_STRONG:
+            matches = ["TRENDING LEMAH"]
+        elif adx < C.REG_ADX_WEAK_MIN:
+            matches = ["RANGING"]
     if not matches:
         label = "TIDAK JELAS"
     elif len(matches) == 1:
