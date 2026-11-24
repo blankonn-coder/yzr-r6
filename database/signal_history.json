@@ -1,9 +1,9 @@
 {
   "metadata": {
     "created_at": "2026-11-15T23:45:26Z",
-    "last_updated": "2026-11-24T01:00:40Z",
+    "last_updated": "2026-11-24T01:15:22Z",
     "retensi_hari": 30,
-    "total_entri": 585
+    "total_entri": 587
   },
   "signals": [
     {
@@ -15636,6 +15636,60 @@
         "Entry 0.54499 / SL 0.54688 / TP 0.54121 (RR 1:2, risiko 18.9 pip)"
       ],
       "status_pantau": "EXPIRED"
+    },
+    {
+      "id": "20261124T011522Z_AUDUSD",
+      "waktu": "2026-11-24T01:15:22Z",
+      "tanggal": "2026-11-24",
+      "jam_utc": "01:15",
+      "pair": "AUD/USD",
+      "keputusan": "SELL",
+      "skor_akhir": 100,
+      "harga_saat_itu": 0.66335,
+      "level_terdekat": {
+        "type": "R",
+        "price": 0.66368,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "TURUN",
+      "alasan": [
+        "Continuation bearish (zona FVG H1 0.66336-0.664)",
+        "Trend searah bias TURUN",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bearish)",
+        "RR minimal 1:2",
+        "Entry 0.66335 / SL 0.6647 / TP 0.66065 (RR 1:2, risiko 13.5 pip)"
+      ],
+      "status_pantau": "AKTIF"
+    },
+    {
+      "id": "20261124T011522Z_EURAUD",
+      "waktu": "2026-11-24T01:15:22Z",
+      "tanggal": "2026-11-24",
+      "jam_utc": "01:15",
+      "pair": "EUR/AUD",
+      "keputusan": "BUY",
+      "skor_akhir": 100,
+      "harga_saat_itu": 1.64463,
+      "level_terdekat": {
+        "type": "S",
+        "price": 1.6447,
+        "tf": "1h"
+      },
+      "rsi": {},
+      "tren": "NAIK",
+      "alasan": [
+        "Continuation bullish (zona FVG H1 1.64436-1.64503)",
+        "Trend searah bias NAIK",
+        "Ada area FVG H1",
+        "Harga retest zona",
+        "Ada konfirmasi candle (pin bar bullish)",
+        "RR minimal 1:2",
+        "Entry 1.64463 / SL 1.64366 / TP 1.64657 (RR 1:2, risiko 9.7 pip)"
+      ],
+      "status_pantau": "AKTIF"
     }
   ]
 }
