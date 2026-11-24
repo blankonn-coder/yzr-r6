@@ -34,7 +34,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_NOTIFY_MODE: ${{ vars.DISCORD_NOTIFY_MODE }}
           PAIRS: ${{ github.event.inputs.pairs || github.event.client_payload.pairs }}
-        run: python -m src.main --pairs "$PAIRS"
+        run: python main.py --pairs "$PAIRS"
       - name: Commit state, database, laporan
         if: always()
         run: |
