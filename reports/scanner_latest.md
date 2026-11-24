@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-24T20:00:50Z
+- Waktu eksekusi: 2026-11-24T20:05:12Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -35,7 +35,7 @@ Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-24T20:00:50Z, pasangan lolos 0.
+- Backtest jendela 360 menit, diperbarui 2026-11-24T20:05:12Z, pasangan lolos 0.
 
 Tidak ada pasangan yang lolos ambang.
 
@@ -43,31 +43,11 @@ Tidak ada kandidat di run ini.
 
 ## Pemantauan 15 menit (entry dan analisa cadangan)
 Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. Jika SL dan TP kena di candle yang sama, dihitung SL. Analisa cadangan BUKAN sinyal.
-| Sumber | Pair | Arah | Entry | SL | TP | 15m | 30m | 45m | 60m | Hasil | Pip sekarang | Umur |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ANALISA CADANGAN (bukan sinyal) | USD/JPY | BUY | 159.2865 | 159.16528 | 159.46834 | -2.4 | -2.6 | -5.4 | -7.2 | Selesai 60 menit | LOSS 7.2 pip | 60 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/GBP | BUY | 0.83613 | 0.83575 | 0.8367 | -0.9 | -0.7 | -0.9 | -1.8 | Selesai 60 menit | LOSS 1.8 pip | 60 mnt |
-| ANALISA CADANGAN (bukan sinyal) | USD/CAD | BUY | 1.42727 | 1.42609 | 1.42904 | -6.6 | -1.6 | -3.6 | -1.2 | Selesai 60 menit | LOSS 1.2 pip | 60 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/CAD | BUY | 1.56493 | 1.56349 | 1.56708 | -4.0 | -0.9 | -2.8 | -0.4 | Selesai 60 menit | LOSS 0.4 pip | 45 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/NZD | BUY | 1.99985 | 1.99769 | 2.00309 | -6.3 | -3.9 | -2.8 | -4.4 | Selesai 60 menit | LOSS 4.4 pip | 45 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/USD | BUY | 1.09655 | 1.09535 | 1.09835 | +2.3 | +0.4 | +0.9 | +0.4 | Selesai 60 menit | PROFIT 0.4 pip | 45 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/AUD | BUY | 1.65099 | 1.64803 | 1.65543 | -3.9 | -2.6 | -0.7 | +4.3 | Selesai 60 menit | PROFIT 4.3 pip | 30 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/CHF | BUY | 0.91616 | 0.91504 | 0.91784 | -0.6 | +0.5 | +0.1 | -1.4 | Selesai 60 menit | LOSS 1.4 pip | 30 mnt |
-| ANALISA CADANGAN (bukan sinyal) | EUR/JPY | BUY | 174.6665 | 174.38202 | 175.09321 | +0.9 | -2.2 | -4.9 | -7.4 | Selesai 60 menit | LOSS 7.4 pip | 30 mnt |
+Tidak ada entry atau saran yang sedang dipantau.
 
 ## Evaluasi 1 jam (entry dan analisa cadangan)
 Dibuat setelah 60 menit atau saat SL/TP kena. MFE = gerak terbaik, MAE = gerak terburuk, dalam pip.
-| Sumber | Pair | Arah | 15m | 30m | 45m | 60m | Hasil | Pip akhir | MFE (pip) | MAE (pip) | Ditutup (UTC) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| ANALISA CADANGAN (bukan sinyal) | USD/JPY | BUY | -2.4 | -2.6 | -5.4 | -7.2 | Selesai 60 menit | LOSS 7.2 pip | 1.1 | -7.9 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/GBP | BUY | -0.9 | -0.7 | -0.9 | -1.8 | Selesai 60 menit | LOSS 1.8 pip | 0.7 | -2.2 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | USD/CAD | BUY | -6.6 | -1.6 | -3.6 | -1.2 | Selesai 60 menit | LOSS 1.2 pip | 2.6 | -6.9 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/CAD | BUY | -4.0 | -0.9 | -2.8 | -0.4 | Selesai 60 menit | LOSS 0.4 pip | 5.0 | -5.5 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/NZD | BUY | -6.3 | -3.9 | -2.8 | -4.4 | Selesai 60 menit | LOSS 4.4 pip | 1.3 | -9.3 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/USD | BUY | +2.3 | +0.4 | +0.9 | +0.4 | Selesai 60 menit | PROFIT 0.4 pip | 3.7 | -1.5 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/AUD | BUY | -3.9 | -2.6 | -0.7 | +4.3 | Selesai 60 menit | PROFIT 4.3 pip | 4.3 | -7.8 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/CHF | BUY | -0.6 | +0.5 | +0.1 | -1.4 | Selesai 60 menit | LOSS 1.4 pip | 0.5 | -1.8 | 2026-11-24T20:00:50Z |
-| ANALISA CADANGAN (bukan sinyal) | EUR/JPY | BUY | +0.9 | -2.2 | -4.9 | -7.4 | Selesai 60 menit | LOSS 7.4 pip | 2.8 | -7.9 | 2026-11-24T20:00:50Z |
+Belum ada evaluasi yang selesai di run ini.
 
 ## Level analisa cadangan (BUKAN sinyal, tanpa statistik)
 Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan apa pun.
