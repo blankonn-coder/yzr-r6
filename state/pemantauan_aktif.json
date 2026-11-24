@@ -47,6 +47,54 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T18:00:43Z"
+    },
+    {
+      "pair": "XAU/AUD",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 5377.382,
+      "jarak_atr": 0.29,
+      "sentuhan": 15,
+      "entry": 5369.268,
+      "sl": 5391.51189,
+      "tp": 5335.90216,
+      "sl_pip": 222.4,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:15:39Z"
+    },
+    {
+      "pair": "EUR/CAD",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 1.56742,
+      "jarak_atr": 0.48,
+      "sentuhan": 12,
+      "entry": 1.56656,
+      "sl": 1.56831,
+      "tp": 1.56393,
+      "sl_pip": 17.5,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:15:39Z"
+    },
+    {
+      "pair": "USD/CAD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 1.42685,
+      "jarak_atr": 0.56,
+      "sentuhan": 9,
+      "entry": 1.42772,
+      "sl": 1.42608,
+      "tp": 1.43018,
+      "sl_pip": 16.4,
+      "bar_terakhir": "2026-11-24T17:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T18:15:39Z"
     }
   ]
 }
