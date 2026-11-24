@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-24T14:30:36Z",
+  "waktu": "2026-11-24T14:45:26Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -42,14 +42,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00074,
-          "resistance": null,
-          "support": {
-            "harga": 1.09673,
-            "jarak_atr": 0.32,
-            "sentuhan": 22,
+          "atr": 0.00076,
+          "resistance": {
+            "harga": 1.09788,
+            "jarak_atr": 0.21,
+            "sentuhan": 24,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -99,14 +99,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00086,
-          "resistance": {
-            "harga": 1.31086,
-            "jarak_atr": 0.93,
+          "atr": 0.00091,
+          "resistance": null,
+          "support": {
+            "harga": 1.31089,
+            "jarak_atr": 0.45,
             "sentuhan": 29,
             "umur_bar": 0
-          },
-          "support": null
+          }
         },
         "m15_tersedia": true
       }
@@ -151,14 +151,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.10561,
-          "resistance": null,
-          "support": {
+          "atr": 0.10857,
+          "resistance": {
             "harga": 159.24239,
-            "jarak_atr": 0.03,
-            "sentuhan": 24,
+            "jarak_atr": 0.35,
+            "sentuhan": 25,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -203,13 +203,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00079,
-          "resistance": {
-            "harga": 0.8379,
-            "jarak_atr": 0.83,
-            "sentuhan": 14,
-            "umur_bar": 2
-          },
+          "atr": 0.00087,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -260,14 +255,19 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.0006,
+          "atr": 0.00064,
           "resistance": {
-            "harga": 0.66466,
-            "jarak_atr": 0.42,
-            "sentuhan": 32,
-            "umur_bar": 0
+            "harga": 0.66586,
+            "jarak_atr": 0.87,
+            "sentuhan": 6,
+            "umur_bar": 97
           },
-          "support": null
+          "support": {
+            "harga": 0.66466,
+            "jarak_atr": 1.0,
+            "sentuhan": 33,
+            "umur_bar": 0
+          }
         },
         "m15_tersedia": true
       }
@@ -312,13 +312,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00074,
-          "resistance": {
-            "harga": 1.43134,
-            "jarak_atr": 0.06,
-            "sentuhan": 9,
-            "umur_bar": 0
-          },
+          "atr": 0.0008,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -369,14 +364,9 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00041,
+          "atr": 0.00046,
           "resistance": null,
-          "support": {
-            "harga": 0.54722,
-            "jarak_atr": 0.94,
-            "sentuhan": 31,
-            "umur_bar": 0
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -426,14 +416,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00033,
-          "resistance": null,
-          "support": {
+          "atr": 0.00035,
+          "resistance": {
             "harga": 0.83711,
-            "jarak_atr": 0.74,
-            "sentuhan": 26,
-            "umur_bar": 1
-          }
+            "jarak_atr": 0.08,
+            "sentuhan": 29,
+            "umur_bar": 0
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -478,12 +468,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.13733,
+          "atr": 0.14052,
           "resistance": {
             "harga": 174.7755,
-            "jarak_atr": 0.66,
-            "sentuhan": 9,
-            "umur_bar": 114
+            "jarak_atr": 0.1,
+            "sentuhan": 10,
+            "umur_bar": 0
           },
           "support": null
         },
@@ -535,14 +525,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00065,
-          "resistance": null,
-          "support": {
+          "atr": 0.00069,
+          "resistance": {
             "harga": 0.91784,
-            "jarak_atr": 0.88,
-            "sentuhan": 51,
+            "jarak_atr": 0.21,
+            "sentuhan": 53,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -592,13 +582,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00152,
-          "resistance": null,
-          "support": {
+          "atr": 0.00157,
+          "resistance": {
             "harga": 1.65031,
-            "jarak_atr": 0.49,
-            "sentuhan": 19,
-            "umur_bar": 1
+            "jarak_atr": 0.22,
+            "sentuhan": 20,
+            "umur_bar": 0
+          },
+          "support": {
+            "harga": 1.64858,
+            "jarak_atr": 0.88,
+            "sentuhan": 15,
+            "umur_bar": 7
           }
         },
         "m15_tersedia": true
@@ -644,13 +639,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00083,
+          "atr": 0.00085,
           "resistance": null,
           "support": {
             "harga": 1.56952,
-            "jarak_atr": 0.55,
+            "jarak_atr": 0.27,
             "sentuhan": 14,
-            "umur_bar": 0
+            "umur_bar": 1
           }
         },
         "m15_tersedia": true
@@ -696,14 +691,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00123,
-          "resistance": {
-            "harga": 2.00389,
-            "jarak_atr": 0.48,
-            "sentuhan": 48,
-            "umur_bar": 0
-          },
-          "support": null
+          "atr": 0.00134,
+          "resistance": null,
+          "support": {
+            "harga": 1.99968,
+            "jarak_atr": 0.79,
+            "sentuhan": 11,
+            "umur_bar": 29
+          }
         },
         "m15_tersedia": true
       }
@@ -748,14 +743,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 9.63912,
-          "resistance": {
-            "harga": 3620.87098,
-            "jarak_atr": 0.19,
-            "sentuhan": 59,
+          "atr": 10.19468,
+          "resistance": null,
+          "support": {
+            "harga": 3619.79746,
+            "jarak_atr": 0.8,
+            "sentuhan": 56,
             "umur_bar": 0
-          },
-          "support": null
+          }
         },
         "m15_tersedia": true
       }
@@ -805,14 +800,9 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 13.02456,
+          "atr": 13.45899,
           "resistance": null,
-          "support": {
-            "harga": 5435.56775,
-            "jarak_atr": 0.87,
-            "sentuhan": 19,
-            "umur_bar": 110
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -859,29 +849,29 @@
       "bar_terakhir": "2026-11-24T13:00:00Z"
     },
     {
-      "pair": "EUR/USD",
+      "pair": "AUD/USD",
       "arah": "BUY",
       "level": "support",
-      "level_harga": 1.09599,
-      "jarak_atr": 0.39,
-      "sentuhan": 20,
-      "entry": 1.09649,
-      "sl": 1.09535,
-      "tp": 1.0982,
-      "sl_pip": 11.4,
+      "level_harga": 0.66346,
+      "jarak_atr": 0.34,
+      "sentuhan": 24,
+      "entry": 0.66386,
+      "sl": 0.66287,
+      "tp": 0.66535,
+      "sl_pip": 9.9,
       "bar_terakhir": "2026-11-24T13:00:00Z"
     },
     {
-      "pair": "XAU/AUD",
+      "pair": "NZD/USD",
       "arah": "SELL",
       "level": "resistance",
-      "level_harga": 5460.94038,
-      "jarak_atr": 0.58,
-      "sentuhan": 19,
-      "entry": 5445.427,
-      "sl": 5474.25727,
-      "tp": 5402.18159,
-      "sl_pip": 288.3,
+      "level_harga": 0.54756,
+      "jarak_atr": 0.65,
+      "sentuhan": 15,
+      "entry": 0.54706,
+      "sl": 0.54795,
+      "tp": 0.54573,
+      "sl_pip": 8.9,
       "bar_terakhir": "2026-11-24T13:00:00Z"
     }
   ],
@@ -901,43 +891,18 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {
         "15": 19.3,
-        "30": 40.8
+        "30": 40.8,
+        "45": 129.9
       },
       "dibuat": "2026-11-24T14:00:42Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 3618.9925,
-      "pip": 40.8,
-      "mfe": 81.2,
+      "harga_skrg": 3627.9025,
+      "pip": 129.9,
+      "mfe": 174.3,
       "mae": -14.6,
-      "umur_menit": 30,
+      "umur_menit": 45,
       "status": "AKTIF"
-    },
-    {
-      "pair": "EUR/JPY",
-      "arah": "SELL",
-      "level": "resistance",
-      "level_harga": 174.5197,
-      "jarak_atr": 0.26,
-      "sentuhan": 23,
-      "entry": 174.4555,
-      "sl": 174.64549,
-      "tp": 174.17052,
-      "sl_pip": 19.0,
-      "bar_terakhir": "2026-11-24T13:00:00Z",
-      "sumber": "ANALISA CADANGAN (bukan sinyal)",
-      "titik": {
-        "15": -11.7
-      },
-      "dibuat": "2026-11-24T14:00:42Z",
-      "hasil": "SL kena",
-      "menit_kena": 30,
-      "harga_skrg": 174.64549,
-      "pip": -19.0,
-      "mfe": 1.9,
-      "mae": -24.9,
-      "umur_menit": 30,
-      "status": "SELESAI"
     },
     {
       "pair": "GBP/USD",
@@ -954,65 +919,18 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {
         "15": -4.5,
-        "30": 2.2
+        "30": 2.2,
+        "45": 14.7
       },
       "dibuat": "2026-11-24T14:00:42Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 1.310055,
-      "pip": 2.2,
-      "mfe": 8.6,
+      "harga_skrg": 1.311305,
+      "pip": 14.7,
+      "mfe": 16.9,
       "mae": -4.5,
-      "umur_menit": 30,
+      "umur_menit": 45,
       "status": "AKTIF"
-    },
-    {
-      "pair": "EUR/CHF",
-      "arah": "BUY",
-      "level": "support",
-      "level_harga": 0.91819,
-      "jarak_atr": 0.06,
-      "sentuhan": 19,
-      "entry": 0.91826,
-      "sl": 0.91769,
-      "tp": 0.91911,
-      "sl_pip": 5.7,
-      "bar_terakhir": "2026-11-24T13:00:00Z",
-      "sumber": "ANALISA CADANGAN (bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-24T14:15:38Z",
-      "hasil": "SL kena",
-      "menit_kena": 15,
-      "harga_skrg": 0.91769,
-      "pip": -5.7,
-      "mfe": 1.5,
-      "mae": -6.1,
-      "umur_menit": 15,
-      "status": "SELESAI"
-    },
-    {
-      "pair": "USD/CAD",
-      "arah": "SELL",
-      "level": "resistance",
-      "level_harga": 1.43278,
-      "jarak_atr": 0.08,
-      "sentuhan": 40,
-      "entry": 1.4327,
-      "sl": 1.43329,
-      "tp": 1.43182,
-      "sl_pip": 5.9,
-      "bar_terakhir": "2026-11-24T13:00:00Z",
-      "sumber": "ANALISA CADANGAN (bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-24T14:15:38Z",
-      "hasil": "TP kena",
-      "menit_kena": 15,
-      "harga_skrg": 1.43182,
-      "pip": 8.8,
-      "mfe": 11.8,
-      "mae": -2.1,
-      "umur_menit": 15,
-      "status": "SELESAI"
     },
     {
       "pair": "EUR/GBP",
@@ -1029,16 +947,17 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {
         "15": 4.3,
-        "30": 2.1
+        "30": 2.1,
+        "45": -0.6
       },
       "dibuat": "2026-11-24T14:15:38Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 0.837355,
-      "pip": 2.1,
+      "harga_skrg": 0.837085,
+      "pip": -0.6,
       "mfe": 5.9,
       "mae": -2.6,
-      "umur_menit": 15,
+      "umur_menit": 30,
       "status": "AKTIF"
     },
     {
@@ -1059,14 +978,14 @@
         "30": 5.5
       },
       "dibuat": "2026-11-24T14:15:38Z",
-      "hasil": "BERJALAN",
-      "menit_kena": null,
-      "harga_skrg": 0.66441,
-      "pip": 5.5,
-      "mfe": 8.1,
+      "hasil": "TP kena",
+      "menit_kena": 45,
+      "harga_skrg": 0.66535,
+      "pip": 14.9,
+      "mfe": 17.0,
       "mae": -0.6,
-      "umur_menit": 15,
-      "status": "AKTIF"
+      "umur_menit": 30,
+      "status": "SELESAI"
     },
     {
       "pair": "EUR/AUD",
@@ -1083,20 +1002,67 @@
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {
         "15": 4.4,
-        "30": 6.4
+        "30": 6.4,
+        "45": 17.3
       },
       "dibuat": "2026-11-24T14:15:38Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 1.65105,
-      "pip": 6.4,
-      "mfe": 11.8,
+      "harga_skrg": 1.64996,
+      "pip": 17.3,
+      "mfe": 21.1,
       "mae": -6.4,
-      "umur_menit": 15,
+      "umur_menit": 30,
       "status": "AKTIF"
-    }
-  ],
-  "evaluasi_1_jam": [
+    },
+    {
+      "pair": "EUR/CHF",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.91819,
+      "jarak_atr": 0.06,
+      "sentuhan": 19,
+      "entry": 0.91826,
+      "sl": 0.91769,
+      "tp": 0.91911,
+      "sl_pip": 5.7,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T14:30:36Z",
+      "hasil": "SL kena",
+      "menit_kena": 15,
+      "harga_skrg": 0.91769,
+      "pip": -5.7,
+      "mfe": 1.5,
+      "mae": -6.1,
+      "umur_menit": 15,
+      "status": "SELESAI"
+    },
+    {
+      "pair": "USD/CAD",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 1.43278,
+      "jarak_atr": 0.08,
+      "sentuhan": 40,
+      "entry": 1.4327,
+      "sl": 1.43329,
+      "tp": 1.43182,
+      "sl_pip": 5.9,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T14:30:36Z",
+      "hasil": "TP kena",
+      "menit_kena": 15,
+      "harga_skrg": 1.43182,
+      "pip": 8.8,
+      "mfe": 11.8,
+      "mae": -2.1,
+      "umur_menit": 15,
+      "status": "SELESAI"
+    },
     {
       "pair": "EUR/JPY",
       "arah": "SELL",
@@ -1113,16 +1079,101 @@
       "titik": {
         "15": -11.7
       },
-      "dibuat": "2026-11-24T14:00:42Z",
+      "dibuat": "2026-11-24T14:30:36Z",
       "hasil": "SL kena",
       "menit_kena": 30,
       "harga_skrg": 174.64549,
       "pip": -19.0,
       "mfe": 1.9,
       "mae": -24.9,
+      "umur_menit": 15,
+      "status": "SELESAI"
+    },
+    {
+      "pair": "EUR/USD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 1.09599,
+      "jarak_atr": 0.39,
+      "sentuhan": 20,
+      "entry": 1.09649,
+      "sl": 1.09535,
+      "tp": 1.0982,
+      "sl_pip": 11.4,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {
+        "15": 2.1,
+        "30": 4.8,
+        "45": 12.3
+      },
+      "dibuat": "2026-11-24T14:30:36Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 1.09772,
+      "pip": 12.3,
+      "mfe": 15.4,
+      "mae": -0.8,
+      "umur_menit": 15,
+      "status": "AKTIF"
+    },
+    {
+      "pair": "XAU/AUD",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 5460.94038,
+      "jarak_atr": 0.58,
+      "sentuhan": 19,
+      "entry": 5445.427,
+      "sl": 5474.25727,
+      "tp": 5402.18159,
+      "sl_pip": 288.3,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {
+        "15": -2.5,
+        "30": -14.9,
+        "45": -77.8
+      },
+      "dibuat": "2026-11-24T14:30:36Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 5453.2105,
+      "pip": -77.8,
+      "mfe": 60.2,
+      "mae": -130.9,
+      "umur_menit": 15,
+      "status": "AKTIF"
+    }
+  ],
+  "evaluasi_1_jam": [
+    {
+      "pair": "AUD/USD",
+      "arah": "BUY",
+      "level": "support",
+      "level_harga": 0.66346,
+      "jarak_atr": 0.34,
+      "sentuhan": 24,
+      "entry": 0.66386,
+      "sl": 0.66287,
+      "tp": 0.66535,
+      "sl_pip": 9.9,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {
+        "15": 3.4,
+        "30": 5.5
+      },
+      "dibuat": "2026-11-24T14:15:38Z",
+      "hasil": "TP kena",
+      "menit_kena": 45,
+      "harga_skrg": 0.66535,
+      "pip": 14.9,
+      "mfe": 17.0,
+      "mae": -0.6,
       "umur_menit": 30,
       "status": "SELESAI",
-      "ditutup": "2026-11-24T14:30:36Z"
+      "ditutup": "2026-11-24T14:45:26Z"
     },
     {
       "pair": "EUR/CHF",
@@ -1138,7 +1189,7 @@
       "bar_terakhir": "2026-11-24T13:00:00Z",
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
-      "dibuat": "2026-11-24T14:15:38Z",
+      "dibuat": "2026-11-24T14:30:36Z",
       "hasil": "SL kena",
       "menit_kena": 15,
       "harga_skrg": 0.91769,
@@ -1147,7 +1198,7 @@
       "mae": -6.1,
       "umur_menit": 15,
       "status": "SELESAI",
-      "ditutup": "2026-11-24T14:30:36Z"
+      "ditutup": "2026-11-24T14:45:26Z"
     },
     {
       "pair": "USD/CAD",
@@ -1163,7 +1214,7 @@
       "bar_terakhir": "2026-11-24T13:00:00Z",
       "sumber": "ANALISA CADANGAN (bukan sinyal)",
       "titik": {},
-      "dibuat": "2026-11-24T14:15:38Z",
+      "dibuat": "2026-11-24T14:30:36Z",
       "hasil": "TP kena",
       "menit_kena": 15,
       "harga_skrg": 1.43182,
@@ -1172,7 +1223,34 @@
       "mae": -2.1,
       "umur_menit": 15,
       "status": "SELESAI",
-      "ditutup": "2026-11-24T14:30:36Z"
+      "ditutup": "2026-11-24T14:45:26Z"
+    },
+    {
+      "pair": "EUR/JPY",
+      "arah": "SELL",
+      "level": "resistance",
+      "level_harga": 174.5197,
+      "jarak_atr": 0.26,
+      "sentuhan": 23,
+      "entry": 174.4555,
+      "sl": 174.64549,
+      "tp": 174.17052,
+      "sl_pip": 19.0,
+      "bar_terakhir": "2026-11-24T13:00:00Z",
+      "sumber": "ANALISA CADANGAN (bukan sinyal)",
+      "titik": {
+        "15": -11.7
+      },
+      "dibuat": "2026-11-24T14:30:36Z",
+      "hasil": "SL kena",
+      "menit_kena": 30,
+      "harga_skrg": 174.64549,
+      "pip": -19.0,
+      "mfe": 1.9,
+      "mae": -24.9,
+      "umur_menit": 15,
+      "status": "SELESAI",
+      "ditutup": "2026-11-24T14:45:26Z"
     }
   ]
 }
