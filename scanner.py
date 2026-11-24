@@ -39,6 +39,8 @@ def scan_pair(pair, ranking, news_bersih, now):
     if not (ok1 and ok4):
         return _invalid(pair, "validasi data gagal: " + "; ".join(e1 + e4))
     row = {"pair": C.disp(pair), **evaluate(build(h1, h4), pair, ranking, news_bersih)}
-    row["catatan"] = row["catatan"] + [f"peringatan data: {x}" for x in w1 + w4]
+    row["catatan"] = row["catatan"] + [f"peringatan data H1 {x}" for x in w1] + \
+        [f"peringatan data H4 {x}" for x in w4]
+    row["bar"] = {"h1": len(h1), "h4": len(h4)}
     row["waktu_bar_terakhir"] = C.fmt(datetime.fromtimestamp(h1[-1]["t"], timezone.utc))
     return row
