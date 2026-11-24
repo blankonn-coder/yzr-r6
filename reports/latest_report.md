@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-24T04:45:21Z
+- Waktu eksekusi: 2026-11-24T05:00:50Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 0
@@ -15,8 +15,7 @@ Tidak ada.
 ## Pemantauan (maks 60 menit)
 | Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
 |---|---|---|---|---|---|
-| NZD/USD | SELL | 0.54506 | 0.54468 | PROFIT 3.8 pip · 0.070% | 59 |
-| USD/JPY | SELL | 158.9915 | 158.9515 | PROFIT 4.0 pip · 0.025% | 29 |
+| USD/JPY | SELL | 158.9915 | 158.9515 | PROFIT 4.0 pip · 0.025% | 45 |
 
 ## Info Database
 - Total entri: 590
