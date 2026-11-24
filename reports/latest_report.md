@@ -1,6 +1,6 @@
 # Laporan Run Screening Forex
 
-- Waktu eksekusi: 2026-11-24T05:00:50Z
+- Waktu eksekusi: 2026-11-24T05:15:28Z
 - Status: TEPAT WAKTU
 - Kalibrasi: TANPA KALIBRASI
 - Pair dianalisa: 0
@@ -13,9 +13,7 @@ Tidak ada.
 Tidak ada.
 
 ## Pemantauan (maks 60 menit)
-| Pair | Arah | Harga Awal | Harga Sekarang | Hasil | Umur (menit) |
-|---|---|---|---|---|---|
-| USD/JPY | SELL | 158.9915 | 158.9515 | PROFIT 4.0 pip · 0.025% | 45 |
+Tidak ada pair aktif.
 
 ## Info Database
 - Total entri: 590
