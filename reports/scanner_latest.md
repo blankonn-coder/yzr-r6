@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-24T21:45:30Z
+- Waktu eksekusi: 2026-11-24T22:00:43Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -30,33 +30,27 @@
 
 ## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)
 Dari lead-lag, maks 3 pair: leader bergerak, follower tertinggal 5-60 menit. BUY/SELL mengikuti arah leader. SL 0.5 ATR H1, TP 1.5R. Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.
-| Pair | Arah | Dasar | Entry | SL | TP | Risiko SL |
-|---|---|---|---|---|---|---|
-| EUR/JPY | **SELL** | LEAD-LAG: XAU/AUD memimpin 30 mnt, korelasi -0.59, n 65 | 174.6205 | 174.73324 | 174.45138 | 11.3 pip |
+Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat lead-lag).
 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-24T21:45:30Z, pasangan lolos 2.
+- Backtest jendela 360 menit, diperbarui 2026-11-24T22:00:43Z, pasangan lolos 1.
 
 Pasangan lolos (10 teratas, urut |korelasi|):
 
 | Leader | Follower | Lag (menit) | Korelasi | Korelasi lag 0 | n |
 |---|---|---|---|---|---|
-| XAU/AUD | EUR/JPY | 30 | -0.586 | 0.08 | 65 |
-| XAU/USD | EUR/JPY | 30 | -0.552 | 0.241 | 65 |
+| XAU/AUD | EUR/JPY | 30 | -0.514 | 0.06 | 65 |
 
-Kandidat (follower yang tertinggal, urut skor):
-
-| Follower | Arah | Leader | Lag (menit) | z leader | Skor |
-|---|---|---|---|---|---|
-| EUR/JPY | SELL | XAU/AUD | 30 | 0.27 | 0.586 |
+Tidak ada kandidat di run ini.
 
 ## Pemantauan 15 menit (entry dan analisa cadangan)
 Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. Jika SL dan TP kena di candle yang sama, dihitung SL. Analisa cadangan BUKAN sinyal.
 | Sumber | Pair | Arah | Entry | SL | TP | 15m | 30m | 45m | 60m | Hasil | Pip sekarang | Umur |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| LEAD-LAG (analisa cadangan, bukan sinyal) | EUR/GBP | SELL | 0.83622 | 0.83647 | 0.83586 | +1.1 | +0.7 | - | - | BERJALAN | PROFIT 0.7 pip | 30 mnt |
+| LEAD-LAG (analisa cadangan, bukan sinyal) | EUR/GBP | SELL | 0.83622 | 0.83647 | 0.83586 | +1.1 | +0.7 | - | - | BERJALAN | PROFIT 0.7 pip | 45 mnt |
+| LEAD-LAG (analisa cadangan, bukan sinyal) | EUR/JPY | SELL | 174.6205 | 174.73324 | 174.45138 | - | - | - | - | Menunggu data M15 | - | 15 mnt |
 
 ## Evaluasi 1 jam (entry dan analisa cadangan)
 Dibuat setelah 60 menit atau saat SL/TP kena. MFE = gerak terbaik, MAE = gerak terburuk, dalam pip.

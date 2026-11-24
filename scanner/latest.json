@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-24T21:45:30Z",
+  "waktu": "2026-11-24T22:00:43Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -833,30 +833,7 @@
       }
     }
   ],
-  "saran_cadangan": [
-    {
-      "pair": "EUR/JPY",
-      "arah": "SELL",
-      "metode": "LEAD-LAG",
-      "leader": "XAU/AUD",
-      "lag_menit": 30,
-      "korelasi": -0.59,
-      "n": 65,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 174.6205,
-      "sl": 174.73324,
-      "tp": 174.45138,
-      "sl_pip": 11.3,
-      "bar_terakhir": "2026-11-24T20:00:00Z",
-      "mulai": "2026-11-24T21:45:00Z",
-      "skor": 0.586,
-      "z_leader": 0.27,
-      "dipicu": false
-    }
-  ],
+  "saran_cadangan": [],
   "pemantauan": [
     {
       "pair": "EUR/GBP",
@@ -891,82 +868,61 @@
       "pip": 0.7,
       "mfe": 1.8,
       "mae": -0.1,
-      "umur_menit": 30,
+      "umur_menit": 45,
+      "status": "AKTIF"
+    },
+    {
+      "pair": "EUR/JPY",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "XAU/AUD",
+      "lag_menit": 30,
+      "korelasi": -0.59,
+      "n": 65,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 174.6205,
+      "sl": 174.73324,
+      "tp": 174.45138,
+      "sl_pip": 11.3,
+      "bar_terakhir": "2026-11-24T20:00:00Z",
+      "mulai": "2026-11-24T21:45:00Z",
+      "skor": 0.586,
+      "z_leader": 0.27,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-24T21:45:30Z",
+      "hasil": "Menunggu data M15",
+      "menit_kena": null,
+      "harga_skrg": null,
+      "pip": null,
+      "mfe": null,
+      "mae": null,
+      "umur_menit": 15,
       "status": "AKTIF"
     }
   ],
   "evaluasi_1_jam": [],
   "leadlag": {
-    "saran": [
-      {
-        "pair": "EUR/JPY",
-        "arah": "SELL",
-        "metode": "LEAD-LAG",
-        "leader": "XAU/AUD",
-        "lag_menit": 30,
-        "korelasi": -0.59,
-        "n": 65,
-        "level": null,
-        "level_harga": null,
-        "jarak_atr": null,
-        "sentuhan": null,
-        "entry": 174.6205,
-        "sl": 174.73324,
-        "tp": 174.45138,
-        "sl_pip": 11.3,
-        "bar_terakhir": "2026-11-24T20:00:00Z",
-        "mulai": "2026-11-24T21:45:00Z",
-        "skor": 0.586,
-        "z_leader": 0.27,
-        "dipicu": false
-      }
-    ],
+    "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-24T21:45:30Z",
+      "diperbarui": "2026-11-24T22:00:43Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 2,
+      "jumlah_lolos": 1,
       "pasangan_lolos": [
         {
           "leader": "XAU/AUD",
           "follower": "EUR/JPY",
           "lag_menit": 30,
-          "korelasi": -0.586,
-          "korelasi_lag0": 0.08,
-          "n": 65
-        },
-        {
-          "leader": "XAU/USD",
-          "follower": "EUR/JPY",
-          "lag_menit": 30,
-          "korelasi": -0.552,
-          "korelasi_lag0": 0.241,
+          "korelasi": -0.514,
+          "korelasi_lag0": 0.06,
           "n": 65
         }
       ],
-      "kandidat": [
-        {
-          "pair": "EUR/JPY",
-          "arah": "SELL",
-          "metode": "LEAD-LAG",
-          "leader": "XAU/AUD",
-          "lag_menit": 30,
-          "korelasi": -0.59,
-          "n": 65,
-          "level": null,
-          "level_harga": null,
-          "jarak_atr": null,
-          "sentuhan": null,
-          "entry": 174.6205,
-          "sl": 174.73324,
-          "tp": 174.45138,
-          "sl_pip": 11.3,
-          "bar_terakhir": "2026-11-24T20:00:00Z",
-          "mulai": "2026-11-24T21:45:00Z",
-          "skor": 0.586,
-          "z_leader": 0.27,
-          "dipicu": false
-        }
-      ]
+      "kandidat": []
     },
     "status": "dianalisa",
     "gagal": []
