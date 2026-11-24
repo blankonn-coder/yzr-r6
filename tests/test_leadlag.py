@@ -242,6 +242,7 @@ def test_discord_hanya_pair_lag_dan_saran():
     saran = [_ll_item("EUR/JPY")]
     emb = DN.build_embed(now, "OK", rows, False, {"saran": saran, "tampil": [], "selesai": [], "lag": lag})
     nama = [f["name"] for f in emb["fields"]]
-    assert not any("Level cadangan" in n or "Saran cadangan" in n for n in nama)
+    assert "🔁 Pair (BUKAN sinyal)" in nama
+    assert not any("Level cadangan" in n or "Saran" in n for n in nama)
     teks = " ".join(f["value"] for f in emb["fields"])
-    assert "**EUR/JPY** · BUY" in teks and "SL 0.99" in teks and "TP 1.015" in teks
+    assert "**EUR/JPY** · 15m" in teks and "BUY" not in teks
