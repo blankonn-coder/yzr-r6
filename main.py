@@ -3,6 +3,7 @@ import argparse
 import os
 import sys
 
+import analisa_cadangan as CD
 import config as C
 import ranking
 import report
@@ -53,6 +54,8 @@ def main():
     C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows))
     print(notify(now, status, rows, ranking_ok))
 
+    if C.CADANGAN_ENABLED:
+        print(f"Snapshot analisa cadangan baru: {CD.simpan_snapshot(now, rows)}")
     counts = {}
     for r in rows:
         counts[r["label"]] = counts.get(r["label"], 0) + 1

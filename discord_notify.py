@@ -38,6 +38,24 @@ def _cut(text, limit=FIELD_MAX):
     return text if len(text) <= limit else text[:limit - 12].rstrip() + "\n… (dipotong)"
 
 
+def _cad_lvl(tag, x):
+    if not x:
+        return f"{tag} —"
+    return f"{tag} {x['harga']} ({x['jarak_atr']} ATR)"
+
+
+def _cad_baris(r):
+    cad = r["cadangan"]
+    bagian = []
+    for key in ("h1", "m15"):
+        t = cad.get(key)
+        if not t:
+            bagian.append(f"{key.upper()} tidak tersedia")
+            continue
+        bagian.append(f"{key.upper()}: {_cad_lvl('Res', t.get('resistance'))} · {_cad_lvl('Sup', t.get('support'))}")
+    return f"**{r['pair']}**\n" + "\n".join(bagian)
+
+
 def build_embed(now, status, rows, ranking_ok):
     entry = [r for r in rows if r["label"].startswith("ENTRY")]
     watch = [r for r in rows if r["label"] == "WATCHLIST"]
@@ -66,6 +84,10 @@ def build_embed(now, status, rows, ranking_ok):
         {"name": f"🟢 ENTRY ({len(entry)})", "value": _cut("\n\n".join(map(baris_entry, entry)) or "—"), "inline": False},
         {"name": f"🟡 WATCHLIST ({len(watch)})", "value": _cut("\n".join(map(baris_watch, watch)) or "—"), "inline": False},
     ]
+    cad = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
+    if cad:
+        fields.append({"name": "🔎 Analisa cadangan (bukan sinyal, tanpa entry)",
+                       "value": _cut("\n".join(map(_cad_baris, cad))), "inline": False})
     if invalid:
         fields.append({"name": f"⚠️ DATA INVALID ({len(invalid)})",
                        "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})

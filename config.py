@@ -11,7 +11,9 @@ from datetime import datetime, timezone
 BIQUOTE_HOST = "https://biquote.io"
 BIQUOTE_CALENDAR_PATH = "/api/calendar"  # ASUMSI: belum diverifikasi ke dokumentasi biquote
 SPREAD_TERSEDIA = False                   # ubah True setelah OANDA tersambung (§1, §10)
-TF_MAIN = "1h"                            # regime, sinyal, entry
+# Timeframe utama (regime, sinyal, entry): H1 sesuai spesifikasi §2. M15 hanya untuk analisa cadangan.
+TF_MAIN = "1h"
+TF_MAIN_SEC = 3600
 TF_BIAS = "4h"                            # bias EMA50 vs EMA200
 H1_COUNT = 500                            # warm-up EMA200 + persentil 100 + Hurst 100 (ASUMSI batas API)
 H4_COUNT = 300
@@ -53,6 +55,16 @@ SPREAD_MEDIAN_MULT = 1.5
 SPREAD_MEDIAN_BARS = 20
 NEWS_WINDOW_MIN = 30
 N_FOLDS = 4
+
+# ---- Analisa cadangan (BUKAN sinyal, hanya saat NO TRADE / WATCHLIST) ----
+CADANGAN_ENABLED = True
+CADANGAN_H1_MAX_ATR = 1.5     # level H1 ditampilkan jika jaraknya maksimal 1,5 ATR
+CADANGAN_M15_MAX_ATR = 1.0    # level M15 ditampilkan jika jaraknya maksimal 1 ATR
+TF_CADANGAN = "15m"           # ASUMSI: interval M15 biquote belum diverifikasi
+M15_COUNT = 300
+CADANGAN_SNAPSHOT_PATH = "database/analisa_cadangan.jsonl"
+CADANGAN_OUTCOME_PATH = "database/analisa_cadangan_hasil.jsonl"
+CADANGAN_OUTCOME_BARS = (1, 4, 12)
 
 # ---- §7 Ranking ----
 RANK_MIN_SAMPLE = 30

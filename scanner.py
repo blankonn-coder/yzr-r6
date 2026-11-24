@@ -1,6 +1,11 @@
-"""Scanner live per pair (§8): ambil H1 & H4 tertutup, validasi, analisa, lalu label."""
+"""Scanner live per pair (§8): ambil H1 & H4 tertutup, validasi, analisa, lalu label.
+
+Analisa cadangan (M15 + H1, BUKAN sinyal) ditambahkan saat label NO TRADE atau WATCHLIST.
+Kegagalan M15 tidak menghentikan scanner dan tidak memengaruhi label.
+"""
 from datetime import datetime, timezone
 
+import analisa_cadangan as CD
 import biquote_client as bq
 import config as C
 from analysis import build, evaluate
@@ -37,13 +42,23 @@ def _invalid(pair, alasan):
             "gap": {"H1": 0, "H4": 0}, "bar": {}, "bar_terakhir": None}
 
 
+def _fetch_m15(pair):
+    """Candle M15 untuk analisa cadangan. None jika gagal atau tidak valid."""
+    try:
+        m15 = bq.fetch_candles(pair, C.TF_CADANGAN, C.M15_COUNT)
+    except Exception:
+        return None
+    ok, _, _ = validate(m15, 900)
+    return m15 if ok else None
+
+
 def scan_pair(pair, ranking, news_bersih, now):
     try:
         h1 = bq.fetch_candles(pair, C.TF_MAIN, C.H1_COUNT)
         h4 = bq.fetch_candles(pair, C.TF_BIAS, C.H4_COUNT)
     except Exception as e:
         return _invalid(pair, f"gagal ambil data ({type(e).__name__}: {e})")
-    ok1, e1, w1 = validate(h1, 3600)
+    ok1, e1, w1 = validate(h1, C.TF_MAIN_SEC)
     ok4, e4, w4 = validate(h4, 14400)
     if not (ok1 and ok4):
         return _invalid(pair, "validasi data gagal: " + "; ".join(e1 + e4))
@@ -55,4 +70,11 @@ def scan_pair(pair, ranking, news_bersih, now):
     row["catatan"] += [f"data H4 {x}" for x in w4 if not x.startswith("gap")]
     row["bar"] = {"h1": len(h1), "h4": len(h4)}
     row["bar_terakhir"] = C.fmt(datetime.fromtimestamp(h1[-1]["t"], timezone.utc))
+
+    if C.CADANGAN_ENABLED:
+        if not row["label"].startswith("ENTRY"):
+            row["cadangan"] = CD.build(h1, _fetch_m15(pair))
+            if not row["cadangan"]["m15_tersedia"]:
+                row["catatan"].append("M15 tidak tersedia, analisa cadangan hanya H1")
+        CD.evaluasi(row["pair"], h1, now)
     return row

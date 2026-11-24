@@ -17,11 +17,11 @@ DIR_TXT = {1: "LONG", -1: "SHORT"}
 BIAS_TXT = {1: "NAIK", -1: "TURUN", 0: "SIDEWAYS", None: "BELUM SIAP"}
 
 
-def bias_series(h1_times, h4_times, h4_ind):
+def bias_series(h1_times, h4_times, h4_ind, h1_sec=C.TF_MAIN_SEC):
     """Bias H4 (EMA50 vs EMA200) untuk tiap bar H1 memakai bar H4 yang sudah TUTUP.
 
-    Bar H4 dibuka di ht dan tutup di ht+4j. Bar H1 dibuka di t dan tutup di t+1j,
-    jadi bar H4 valid jika ht <= t-3j. None = belum bisa dihitung, bukan sideways.
+    Bar H4 dibuka di ht dan tutup di ht+4j. Bar utama dibuka di t dan tutup di t+h1_sec,
+    jadi bar H4 valid jika ht + 4j <= t + h1_sec. None = belum bisa dihitung, bukan sideways.
     """
     sign = []
     for a, b in zip(h4_ind["ema50"], h4_ind["ema200"]):
@@ -31,15 +31,15 @@ def bias_series(h1_times, h4_times, h4_ind):
             sign.append(1 if a > b else -1 if a < b else 0)
     out = []
     for t in h1_times:
-        j = bisect.bisect_right(h4_times, t - 3 * 3600) - 1
+        j = bisect.bisect_right(h4_times, t + h1_sec - 14400) - 1
         out.append(sign[j] if j >= 0 else None)
     return out
 
 
-def build(h1, h4):
+def build(h1, h4, h1_sec=C.TF_MAIN_SEC):
     ind4 = compute(h4)
     ind1 = compute(h1)
-    bias = bias_series([c["t"] for c in h1], [c["t"] for c in h4], ind4)
+    bias = bias_series([c["t"] for c in h1], [c["t"] for c in h4], ind4, h1_sec)
     return {"cs": h1, "ind": ind1, "bias": bias, "closes": [c["c"] for c in h1], "n_h4": len(h4)}
 
 
