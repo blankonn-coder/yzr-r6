@@ -61,11 +61,11 @@ def test_pilih_saran_nearest_level_and_direction():
     assert next(s for s in saran if s["pair"] == "AUD/USD")["level"] == "support"
 
 
-def test_pilih_saran_max_five_and_exclusion():
+def test_pilih_saran_max_three_and_exclusion():
     rows = [_row(f"P{i}/X", 1.0 + i * 0.001, support=_lvl(1.0 + i * 0.001 - 0.0001, 0.1 + i * 0.01))
             for i in range(8)]
     saran = CD.pilih_saran(rows)
-    assert len(saran) == C.CADANGAN_SARAN_N == 5 and len({s["pair"] for s in saran}) == 5
+    assert len(saran) == C.CADANGAN_SARAN_N == 3 and len({s["pair"] for s in saran}) == 3
     saran2 = CD.pilih_saran(rows, dikecualikan={"P0/X"})
     assert "P0/X" not in {s["pair"] for s in saran2}
 
