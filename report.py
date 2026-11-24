@@ -53,7 +53,59 @@ def _cad_block(r):
     return out
 
 
-def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, market_open=True, rank_meta=None):
+def _pip_txt(pip):
+    if pip is None:
+        return "-"
+    return f"{'PROFIT' if pip >= 0 else 'LOSS'} {abs(pip)} pip"
+
+
+def _saran_md(saran):
+    if not saran:
+        return ["Tidak ada saran (tidak ada level H1 dalam jarak "
+                f"{C.CADANGAN_SARAN_MAX_ATR} ATR)."]
+    L = ["| Pair | Arah | Level H1 (jarak, sentuhan) | Entry | SL | TP | Risiko SL |",
+         "|---|---|---|---|---|---|---|"]
+    for s in saran:
+        lvl = "support" if s["level"] == "support" else "resistance"
+        L.append(f"| {s['pair']} | **{s['arah']}** | {s['level_harga']} {lvl} "
+                 f"({s['jarak_atr']} ATR, {s['sentuhan']} sentuh) | {s['entry']} | {s['sl']} | {s['tp']} "
+                 f"| {s['sl_pip']} pip |")
+    return L
+
+
+def _titik_txt(p, menit):
+    v = p["titik"].get(str(menit))
+    return "-" if v is None else f"{v:+.1f}"
+
+
+def _pantau_md(tampil):
+    if not tampil:
+        return ["Tidak ada entry atau saran yang sedang dipantau."]
+    L = ["| Sumber | Pair | Arah | Entry | SL | TP | 15m | 30m | 45m | 60m | Hasil | Pip sekarang | Umur |",
+         "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for p in tampil:
+        L.append(f"| {p['sumber']} | {p['pair']} | {p['arah']} | {p['entry']} | {p['sl']} | {p['tp']} "
+                 f"| {_titik_txt(p, 15)} | {_titik_txt(p, 30)} | {_titik_txt(p, 45)} | {_titik_txt(p, 60)} "
+                 f"| {p['hasil']} | {_pip_txt(p['pip'])} | {p['umur_menit']} mnt |")
+    return L
+
+
+def _evaluasi_md(selesai):
+    if not selesai:
+        return ["Belum ada evaluasi yang selesai di run ini."]
+    L = ["| Sumber | Pair | Arah | Hasil | Pip akhir | MFE (pip) | MAE (pip) | Ditutup (UTC) |",
+         "|---|---|---|---|---|---|---|---|"]
+    for e in selesai:
+        L.append(f"| {e['sumber']} | {e['pair']} | {e['arah']} | {e['hasil']}"
+                 f"{' · menit ' + str(e['menit_kena']) if e['menit_kena'] else ''} | {_pip_txt(e['pip'])} "
+                 f"| {e['mfe'] if e['mfe'] is not None else '-'} | {e['mae'] if e['mae'] is not None else '-'} "
+                 f"| {e['ditutup']} |")
+    return L
+
+
+def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, market_open=True, rank_meta=None,
+                     cad=None):
+    cad = cad or {"saran": [], "entry": [], "tampil": [], "selesai": []}
     gap_h1 = sum(1 for r in rows if (r.get("gap") or {}).get("H1"))
     gap_h4 = sum(1 for r in rows if (r.get("gap") or {}).get("H4"))
 
@@ -92,7 +144,25 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
         L.append("Tidak ada pair yang dianalisa.")
 
     cad_rows = [r for r in rows if r.get("cadangan") and not r["label"].startswith("ENTRY")]
-    L += ["", "## Analisa cadangan (BUKAN sinyal, tanpa entry, tanpa SL/TP, tanpa statistik)"]
+    L += ["", "## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)"]
+    if market_open:
+        L.append(f"{C.CADANGAN_SARAN_N} pair dengan level H1 terdekat. BUY dari support, SELL dari resistance. "
+                 f"SL {C.CADANGAN_SARAN_SL_ATR} ATR di seberang level, TP {C.CADANGAN_SARAN_TP_R}R. "
+                 "Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.")
+        L += _saran_md(cad["saran"])
+    else:
+        L.append("Pasar tutup, saran tidak dibuat.")
+
+    L += ["", "## Pemantauan 15 menit (entry dan analisa cadangan)",
+          "Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. "
+          "Jika SL dan TP kena di candle yang sama, dihitung SL. Analisa cadangan BUKAN sinyal."]
+    L += _pantau_md(cad["tampil"])
+
+    L += ["", "## Evaluasi 1 jam (entry dan analisa cadangan)",
+          "Dibuat setelah 60 menit atau saat SL/TP kena. MFE = gerak terbaik, MAE = gerak terburuk, dalam pip."]
+    L += _evaluasi_md(cad["selesai"])
+
+    L += ["", "## Level analisa cadangan (BUKAN sinyal, tanpa statistik)"]
     if cad_rows:
         L.append("Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan apa pun.")
         for r in cad_rows:
@@ -115,9 +185,13 @@ def build_scanner_md(now, status, rows, ranking_ok, news_bersih, news_err, marke
           f"- **Bar H1/H4**: jumlah candle {C.TF_MAIN} dan H4 yang diterima dari biquote. EMA200 H4 butuh minimal 200 bar.",
           f"- **Analisa cadangan**: level dari M15 (±{C.CADANGAN_M15_MAX_ATR} ATR) dan H1 (±{C.CADANGAN_H1_MAX_ATR} ATR). "
           "Sentuhan = jumlah bar yang menyentuh area level.",
+          "- **Saran analisa cadangan**: BUKAN sinyal dan BUKAN ENTRY. Hanya kedekatan harga ke level H1, "
+          "tanpa backtest atau statistik. Pakai hanya sebagai bahan pertimbangan sendiri.",
           ""]
     return "\n".join(L) + "\n"
 
 
-def build_scanner_json(now, status, rows):
-    return {"waktu": C.fmt(now), "status": status, "rows": rows}
+def build_scanner_json(now, status, rows, cad=None):
+    cad = cad or {"saran": [], "entry": [], "tampil": [], "selesai": []}
+    return {"waktu": C.fmt(now), "status": status, "rows": rows,
+            "saran_cadangan": cad["saran"], "pemantauan": cad["tampil"], "evaluasi_1_jam": cad["selesai"]}

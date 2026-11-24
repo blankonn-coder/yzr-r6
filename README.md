@@ -20,8 +20,17 @@ Spesifikasi lengkap ada di dokumen skema; file ini merangkum cara kerja dan bata
 - `NO TRADE`: tidak ada metode PRIORITAS untuk regime tersebut.
 - `DATA INVALID`: gagal ambil atau validasi data.
 
+## Analisa cadangan dan pemantauan (BUKAN sinyal untuk cadangan)
+- **Level** (NO TRADE/WATCHLIST): support dan resistance terdekat dari H1 dan M15. Tidak mengubah label.
+- **Saran cadangan**: 5 pair dengan level H1 terdekat (maks 1 ATR). Support memberi BUY, resistance memberi SELL. SL 0,5 ATR di seberang level, TP 1,5R. Hanya kedekatan harga ke level, tanpa backtest, tanpa cek spread atau news.
+- **Pemantauan 15 menit** (`pantauan.py`): untuk entry ENTRY dan saran cadangan. Titik cek 15, 30, 45, 60 menit dari close candle M15, dihitung dalam pip dari entry.
+- **Evaluasi 1 jam**: dibuat setelah 60 menit, atau saat SL/TP kena. Berisi pip akhir, MFE (gerak terbaik), dan MAE (gerak terburuk). Jika SL dan TP kena di candle yang sama, dihitung SL.
+- Catatan aktif: `state/pemantauan_aktif.json`. Arsip evaluasi: `database/pemantauan.jsonl`. Konfigurasi: `config.py` bagian "Pemantauan entry dan saran cadangan".
+- Scanner berjalan per jam (cron), jadi titik 15 menit dibaca dari candle M15, bukan dari run tiap 15 menit.
+
 ## Keadaan saat ini
 - Spread live belum tersambung (`SPREAD_TERSEDIA = False`), sehingga tidak ada ENTRY.
+- Saran cadangan dan pemantauan aktif. Keduanya bukan sinyal dan belum divalidasi backtest.
 - Ranking belum ada, sehingga scanner hanya menghasilkan NO TRADE.
 - §9 manajemen risiko (batas 3 trade/pair/hari, korelasi) belum diimplementasi.
 

@@ -42,7 +42,7 @@ def _invalid(pair, alasan):
             "gap": {"H1": 0, "H4": 0}, "bar": {}, "bar_terakhir": None}
 
 
-def _fetch_m15(pair):
+def fetch_m15(pair):
     """Candle M15 untuk analisa cadangan. None jika gagal atau tidak valid."""
     try:
         m15 = bq.fetch_candles(pair, C.TF_CADANGAN, C.M15_COUNT)
@@ -73,7 +73,7 @@ def scan_pair(pair, ranking, news_bersih, now):
 
     if C.CADANGAN_ENABLED:
         if not row["label"].startswith("ENTRY"):
-            row["cadangan"] = CD.build(h1, _fetch_m15(pair))
+            row["cadangan"] = CD.build(h1, fetch_m15(pair))
             if not row["cadangan"]["m15_tersedia"]:
                 row["catatan"].append("M15 tidak tersedia, analisa cadangan hanya H1")
         CD.evaluasi(row["pair"], h1, now)

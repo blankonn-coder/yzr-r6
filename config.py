@@ -66,6 +66,18 @@ CADANGAN_SNAPSHOT_PATH = "database/analisa_cadangan.jsonl"
 CADANGAN_OUTCOME_PATH = "database/analisa_cadangan_hasil.jsonl"
 CADANGAN_OUTCOME_BARS = (1, 4, 12)
 
+# ---- Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest, tidak mengubah label) ----
+CADANGAN_SARAN_N = 5              # jumlah pair saran per run
+CADANGAN_SARAN_MAX_ATR = 1.0      # hanya level H1 dengan jarak maksimal 1 ATR dari harga
+CADANGAN_SARAN_SL_ATR = 0.5       # SL = level dikurangi/ditambah 0,5 ATR H1 (sisi seberang harga)
+CADANGAN_SARAN_TP_R = 1.5         # TP = entry ± 1,5 R (R = jarak entry ke SL)
+# ---- Pemantauan entry dan saran cadangan ----
+PANTAU_TITIK_MENIT = 15           # titik cek tiap 15 menit (close candle M15)
+PANTAU_TOTAL_MENIT = 60           # setelah 60 menit dibuat evaluasi 1 jam
+PANTAU_TIMEOUT_MENIT = 90         # jika candle M15 belum lengkap sampai 90 menit, evaluasi ditutup
+PANTAU_AKTIF_PATH = "state/pemantauan_aktif.json"
+PANTAU_ARSIP_PATH = "database/pemantauan.jsonl"
+
 # ---- §7 Ranking ----
 RANK_MIN_SAMPLE = 30
 RANK_PF_MIN = 1.0

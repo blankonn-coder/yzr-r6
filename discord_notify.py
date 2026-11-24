@@ -74,7 +74,27 @@ def _potong_baris(blok, limit=FIELD_MAX):
     return hasil or ["—"]
 
 
-def build_embed(now, status, rows, ranking_ok):
+def _saran_baris(sr):
+    return (f"**{sr['pair']}** · {sr['arah']} · Entry {sr['entry']} · SL {sr['sl']} · TP {sr['tp']} "
+            f"(SL {sr['sl_pip']} pip)")
+
+
+def _pantau_baris(p):
+    titik = " ".join(f"{m}m {p['titik'][str(m)]:+.1f}" if str(m) in p["titik"] else f"{m}m -" for m in (15, 30, 45, 60))
+    pip = p["pip"]
+    tag = "" if p["sumber"] == "ENTRY" else " (analisa cadangan, bukan sinyal)"
+    hasil = p["hasil"] if pip is None else f"{p['hasil']} · {'PROFIT' if pip >= 0 else 'LOSS'} {abs(pip)} pip"
+    return f"**{p['pair']}** · {p['arah']}{tag} · {titik} · {hasil}"
+
+
+def _evaluasi_baris(e):
+    f = lambda x: "-" if x is None else f"{x:+.1f}"
+    return (f"**{e['pair']}** · {e['arah']} · {e['hasil']} · pip akhir {f(e['pip'])} · "
+            f"MFE {f(e['mfe'])} · MAE {f(e['mae'])}")
+
+
+def build_embed(now, status, rows, ranking_ok, info=None):
+    info = info or {"saran": [], "tampil": [], "selesai": []}
     entry = [r for r in rows if r["label"].startswith("ENTRY")]
     watch = [r for r in rows if r["label"] == "WATCHLIST"]
     invalid = [r for r in rows if r["label"] == "DATA INVALID"]
@@ -107,10 +127,19 @@ def build_embed(now, status, rows, ranking_ok):
         # Dipecah per pair agar tidak terpotong oleh batas 1024 karakter per field
         potongan = _potong_baris(list(map(_cad_baris, cad)))
         for i, teks in enumerate(potongan, 1):
-            judul = "🔎 Analisa cadangan (bukan sinyal, tanpa entry)"
+            judul = "🔎 Level cadangan (bukan sinyal)"
             if len(potongan) > 1:
                 judul += f" {i}/{len(potongan)}"
             fields.append({"name": judul, "value": teks, "inline": False})
+    if cad_saran := info["saran"]:
+        fields.append({"name": "💡 Saran cadangan (BUKAN sinyal, belum divalidasi backtest)",
+                       "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
+    if tampil := info["tampil"]:
+        fields.append({"name": "⏱ Pemantauan 15 menit (entry & analisa cadangan)",
+                       "value": _cut("\n".join(map(_pantau_baris, tampil))), "inline": False})
+    if selesai := info["selesai"]:
+        fields.append({"name": "📊 Evaluasi 1 jam",
+                       "value": _cut("\n".join(map(_evaluasi_baris, selesai))), "inline": False})
     if invalid:
         fields.append({"name": f"⚠️ DATA INVALID ({len(invalid)})",
                        "value": _cut(", ".join(r["pair"] for r in invalid)), "inline": False})
@@ -134,14 +163,14 @@ def _post(url, embed):
     return False
 
 
-def notify(now, status, rows, ranking_ok):
+def notify(now, status, rows, ranking_ok, info=None):
     url = os.environ.get(WEBHOOK_ENV, "").strip()
     if not url:
         return "Discord: webhook belum diatur, dilewati"
     if not should_send(_mode(), rows, heartbeat=(now.hour == 0)):
         return f"Discord: mode {_mode()}, tidak ada yang dikirim"
     try:
-        ok = _post(url, build_embed(now, status, rows, ranking_ok))
+        ok = _post(url, build_embed(now, status, rows, ranking_ok, info))
         return "Discord: terkirim" if ok else "Discord: gagal kirim (cek URL webhook)"
     except Exception as e:  # URL tidak boleh ikut tercetak
         return f"Discord: error {type(e).__name__}"

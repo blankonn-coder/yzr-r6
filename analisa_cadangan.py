@@ -1,8 +1,13 @@
 """Analisa cadangan (BUKAN sinyal).
 
-Dipakai saat label NO TRADE atau WATCHLIST. Berisi level support dan resistance terdekat
-dari swing H1 dan M15 untuk konteks scalping. Tidak ada entry, SL, TP, atau statistik,
-dan tidak mengubah label, ranking, atau keputusan apa pun.
+Dipakai saat label NO TRADE atau WATCHLIST. Berisi:
+1. Level support dan resistance terdekat dari swing H1 dan M15 untuk konteks scalping.
+2. Saran BUY/SELL untuk N pair dengan level H1 terdekat, lengkap dengan entry, SL, dan TP.
+   Saran ini hanya dari kedekatan harga ke level. Tidak divalidasi backtest, tidak memeriksa
+   spread atau news, dan tidak memakai statistik ranking.
+Pemantauan saran dan entry ada di pantauan.py.
+
+Tidak mengubah label ENTRY/WATCHLIST/NO TRADE, ranking, atau keputusan apa pun.
 
 Sentuhan = jumlah bar yang high-low-nya menyentuh area level (± TOUCH_ATR x ATR).
 """
@@ -149,3 +154,56 @@ def evaluasi(pair_disp, h1, now):
             baru.append({"id": s["id"], "level": None, "dicatat": C.fmt(now)})
     _append_jsonl(C.CADANGAN_OUTCOME_PATH, baru)
     return len(baru)
+
+
+# ---------- Saran buy/sell (BUKAN sinyal) ----------
+
+def _pair_key(pair):
+    return pair.replace("/", "_")
+
+
+def _buat_saran(r, h1, nama, arah):
+    """Saran dari satu level H1. BUY dari support (harga di atas level), SELL dari resistance."""
+    lvl = h1[nama]
+    a = h1["atr"]
+    harga = r["harga"]
+    if arah == "BUY":
+        sl = lvl["harga"] - C.CADANGAN_SARAN_SL_ATR * a
+        risk = harga - sl
+        tp = harga + C.CADANGAN_SARAN_TP_R * risk
+    else:
+        sl = lvl["harga"] + C.CADANGAN_SARAN_SL_ATR * a
+        risk = sl - harga
+        tp = harga - C.CADANGAN_SARAN_TP_R * risk
+    return {"pair": r["pair"], "arah": arah, "level": nama, "level_harga": round(lvl["harga"], 5),
+            "jarak_atr": lvl["jarak_atr"], "sentuhan": lvl["sentuhan"],
+            "entry": round(harga, 5), "sl": round(sl, 5), "tp": round(tp, 5),
+            "sl_pip": round(risk / C.pip_size(_pair_key(r["pair"])), 1),
+            "bar_terakhir": r["bar_terakhir"]}
+
+
+def pilih_saran(rows, dikecualikan=()):
+    """Pilih N pair dengan level H1 terdekat (jarak <= batas). Satu saran per pair.
+    Level terdekat yang dipakai: support -> BUY, resistance -> SELL. Seri diurut dari sentuhan terbanyak.
+    dikecualikan: pair yang masih dipantau, tidak dibuatkan saran baru."""
+    calon = []
+    for r in rows:
+        h1 = (r.get("cadangan") or {}).get("h1")
+        if not h1 or r["label"] == "DATA INVALID" or r["label"].startswith("ENTRY"):
+            continue
+        if r["pair"] in dikecualikan:
+            continue
+        for nama, arah in (("support", "BUY"), ("resistance", "SELL")):
+            lvl = h1.get(nama)
+            if lvl and lvl["jarak_atr"] <= C.CADANGAN_SARAN_MAX_ATR:
+                calon.append((lvl["jarak_atr"], -lvl["sentuhan"], r, h1, nama, arah))
+    calon.sort(key=lambda x: (x[0], x[1]))
+    saran, sudah = [], set()
+    for _, _, r, h1, nama, arah in calon:
+        if r["pair"] in sudah:
+            continue
+        sudah.add(r["pair"])
+        saran.append(_buat_saran(r, h1, nama, arah))
+        if len(saran) == C.CADANGAN_SARAN_N:
+            break
+    return saran

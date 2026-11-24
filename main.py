@@ -5,6 +5,7 @@ import sys
 
 import analisa_cadangan as CD
 import config as C
+import pantauan
 import ranking
 import report
 import scanner
@@ -49,10 +50,15 @@ def main():
     else:
         status = "PASAR TUTUP, tidak ada analisa"
 
+    # Saran dan pemantauan cadangan hanya dihitung saat pasar buka. Saat tutup, state tidak diubah.
+    cad = None
+    if is_open:
+        cad = pantauan.jalankan(now, rows, scanner.fetch_m15)
+
     _tulis(C.SCANNER_MD_PATH, report.build_scanner_md(now, status, rows, ranking_ok, news_bersih,
-                                                       news_err, is_open, ranking.load_meta()))
-    C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows))
-    print(notify(now, status, rows, ranking_ok))
+                                                       news_err, is_open, ranking.load_meta(), cad))
+    C.save_json(C.SCANNER_JSON_PATH, report.build_scanner_json(now, status, rows, cad))
+    print(notify(now, status, rows, ranking_ok, cad))
 
     if C.CADANGAN_ENABLED:
         print(f"Snapshot analisa cadangan baru: {CD.simpan_snapshot(now, rows)}")
