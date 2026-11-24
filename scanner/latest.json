@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-24T21:15:24Z",
+  "waktu": "2026-11-24T21:30:31Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -47,11 +47,11 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00048,
+          "atr": 0.00046,
           "resistance": {
-            "harga": 1.09658,
-            "jarak_atr": 0.01,
-            "sentuhan": 30,
+            "harga": 1.09655,
+            "jarak_atr": 0.05,
+            "sentuhan": 31,
             "umur_bar": 0
           },
           "support": null
@@ -99,12 +99,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00059,
+          "atr": 0.00057,
           "resistance": {
-            "harga": 1.31168,
-            "jarak_atr": 0.59,
-            "sentuhan": 27,
-            "umur_bar": 1
+            "harga": 1.31163,
+            "jarak_atr": 0.29,
+            "sentuhan": 28,
+            "umur_bar": 0
           },
           "support": null
         },
@@ -151,14 +151,19 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.06532,
+          "atr": 0.06191,
           "resistance": {
-            "harga": 159.25014,
-            "jarak_atr": 0.15,
-            "sentuhan": 37,
-            "umur_bar": 0
+            "harga": 159.28717,
+            "jarak_atr": 0.74,
+            "sentuhan": 39,
+            "umur_bar": 9
           },
-          "support": null
+          "support": {
+            "harga": 159.197,
+            "jarak_atr": 0.72,
+            "sentuhan": 36,
+            "umur_bar": 2
+          }
         },
         "m15_tersedia": true
       }
@@ -208,18 +213,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00047,
+          "atr": 0.00045,
           "resistance": {
             "harga": 0.83591,
-            "jarak_atr": 0.76,
+            "jarak_atr": 0.84,
             "sentuhan": 9,
-            "umur_bar": 13
+            "umur_bar": 14
           },
           "support": {
-            "harga": 0.83523,
-            "jarak_atr": 0.68,
-            "sentuhan": 18,
-            "umur_bar": 1
+            "harga": 0.83545,
+            "jarak_atr": 0.19,
+            "sentuhan": 21,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -270,13 +275,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00046,
-          "resistance": {
-            "harga": 0.6645,
-            "jarak_atr": 1.0,
-            "sentuhan": 36,
-            "umur_bar": 4
-          },
+          "atr": 0.00044,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -322,18 +322,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00073,
+          "atr": 0.0007,
           "resistance": {
             "harga": 1.42753,
-            "jarak_atr": 0.51,
+            "jarak_atr": 0.36,
             "sentuhan": 3,
-            "umur_bar": 8
+            "umur_bar": 9
           },
           "support": {
             "harga": 1.42659,
-            "jarak_atr": 0.79,
+            "jarak_atr": 1.0,
             "sentuhan": 8,
-            "umur_bar": 2
+            "umur_bar": 3
           }
         },
         "m15_tersedia": true
@@ -384,18 +384,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00033,
+          "atr": 0.00031,
           "resistance": {
             "harga": 0.54865,
-            "jarak_atr": 0.83,
+            "jarak_atr": 0.9,
             "sentuhan": 11,
-            "umur_bar": 7
+            "umur_bar": 8
           },
           "support": {
-            "harga": 0.5481,
-            "jarak_atr": 0.85,
-            "sentuhan": 13,
-            "umur_bar": 16
+            "harga": 0.54811,
+            "jarak_atr": 0.82,
+            "sentuhan": 12,
+            "umur_bar": 17
           }
         },
         "m15_tersedia": true
@@ -450,9 +450,9 @@
           "resistance": null,
           "support": {
             "harga": 0.83607,
-            "jarak_atr": 0.77,
-            "sentuhan": 20,
-            "umur_bar": 2
+            "jarak_atr": 0.19,
+            "sentuhan": 21,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -503,10 +503,10 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.07915,
+          "atr": 0.07521,
           "resistance": {
-            "harga": 174.6385,
-            "jarak_atr": 0.24,
+            "harga": 174.64013,
+            "jarak_atr": 0.29,
             "sentuhan": 24,
             "umur_bar": 0
           },
@@ -560,7 +560,7 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00036,
+          "atr": 0.00034,
           "resistance": null,
           "support": null
         },
@@ -612,14 +612,19 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00105,
+          "atr": 0.00099,
           "resistance": {
             "harga": 1.65213,
-            "jarak_atr": 0.72,
-            "sentuhan": 29,
-            "umur_bar": 13
+            "jarak_atr": 0.83,
+            "sentuhan": 28,
+            "umur_bar": 14
           },
-          "support": null
+          "support": {
+            "harga": 1.65036,
+            "jarak_atr": 0.96,
+            "sentuhan": 21,
+            "umur_bar": 8
+          }
         },
         "m15_tersedia": true
       }
@@ -664,12 +669,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00076,
+          "atr": 0.00072,
           "resistance": null,
           "support": {
-            "harga": 1.56473,
-            "jarak_atr": 0.18,
-            "sentuhan": 19,
+            "harga": 1.56468,
+            "jarak_atr": 0.32,
+            "sentuhan": 18,
             "umur_bar": 0
           }
         },
@@ -716,18 +721,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00094,
+          "atr": 0.0009,
           "resistance": {
             "harga": 2.00004,
-            "jarak_atr": 0.44,
+            "jarak_atr": 0.52,
             "sentuhan": 23,
-            "umur_bar": 0
+            "umur_bar": 1
           },
           "support": {
             "harga": 1.99897,
-            "jarak_atr": 0.7,
+            "jarak_atr": 0.67,
             "sentuhan": 13,
-            "umur_bar": 5
+            "umur_bar": 6
           }
         },
         "m15_tersedia": true
@@ -768,14 +773,19 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 8.74154,
+          "atr": 8.52993,
           "resistance": {
             "harga": 3552.7495,
-            "jarak_atr": 0.2,
-            "sentuhan": 7,
+            "jarak_atr": 0.01,
+            "sentuhan": 8,
             "umur_bar": 0
           },
-          "support": null
+          "support": {
+            "harga": 3546.6735,
+            "jarak_atr": 0.7,
+            "sentuhan": 2,
+            "umur_bar": 2
+          }
         },
         "m15_tersedia": true
       }
@@ -820,25 +830,21 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 11.424,
-          "resistance": {
-            "harga": 5348.606,
-            "jarak_atr": 0.08,
-            "sentuhan": 8,
-            "umur_bar": 0
-          },
+          "atr": 11.19725,
+          "resistance": null,
           "support": {
-            "harga": 5337.9785,
-            "jarak_atr": 0.85,
-            "sentuhan": 2,
-            "umur_bar": 181
+            "harga": 5348.606,
+            "jarak_atr": 0.14,
+            "sentuhan": 9,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
       }
     }
   ],
-  "saran_cadangan": [
+  "saran_cadangan": [],
+  "pemantauan": [
     {
       "pair": "EUR/GBP",
       "arah": "SELL",
@@ -859,71 +865,91 @@
       "mulai": "2026-11-24T21:15:00Z",
       "skor": 0.51,
       "z_leader": -0.09,
-      "dipicu": false
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {
+        "15": 1.1
+      },
+      "dibuat": "2026-11-24T21:15:24Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 0.836105,
+      "pip": 1.1,
+      "mfe": 1.3,
+      "mae": -0.1,
+      "umur_menit": 15,
+      "status": "AKTIF"
     }
   ],
-  "pemantauan": [],
   "evaluasi_1_jam": [],
   "leadlag": {
     "saran": [
       {
         "pair": "EUR/GBP",
-        "arah": "SELL",
+        "arah": "BUY",
         "metode": "LEAD-LAG",
         "leader": "GBP/USD",
         "lag_menit": 15,
-        "korelasi": 0.51,
+        "korelasi": 0.55,
         "n": 68,
         "level": null,
         "level_harga": null,
         "jarak_atr": null,
         "sentuhan": null,
-        "entry": 0.83622,
-        "sl": 0.83647,
-        "tp": 0.83586,
+        "entry": 0.8361,
+        "sl": 0.83586,
+        "tp": 0.83647,
         "sl_pip": 2.5,
         "bar_terakhir": "2026-11-24T20:00:00Z",
-        "mulai": "2026-11-24T21:15:00Z",
-        "skor": 0.51,
-        "z_leader": -0.09,
+        "mulai": "2026-11-24T21:30:00Z",
+        "skor": 0.546,
+        "z_leader": 0.31,
         "dipicu": false
       }
     ],
     "backtest": {
-      "diperbarui": "2026-11-24T21:15:24Z",
+      "diperbarui": "2026-11-24T21:30:31Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 1,
+      "jumlah_lolos": 2,
       "pasangan_lolos": [
         {
           "leader": "GBP/USD",
           "follower": "EUR/GBP",
           "lag_menit": 15,
-          "korelasi": 0.51,
-          "korelasi_lag0": -0.298,
+          "korelasi": 0.546,
+          "korelasi_lag0": -0.315,
+          "n": 68
+        },
+        {
+          "leader": "AUD/USD",
+          "follower": "EUR/GBP",
+          "lag_menit": 15,
+          "korelasi": 0.517,
+          "korelasi_lag0": -0.412,
           "n": 68
         }
       ],
       "kandidat": [
         {
           "pair": "EUR/GBP",
-          "arah": "SELL",
+          "arah": "BUY",
           "metode": "LEAD-LAG",
           "leader": "GBP/USD",
           "lag_menit": 15,
-          "korelasi": 0.51,
+          "korelasi": 0.55,
           "n": 68,
           "level": null,
           "level_harga": null,
           "jarak_atr": null,
           "sentuhan": null,
-          "entry": 0.83622,
-          "sl": 0.83647,
-          "tp": 0.83586,
+          "entry": 0.8361,
+          "sl": 0.83586,
+          "tp": 0.83647,
           "sl_pip": 2.5,
           "bar_terakhir": "2026-11-24T20:00:00Z",
-          "mulai": "2026-11-24T21:15:00Z",
-          "skor": 0.51,
-          "z_leader": -0.09,
+          "mulai": "2026-11-24T21:30:00Z",
+          "skor": 0.546,
+          "z_leader": 0.31,
           "dipicu": false
         }
       ]
