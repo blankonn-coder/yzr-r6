@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-25T15:15:35Z",
+  "waktu": "2026-11-25T15:30:38Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -754,10 +754,19 @@
   "leadlag": {
     "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-25T15:15:35Z",
+      "diperbarui": "2026-11-25T15:30:38Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 0,
-      "pasangan_lolos": [],
+      "jumlah_lolos": 1,
+      "pasangan_lolos": [
+        {
+          "leader": "EUR/JPY",
+          "follower": "GBP/AUD",
+          "lag_menit": 10,
+          "korelasi": 0.52,
+          "korelasi_lag0": -0.023,
+          "n": 69
+        }
+      ],
       "kandidat": []
     },
     "status": "dianalisa",
