@@ -1,31 +1,6 @@
 {
   "aktif": [
     {
-      "pair": "EUR/JPY",
-      "arah": "BUY",
-      "metode": "LEAD-LAG",
-      "leader": "GBP/AUD",
-      "lag_menit": 30,
-      "korelasi": 0.62,
-      "n": 30,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 174.63,
-      "sl": 174.50731,
-      "tp": 174.81403,
-      "sl_pip": 12.3,
-      "bar_terakhir": "2026-11-25T21:00:00Z",
-      "mulai": "2026-11-25T22:15:00Z",
-      "skor": 0.62,
-      "z_leader": 0.21,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-25T22:15:23Z"
-    },
-    {
       "pair": "USD/JPY",
       "arah": "SELL",
       "metode": "LEAD-LAG",
