@@ -49,6 +49,31 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-24T23:45:24Z"
+    },
+    {
+      "pair": "EUR/NZD",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "EUR/GBP",
+      "lag_menit": 25,
+      "korelasi": -0.5,
+      "n": 63,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 2.00165,
+      "sl": 2.0027,
+      "tp": 2.00007,
+      "sl_pip": 10.5,
+      "bar_terakhir": "2026-11-24T23:00:00Z",
+      "mulai": "2026-11-25T00:00:00Z",
+      "skor": 0.501,
+      "z_leader": 0.2,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T00:00:42Z"
     }
   ]
 }
