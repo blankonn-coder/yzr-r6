@@ -1,31 +1,6 @@
 {
   "aktif": [
     {
-      "pair": "EUR/GBP",
-      "arah": "SELL",
-      "metode": "LEAD-LAG",
-      "leader": "CAD/JPY",
-      "lag_menit": 35,
-      "korelasi": -0.51,
-      "n": 62,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 0.83615,
-      "sl": 0.83637,
-      "tp": 0.83583,
-      "sl_pip": 2.1,
-      "bar_terakhir": "2026-11-25T01:00:00Z",
-      "mulai": "2026-11-25T02:30:00Z",
-      "skor": 0.512,
-      "z_leader": 0.87,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-25T02:30:28Z"
-    },
-    {
       "pair": "USD/CHF",
       "arah": "BUY",
       "metode": "LEAD-LAG",
@@ -49,6 +24,31 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-25T03:00:39Z"
+    },
+    {
+      "pair": "EUR/GBP",
+      "arah": "BUY",
+      "metode": "LEAD-LAG",
+      "leader": "CAD/JPY",
+      "lag_menit": 35,
+      "korelasi": -0.54,
+      "n": 64,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.83625,
+      "sl": 0.83603,
+      "tp": 0.83656,
+      "sl_pip": 2.1,
+      "bar_terakhir": "2026-11-25T02:00:00Z",
+      "mulai": "2026-11-25T03:30:00Z",
+      "skor": 0.536,
+      "z_leader": -0.08,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T03:30:34Z"
     }
   ]
 }
