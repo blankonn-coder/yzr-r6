@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-25T09:45:23Z
+- Waktu eksekusi: 2026-11-25T10:00:47Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -12,92 +12,104 @@
 
 | Pair | Regime | Bias H4 | Label | Status | Mode | Arah | Kekuatan sel (backtest) | Harga (mid) | Entry / SL / TP | Bar H1/H4 | Bar terakhir (UTC) | Catatan |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| EUR/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.0943 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| GBP/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.30804 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| USD/JPY | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 159.3985 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
-| USD/CHF | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.83437 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| AUD/USD | MIXED | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.65736 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime MIXED belum punya metode prioritas di ranking |
-| USD/CAD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.42782 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
-| NZD/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.54596 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| EUR/GBP | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.83661 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
-| EUR/JPY | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 174.4325 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
-| EUR/CHF | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.91304 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
-| EUR/AUD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.66472 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
-| EUR/CAD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.56246 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| EUR/NZD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00436 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
-| XAU/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 3534.0715 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| XAU/AUD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 5376.128 | — | 168/180 | 2026-11-25T08:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.09382 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| GBP/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.30574 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| USD/JPY | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 159.4455 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
+| USD/CHF | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.83461 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| AUD/USD | MIXED | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.65655 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime MIXED belum punya metode prioritas di ranking |
+| USD/CAD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.4291 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| NZD/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.54522 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/GBP | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.83771 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/JPY | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 174.4105 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
+| EUR/CHF | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.9129 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| EUR/AUD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.66606 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| EUR/CAD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.56318 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/NZD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00619 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
+| XAU/USD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 3530.3215 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| XAU/AUD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 5377.0625 | — | 168/180 | 2026-11-25T09:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
 
 ## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)
 Dari lead-lag, maks 3 pair: leader bergerak, follower tertinggal 5-60 menit. BUY/SELL mengikuti arah leader. SL 0.5 ATR H1, TP 1.5R. Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.
-Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat lead-lag).
+| Pair | Arah | Dasar | Entry | SL | TP | Risiko SL |
+|---|---|---|---|---|---|---|
+| USD/CHF | **BUY** | LEAD-LAG: EUR/GBP memimpin 35 mnt, korelasi 0.53, n 64 | 0.83461 | 0.83407 | 0.83542 | 5.4 pip |
 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-25T09:45:23Z, pasangan lolos 0.
+- Backtest jendela 360 menit, diperbarui 2026-11-25T10:00:47Z, pasangan lolos 1.
 
-Tidak ada pasangan yang lolos ambang.
+Pasangan lolos (10 teratas, urut |korelasi|):
 
-Tidak ada kandidat di run ini.
+| Leader | Follower | Lag (menit) | Korelasi | Korelasi lag 0 | n |
+|---|---|---|---|---|---|
+| EUR/GBP | USD/CHF | 35 | 0.528 | -0.043 | 64 |
+
+Kandidat (follower yang tertinggal, urut skor):
+
+| Follower | Arah | Leader | Lag (menit) | z leader | Skor |
+|---|---|---|---|---|---|
+| USD/CHF | BUY | EUR/GBP | 35 | 3.56 | 1.878 |
 
 ## Pemantauan 15 menit (entry dan analisa cadangan)
 Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. Jika SL dan TP kena di candle yang sama, dihitung SL. Analisa cadangan BUKAN sinyal.
 | Sumber | Pair | Arah | Entry | SL | TP | 15m | 30m | 45m | 60m | Hasil | Pip sekarang | Umur |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| LEAD-LAG (analisa cadangan, bukan sinyal) | USD/CHF | SELL | 0.83437 | 0.83491 | 0.83356 | +4.3 | +0.4 | +2.2 | - | BERJALAN | PROFIT 2.2 pip | 45 mnt |
+| LEAD-LAG (analisa cadangan, bukan sinyal) | USD/CHF | SELL | 0.83437 | 0.83491 | 0.83356 | +4.3 | +0.4 | +2.2 | -2.4 | Selesai 60 menit | LOSS 2.4 pip | 60 mnt |
 
 ## Evaluasi 1 jam (entry dan analisa cadangan)
 Dibuat setelah 60 menit atau saat SL/TP kena. MFE = gerak terbaik, MAE = gerak terburuk, dalam pip.
-Belum ada evaluasi yang selesai di run ini.
+| Sumber | Pair | Arah | 15m | 30m | 45m | 60m | Hasil | Pip akhir | MFE (pip) | MAE (pip) | Ditutup (UTC) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| LEAD-LAG (analisa cadangan, bukan sinyal) | USD/CHF | SELL | +4.3 | +0.4 | +2.2 | -2.4 | Selesai 60 menit | LOSS 2.4 pip | 6.5 | -4.8 | 2026-11-25T10:00:47Z |
 
 ## Level analisa cadangan (BUKAN sinyal, tanpa statistik)
 Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan apa pun.
 - **EUR/USD** (NO TRADE)
-  - H1: resistance tidak ada dalam jarak · support 1.09315 (1.16 ATR, 7 bar sentuh)
-  - M15: resistance 1.0945 (0.95 ATR, 22 bar sentuh) · support 1.09326 (1.0 ATR, 16 bar sentuh)
+  - H1: resistance tidak ada dalam jarak · support 1.09315 (0.66 ATR, 8 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 1.09326 (0.89 ATR, 16 bar sentuh)
 - **GBP/USD** (NO TRADE)
-  - H1: resistance 1.3094 (1.16 ATR, 24 bar sentuh) · support 1.30783 (0.17 ATR, 10 bar sentuh)
-  - M15: resistance 1.30689 (0.8 ATR, 18 bar sentuh) · support 1.30608 (0.23 ATR, 10 bar sentuh)
+  - H1: resistance tidak ada dalam jarak · support 1.30481 (0.74 ATR, 8 bar sentuh)
+  - M15: resistance 1.30608 (0.43 ATR, 11 bar sentuh) · support tidak ada dalam jarak
 - **USD/JPY** (NO TRADE)
-  - H1: resistance tidak ada dalam jarak · support 159.24362 (0.85 ATR, 67 bar sentuh)
-  - M15: resistance 159.4145 (0.98 ATR, 19 bar sentuh) · support tidak ada dalam jarak
+  - H1: resistance tidak ada dalam jarak · support 159.23818 (1.15 ATR, 65 bar sentuh)
+  - M15: resistance 159.49425 (0.47 ATR, 12 bar sentuh) · support 159.4145 (0.3 ATR, 20 bar sentuh)
 - **USD/CHF** (NO TRADE)
-  - H1: resistance 0.8344 (0.04 ATR, 3 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance 0.83444 (0.43 ATR, 7 bar sentuh) · support 0.83361 (0.78 ATR, 2 bar sentuh)
+  - H1: resistance 0.83503 (0.39 ATR, 9 bar sentuh) · support 0.8344 (0.18 ATR, 4 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 0.83444 (0.23 ATR, 8 bar sentuh)
 - **AUD/USD** (NO TRADE)
   - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
+  - M15: resistance tidak ada dalam jarak · support 0.6559 (0.89 ATR, 1 bar sentuh)
 - **USD/CAD** (NO TRADE)
-  - H1: resistance tidak ada dalam jarak · support 1.42735 (0.4 ATR, 12 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
+  - H1: resistance 1.43034 (1.04 ATR, 39 bar sentuh) · support 1.42735 (1.46 ATR, 13 bar sentuh)
+  - M15: resistance 1.42942 (0.54 ATR, 5 bar sentuh) · support 1.42895 (0.24 ATR, 9 bar sentuh)
 - **NZD/USD** (NO TRADE)
-  - H1: resistance 0.54628 (0.38 ATR, 9 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance 0.54567 (0.5 ATR, 24 bar sentuh) · support tidak ada dalam jarak
+  - H1: resistance 0.54628 (1.26 ATR, 9 bar sentuh) · support 0.54451 (0.85 ATR, 13 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
 - **EUR/GBP** (NO TRADE)
-  - H1: resistance 0.83698 (0.86 ATR, 24 bar sentuh) · support 0.83626 (0.84 ATR, 33 bar sentuh)
-  - M15: resistance 0.83771 (0.89 ATR, 3 bar sentuh) · support 0.83731 (0.51 ATR, 15 bar sentuh)
+  - H1: resistance 0.8384 (1.44 ATR, 8 bar sentuh) · support 0.83764 (0.14 ATR, 30 bar sentuh)
+  - M15: resistance 0.83771 (0.03 ATR, 4 bar sentuh) · support tidak ada dalam jarak
 - **EUR/JPY** (NO TRADE)
-  - H1: resistance 174.71531 (1.24 ATR, 32 bar sentuh) · support 174.2705 (0.71 ATR, 23 bar sentuh)
-  - M15: resistance 174.28875 (0.11 ATR, 29 bar sentuh) · support 174.1625 (0.8 ATR, 17 bar sentuh)
+  - H1: resistance 174.71531 (1.31 ATR, 32 bar sentuh) · support 174.2705 (0.6 ATR, 24 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 174.28875 (0.86 ATR, 30 bar sentuh)
 - **EUR/CHF** (NO TRADE)
   - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
-  - M15: resistance 0.91299 (0.7 ATR, 9 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 0.91299 (0.11 ATR, 10 bar sentuh) · support tidak ada dalam jarak
 - **EUR/AUD** (NO TRADE)
   - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
-  - M15: resistance 1.66615 (0.42 ATR, 5 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 1.66615 (0.06 ATR, 6 bar sentuh) · support tidak ada dalam jarak
 - **EUR/CAD** (NO TRADE)
-  - H1: resistance tidak ada dalam jarak · support 1.5612 (0.96 ATR, 1 bar sentuh)
-  - M15: resistance 1.56279 (0.61 ATR, 14 bar sentuh) · support 1.56194 (0.58 ATR, 10 bar sentuh)
+  - H1: resistance 1.56452 (1.0 ATR, 10 bar sentuh) · support 1.5612 (1.49 ATR, 1 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 1.56279 (0.53 ATR, 15 bar sentuh)
 - **EUR/NZD** (NO TRADE)
-  - H1: resistance 2.00637 (0.81 ATR, 18 bar sentuh) · support 2.00101 (1.36 ATR, 56 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support 2.00539 (0.14 ATR, 27 bar sentuh)
+  - H1: resistance 2.00637 (0.07 ATR, 19 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 2.00701 (0.65 ATR, 10 bar sentuh) · support 2.00539 (0.64 ATR, 27 bar sentuh)
 - **XAU/USD** (NO TRADE)
-  - H1: resistance 3546.6735 (0.63 ATR, 18 bar sentuh) · support 3533.6145 (0.02 ATR, 16 bar sentuh)
-  - M15: resistance 3533.6145 (0.6 ATR, 10 bar sentuh) · support tidak ada dalam jarak
+  - H1: resistance 3533.6145 (0.17 ATR, 17 bar sentuh) · support 3513.53475 (0.86 ATR, 9 bar sentuh)
+  - M15: resistance 3533.6145 (0.36 ATR, 10 bar sentuh) · support 3523.6475 (0.73 ATR, 14 bar sentuh)
 - **XAU/AUD** (NO TRADE)
-  - H1: resistance 5385.145 (0.32 ATR, 17 bar sentuh) · support 5338.993 (1.3 ATR, 22 bar sentuh)
-  - M15: resistance 5377.0385 (0.46 ATR, 27 bar sentuh) · support 5362.4315 (0.7 ATR, 21 bar sentuh)
+  - H1: resistance 5377.10775 (0.0 ATR, 23 bar sentuh) · support 5338.993 (1.39 ATR, 21 bar sentuh)
+  - M15: resistance 5389.13713 (0.99 ATR, 6 bar sentuh) · support 5377.0385 (0.0 ATR, 28 bar sentuh)
 
 ## Keterangan
 - **ENTRY LONG/SHORT**: semua syarat terpenuhi. Entry, SL, dan TP boleh dipakai.
