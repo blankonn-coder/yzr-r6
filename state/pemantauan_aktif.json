@@ -1,31 +1,6 @@
 {
   "aktif": [
     {
-      "pair": "NZD/USD",
-      "arah": "BUY",
-      "metode": "LEAD-LAG",
-      "leader": "XAU/AUD",
-      "lag_menit": 35,
-      "korelasi": 0.56,
-      "n": 28,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 0.54905,
-      "sl": 0.54855,
-      "tp": 0.54981,
-      "sl_pip": 5.0,
-      "bar_terakhir": "2026-11-25T19:00:00Z",
-      "mulai": "2026-11-25T20:30:00Z",
-      "skor": 1.11,
-      "z_leader": 1.98,
-      "dipicu": true,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-25T20:30:33Z"
-    },
-    {
       "pair": "EUR/JPY",
       "arah": "SELL",
       "metode": "LEAD-LAG",
@@ -149,6 +124,31 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-25T21:15:24Z"
+    },
+    {
+      "pair": "EUR/USD",
+      "arah": "BUY",
+      "metode": "LEAD-LAG",
+      "leader": "CHF/JPY",
+      "lag_menit": 40,
+      "korelasi": -0.71,
+      "n": 26,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 1.09745,
+      "sl": 1.09682,
+      "tp": 1.0984,
+      "sl_pip": 6.3,
+      "bar_terakhir": "2026-11-25T20:00:00Z",
+      "mulai": "2026-11-25T21:30:00Z",
+      "skor": 0.705,
+      "z_leader": -0.67,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T21:30:31Z"
     }
   ]
 }

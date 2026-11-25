@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-25T21:15:24Z",
+  "waktu": "2026-11-25T21:30:31Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -47,11 +47,11 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00074,
+          "atr": 0.0007,
           "resistance": {
             "harga": 1.09748,
-            "jarak_atr": 0.03,
-            "sentuhan": 12,
+            "jarak_atr": 0.04,
+            "sentuhan": 13,
             "umur_bar": 0
           },
           "support": null
@@ -99,12 +99,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.001,
+          "atr": 0.00095,
           "resistance": null,
           "support": {
             "harga": 1.31153,
-            "jarak_atr": 0.19,
-            "sentuhan": 41,
+            "jarak_atr": 0.15,
+            "sentuhan": 42,
             "umur_bar": 0
           }
         },
@@ -151,10 +151,10 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.11415,
+          "atr": 0.10893,
           "resistance": {
-            "harga": 159.23395,
-            "jarak_atr": 0.06,
+            "harga": 159.23447,
+            "jarak_atr": 0.33,
             "sentuhan": 75,
             "umur_bar": 0
           },
@@ -203,18 +203,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00081,
+          "atr": 0.00077,
           "resistance": {
             "harga": 0.83159,
-            "jarak_atr": 0.69,
+            "jarak_atr": 0.74,
             "sentuhan": 12,
-            "umur_bar": 8
+            "umur_bar": 9
           },
           "support": {
             "harga": 0.83072,
-            "jarak_atr": 0.37,
+            "jarak_atr": 0.38,
             "sentuhan": 16,
-            "umur_bar": 0
+            "umur_bar": 1
           }
         },
         "m15_tersedia": true
@@ -265,12 +265,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00079,
+          "atr": 0.00074,
           "resistance": {
             "harga": 0.66323,
-            "jarak_atr": 0.54,
-            "sentuhan": 46,
-            "umur_bar": 1
+            "jarak_atr": 0.49,
+            "sentuhan": 45,
+            "umur_bar": 2
           },
           "support": null
         },
@@ -312,12 +312,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00098,
+          "atr": 0.00095,
           "resistance": {
             "harga": 1.42229,
-            "jarak_atr": 0.59,
+            "jarak_atr": 0.79,
             "sentuhan": 4,
-            "umur_bar": 7
+            "umur_bar": 8
           },
           "support": null
         },
@@ -369,13 +369,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00052,
+          "atr": 0.0005,
           "resistance": null,
           "support": {
             "harga": 0.54857,
-            "jarak_atr": 0.26,
-            "sentuhan": 20,
-            "umur_bar": 0
+            "jarak_atr": 0.23,
+            "sentuhan": 19,
+            "umur_bar": 86
           }
         },
         "m15_tersedia": true
@@ -426,13 +426,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00038,
+          "atr": 0.00036,
           "resistance": null,
           "support": {
             "harga": 0.83651,
-            "jarak_atr": 0.47,
+            "jarak_atr": 0.52,
             "sentuhan": 52,
-            "umur_bar": 1
+            "umur_bar": 2
           }
         },
         "m15_tersedia": true
@@ -478,9 +478,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.13776,
+          "atr": 0.13113,
           "resistance": null,
-          "support": null
+          "support": {
+            "harga": 174.5881,
+            "jarak_atr": 0.96,
+            "sentuhan": 37,
+            "umur_bar": 53
+          }
         },
         "m15_tersedia": true
       }
@@ -520,18 +525,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00071,
+          "atr": 0.00066,
           "resistance": {
             "harga": 0.91231,
             "jarak_atr": 0.42,
             "sentuhan": 9,
-            "umur_bar": 4
+            "umur_bar": 5
           },
           "support": {
             "harga": 0.91178,
-            "jarak_atr": 0.31,
+            "jarak_atr": 0.36,
             "sentuhan": 7,
-            "umur_bar": 1
+            "umur_bar": 2
           }
         },
         "m15_tersedia": true
@@ -582,17 +587,17 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00186,
+          "atr": 0.00176,
           "resistance": {
             "harga": 1.65708,
-            "jarak_atr": 0.73,
+            "jarak_atr": 0.85,
             "sentuhan": 9,
-            "umur_bar": 2
+            "umur_bar": 3
           },
           "support": {
-            "harga": 1.65543,
-            "jarak_atr": 0.16,
-            "sentuhan": 9,
+            "harga": 1.65538,
+            "jarak_atr": 0.12,
+            "sentuhan": 10,
             "umur_bar": 0
           }
         },
@@ -639,14 +644,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00096,
-          "resistance": null,
-          "support": {
+          "atr": 0.00093,
+          "resistance": {
             "harga": 1.56019,
-            "jarak_atr": 0.05,
-            "sentuhan": 4,
+            "jarak_atr": 0.12,
+            "sentuhan": 5,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -691,7 +696,7 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.0015,
+          "atr": 0.00142,
           "resistance": null,
           "support": null
         },
@@ -743,12 +748,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 19.76272,
+          "atr": 19.82395,
           "resistance": {
             "harga": 3588.0315,
-            "jarak_atr": 0.81,
-            "sentuhan": 5,
-            "umur_bar": 2
+            "jarak_atr": 0.4,
+            "sentuhan": 6,
+            "umur_bar": 0
           },
           "support": null
         },
@@ -800,19 +805,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 26.03053,
+          "atr": 26.36332,
           "resistance": {
             "harga": 5411.9015,
-            "jarak_atr": 0.88,
-            "sentuhan": 5,
-            "umur_bar": 2
+            "jarak_atr": 0.43,
+            "sentuhan": 6,
+            "umur_bar": 0
           },
-          "support": {
-            "harga": 5367.32342,
-            "jarak_atr": 0.84,
-            "sentuhan": 44,
-            "umur_bar": 4
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -820,66 +820,29 @@
   ],
   "saran_cadangan": [
     {
-      "pair": "USD/CAD",
-      "arah": "SELL",
+      "pair": "EUR/USD",
+      "arah": "BUY",
       "metode": "LEAD-LAG",
-      "leader": "GBP/JPY",
-      "lag_menit": 50,
-      "korelasi": 0.53,
-      "n": 22,
+      "leader": "CHF/JPY",
+      "lag_menit": 40,
+      "korelasi": -0.71,
+      "n": 26,
       "level": null,
       "level_harga": null,
       "jarak_atr": null,
       "sentuhan": null,
-      "entry": 1.4217,
-      "sl": 1.42253,
-      "tp": 1.42047,
-      "sl_pip": 8.2,
+      "entry": 1.09745,
+      "sl": 1.09682,
+      "tp": 1.0984,
+      "sl_pip": 6.3,
       "bar_terakhir": "2026-11-25T20:00:00Z",
-      "mulai": "2026-11-25T21:15:00Z",
-      "skor": 0.534,
-      "z_leader": -0.62,
+      "mulai": "2026-11-25T21:30:00Z",
+      "skor": 0.705,
+      "z_leader": -0.67,
       "dipicu": false
     }
   ],
   "pemantauan": [
-    {
-      "pair": "EUR/CAD",
-      "arah": "SELL",
-      "metode": "LEAD-LAG",
-      "leader": "NZD/CAD",
-      "lag_menit": 20,
-      "korelasi": 0.54,
-      "n": 34,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 1.55934,
-      "sl": 1.56015,
-      "tp": 1.55812,
-      "sl_pip": 8.1,
-      "bar_terakhir": "2026-11-25T19:00:00Z",
-      "mulai": "2026-11-25T20:15:00Z",
-      "skor": 0.543,
-      "z_leader": -0.06,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {
-        "15": -1.4,
-        "30": 2.9,
-        "45": -4.0
-      },
-      "dibuat": "2026-11-25T20:15:26Z",
-      "hasil": "SL kena",
-      "menit_kena": 60,
-      "harga_skrg": 1.56015,
-      "pip": -8.1,
-      "mfe": 5.8,
-      "mae": -11.9,
-      "umur_menit": 60,
-      "status": "SELESAI"
-    },
     {
       "pair": "NZD/USD",
       "arah": "BUY",
@@ -905,52 +868,17 @@
       "titik": {
         "15": -1.4,
         "30": -2.5,
-        "45": -3.5
+        "45": -3.5,
+        "60": -3.7
       },
       "dibuat": "2026-11-25T20:30:33Z",
-      "hasil": "BERJALAN",
+      "hasil": "Selesai 60 menit",
       "menit_kena": null,
-      "harga_skrg": 0.5487,
-      "pip": -3.5,
+      "harga_skrg": 0.54868,
+      "pip": -3.7,
       "mfe": 0.1,
       "mae": -3.8,
-      "umur_menit": 45,
-      "status": "AKTIF"
-    },
-    {
-      "pair": "USD/CAD",
-      "arah": "BUY",
-      "metode": "LEAD-LAG",
-      "leader": "EUR/NZD",
-      "lag_menit": 20,
-      "korelasi": -0.58,
-      "n": 34,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 1.4203,
-      "sl": 1.41945,
-      "tp": 1.42157,
-      "sl_pip": 8.4,
-      "bar_terakhir": "2026-11-25T19:00:00Z",
-      "mulai": "2026-11-25T20:30:00Z",
-      "skor": 0.583,
-      "z_leader": -0.19,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {
-        "15": 0.3,
-        "30": 7.8
-      },
-      "dibuat": "2026-11-25T20:30:33Z",
-      "hasil": "TP kena",
-      "menit_kena": 45,
-      "harga_skrg": 1.42157,
-      "pip": 12.7,
-      "mfe": 14.9,
-      "mae": -2.1,
-      "umur_menit": 45,
+      "umur_menit": 60,
       "status": "SELESAI"
     },
     {
@@ -977,16 +905,17 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {
         "15": 0.0,
-        "30": 2.3
+        "30": 2.3,
+        "45": 5.2
       },
       "dibuat": "2026-11-25T20:45:24Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 174.7425,
-      "pip": 2.3,
-      "mfe": 2.6,
+      "harga_skrg": 174.7135,
+      "pip": 5.2,
+      "mfe": 6.4,
       "mae": -4.2,
-      "umur_menit": 30,
+      "umur_menit": 45,
       "status": "AKTIF"
     },
     {
@@ -1013,16 +942,17 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {
         "15": 43.5,
-        "30": 3.8
+        "30": 3.8,
+        "45": 117.6
       },
       "dibuat": "2026-11-25T20:45:24Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 5389.0625,
-      "pip": 3.8,
-      "mfe": 103.1,
+      "harga_skrg": 5400.44,
+      "pip": 117.6,
+      "mfe": 255.4,
       "mae": -55.2,
-      "umur_menit": 30,
+      "umur_menit": 45,
       "status": "AKTIF"
     },
     {
@@ -1048,16 +978,17 @@
       "dipicu": false,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {
-        "15": -0.8
+        "15": -0.8,
+        "30": -0.9
       },
       "dibuat": "2026-11-25T21:00:45Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 0.836685,
-      "pip": -0.8,
+      "harga_skrg": 0.836695,
+      "pip": -0.9,
       "mfe": -0.1,
-      "mae": -1.1,
-      "umur_menit": 15,
+      "mae": -1.8,
+      "umur_menit": 30,
       "status": "AKTIF"
     },
     {
@@ -1083,94 +1014,94 @@
       "dipicu": false,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {
-        "15": -2.7
+        "15": -2.7,
+        "30": -4.0
       },
       "dibuat": "2026-11-25T21:00:45Z",
       "hasil": "BERJALAN",
       "menit_kena": null,
-      "harga_skrg": 1.65572,
-      "pip": -2.7,
+      "harga_skrg": 1.65559,
+      "pip": -4.0,
       "mfe": 2.4,
-      "mae": -3.3,
+      "mae": -6.3,
+      "umur_menit": 30,
+      "status": "AKTIF"
+    },
+    {
+      "pair": "USD/CAD",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "GBP/JPY",
+      "lag_menit": 50,
+      "korelasi": 0.53,
+      "n": 22,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 1.4217,
+      "sl": 1.42253,
+      "tp": 1.42047,
+      "sl_pip": 8.2,
+      "bar_terakhir": "2026-11-25T20:00:00Z",
+      "mulai": "2026-11-25T21:15:00Z",
+      "skor": 0.534,
+      "z_leader": -0.62,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {
+        "15": 1.6
+      },
+      "dibuat": "2026-11-25T21:15:24Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 1.421535,
+      "pip": 1.6,
+      "mfe": 4.9,
+      "mae": -0.2,
       "umur_menit": 15,
       "status": "AKTIF"
     }
   ],
   "evaluasi_1_jam": [
     {
-      "pair": "EUR/CAD",
-      "arah": "SELL",
+      "pair": "NZD/USD",
+      "arah": "BUY",
       "metode": "LEAD-LAG",
-      "leader": "NZD/CAD",
-      "lag_menit": 20,
-      "korelasi": 0.54,
-      "n": 34,
+      "leader": "XAU/AUD",
+      "lag_menit": 35,
+      "korelasi": 0.56,
+      "n": 28,
       "level": null,
       "level_harga": null,
       "jarak_atr": null,
       "sentuhan": null,
-      "entry": 1.55934,
-      "sl": 1.56015,
-      "tp": 1.55812,
-      "sl_pip": 8.1,
+      "entry": 0.54905,
+      "sl": 0.54855,
+      "tp": 0.54981,
+      "sl_pip": 5.0,
       "bar_terakhir": "2026-11-25T19:00:00Z",
-      "mulai": "2026-11-25T20:15:00Z",
-      "skor": 0.543,
-      "z_leader": -0.06,
-      "dipicu": false,
+      "mulai": "2026-11-25T20:30:00Z",
+      "skor": 1.11,
+      "z_leader": 1.98,
+      "dipicu": true,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {
         "15": -1.4,
-        "30": 2.9,
-        "45": -4.0
-      },
-      "dibuat": "2026-11-25T20:15:26Z",
-      "hasil": "SL kena",
-      "menit_kena": 60,
-      "harga_skrg": 1.56015,
-      "pip": -8.1,
-      "mfe": 5.8,
-      "mae": -11.9,
-      "umur_menit": 60,
-      "status": "SELESAI",
-      "ditutup": "2026-11-25T21:15:24Z"
-    },
-    {
-      "pair": "USD/CAD",
-      "arah": "BUY",
-      "metode": "LEAD-LAG",
-      "leader": "EUR/NZD",
-      "lag_menit": 20,
-      "korelasi": -0.58,
-      "n": 34,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 1.4203,
-      "sl": 1.41945,
-      "tp": 1.42157,
-      "sl_pip": 8.4,
-      "bar_terakhir": "2026-11-25T19:00:00Z",
-      "mulai": "2026-11-25T20:30:00Z",
-      "skor": 0.583,
-      "z_leader": -0.19,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {
-        "15": 0.3,
-        "30": 7.8
+        "30": -2.5,
+        "45": -3.5,
+        "60": -3.7
       },
       "dibuat": "2026-11-25T20:30:33Z",
-      "hasil": "TP kena",
-      "menit_kena": 45,
-      "harga_skrg": 1.42157,
-      "pip": 12.7,
-      "mfe": 14.9,
-      "mae": -2.1,
-      "umur_menit": 45,
+      "hasil": "Selesai 60 menit",
+      "menit_kena": null,
+      "harga_skrg": 0.54868,
+      "pip": -3.7,
+      "mfe": 0.1,
+      "mae": -3.8,
+      "umur_menit": 60,
       "status": "SELESAI",
-      "ditutup": "2026-11-25T21:15:24Z"
+      "ditutup": "2026-11-25T21:30:31Z"
     }
   ],
   "leadlag": {
@@ -1181,198 +1112,262 @@
         "metode": "LEAD-LAG",
         "leader": "USD/CAD",
         "lag_menit": 50,
-        "korelasi": 0.52,
+        "korelasi": 0.55,
         "n": 22,
         "level": null,
         "level_harga": null,
         "jarak_atr": null,
         "sentuhan": null,
         "entry": 0.83669,
-        "sl": 0.83634,
-        "tp": 0.83721,
+        "sl": 0.83635,
+        "tp": 0.83722,
         "sl_pip": 3.5,
         "bar_terakhir": "2026-11-25T20:00:00Z",
-        "mulai": "2026-11-25T21:15:00Z",
-        "skor": 0.648,
-        "z_leader": 1.24,
+        "mulai": "2026-11-25T21:30:00Z",
+        "skor": 0.705,
+        "z_leader": 1.27,
         "dipicu": true
       },
       {
-        "pair": "EUR/JPY",
-        "arah": "SELL",
+        "pair": "EUR/USD",
+        "arah": "BUY",
         "metode": "LEAD-LAG",
-        "leader": "GBP/AUD",
-        "lag_menit": 30,
-        "korelasi": 0.62,
-        "n": 30,
+        "leader": "CHF/JPY",
+        "lag_menit": 40,
+        "korelasi": -0.71,
+        "n": 26,
         "level": null,
         "level_harga": null,
         "jarak_atr": null,
         "sentuhan": null,
-        "entry": 174.7425,
-        "sl": 174.86939,
-        "tp": 174.55216,
-        "sl_pip": 12.7,
+        "entry": 1.09745,
+        "sl": 1.09682,
+        "tp": 1.0984,
+        "sl_pip": 6.3,
         "bar_terakhir": "2026-11-25T20:00:00Z",
-        "mulai": "2026-11-25T21:15:00Z",
-        "skor": 0.618,
-        "z_leader": -0.37,
+        "mulai": "2026-11-25T21:30:00Z",
+        "skor": 0.705,
+        "z_leader": -0.67,
         "dipicu": false
       },
       {
-        "pair": "USD/CAD",
+        "pair": "EUR/AUD",
         "arah": "SELL",
         "metode": "LEAD-LAG",
-        "leader": "GBP/JPY",
-        "lag_menit": 50,
-        "korelasi": 0.53,
-        "n": 22,
+        "leader": "GBP/CHF",
+        "lag_menit": 20,
+        "korelasi": 0.7,
+        "n": 34,
         "level": null,
         "level_harga": null,
         "jarak_atr": null,
         "sentuhan": null,
-        "entry": 1.4217,
-        "sl": 1.42253,
-        "tp": 1.42047,
-        "sl_pip": 8.2,
+        "entry": 1.65559,
+        "sl": 1.65733,
+        "tp": 1.65298,
+        "sl_pip": 17.4,
         "bar_terakhir": "2026-11-25T20:00:00Z",
-        "mulai": "2026-11-25T21:15:00Z",
-        "skor": 0.534,
-        "z_leader": -0.62,
+        "mulai": "2026-11-25T21:30:00Z",
+        "skor": 0.697,
+        "z_leader": -0.21,
         "dipicu": false
       }
     ],
     "backtest": {
-      "diperbarui": "2026-11-25T21:15:24Z",
+      "diperbarui": "2026-11-25T21:30:31Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 16,
+      "jumlah_lolos": 24,
       "pasangan_lolos": [
         {
           "leader": "GBP/NZD",
           "follower": "GBP/JPY",
           "lag_menit": 30,
-          "korelasi": 0.725,
-          "korelasi_lag0": -0.426,
+          "korelasi": 0.718,
+          "korelasi_lag0": -0.423,
           "n": 30
         },
         {
-          "leader": "GBP/AUD",
-          "follower": "EUR/JPY",
-          "lag_menit": 30,
-          "korelasi": 0.618,
-          "korelasi_lag0": -0.374,
-          "n": 30
+          "leader": "CHF/JPY",
+          "follower": "EUR/USD",
+          "lag_menit": 40,
+          "korelasi": -0.705,
+          "korelasi_lag0": 0.296,
+          "n": 26
         },
         {
-          "leader": "NZD/USD",
-          "follower": "AUD/CAD",
+          "leader": "GBP/CHF",
+          "follower": "EUR/AUD",
+          "lag_menit": 20,
+          "korelasi": 0.697,
+          "korelasi_lag0": -0.432,
+          "n": 34
+        },
+        {
+          "leader": "CHF/JPY",
+          "follower": "USD/CHF",
+          "lag_menit": 40,
+          "korelasi": 0.689,
+          "korelasi_lag0": -0.494,
+          "n": 26
+        },
+        {
+          "leader": "CAD/CHF",
+          "follower": "GBP/JPY",
           "lag_menit": 50,
-          "korelasi": 0.576,
-          "korelasi_lag0": 0.566,
+          "korelasi": 0.686,
+          "korelasi_lag0": 0.364,
           "n": 22
         },
         {
           "leader": "GBP/AUD",
           "follower": "GBP/JPY",
           "lag_menit": 30,
-          "korelasi": 0.574,
-          "korelasi_lag0": -0.466,
+          "korelasi": 0.66,
+          "korelasi_lag0": -0.428,
           "n": 30
         },
         {
-          "leader": "GBP/JPY",
-          "follower": "GBP/CAD",
-          "lag_menit": 50,
-          "korelasi": 0.568,
-          "korelasi_lag0": 0.289,
-          "n": 22
+          "leader": "GBP/CHF",
+          "follower": "GBP/AUD",
+          "lag_menit": 20,
+          "korelasi": 0.646,
+          "korelasi_lag0": -0.319,
+          "n": 34
         },
         {
-          "leader": "CAD/JPY",
-          "follower": "GBP/CAD",
-          "lag_menit": 50,
-          "korelasi": 0.561,
-          "korelasi_lag0": -0.5,
-          "n": 22
+          "leader": "NZD/CAD",
+          "follower": "EUR/GBP",
+          "lag_menit": 20,
+          "korelasi": 0.623,
+          "korelasi_lag0": -0.166,
+          "n": 34
         },
         {
-          "leader": "NZD/JPY",
-          "follower": "GBP/CAD",
-          "lag_menit": 50,
-          "korelasi": 0.543,
-          "korelasi_lag0": -0.005,
-          "n": 22
+          "leader": "NZD/USD",
+          "follower": "EUR/GBP",
+          "lag_menit": 20,
+          "korelasi": 0.608,
+          "korelasi_lag0": -0.228,
+          "n": 34
         },
         {
-          "leader": "GBP/JPY",
-          "follower": "USD/CAD",
-          "lag_menit": 50,
-          "korelasi": 0.534,
-          "korelasi_lag0": -0.324,
-          "n": 22
+          "leader": "GBP/AUD",
+          "follower": "EUR/JPY",
+          "lag_menit": 30,
+          "korelasi": 0.595,
+          "korelasi_lag0": -0.357,
+          "n": 30
         },
         {
           "leader": "GBP/CHF",
           "follower": "EUR/NZD",
           "lag_menit": 20,
-          "korelasi": 0.533,
-          "korelasi_lag0": -0.141,
+          "korelasi": 0.594,
+          "korelasi_lag0": -0.381,
           "n": 34
         },
         {
-          "leader": "GBP/CHF",
-          "follower": "EUR/AUD",
+          "leader": "CHF/JPY",
+          "follower": "GBP/USD",
           "lag_menit": 20,
-          "korelasi": 0.531,
-          "korelasi_lag0": -0.33,
+          "korelasi": -0.577,
+          "korelasi_lag0": 0.372,
           "n": 34
         },
         {
-          "leader": "GBP/USD",
-          "follower": "NZD/CAD",
+          "leader": "CAD/CHF",
+          "follower": "EUR/JPY",
           "lag_menit": 50,
-          "korelasi": 0.529,
-          "korelasi_lag0": 0.472,
+          "korelasi": 0.569,
+          "korelasi_lag0": 0.271,
           "n": 22
-        },
-        {
-          "leader": "CAD/JPY",
-          "follower": "CHF/JPY",
-          "lag_menit": 30,
-          "korelasi": -0.527,
-          "korelasi_lag0": 0.465,
-          "n": 30
         },
         {
           "leader": "USD/CAD",
           "follower": "EUR/GBP",
           "lag_menit": 50,
-          "korelasi": 0.524,
-          "korelasi_lag0": 0.231,
+          "korelasi": 0.555,
+          "korelasi_lag0": 0.175,
           "n": 22
         },
         {
-          "leader": "XAU/AUD",
-          "follower": "AUD/CAD",
+          "leader": "CAD/JPY",
+          "follower": "GBP/CAD",
           "lag_menit": 50,
-          "korelasi": 0.523,
-          "korelasi_lag0": 0.496,
+          "korelasi": 0.554,
+          "korelasi_lag0": -0.496,
           "n": 22
+        },
+        {
+          "leader": "CHF/JPY",
+          "follower": "USD/CAD",
+          "lag_menit": 40,
+          "korelasi": 0.553,
+          "korelasi_lag0": -0.483,
+          "n": 26
+        },
+        {
+          "leader": "GBP/AUD",
+          "follower": "EUR/GBP",
+          "lag_menit": 50,
+          "korelasi": 0.547,
+          "korelasi_lag0": 0.233,
+          "n": 22
+        },
+        {
+          "leader": "CHF/JPY",
+          "follower": "CAD/JPY",
+          "lag_menit": 45,
+          "korelasi": -0.533,
+          "korelasi_lag0": 0.525,
+          "n": 24
         },
         {
           "leader": "USD/JPY",
           "follower": "AUD/USD",
           "lag_menit": 20,
-          "korelasi": -0.52,
-          "korelasi_lag0": 0.09,
+          "korelasi": -0.533,
+          "korelasi_lag0": 0.116,
           "n": 34
+        },
+        {
+          "leader": "GBP/CHF",
+          "follower": "EUR/CAD",
+          "lag_menit": 20,
+          "korelasi": 0.528,
+          "korelasi_lag0": 0.069,
+          "n": 34
+        },
+        {
+          "leader": "CHF/JPY",
+          "follower": "XAU/USD",
+          "lag_menit": 55,
+          "korelasi": -0.525,
+          "korelasi_lag0": 0.311,
+          "n": 20
+        },
+        {
+          "leader": "NZD/JPY",
+          "follower": "EUR/GBP",
+          "lag_menit": 20,
+          "korelasi": 0.522,
+          "korelasi_lag0": -0.276,
+          "n": 34
+        },
+        {
+          "leader": "CAD/JPY",
+          "follower": "EUR/GBP",
+          "lag_menit": 50,
+          "korelasi": -0.507,
+          "korelasi_lag0": -0.252,
+          "n": 22
         },
         {
           "leader": "NZD/USD",
           "follower": "AUD/NZD",
           "lag_menit": 40,
-          "korelasi": 0.505,
-          "korelasi_lag0": 0.027,
+          "korelasi": 0.507,
+          "korelasi_lag0": 0.002,
           "n": 26
         }
       ],
@@ -1383,86 +1378,42 @@
           "metode": "LEAD-LAG",
           "leader": "USD/CAD",
           "lag_menit": 50,
-          "korelasi": 0.52,
+          "korelasi": 0.55,
           "n": 22,
           "level": null,
           "level_harga": null,
           "jarak_atr": null,
           "sentuhan": null,
           "entry": 0.83669,
-          "sl": 0.83634,
-          "tp": 0.83721,
+          "sl": 0.83635,
+          "tp": 0.83722,
           "sl_pip": 3.5,
           "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.648,
-          "z_leader": 1.24,
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.705,
+          "z_leader": 1.27,
           "dipicu": true
         },
         {
-          "pair": "EUR/JPY",
-          "arah": "SELL",
+          "pair": "EUR/USD",
+          "arah": "BUY",
           "metode": "LEAD-LAG",
-          "leader": "GBP/AUD",
-          "lag_menit": 30,
-          "korelasi": 0.62,
-          "n": 30,
+          "leader": "CHF/JPY",
+          "lag_menit": 40,
+          "korelasi": -0.71,
+          "n": 26,
           "level": null,
           "level_harga": null,
           "jarak_atr": null,
           "sentuhan": null,
-          "entry": 174.7425,
-          "sl": 174.86939,
-          "tp": 174.55216,
-          "sl_pip": 12.7,
+          "entry": 1.09745,
+          "sl": 1.09682,
+          "tp": 1.0984,
+          "sl_pip": 6.3,
           "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.618,
-          "z_leader": -0.37,
-          "dipicu": false
-        },
-        {
-          "pair": "USD/CAD",
-          "arah": "SELL",
-          "metode": "LEAD-LAG",
-          "leader": "GBP/JPY",
-          "lag_menit": 50,
-          "korelasi": 0.53,
-          "n": 22,
-          "level": null,
-          "level_harga": null,
-          "jarak_atr": null,
-          "sentuhan": null,
-          "entry": 1.4217,
-          "sl": 1.42253,
-          "tp": 1.42047,
-          "sl_pip": 8.2,
-          "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.534,
-          "z_leader": -0.62,
-          "dipicu": false
-        },
-        {
-          "pair": "EUR/NZD",
-          "arah": "SELL",
-          "metode": "LEAD-LAG",
-          "leader": "GBP/CHF",
-          "lag_menit": 20,
-          "korelasi": 0.53,
-          "n": 34,
-          "level": null,
-          "level_harga": null,
-          "jarak_atr": null,
-          "sentuhan": null,
-          "entry": 2.00029,
-          "sl": 2.00165,
-          "tp": 1.99826,
-          "sl_pip": 13.6,
-          "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.533,
-          "z_leader": -0.08,
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.705,
+          "z_leader": -0.67,
           "dipicu": false
         },
         {
@@ -1471,20 +1422,130 @@
           "metode": "LEAD-LAG",
           "leader": "GBP/CHF",
           "lag_menit": 20,
-          "korelasi": 0.53,
+          "korelasi": 0.7,
           "n": 34,
           "level": null,
           "level_harga": null,
           "jarak_atr": null,
           "sentuhan": null,
-          "entry": 1.65572,
-          "sl": 1.65746,
-          "tp": 1.65311,
+          "entry": 1.65559,
+          "sl": 1.65733,
+          "tp": 1.65298,
           "sl_pip": 17.4,
           "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.531,
-          "z_leader": -0.08,
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.697,
+          "z_leader": -0.21,
+          "dipicu": false
+        },
+        {
+          "pair": "USD/CHF",
+          "arah": "SELL",
+          "metode": "LEAD-LAG",
+          "leader": "CHF/JPY",
+          "lag_menit": 40,
+          "korelasi": 0.69,
+          "n": 26,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 0.83101,
+          "sl": 0.83177,
+          "tp": 0.82988,
+          "sl_pip": 7.5,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.689,
+          "z_leader": -0.67,
+          "dipicu": false
+        },
+        {
+          "pair": "EUR/JPY",
+          "arah": "SELL",
+          "metode": "LEAD-LAG",
+          "leader": "GBP/AUD",
+          "lag_menit": 30,
+          "korelasi": 0.6,
+          "n": 30,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 174.7135,
+          "sl": 174.8404,
+          "tp": 174.52316,
+          "sl_pip": 12.7,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.595,
+          "z_leader": -0.4,
+          "dipicu": false
+        },
+        {
+          "pair": "EUR/NZD",
+          "arah": "SELL",
+          "metode": "LEAD-LAG",
+          "leader": "GBP/CHF",
+          "lag_menit": 20,
+          "korelasi": 0.59,
+          "n": 34,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 2.00042,
+          "sl": 2.00178,
+          "tp": 1.99839,
+          "sl_pip": 13.6,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.594,
+          "z_leader": -0.21,
+          "dipicu": false
+        },
+        {
+          "pair": "GBP/USD",
+          "arah": "BUY",
+          "metode": "LEAD-LAG",
+          "leader": "CHF/JPY",
+          "lag_menit": 20,
+          "korelasi": -0.58,
+          "n": 34,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 1.31167,
+          "sl": 1.31079,
+          "tp": 1.31299,
+          "sl_pip": 8.8,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.577,
+          "z_leader": -0.7,
+          "dipicu": false
+        },
+        {
+          "pair": "USD/CAD",
+          "arah": "SELL",
+          "metode": "LEAD-LAG",
+          "leader": "CHF/JPY",
+          "lag_menit": 40,
+          "korelasi": 0.55,
+          "n": 26,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 1.42153,
+          "sl": 1.42236,
+          "tp": 1.4203,
+          "sl_pip": 8.2,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.553,
+          "z_leader": -0.67,
           "dipicu": false
         },
         {
@@ -1493,20 +1554,64 @@
           "metode": "LEAD-LAG",
           "leader": "USD/JPY",
           "lag_menit": 20,
-          "korelasi": -0.52,
+          "korelasi": -0.53,
           "n": 34,
           "level": null,
           "level_harga": null,
           "jarak_atr": null,
           "sentuhan": null,
-          "entry": 0.66281,
-          "sl": 0.66206,
-          "tp": 0.66394,
+          "entry": 0.66287,
+          "sl": 0.66212,
+          "tp": 0.664,
           "sl_pip": 7.5,
           "bar_terakhir": "2026-11-25T20:00:00Z",
-          "mulai": "2026-11-25T21:15:00Z",
-          "skor": 0.52,
-          "z_leader": -0.05,
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.533,
+          "z_leader": -0.36,
+          "dipicu": false
+        },
+        {
+          "pair": "EUR/CAD",
+          "arah": "SELL",
+          "metode": "LEAD-LAG",
+          "leader": "GBP/CHF",
+          "lag_menit": 20,
+          "korelasi": 0.53,
+          "n": 34,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 1.56008,
+          "sl": 1.56087,
+          "tp": 1.55889,
+          "sl_pip": 7.9,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.528,
+          "z_leader": -0.21,
+          "dipicu": false
+        },
+        {
+          "pair": "XAU/USD",
+          "arah": "BUY",
+          "metode": "LEAD-LAG",
+          "leader": "CHF/JPY",
+          "lag_menit": 55,
+          "korelasi": -0.53,
+          "n": 20,
+          "level": null,
+          "level_harga": null,
+          "jarak_atr": null,
+          "sentuhan": null,
+          "entry": 3580.0495,
+          "sl": 3564.13722,
+          "tp": 3603.91792,
+          "sl_pip": 159.1,
+          "bar_terakhir": "2026-11-25T20:00:00Z",
+          "mulai": "2026-11-25T21:30:00Z",
+          "skor": 0.525,
+          "z_leader": -1.01,
           "dipicu": false
         }
       ]
