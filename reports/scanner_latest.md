@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-25T19:00:42Z
+- Waktu eksekusi: 2026-11-25T19:15:25Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -24,9 +24,9 @@
 | EUR/CHF | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.91024 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
 | EUR/AUD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.66392 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
 | EUR/CAD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.55876 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
-| EUR/NZD | MIXED | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00664 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime MIXED belum punya metode prioritas di ranking |
-| XAU/USD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 3445.7045 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
-| XAU/AUD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 5236.682 | — | 168/180 | 2026-11-25T15:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| EUR/NZD | MIXED | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00583 | — | 168/180 | 2026-11-25T16:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime MIXED belum punya metode prioritas di ranking |
+| XAU/USD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 3467.7405 | — | 168/180 | 2026-11-25T16:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
+| XAU/AUD | TRENDING KUAT | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 5256.691 | — | 168/180 | 2026-11-25T16:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING KUAT belum punya metode prioritas di ranking |
 
 ## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)
 Dari lead-lag, maks 3 pair: leader bergerak, follower tertinggal 5-60 menit. BUY/SELL mengikuti arah leader. SL 0.5 ATR H1, TP 1.5R. Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.
@@ -35,13 +35,9 @@ Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-25T19:00:42Z, pasangan lolos 1.
+- Backtest jendela 360 menit, diperbarui 2026-11-25T19:15:25Z, pasangan lolos 0.
 
-Pasangan lolos (10 teratas, urut |korelasi|):
-
-| Leader | Follower | Lag (menit) | Korelasi | Korelasi lag 0 | n |
-|---|---|---|---|---|---|
-| GBP/JPY | AUD/CHF | 20 | -0.506 | 0.443 | 67 |
+Tidak ada pasangan yang lolos ambang.
 
 Tidak ada kandidat di run ini.
 
@@ -92,14 +88,14 @@ Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan a
   - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
   - M15: resistance tidak ada dalam jarak · support 1.55906 (0.42 ATR, 8 bar sentuh)
 - **EUR/NZD** (NO TRADE)
-  - H1: resistance 2.01012 (1.32 ATR, 3 bar sentuh) · support 2.00657 (0.03 ATR, 24 bar sentuh)
+  - H1: resistance 2.00657 (0.28 ATR, 24 bar sentuh) · support tidak ada dalam jarak
   - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
 - **XAU/USD** (NO TRADE)
   - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
   - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
 - **XAU/AUD** (NO TRADE)
-  - H1: resistance tidak ada dalam jarak · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
+  - H1: resistance 5310.43358 (1.41 ATR, 15 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 5273.18 (0.75 ATR, 6 bar sentuh) · support tidak ada dalam jarak
 
 ## Keterangan
 - **ENTRY LONG/SHORT**: semua syarat terpenuhi. Entry, SL, dan TP boleh dipakai.
