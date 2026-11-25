@@ -1,3 +1,29 @@
 {
-  "aktif": []
+  "aktif": [
+    {
+      "pair": "AUD/USD",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "USD/JPY",
+      "lag_menit": 25,
+      "korelasi": 0.51,
+      "n": 66,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.65705,
+      "sl": 0.65777,
+      "tp": 0.65597,
+      "sl_pip": 7.2,
+      "bar_terakhir": "2026-11-25T09:00:00Z",
+      "mulai": "2026-11-25T10:45:00Z",
+      "skor": 0.508,
+      "z_leader": -0.72,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T10:45:24Z"
+    }
+  ]
 }
