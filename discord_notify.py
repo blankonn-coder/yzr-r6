@@ -144,9 +144,12 @@ def build_embed(now, status, rows, ranking_ok, info=None):
     if cad_saran := info["saran"]:
         ll = [s for s in cad_saran if s.get("metode") == "LEAD-LAG"]
         if ll:
-            fields.append({"name": "🔁 Pair (BUKAN sinyal)",
-                           "value": _cut("\n".join(f"**{s['pair']}** · {s['lag_menit']}m" for s in ll)),
-                           "inline": False})
+            for arah in ("BUY", "SELL"):
+                grup = [s for s in ll if s["arah"] == arah]
+                if grup:
+                    fields.append({"name": f"🔁 {arah} (BUKAN sinyal)",
+                                   "value": _cut("\n".join(f"**{s['pair']}** · {s['lag_menit']}m" for s in grup)),
+                                   "inline": False})
         else:
             fields.append({"name": "💡 Saran cadangan (BUKAN sinyal, belum divalidasi backtest)",
                            "value": _cut("\n".join(map(_saran_baris, cad_saran))), "inline": False})
