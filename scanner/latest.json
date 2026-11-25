@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-25T15:00:53Z",
+  "waktu": "2026-11-25T15:15:35Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -42,11 +42,11 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00083,
+          "atr": 0.00082,
           "resistance": {
             "harga": 1.09505,
-            "jarak_atr": 0.59,
-            "sentuhan": 14,
+            "jarak_atr": 0.01,
+            "sentuhan": 15,
             "umur_bar": 0
           },
           "support": null
@@ -99,14 +99,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00099,
-          "resistance": {
-            "harga": 1.30698,
-            "jarak_atr": 0.65,
-            "sentuhan": 27,
-            "umur_bar": 0
-          },
-          "support": null
+          "atr": 0.00106,
+          "resistance": null,
+          "support": {
+            "harga": 1.30428,
+            "jarak_atr": 0.79,
+            "sentuhan": 31,
+            "umur_bar": 119
+          }
         },
         "m15_tersedia": true
       }
@@ -151,7 +151,7 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.09337,
+          "atr": 0.10827,
           "resistance": null,
           "support": null
         },
@@ -193,14 +193,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00107,
-          "resistance": {
-            "harga": 0.83093,
-            "jarak_atr": 0.73,
-            "sentuhan": 5,
-            "umur_bar": 1
-          },
-          "support": null
+          "atr": 0.00105,
+          "resistance": null,
+          "support": {
+            "harga": 0.82863,
+            "jarak_atr": 0.83,
+            "sentuhan": 2,
+            "umur_bar": 4
+          }
         },
         "m15_tersedia": true
       }
@@ -245,19 +245,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00073,
+          "atr": 0.00076,
           "resistance": {
-            "harga": 0.6586,
-            "jarak_atr": 0.53,
-            "sentuhan": 6,
+            "harga": 0.65748,
+            "jarak_atr": 0.1,
+            "sentuhan": 18,
             "umur_bar": 0
           },
-          "support": {
-            "harga": 0.65748,
-            "jarak_atr": 1.0,
-            "sentuhan": 17,
-            "umur_bar": 1
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -297,13 +292,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00096,
+          "atr": 0.00097,
           "resistance": null,
           "support": {
             "harga": 1.42298,
-            "jarak_atr": 0.62,
-            "sentuhan": 2,
-            "umur_bar": 1
+            "jarak_atr": 0.43,
+            "sentuhan": 3,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -354,13 +349,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00048,
-          "resistance": {
-            "harga": 0.54642,
-            "jarak_atr": 0.76,
-            "sentuhan": 13,
-            "umur_bar": 3
-          },
+          "atr": 0.00051,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -411,14 +401,9 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00033,
+          "atr": 0.00039,
           "resistance": null,
-          "support": {
-            "harga": 0.8378,
-            "jarak_atr": 0.3,
-            "sentuhan": 4,
-            "umur_bar": 0
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -463,8 +448,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.13084,
-          "resistance": null,
+          "atr": 0.14307,
+          "resistance": {
+            "harga": 174.23739,
+            "jarak_atr": 0.19,
+            "sentuhan": 22,
+            "umur_bar": 0
+          },
           "support": null
         },
         "m15_tersedia": true
@@ -505,7 +495,7 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00102,
+          "atr": 0.001,
           "resistance": null,
           "support": null
         },
@@ -552,17 +542,17 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00156,
+          "atr": 0.00167,
           "resistance": {
-            "harga": 1.66329,
-            "jarak_atr": 0.25,
+            "harga": 1.66674,
+            "jarak_atr": 0.59,
             "sentuhan": 10,
-            "umur_bar": 0
+            "umur_bar": 7
           },
           "support": {
-            "harga": 1.66211,
-            "jarak_atr": 0.51,
-            "sentuhan": 6,
+            "harga": 1.66469,
+            "jarak_atr": 0.63,
+            "sentuhan": 18,
             "umur_bar": 0
           }
         },
@@ -651,13 +641,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00123,
-          "resistance": {
-            "harga": 2.00563,
-            "jarak_atr": 0.88,
-            "sentuhan": 18,
-            "umur_bar": 1
-          },
+          "atr": 0.00134,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -703,13 +688,8 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 14.65626,
-          "resistance": {
-            "harga": 3484.8155,
-            "jarak_atr": 0.96,
-            "sentuhan": 5,
-            "umur_bar": 0
-          },
+          "atr": 14.93932,
+          "resistance": null,
           "support": null
         },
         "m15_tersedia": true
@@ -755,11 +735,11 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 20.39259,
+          "atr": 20.3878,
           "resistance": {
             "harga": 5273.18,
-            "jarak_atr": 0.02,
-            "sentuhan": 3,
+            "jarak_atr": 0.8,
+            "sentuhan": 4,
             "umur_bar": 0
           },
           "support": null
@@ -774,7 +754,7 @@
   "leadlag": {
     "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-25T15:00:53Z",
+      "diperbarui": "2026-11-25T15:15:35Z",
       "jendela_menit": 360,
       "jumlah_lolos": 0,
       "pasangan_lolos": [],
