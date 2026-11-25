@@ -1,29 +1,29 @@
 {
   "aktif": [
     {
-      "pair": "EUR/JPY",
+      "pair": "EUR/GBP",
       "arah": "SELL",
       "metode": "LEAD-LAG",
-      "leader": "XAU/AUD",
+      "leader": "CAD/JPY",
       "lag_menit": 35,
-      "korelasi": 0.53,
-      "n": 50,
+      "korelasi": -0.51,
+      "n": 62,
       "level": null,
       "level_harga": null,
       "jarak_atr": null,
       "sentuhan": null,
-      "entry": 174.5325,
-      "sl": 174.63016,
-      "tp": 174.38601,
-      "sl_pip": 9.8,
-      "bar_terakhir": "2026-11-25T00:00:00Z",
-      "mulai": "2026-11-25T01:30:00Z",
-      "skor": 0.528,
-      "z_leader": -1.09,
+      "entry": 0.83615,
+      "sl": 0.83637,
+      "tp": 0.83583,
+      "sl_pip": 2.1,
+      "bar_terakhir": "2026-11-25T01:00:00Z",
+      "mulai": "2026-11-25T02:30:00Z",
+      "skor": 0.512,
+      "z_leader": 0.87,
       "dipicu": false,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
-      "dibuat": "2026-11-25T01:30:34Z"
+      "dibuat": "2026-11-25T02:30:28Z"
     }
   ]
 }
