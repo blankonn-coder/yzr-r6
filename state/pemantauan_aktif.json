@@ -76,29 +76,29 @@
       "dibuat": "2026-11-25T00:15:28Z"
     },
     {
-      "pair": "EUR/JPY",
-      "arah": "SELL",
+      "pair": "GBP/USD",
+      "arah": "BUY",
       "metode": "LEAD-LAG",
-      "leader": "XAU/USD",
-      "lag_menit": 35,
-      "korelasi": 0.58,
-      "n": 50,
+      "leader": "EUR/GBP",
+      "lag_menit": 50,
+      "korelasi": 0.56,
+      "n": 60,
       "level": null,
       "level_harga": null,
       "jarak_atr": null,
       "sentuhan": null,
-      "entry": 174.5165,
-      "sl": 174.61571,
-      "tp": 174.36768,
-      "sl_pip": 9.9,
+      "entry": 1.3108,
+      "sl": 1.31021,
+      "tp": 1.3117,
+      "sl_pip": 5.9,
       "bar_terakhir": "2026-11-24T23:00:00Z",
-      "mulai": "2026-11-25T00:15:00Z",
-      "skor": 0.581,
-      "z_leader": -1.03,
+      "mulai": "2026-11-25T00:30:00Z",
+      "skor": 0.557,
+      "z_leader": 0.55,
       "dipicu": false,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
-      "dibuat": "2026-11-25T00:15:28Z"
+      "dibuat": "2026-11-25T00:30:35Z"
     }
   ]
 }
