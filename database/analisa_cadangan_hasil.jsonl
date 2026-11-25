@@ -212,3 +212,26 @@
 {"id": "EUR_NZD_2026-11-24T19:00:00Z", "level": "support", "harga_level": 1.99903, "sentuh_12h": false, "perubahan_atr": {"1h": 0.11, "4h": 0.92, "12h": 2.78}, "dicatat": "2026-11-25T08:00:46Z"}
 {"id": "XAU_USD_2026-11-24T18:00:00Z", "level": null, "dicatat": "2026-11-25T08:00:46Z"}
 {"id": "XAU_AUD_2026-11-24T18:00:00Z", "level": "resistance", "harga_level": 5377.382, "sentuh_12h": true, "perubahan_atr": {"1h": 0.11, "4h": 0.03, "12h": 0.56}, "dicatat": "2026-11-25T08:00:46Z"}
+{"id": "EUR_USD_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 1.09682, "sentuh_12h": false, "perubahan_atr": {"1h": 0.0, "4h": -0.34, "12h": -1.92}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_USD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 1.09589, "sentuh_12h": true, "perubahan_atr": {"1h": 0.0, "4h": -0.34, "12h": -1.92}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "GBP_USD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 1.31042, "sentuh_12h": true, "perubahan_atr": {"1h": 0.09, "4h": 0.05, "12h": -2.45}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "USD_JPY_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 159.25344, "sentuh_12h": true, "perubahan_atr": {"1h": 0.1, "4h": -0.02, "12h": 0.89}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "USD_CHF_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 0.83669, "sentuh_12h": true, "perubahan_atr": {"1h": 0.1, "4h": 0.3, "12h": -1.03}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "USD_CHF_2026-11-24T20:00:00Z", "level": "support", "harga_level": 0.8344, "sentuh_12h": true, "perubahan_atr": {"1h": 0.1, "4h": 0.3, "12h": -1.03}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "AUD_USD_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 0.66545, "sentuh_12h": true, "perubahan_atr": {"1h": -0.09, "4h": 1.12, "12h": -5.81}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "AUD_USD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 0.66332, "sentuh_12h": true, "perubahan_atr": {"1h": -0.09, "4h": 1.12, "12h": -5.81}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "USD_CAD_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 1.42701, "sentuh_12h": true, "perubahan_atr": {"1h": 0.0, "4h": -0.39, "12h": 0.6}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "NZD_USD_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 0.54932, "sentuh_12h": false, "perubahan_atr": {"1h": -0.11, "4h": -0.46, "12h": -3.0}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "NZD_USD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 0.54756, "sentuh_12h": true, "perubahan_atr": {"1h": -0.11, "4h": -0.46, "12h": -3.0}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_GBP_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 0.83661, "sentuh_12h": true, "perubahan_atr": {"1h": -0.14, "4h": -0.6, "12h": 0.91}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_GBP_2026-11-24T20:00:00Z", "level": "support", "harga_level": 0.83601, "sentuh_12h": true, "perubahan_atr": {"1h": -0.14, "4h": -0.6, "12h": 0.91}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_JPY_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 174.88706, "sentuh_12h": false, "perubahan_atr": {"1h": 0.04, "4h": -0.3, "12h": -0.85}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_JPY_2026-11-24T20:00:00Z", "level": "support", "harga_level": 174.505, "sentuh_12h": true, "perubahan_atr": {"1h": 0.04, "4h": -0.3, "12h": -0.85}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_CHF_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 0.91743, "sentuh_12h": false, "perubahan_atr": {"1h": 0.09, "4h": 0.09, "12h": -3.32}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_CHF_2026-11-24T20:00:00Z", "level": "support", "harga_level": 0.91556, "sentuh_12h": true, "perubahan_atr": {"1h": 0.09, "4h": 0.09, "12h": -3.32}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_AUD_2026-11-24T20:00:00Z", "level": "resistance", "harga_level": 1.65267, "sentuh_12h": true, "perubahan_atr": {"1h": 0.1, "4h": -1.48, "12h": 5.22}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_AUD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 1.65051, "sentuh_12h": true, "perubahan_atr": {"1h": 0.1, "4h": -1.48, "12h": 5.22}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_CAD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 1.56439, "sentuh_12h": true, "perubahan_atr": {"1h": -0.01, "4h": -0.61, "12h": -1.3}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "EUR_NZD_2026-11-24T20:00:00Z", "level": "support", "harga_level": 1.99917, "sentuh_12h": false, "perubahan_atr": {"1h": 0.1, "4h": 0.28, "12h": 2.0}, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "XAU_USD_2026-11-24T19:00:00Z", "level": null, "dicatat": "2026-11-25T09:00:42Z"}
+{"id": "XAU_AUD_2026-11-24T19:00:00Z", "level": "resistance", "harga_level": 5377.382, "sentuh_12h": true, "perubahan_atr": {"1h": -0.22, "4h": -0.86, "12h": 0.77}, "dicatat": "2026-11-25T09:00:42Z"}

@@ -1,3 +1,29 @@
 {
-  "aktif": []
+  "aktif": [
+    {
+      "pair": "USD/CHF",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "EUR/GBP",
+      "lag_menit": 35,
+      "korelasi": 0.51,
+      "n": 64,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.83437,
+      "sl": 0.83491,
+      "tp": 0.83356,
+      "sl_pip": 5.4,
+      "bar_terakhir": "2026-11-25T08:00:00Z",
+      "mulai": "2026-11-25T09:00:00Z",
+      "skor": 0.514,
+      "z_leader": -0.38,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T09:00:42Z"
+    }
+  ]
 }
