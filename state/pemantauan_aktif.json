@@ -24,6 +24,31 @@
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
       "dibuat": "2026-11-25T02:30:28Z"
+    },
+    {
+      "pair": "USD/CHF",
+      "arah": "BUY",
+      "metode": "LEAD-LAG",
+      "leader": "NZD/USD",
+      "lag_menit": 5,
+      "korelasi": -0.52,
+      "n": 68,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.83581,
+      "sl": 0.83534,
+      "tp": 0.83653,
+      "sl_pip": 4.8,
+      "bar_terakhir": "2026-11-25T02:00:00Z",
+      "mulai": "2026-11-25T03:00:00Z",
+      "skor": 0.52,
+      "z_leader": -1.1,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-25T03:00:39Z"
     }
   ]
 }
