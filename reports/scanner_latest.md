@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-25T14:00:43Z
+- Waktu eksekusi: 2026-11-25T14:15:25Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -35,7 +35,7 @@ Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-25T14:00:43Z, pasangan lolos 0.
+- Backtest jendela 360 menit, diperbarui 2026-11-25T14:15:25Z, pasangan lolos 0.
 
 Tidak ada pasangan yang lolos ambang.
 

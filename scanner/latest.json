@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-25T14:00:43Z",
+  "waktu": "2026-11-25T14:15:25Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -774,7 +774,7 @@
   "leadlag": {
     "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-25T14:00:43Z",
+      "diperbarui": "2026-11-25T14:15:25Z",
       "jendela_menit": 360,
       "jumlah_lolos": 0,
       "pasangan_lolos": [],
