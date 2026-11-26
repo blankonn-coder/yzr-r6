@@ -1,54 +1,59 @@
-# Adaptive Forex Scanner (Skema FINAL BERSIH v2)
+# Skema Final: EUR/USD sebagai Pemantik dengan Konfirmasi Multi-Pair
 
-Scanner forex per jam berbasis regime pasar H1 dan ranking hasil backtest.
-Spesifikasi lengkap ada di dokumen skema; file ini merangkum cara kerja dan batasannya.
+Scanner polling 15 menit. Satu siklus per bar M15 yang sudah tutup. Data dari biquote.
 
-## Alur
-1. **Backtest** (lokal, tiap 3 bulan): `python -m backtest.run`
-   - Data M1 bid/ask dari cache CSV (`DUKASCOPY_CACHE_DIR`).
-   - Lima metode diuji per pair, dibagi 4 fold out-of-sample, tanpa optimasi parameter.
-   - Hasil di-append ke `database/ranking_history.jsonl` dan ditulis ke `reports/ranking.md`.
-2. **Scanner live** (GitHub Actions, menit ke-5 tiap jam): `python main.py`
-   - Ambil H1 dan H4 tertutup dari biquote, validasi, hitung regime dan bias H4.
-   - Ambil metode PRIORITAS untuk pair + regime dari ranking aktif (bintang ≥ 3, lolos penguci).
-   - Tanpa ranking aktif, semua pair berlabel NO TRADE.
-   - Hasil: `reports/scanner_latest.md`, `scanner/latest.json`, dan Discord.
+## Struktur repo
+```
+config.py              parameter skema, path, dan fungsi bantu
+engine.py              indikator, persiapan data, trigger, korelasi, filter, target, keputusan
+pantauan.py            pemantauan entry (titik 15/30/45/60 menit, evaluasi 1 jam)
+main.py                scanner live: data biquote, validasi, analisa, laporan, Discord
+backtest.py            backtest §12 (memakai engine yang sama dengan live)
+tests/test_all.py      seluruh tes (python -m pytest tests/)
+requirements.txt       requests, pytest
+.gitignore
+.github/workflows/forex_scalper.yml
+```
+Folder `state/`, `database/`, `reports/`, dan `scanner/` dibuat dan di-commit oleh bot saat run.
 
-## Label
-- `ENTRY LONG/SHORT`: trigger terpenuhi, tidak ada news ±30 menit, dan spread terverifikasi.
-- `WATCHLIST`: metode ada tetapi trigger belum, ada news, kalender gagal, atau spread belum terverifikasi.
-- `NO TRADE`: tidak ada metode PRIORITAS untuk regime tersebut.
-- `DATA INVALID`: gagal ambil atau validasi data.
+## Alur per siklus (`main.py`)
+1. Perbarui pemantauan entry yang masih berjalan.
+2. Ambil candle M15 (5 pair) dan H4 (EUR/USD) dari biquote, validasi, lalu sejajarkan timestamp.
+3. Analisa bar terakhir yang tutup (`engine.analyze`):
+   - **Trigger** EUR/USD: close vs EMA50, stochastic cross dari zona 20/80, ATR di atas median 100 bar.
+   - **Bobot adaptif**: korelasi rolling 50/200/500 bar, dikombinasikan dan dinormalisasi.
+   - **Skor konfirmasi** dibandingkan dengan quantile 70/30 dari riwayat skor.
+   - **Filter**: persentil ATR 30–80, tren H4, kalender ±30 menit, dan korelasi rata-rata ≥ 0,2.
+   - **Target EUR/JPY**: USD/JPY tidak berlawanan arah trigger, dan EUR/JPY di sisi EMA50 yang sesuai.
+4. Jika semua lulus: entry = close M15 EUR/JPY, SL = clamp(1,5 × ATR, 10–15 pip), TP = 10 pip.
+5. Catat ke `database/signal_log.jsonl`, `reports/scanner_latest.md`, `scanner/latest.json`, dan Discord.
 
-## Analisa cadangan dan pemantauan (BUKAN sinyal untuk cadangan)
-- **Level** (NO TRADE/WATCHLIST): support dan resistance terdekat dari H1 dan M15. Tidak mengubah label.
-- **Saran cadangan**: 5 pair dengan level H1 terdekat (maks 1 ATR). Support memberi BUY, resistance memberi SELL. SL 0,5 ATR di seberang level, TP 1,5R. Hanya kedekatan harga ke level, tanpa backtest, tanpa cek spread atau news.
-- **Pemantauan 15 menit** (`pantauan.py`): untuk entry ENTRY dan saran cadangan. Titik cek 15, 30, 45, 60 menit dari close candle M15, dihitung dalam pip dari entry.
-- **Evaluasi 1 jam**: dibuat setelah 60 menit, atau saat SL/TP kena. Berisi pip akhir, MFE (gerak terbaik), dan MAE (gerak terburuk). Jika SL dan TP kena di candle yang sama, dihitung SL.
-- Catatan aktif: `state/pemantauan_aktif.json`. Arsip evaluasi: `database/pemantauan.jsonl`. Konfigurasi: `config.py` bagian "Pemantauan entry dan saran cadangan".
-- Scanner berjalan per jam (cron), jadi titik 15 menit dibaca dari candle M15, bukan dari run tiap 15 menit.
+Label: `ENTRY LONG/SHORT`, `NO TRADE` (trigger ada, alasan dicatat), `NO SIGNAL`, `DATA INVALID`.
 
-## Keadaan saat ini
-- Spread live belum tersambung (`SPREAD_TERSEDIA = False`), sehingga tidak ada ENTRY.
-- Saran cadangan dan pemantauan aktif. Keduanya bukan sinyal dan belum divalidasi backtest.
-- Ranking belum ada, sehingga scanner hanya menghasilkan NO TRADE.
-- §9 manajemen risiko (batas 3 trade/pair/hari, korelasi) belum diimplementasi.
+## Performa
+- Korelasi memakai prefix sum, sehingga setiap jendela O(1). Tidak ada loop ulang per bar.
+- Analisa penuh hanya dijalankan saat trigger aktif. Pemeriksaan murah dilakukan dulu.
+- Keputusan, skor, level entry, dan trade identik dengan versi berstruktur lebih rumit, diuji bar demi bar pada 3 dataset sintetis (33.837 bar, 338 bar trigger, 16 entry).
 
-## Yang belum diverifikasi (ASUMSI)
-- Endpoint dan skema kalender biquote (`BIQUOTE_CALENDAR_PATH`). Jika gagal, scanner tidak membuat ENTRY.
-- Batas jumlah candle per request di biquote (`H1_COUNT`, `H4_COUNT`).
-- Integrasi dukascopy-downloader. Saat ini loader membaca CSV dari cache; format ada di `backtest/dukascopy_loader.py`.
-- Periode indikator standar (ATR 14, ADX 14, MACD 12/26/9, Stoch 14/3/3, BB 20/2, Fisher 10).
-  Spesifikasi tidak menyebutkannya.
+## Backtest
+```
+BACKTEST_CACHE_DIR=/path/cache python backtest.py
+```
+Cache berisi `{PAIR}_M15.csv` (kolom `time, open, high, low, close`) untuk semua pair. Hasil: `reports/backtest.md`.
+- Biaya: spread (EUR/USD 1,5 pip, EUR/JPY 2,0 pip, selain itu 2,0) + slippage 0,5 pip.
+- Berita tidak bisa diuji, sehingga hasil cenderung optimistis.
+- Tidak ada parameter yang dioptimasi.
+
+## Keputusan dan asumsi (perlu dikonfirmasi)
+- **Sumber data biquote**, bukan OANDA. Nama interval `15m`, endpoint kalender, dan batas candle (`M15_COUNT = 700`) belum diverifikasi.
+- **Pair konfirmasi** mengikuti pseudocode §13. **Target** EUR/JPY. EUR/GBP tersedia lewat `TARGET_RULES` jika ingin diganti.
+- **Rumus skor** tidak mengalikan dengan arah trigger. Dengan rumus spesifikasi, aturan BUY ≥ q70 dan SELL ≤ q30 saling bertentangan.
+- **Stochastic "cross dari bawah 20"** dibaca sebagai %K bar sebelumnya < 20 saat cross.
+- **Filter korelasi** menghentikan entry seperti filter lain. Spesifikasi juga menyebut "turunkan ke single-pair trigger", yang tidak diimplementasikan.
+- **Lead-lag** hanya dicatat sebagai informasi, sesuai pseudocode.
+- **Spread** tidak tersedia, sehingga filter spread dilewati.
+- **Batas posisi** memakai catatan pemantauan (maks 60 menit), bukan posisi nyata di broker.
 
 ## Konfigurasi GitHub
-- Secret `DISCORD_WEBHOOK_URL`
-- Variable `DISCORD_NOTIFY_MODE` (`signal` default | `always` | `off`)
-
-## Keputusan: ambang bintang
-- Semua bintang 1 sampai 5 boleh dipakai scanner (`RANK_PRIORITY_STARS = 1`). Spesifikasi §7b awalnya hanya bintang 3 ke atas.
-- Penguci tetap berlaku: PF > 1, expectancy > 0, DD ≤ 15R, dan sampel ≥ 30 trade (sel PROVISIONAL tidak dipakai).
-- Setiap sinyal menampilkan mode dan kekuatan sel di laporan dan Discord, sehingga pembaca bisa menilai dasarnya.
-
-## Tes
-    python -m pytest tests/
+- Secret `DISCORD_WEBHOOK_URL`, variable `DISCORD_NOTIFY_MODE` (`signal` | `always` | `off`).
+- Jadwal cron-job.org dikirim ke `repository_dispatch` tiap 15 menit.
