@@ -1,29 +1,3 @@
 {
-  "aktif": [
-    {
-      "pair": "USD/CAD",
-      "arah": "SELL",
-      "metode": "LEAD-LAG",
-      "leader": "EUR/CHF",
-      "lag_menit": 55,
-      "korelasi": 0.51,
-      "n": 60,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 1.42268,
-      "sl": 1.42328,
-      "tp": 1.42179,
-      "sl_pip": 5.9,
-      "bar_terakhir": "2026-11-26T05:00:00Z",
-      "mulai": "2026-11-26T06:30:00Z",
-      "skor": 0.515,
-      "z_leader": -0.46,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-26T06:30:35Z"
-    }
-  ]
+  "aktif": []
 }
