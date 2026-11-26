@@ -1,2 +1,0 @@
-# Hanya untuk backtest lokal
-# dukascopy-downloader: API paket BELUM diverifikasi; loader saat ini membaca CSV cache.
