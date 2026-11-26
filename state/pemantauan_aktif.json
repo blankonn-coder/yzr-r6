@@ -1,3 +1,29 @@
 {
-  "aktif": []
+  "aktif": [
+    {
+      "pair": "EUR/CHF",
+      "arah": "SELL",
+      "metode": "LEAD-LAG",
+      "leader": "AUD/NZD",
+      "lag_menit": 60,
+      "korelasi": -0.5,
+      "n": 59,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.91529,
+      "sl": 0.91567,
+      "tp": 0.91473,
+      "sl_pip": 3.8,
+      "bar_terakhir": "2026-11-26T20:00:00Z",
+      "mulai": "2026-11-26T21:45:00Z",
+      "skor": 0.501,
+      "z_leader": 0.94,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-26T21:45:22Z"
+    }
+  ]
 }
