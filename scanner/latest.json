@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-26T21:45:22Z",
+  "waktu": "2026-11-26T22:00:39Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -503,7 +503,7 @@
       "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 0.91524,
+      "harga": 0.91533,
       "entry": null,
       "sl": null,
       "tp": null,
@@ -519,33 +519,33 @@
         "h1": 168,
         "h4": 180
       },
-      "bar_terakhir": "2026-11-26T20:00:00Z",
+      "bar_terakhir": "2026-11-26T21:00:00Z",
       "cadangan": {
         "sumber": "biquote",
         "h1": {
           "tf": "H1",
-          "atr": 0.00075,
+          "atr": 0.00071,
           "resistance": {
             "harga": 0.91579,
-            "jarak_atr": 0.73,
+            "jarak_atr": 0.64,
             "sentuhan": 14,
-            "umur_bar": 5
+            "umur_bar": 6
           },
           "support": {
-            "harga": 0.91477,
-            "jarak_atr": 0.63,
-            "sentuhan": 8,
-            "umur_bar": 1
+            "harga": 0.91484,
+            "jarak_atr": 0.69,
+            "sentuhan": 7,
+            "umur_bar": 2
           }
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00019,
+          "atr": 0.00018,
           "resistance": {
-            "harga": 0.91539,
-            "jarak_atr": 0.54,
-            "sentuhan": 28,
-            "umur_bar": 15
+            "harga": 0.91542,
+            "jarak_atr": 0.51,
+            "sentuhan": 29,
+            "umur_bar": 16
           },
           "support": null
         },
@@ -679,7 +679,7 @@
       "status": "Tidak ada metode prioritas",
       "metode": null,
       "arah": null,
-      "harga": 2.00481,
+      "harga": 2.00543,
       "entry": null,
       "sl": null,
       "tp": null,
@@ -695,33 +695,38 @@
         "h1": 168,
         "h4": 180
       },
-      "bar_terakhir": "2026-11-26T20:00:00Z",
+      "bar_terakhir": "2026-11-26T21:00:00Z",
       "cadangan": {
         "sumber": "biquote",
         "h1": {
           "tf": "H1",
-          "atr": 0.00166,
+          "atr": 0.0016,
           "resistance": {
-            "harga": 2.00674,
-            "jarak_atr": 1.16,
-            "sentuhan": 17,
-            "umur_bar": 26
+            "harga": 2.00655,
+            "jarak_atr": 0.7,
+            "sentuhan": 19,
+            "umur_bar": 27
           },
           "support": {
             "harga": 2.0034,
-            "jarak_atr": 0.85,
+            "jarak_atr": 1.27,
             "sentuhan": 36,
-            "umur_bar": 5
+            "umur_bar": 6
           }
         },
         "m15": {
           "tf": "M15",
           "atr": 0.00051,
-          "resistance": null,
+          "resistance": {
+            "harga": 2.00582,
+            "jarak_atr": 0.75,
+            "sentuhan": 21,
+            "umur_bar": 23
+          },
           "support": {
             "harga": 2.00496,
-            "jarak_atr": 0.62,
-            "sentuhan": 50,
+            "jarak_atr": 0.94,
+            "sentuhan": 51,
             "umur_bar": 0
           }
         },
@@ -828,7 +833,8 @@
       }
     }
   ],
-  "saran_cadangan": [
+  "saran_cadangan": [],
+  "pemantauan": [
     {
       "pair": "EUR/CHF",
       "arah": "SELL",
@@ -849,90 +855,48 @@
       "mulai": "2026-11-26T21:45:00Z",
       "skor": 0.501,
       "z_leader": 0.94,
-      "dipicu": false
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {
+        "15": -0.4
+      },
+      "dibuat": "2026-11-26T21:45:22Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 0.91533,
+      "pip": -0.4,
+      "mfe": 0.7,
+      "mae": -0.4,
+      "umur_menit": 15,
+      "status": "AKTIF"
     }
   ],
-  "pemantauan": [],
   "evaluasi_1_jam": [],
   "leadlag": {
-    "saran": [
-      {
-        "pair": "EUR/CHF",
-        "arah": "SELL",
-        "metode": "LEAD-LAG",
-        "leader": "AUD/NZD",
-        "lag_menit": 60,
-        "korelasi": -0.5,
-        "n": 59,
-        "level": null,
-        "level_harga": null,
-        "jarak_atr": null,
-        "sentuhan": null,
-        "entry": 0.91529,
-        "sl": 0.91567,
-        "tp": 0.91473,
-        "sl_pip": 3.8,
-        "bar_terakhir": "2026-11-26T20:00:00Z",
-        "mulai": "2026-11-26T21:45:00Z",
-        "skor": 0.501,
-        "z_leader": 0.94,
-        "dipicu": false
-      }
-    ],
+    "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-26T21:45:22Z",
+      "diperbarui": "2026-11-26T22:00:39Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 3,
+      "jumlah_lolos": 2,
       "pasangan_lolos": [
-        {
-          "leader": "XAU/AUD",
-          "follower": "GBP/AUD",
-          "lag_menit": 40,
-          "korelasi": -0.581,
-          "korelasi_lag0": 0.266,
-          "n": 44
-        },
         {
           "leader": "EUR/NZD",
           "follower": "GBP/CHF",
           "lag_menit": 40,
-          "korelasi": -0.542,
-          "korelasi_lag0": 0.119,
-          "n": 63
+          "korelasi": -0.51,
+          "korelasi_lag0": 0.03,
+          "n": 62
         },
         {
-          "leader": "AUD/NZD",
-          "follower": "EUR/CHF",
-          "lag_menit": 60,
+          "leader": "EUR/AUD",
+          "follower": "XAU/USD",
+          "lag_menit": 5,
           "korelasi": -0.501,
-          "korelasi_lag0": 0.117,
-          "n": 59
+          "korelasi_lag0": -0.262,
+          "n": 40
         }
       ],
-      "kandidat": [
-        {
-          "pair": "EUR/CHF",
-          "arah": "SELL",
-          "metode": "LEAD-LAG",
-          "leader": "AUD/NZD",
-          "lag_menit": 60,
-          "korelasi": -0.5,
-          "n": 59,
-          "level": null,
-          "level_harga": null,
-          "jarak_atr": null,
-          "sentuhan": null,
-          "entry": 0.91529,
-          "sl": 0.91567,
-          "tp": 0.91473,
-          "sl_pip": 3.8,
-          "bar_terakhir": "2026-11-26T20:00:00Z",
-          "mulai": "2026-11-26T21:45:00Z",
-          "skor": 0.501,
-          "z_leader": 0.94,
-          "dipicu": false
-        }
-      ]
+      "kandidat": []
     },
     "status": "dianalisa",
     "gagal": []

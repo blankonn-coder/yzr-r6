@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-26T21:45:22Z
+- Waktu eksekusi: 2026-11-26T22:00:39Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -21,41 +21,36 @@
 | NZD/USD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.54716 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
 | EUR/GBP | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.83698 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
 | EUR/JPY | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 174.7215 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
-| EUR/CHF | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.91524 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/CHF | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 0.91533 | — | 168/180 | 2026-11-26T21:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
 | EUR/AUD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.65325 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
 | EUR/CAD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 1.56278 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
-| EUR/NZD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00481 | — | 168/180 | 2026-11-26T20:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
+| EUR/NZD | TRENDING LEMAH | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 2.00543 | — | 168/180 | 2026-11-26T21:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime TRENDING LEMAH belum punya metode prioritas di ranking |
 | XAU/USD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 3568.3995 | — | 168/180 | 2026-11-26T18:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
 | XAU/AUD | RANGING | BELUM SIAP | NO TRADE | Tidak ada metode prioritas | - | - | — | 5380.9635 | — | 168/180 | 2026-11-26T18:00:00Z | bias H4 belum bisa dihitung (bar H4: 180, butuh 200); regime RANGING belum punya metode prioritas di ranking |
 
 ## Saran analisa cadangan (BUKAN sinyal, tidak divalidasi backtest)
 Dari lead-lag, maks 3 pair: leader bergerak, follower tertinggal 5-60 menit. BUY/SELL mengikuti arah leader. SL 0.5 ATR H1, TP 1.5R. Tanpa cek spread, news, atau batas risiko §9. Tidak mengubah label.
-| Pair | Arah | Dasar | Entry | SL | TP | Risiko SL |
-|---|---|---|---|---|---|---|
-| EUR/CHF | **SELL** | LEAD-LAG: AUD/NZD memimpin 60 mnt, korelasi -0.5, n 59 | 0.91529 | 0.91567 | 0.91473 | 3.8 pip |
+Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat lead-lag).
 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-26T21:45:22Z, pasangan lolos 3.
+- Backtest jendela 360 menit, diperbarui 2026-11-26T22:00:39Z, pasangan lolos 2.
 
 Pasangan lolos (10 teratas, urut |korelasi|):
 
 | Leader | Follower | Lag (menit) | Korelasi | Korelasi lag 0 | n |
 |---|---|---|---|---|---|
-| XAU/AUD | GBP/AUD | 40 | -0.581 | 0.266 | 44 |
-| EUR/NZD | GBP/CHF | 40 | -0.542 | 0.119 | 63 |
-| AUD/NZD | EUR/CHF | 60 | -0.501 | 0.117 | 59 |
+| EUR/NZD | GBP/CHF | 40 | -0.51 | 0.03 | 62 |
+| EUR/AUD | XAU/USD | 5 | -0.501 | -0.262 | 40 |
 
-Kandidat (follower yang tertinggal, urut skor):
-
-| Follower | Arah | Leader | Lag (menit) | z leader | Skor |
-|---|---|---|---|---|---|
-| EUR/CHF | SELL | AUD/NZD | 60 | 0.94 | 0.501 |
+Tidak ada kandidat di run ini.
 
 ## Pemantauan 15 menit (entry dan analisa cadangan)
 Nilai di kolom 15m-60m = pip dari entry pada close candle M15 ke-1 sampai ke-4. Jika SL dan TP kena di candle yang sama, dihitung SL. Analisa cadangan BUKAN sinyal.
-Tidak ada entry atau saran yang sedang dipantau.
+| Sumber | Pair | Arah | Entry | SL | TP | 15m | 30m | 45m | 60m | Hasil | Pip sekarang | Umur |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| LEAD-LAG (analisa cadangan, bukan sinyal) | EUR/CHF | SELL | 0.91529 | 0.91567 | 0.91473 | -0.4 | - | - | - | BERJALAN | LOSS 0.4 pip | 15 mnt |
 
 ## Evaluasi 1 jam (entry dan analisa cadangan)
 Dibuat setelah 60 menit atau saat SL/TP kena. MFE = gerak terbaik, MAE = gerak terburuk, dalam pip.
@@ -91,8 +86,8 @@ Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan a
   - H1: resistance 174.83527 (0.78 ATR, 42 bar sentuh) · support tidak ada dalam jarak
   - M15: resistance tidak ada dalam jarak · support 174.71375 (0.05 ATR, 24 bar sentuh)
 - **EUR/CHF** (NO TRADE)
-  - H1: resistance 0.91579 (0.73 ATR, 14 bar sentuh) · support 0.91477 (0.63 ATR, 8 bar sentuh)
-  - M15: resistance 0.91539 (0.54 ATR, 28 bar sentuh) · support tidak ada dalam jarak
+  - H1: resistance 0.91579 (0.64 ATR, 14 bar sentuh) · support 0.91484 (0.69 ATR, 7 bar sentuh)
+  - M15: resistance 0.91542 (0.51 ATR, 29 bar sentuh) · support tidak ada dalam jarak
 - **EUR/AUD** (NO TRADE)
   - H1: resistance 1.65586 (1.32 ATR, 22 bar sentuh) · support 1.65297 (0.14 ATR, 28 bar sentuh)
   - M15: resistance 1.65357 (0.5 ATR, 20 bar sentuh) · support 1.65326 (0.2 ATR, 21 bar sentuh)
@@ -100,8 +95,8 @@ Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan a
   - H1: resistance 1.56427 (1.34 ATR, 6 bar sentuh) · support 1.56217 (0.55 ATR, 16 bar sentuh)
   - M15: resistance 1.56284 (0.04 ATR, 33 bar sentuh) · support tidak ada dalam jarak
 - **EUR/NZD** (NO TRADE)
-  - H1: resistance 2.00674 (1.16 ATR, 17 bar sentuh) · support 2.0034 (0.85 ATR, 36 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support 2.00496 (0.62 ATR, 50 bar sentuh)
+  - H1: resistance 2.00655 (0.7 ATR, 19 bar sentuh) · support 2.0034 (1.27 ATR, 36 bar sentuh)
+  - M15: resistance 2.00582 (0.75 ATR, 21 bar sentuh) · support 2.00496 (0.94 ATR, 51 bar sentuh)
 - **XAU/USD** (NO TRADE)
   - H1: resistance 3586.92868 (0.99 ATR, 23 bar sentuh) · support tidak ada dalam jarak
   - M15: resistance 3569.3091 (0.46 ATR, 65 bar sentuh) · support tidak ada dalam jarak
