@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-26T19:15:26Z",
+  "waktu": "2026-11-26T19:30:34Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -47,14 +47,19 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00034,
+          "atr": 0.00033,
           "resistance": {
             "harga": 1.09715,
-            "jarak_atr": 0.39,
+            "jarak_atr": 0.83,
             "sentuhan": 49,
-            "umur_bar": 0
+            "umur_bar": 1
           },
-          "support": null
+          "support": {
+            "harga": 1.09658,
+            "jarak_atr": 0.92,
+            "sentuhan": 33,
+            "umur_bar": 48
+          }
         },
         "m15_tersedia": true
       }
@@ -104,9 +109,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00046,
+          "atr": 0.00044,
           "resistance": null,
-          "support": null
+          "support": {
+            "harga": 1.31006,
+            "jarak_atr": 0.92,
+            "sentuhan": 29,
+            "umur_bar": 16
+          }
         },
         "m15_tersedia": true
       }
@@ -151,12 +161,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.03093,
+          "atr": 0.02994,
           "resistance": {
-            "harga": 159.29155,
-            "jarak_atr": 0.68,
-            "sentuhan": 68,
-            "umur_bar": 2
+            "harga": 159.29036,
+            "jarak_atr": 0.26,
+            "sentuhan": 66,
+            "umur_bar": 3
           },
           "support": null
         },
@@ -203,14 +213,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00033,
-          "resistance": null,
-          "support": {
-            "harga": 0.83387,
-            "jarak_atr": 0.74,
-            "sentuhan": 18,
-            "umur_bar": 11
-          }
+          "atr": 0.00032,
+          "resistance": {
+            "harga": 0.83455,
+            "jarak_atr": 1.0,
+            "sentuhan": 16,
+            "umur_bar": 8
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -260,8 +270,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00026,
-          "resistance": null,
+          "atr": 0.00024,
+          "resistance": {
+            "harga": 0.66318,
+            "jarak_atr": 0.38,
+            "sentuhan": 34,
+            "umur_bar": 0
+          },
           "support": null
         },
         "m15_tersedia": true
@@ -369,19 +384,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00021,
+          "atr": 0.0002,
           "resistance": {
-            "harga": 0.54719,
-            "jarak_atr": 0.34,
-            "sentuhan": 22,
+            "harga": 0.54702,
+            "jarak_atr": 0.08,
+            "sentuhan": 11,
             "umur_bar": 0
           },
-          "support": {
-            "harga": 0.54702,
-            "jarak_atr": 0.5,
-            "sentuhan": 10,
-            "umur_bar": 4
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -431,7 +441,7 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00018,
+          "atr": 0.00017,
           "resistance": null,
           "support": null
         },
@@ -483,14 +493,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.04783,
-          "resistance": null,
-          "support": {
+          "atr": 0.04613,
+          "resistance": {
             "harga": 174.71808,
-            "jarak_atr": 0.03,
-            "sentuhan": 35,
+            "jarak_atr": 0.19,
+            "sentuhan": 34,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -540,12 +550,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.0003,
+          "atr": 0.00027,
           "resistance": null,
           "support": {
             "harga": 0.91501,
-            "jarak_atr": 0.12,
-            "sentuhan": 16,
+            "jarak_atr": 0.14,
+            "sentuhan": 17,
             "umur_bar": 0
           }
         },
@@ -597,13 +607,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00066,
+          "atr": 0.00062,
           "resistance": null,
           "support": {
             "harga": 1.65369,
-            "jarak_atr": 0.8,
-            "sentuhan": 21,
-            "umur_bar": 14
+            "jarak_atr": 0.81,
+            "sentuhan": 20,
+            "umur_bar": 15
           }
         },
         "m15_tersedia": true
@@ -654,12 +664,12 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00049,
+          "atr": 0.00046,
           "resistance": null,
           "support": {
             "harga": 1.56274,
-            "jarak_atr": 0.26,
-            "sentuhan": 28,
+            "jarak_atr": 0.21,
+            "sentuhan": 29,
             "umur_bar": 0
           }
         },
@@ -711,12 +721,17 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00067,
-          "resistance": null,
+          "atr": 0.00066,
+          "resistance": {
+            "harga": 2.00588,
+            "jarak_atr": 0.82,
+            "sentuhan": 19,
+            "umur_bar": 13
+          },
           "support": {
             "harga": 2.00499,
-            "jarak_atr": 0.21,
-            "sentuhan": 45,
+            "jarak_atr": 0.54,
+            "sentuhan": 46,
             "umur_bar": 0
           }
         },
@@ -829,10 +844,19 @@
   "leadlag": {
     "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-26T19:15:26Z",
+      "diperbarui": "2026-11-26T19:30:34Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 0,
-      "pasangan_lolos": [],
+      "jumlah_lolos": 1,
+      "pasangan_lolos": [
+        {
+          "leader": "USD/JPY",
+          "follower": "NZD/JPY",
+          "lag_menit": 40,
+          "korelasi": 0.522,
+          "korelasi_lag0": 0.07,
+          "n": 63
+        }
+      ],
       "kandidat": []
     },
     "status": "dianalisa",
