@@ -1,5 +1,5 @@
 {
-  "waktu": "2026-11-26T20:00:42Z",
+  "waktu": "2026-11-26T20:15:22Z",
   "status": "OK, 15 pair dianalisa, 0 data tidak valid",
   "rows": [
     {
@@ -47,19 +47,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00032,
+          "atr": 0.0003,
           "resistance": {
-            "harga": 1.09748,
-            "jarak_atr": 0.85,
-            "sentuhan": 40,
-            "umur_bar": 13
-          },
-          "support": {
             "harga": 1.09714,
-            "jarak_atr": 0.22,
+            "jarak_atr": 0.13,
             "sentuhan": 50,
             "umur_bar": 0
-          }
+          },
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -109,13 +104,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00042,
+          "atr": 0.0004,
           "resistance": null,
           "support": {
             "harga": 1.31047,
-            "jarak_atr": 0.9,
-            "sentuhan": 40,
-            "umur_bar": 1
+            "jarak_atr": 0.65,
+            "sentuhan": 39,
+            "umur_bar": 2
           }
         },
         "m15_tersedia": true
@@ -161,13 +156,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.02787,
+          "atr": 0.02731,
           "resistance": null,
           "support": {
             "harga": 159.25382,
-            "jarak_atr": 0.56,
+            "jarak_atr": 0.57,
             "sentuhan": 59,
-            "umur_bar": 17
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -213,19 +208,14 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00029,
+          "atr": 0.00028,
           "resistance": {
             "harga": 0.83425,
-            "jarak_atr": 0.41,
-            "sentuhan": 32,
+            "jarak_atr": 0.11,
+            "sentuhan": 33,
             "umur_bar": 0
           },
-          "support": {
-            "harga": 0.83391,
-            "jarak_atr": 0.75,
-            "sentuhan": 19,
-            "umur_bar": 14
-          }
+          "support": null
         },
         "m15_tersedia": true
       }
@@ -327,17 +317,17 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00036,
+          "atr": 0.00035,
           "resistance": {
             "harga": 1.42497,
-            "jarak_atr": 0.93,
+            "jarak_atr": 0.59,
             "sentuhan": 12,
-            "umur_bar": 1
+            "umur_bar": 2
           },
           "support": {
             "harga": 1.42463,
-            "jarak_atr": 0.03,
-            "sentuhan": 20,
+            "jarak_atr": 0.37,
+            "sentuhan": 21,
             "umur_bar": 0
           }
         },
@@ -674,13 +664,13 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00043,
+          "atr": 0.00042,
           "resistance": null,
           "support": {
             "harga": 1.56274,
-            "jarak_atr": 0.39,
-            "sentuhan": 30,
-            "umur_bar": 1
+            "jarak_atr": 0.38,
+            "sentuhan": 31,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -731,18 +721,18 @@
         },
         "m15": {
           "tf": "M15",
-          "atr": 0.00062,
+          "atr": 0.00061,
           "resistance": {
             "harga": 2.00582,
-            "jarak_atr": 0.66,
+            "jarak_atr": 0.94,
             "sentuhan": 22,
-            "umur_bar": 15
+            "umur_bar": 16
           },
           "support": {
             "harga": 2.00499,
-            "jarak_atr": 0.68,
-            "sentuhan": 47,
-            "umur_bar": 1
+            "jarak_atr": 0.43,
+            "sentuhan": 48,
+            "umur_bar": 0
           }
         },
         "m15_tersedia": true
@@ -848,7 +838,8 @@
       }
     }
   ],
-  "saran_cadangan": [
+  "saran_cadangan": [],
+  "pemantauan": [
     {
       "pair": "GBP/USD",
       "arah": "BUY",
@@ -869,90 +860,31 @@
       "mulai": "2026-11-26T20:00:00Z",
       "skor": 0.515,
       "z_leader": -0.16,
-      "dipicu": false
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {
+        "15": -1.2
+      },
+      "dibuat": "2026-11-26T20:00:42Z",
+      "hasil": "BERJALAN",
+      "menit_kena": null,
+      "harga_skrg": 1.310735,
+      "pip": -1.2,
+      "mfe": 0.7,
+      "mae": -1.6,
+      "umur_menit": 15,
+      "status": "AKTIF"
     }
   ],
-  "pemantauan": [],
   "evaluasi_1_jam": [],
   "leadlag": {
-    "saran": [
-      {
-        "pair": "GBP/USD",
-        "arah": "BUY",
-        "metode": "LEAD-LAG",
-        "leader": "CHF/JPY",
-        "lag_menit": 60,
-        "korelasi": -0.51,
-        "n": 59,
-        "level": null,
-        "level_harga": null,
-        "jarak_atr": null,
-        "sentuhan": null,
-        "entry": 1.31085,
-        "sl": 1.31025,
-        "tp": 1.31174,
-        "sl_pip": 5.9,
-        "bar_terakhir": "2026-11-26T19:00:00Z",
-        "mulai": "2026-11-26T20:00:00Z",
-        "skor": 0.515,
-        "z_leader": -0.16,
-        "dipicu": false
-      }
-    ],
+    "saran": [],
     "backtest": {
-      "diperbarui": "2026-11-26T20:00:42Z",
+      "diperbarui": "2026-11-26T20:15:22Z",
       "jendela_menit": 360,
-      "jumlah_lolos": 3,
-      "pasangan_lolos": [
-        {
-          "leader": "CHF/JPY",
-          "follower": "GBP/USD",
-          "lag_menit": 60,
-          "korelasi": -0.515,
-          "korelasi_lag0": 0.332,
-          "n": 59
-        },
-        {
-          "leader": "EUR/CHF",
-          "follower": "GBP/JPY",
-          "lag_menit": 30,
-          "korelasi": 0.507,
-          "korelasi_lag0": 0.057,
-          "n": 65
-        },
-        {
-          "leader": "EUR/CHF",
-          "follower": "GBP/USD",
-          "lag_menit": 30,
-          "korelasi": 0.503,
-          "korelasi_lag0": 0.089,
-          "n": 65
-        }
-      ],
-      "kandidat": [
-        {
-          "pair": "GBP/USD",
-          "arah": "BUY",
-          "metode": "LEAD-LAG",
-          "leader": "CHF/JPY",
-          "lag_menit": 60,
-          "korelasi": -0.51,
-          "n": 59,
-          "level": null,
-          "level_harga": null,
-          "jarak_atr": null,
-          "sentuhan": null,
-          "entry": 1.31085,
-          "sl": 1.31025,
-          "tp": 1.31174,
-          "sl_pip": 5.9,
-          "bar_terakhir": "2026-11-26T19:00:00Z",
-          "mulai": "2026-11-26T20:00:00Z",
-          "skor": 0.515,
-          "z_leader": -0.16,
-          "dipicu": false
-        }
-      ]
+      "jumlah_lolos": 0,
+      "pasangan_lolos": [],
+      "kandidat": []
     },
     "status": "dianalisa",
     "gagal": []
