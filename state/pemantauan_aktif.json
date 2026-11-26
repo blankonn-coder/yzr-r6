@@ -1,3 +1,29 @@
 {
-  "aktif": []
+  "aktif": [
+    {
+      "pair": "NZD/USD",
+      "arah": "BUY",
+      "metode": "LEAD-LAG",
+      "leader": "CHF/JPY",
+      "lag_menit": 45,
+      "korelasi": 0.53,
+      "n": 61,
+      "level": null,
+      "level_harga": null,
+      "jarak_atr": null,
+      "sentuhan": null,
+      "entry": 0.54864,
+      "sl": 0.54822,
+      "tp": 0.54927,
+      "sl_pip": 4.2,
+      "bar_terakhir": "2026-11-26T01:00:00Z",
+      "mulai": "2026-11-26T02:15:00Z",
+      "skor": 0.531,
+      "z_leader": 0.21,
+      "dipicu": false,
+      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
+      "titik": {},
+      "dibuat": "2026-11-26T02:15:33Z"
+    }
+  ]
 }
