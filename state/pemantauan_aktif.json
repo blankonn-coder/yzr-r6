@@ -1,31 +1,6 @@
 {
   "aktif": [
     {
-      "pair": "EUR/JPY",
-      "arah": "SELL",
-      "metode": "LEAD-LAG",
-      "leader": "USD/CAD",
-      "lag_menit": 40,
-      "korelasi": -0.51,
-      "n": 63,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 174.6965,
-      "sl": 174.80019,
-      "tp": 174.54096,
-      "sl_pip": 10.4,
-      "bar_terakhir": "2026-11-26T09:00:00Z",
-      "mulai": "2026-11-26T10:00:00Z",
-      "skor": 0.505,
-      "z_leader": 0.79,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-26T10:00:45Z"
-    },
-    {
       "pair": "EUR/USD",
       "arah": "SELL",
       "metode": "LEAD-LAG",
