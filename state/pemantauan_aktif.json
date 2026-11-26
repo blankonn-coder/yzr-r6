@@ -1,29 +1,3 @@
 {
-  "aktif": [
-    {
-      "pair": "GBP/USD",
-      "arah": "BUY",
-      "metode": "LEAD-LAG",
-      "leader": "CHF/JPY",
-      "lag_menit": 60,
-      "korelasi": -0.51,
-      "n": 59,
-      "level": null,
-      "level_harga": null,
-      "jarak_atr": null,
-      "sentuhan": null,
-      "entry": 1.31085,
-      "sl": 1.31025,
-      "tp": 1.31174,
-      "sl_pip": 5.9,
-      "bar_terakhir": "2026-11-26T19:00:00Z",
-      "mulai": "2026-11-26T20:00:00Z",
-      "skor": 0.515,
-      "z_leader": -0.16,
-      "dipicu": false,
-      "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
-      "titik": {},
-      "dibuat": "2026-11-26T20:00:42Z"
-    }
-  ]
+  "aktif": []
 }
