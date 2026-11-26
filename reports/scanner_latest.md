@@ -1,6 +1,6 @@
 # Laporan Scanner Adaptive Forex
 
-- Waktu eksekusi: 2026-11-26T16:15:25Z
+- Waktu eksekusi: 2026-11-26T16:30:39Z
 - Status run: OK, 15 pair dianalisa, 0 data tidak valid
 - Ringkasan: ENTRY 0, WATCHLIST 0, NO TRADE 15, DATA INVALID 0
 - Timeframe sinyal: 1h (H1), bias 4h
@@ -35,7 +35,7 @@ Tidak ada saran (tidak ada level H1 dalam jarak 1.0 ATR, dan tidak ada kandidat 
 ## Lead-lag (backtest 6 jam, BUKAN sinyal)
 - Status: dianalisa
 - Pair gagal diambil (M5): tidak ada
-- Backtest jendela 360 menit, diperbarui 2026-11-26T16:15:25Z, pasangan lolos 0.
+- Backtest jendela 360 menit, diperbarui 2026-11-26T16:30:39Z, pasangan lolos 0.
 
 Tidak ada pasangan yang lolos ambang.
 
@@ -53,25 +53,25 @@ Belum ada evaluasi yang selesai di run ini.
 Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan apa pun.
 - **EUR/USD** (NO TRADE)
   - H1: resistance 1.09876 (1.4 ATR, 27 bar sentuh) · support 1.09605 (1.15 ATR, 31 bar sentuh)
-  - M15: resistance 1.09771 (0.87 ATR, 32 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 1.09771 (0.52 ATR, 32 bar sentuh) · support tidak ada dalam jarak
 - **GBP/USD** (NO TRADE)
   - H1: resistance tidak ada dalam jarak · support 1.31042 (0.36 ATR, 46 bar sentuh)
-  - M15: resistance 1.3114 (0.68 ATR, 66 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 1.3114 (0.29 ATR, 67 bar sentuh) · support tidak ada dalam jarak
 - **USD/JPY** (NO TRADE)
   - H1: resistance 159.49025 (1.32 ATR, 17 bar sentuh) · support 159.14303 (1.26 ATR, 49 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support 159.26038 (0.78 ATR, 71 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 159.26038 (0.47 ATR, 71 bar sentuh)
 - **USD/CHF** (NO TRADE)
   - H1: resistance 0.83483 (0.46 ATR, 12 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support 0.83388 (0.2 ATR, 20 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 0.83388 (0.22 ATR, 21 bar sentuh)
 - **AUD/USD** (NO TRADE)
   - H1: resistance 0.66291 (0.0 ATR, 45 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support 0.66283 (0.72 ATR, 31 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 0.66283 (0.3 ATR, 31 bar sentuh)
 - **USD/CAD** (NO TRADE)
   - H1: resistance 1.4263 (1.21 ATR, 4 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance 1.42538 (0.71 ATR, 4 bar sentuh) · support tidak ada dalam jarak
+  - M15: resistance 1.42538 (0.9 ATR, 4 bar sentuh) · support tidak ada dalam jarak
 - **NZD/USD** (NO TRADE)
   - H1: resistance 0.54755 (0.73 ATR, 27 bar sentuh) · support 0.54648 (0.77 ATR, 15 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support 0.54719 (0.07 ATR, 12 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 0.54719 (0.17 ATR, 12 bar sentuh)
 - **EUR/GBP** (NO TRADE)
   - H1: resistance 0.83769 (1.21 ATR, 46 bar sentuh) · support 0.83629 (1.34 ATR, 39 bar sentuh)
   - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
@@ -80,22 +80,22 @@ Level S/R terdekat untuk konteks scalping. Tidak mengubah label atau keputusan a
   - M15: resistance tidak ada dalam jarak · support tidak ada dalam jarak
 - **EUR/CHF** (NO TRADE)
   - H1: resistance 0.91578 (0.3 ATR, 14 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support 0.915 (0.29 ATR, 14 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 0.915 (0.61 ATR, 15 bar sentuh)
 - **EUR/AUD** (NO TRADE)
   - H1: resistance 1.65589 (0.25 ATR, 25 bar sentuh) · support 1.65267 (1.01 ATR, 28 bar sentuh)
-  - M15: resistance 1.65567 (0.86 ATR, 23 bar sentuh) · support 1.65417 (0.57 ATR, 40 bar sentuh)
+  - M15: resistance 1.65567 (0.28 ATR, 24 bar sentuh) · support tidak ada dalam jarak
 - **EUR/CAD** (NO TRADE)
   - H1: resistance 1.56434 (0.75 ATR, 8 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support 1.56277 (1.0 ATR, 26 bar sentuh)
+  - M15: resistance 1.56421 (1.0 ATR, 5 bar sentuh) · support tidak ada dalam jarak
 - **EUR/NZD** (NO TRADE)
   - H1: resistance 2.00691 (0.51 ATR, 19 bar sentuh) · support 2.00332 (1.28 ATR, 40 bar sentuh)
-  - M15: resistance 2.0058 (0.63 ATR, 27 bar sentuh) · support 2.00499 (0.23 ATR, 38 bar sentuh)
+  - M15: resistance 2.0058 (0.49 ATR, 27 bar sentuh) · support 2.00499 (0.4 ATR, 38 bar sentuh)
 - **XAU/USD** (NO TRADE)
   - H1: resistance 3589.66555 (0.74 ATR, 21 bar sentuh) · support tidak ada dalam jarak
-  - M15: resistance tidak ada dalam jarak · support 3575.41139 (0.16 ATR, 46 bar sentuh)
+  - M15: resistance 3575.41139 (0.47 ATR, 47 bar sentuh) · support 3568.9135 (0.39 ATR, 58 bar sentuh)
 - **XAU/AUD** (NO TRADE)
   - H1: resistance 5423.0105 (1.09 ATR, 10 bar sentuh) · support 5370.73464 (0.67 ATR, 37 bar sentuh)
-  - M15: resistance tidak ada dalam jarak · support 5389.77 (0.41 ATR, 43 bar sentuh)
+  - M15: resistance tidak ada dalam jarak · support 5377.90095 (0.99 ATR, 63 bar sentuh)
 
 ## Keterangan
 - **ENTRY LONG/SHORT**: semua syarat terpenuhi. Entry, SL, dan TP boleh dipakai.
