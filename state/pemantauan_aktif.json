@@ -37,18 +37,18 @@
       "level_harga": null,
       "jarak_atr": null,
       "sentuhan": null,
-      "entry": 1.09685,
-      "sl": 1.09736,
-      "tp": 1.09608,
+      "entry": 1.09726,
+      "sl": 1.09777,
+      "tp": 1.09649,
       "sl_pip": 5.1,
       "bar_terakhir": "2026-11-26T09:00:00Z",
-      "mulai": "2026-11-26T10:15:00Z",
-      "skor": 0.523,
-      "z_leader": -0.39,
+      "mulai": "2026-11-26T10:30:00Z",
+      "skor": 0.52,
+      "z_leader": -0.59,
       "dipicu": false,
       "sumber": "LEAD-LAG (analisa cadangan, bukan sinyal)",
       "titik": {},
-      "dibuat": "2026-11-26T10:15:34Z"
+      "dibuat": "2026-11-26T10:30:36Z"
     }
   ]
 }
