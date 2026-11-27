@@ -259,6 +259,16 @@ def leadlag_summary(prep, i):
 
 # ---------------- trigger (§4) ----------------
 
+def zona_stoch(k, i):
+    """Zona jenuh beli/jual. Adaptif: persentil K dalam STOCH_WIN bar terakhir (sampai bar i)."""
+    if not C.STOCH_ADAPTIF:
+        return C.STOCH_OS, C.STOCH_OB
+    win = sorted(x for x in k[max(0, i - C.STOCH_WIN + 1):i + 1] if x is not None)
+    if len(win) < C.STOCH_WIN // 2:
+        return C.STOCH_OS, C.STOCH_OB
+    return quantile(win, C.STOCH_Q_OS), quantile(win, C.STOCH_Q_OB)
+
+
 def trigger(prep, i):
     """+1 BUY, -1 SELL, 0 tidak ada. Syarat murah dicek dulu, median ATR baru dihitung bila perlu."""
     p = prep["p"][C.PEMICU]
@@ -268,8 +278,9 @@ def trigger(prep, i):
     if i < 1 or pct is None or ema_v is None or None in (p["atr"][i], k[i], d[i], k[i - 1], d[i - 1]):
         return 0, {"alasan": "warm-up indikator"}
     close = p["c"][i]
-    cross_up = k[i - 1] <= d[i - 1] and k[i] > d[i] and k[i - 1] < C.STOCH_OS and close > ema_v
-    cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > C.STOCH_OB and close < ema_v
+    os_lvl, ob_lvl = zona_stoch(k, i)
+    cross_up = k[i - 1] <= d[i - 1] and k[i] > d[i] and k[i - 1] < os_lvl and close > ema_v
+    cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > ob_lvl and close < ema_v
     if not (cross_up or cross_dn):
         return 0, {"alasan": "trigger tidak terpenuhi (EMA/stochastic)"}
     detail = {"ema": round(ema_v, 5), "ema_len": C.EMA_TRIGGER_CEPAT if cepat else C.EMA_TRIGGER_LAMBAT,

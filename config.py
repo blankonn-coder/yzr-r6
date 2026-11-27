@@ -35,7 +35,10 @@ EMA_TRIGGER_CEPAT = 20                  # EMA trigger saat volatilitas tinggi
 EMA_TRIGGER_LAMBAT = 50                 # EMA trigger selain itu
 EMA_PCT_SWITCH = 65                     # persentil ATR > 65 -> EMA 20 (adaptif 2 bin)
 STOCH_K, STOCH_SMOOTH, STOCH_D = 14, 3, 3
-STOCH_OS, STOCH_OB = 30, 70               # zona cross (disetujui pengguna: lebih sering untuk scalping; spesifikasi 20/80)
+STOCH_OS, STOCH_OB = 30, 70               # dipakai bila STOCH_ADAPTIF False atau data belum cukup
+STOCH_ADAPTIF = True                     # zona stochastic = persentil K terakhir (adaptif terhadap pasar)
+STOCH_WIN = 200
+STOCH_Q_OS, STOCH_Q_OB = 0.30, 0.70               # zona cross (disetujui pengguna: lebih sering untuk scalping; spesifikasi 20/80)
 ATR_N = 14
 ATR_MED_N = 100
 ATR_MEDIAN_AKTIF = False                 # filter ATR > median 100 bar dimatikan (disetujui pengguna; spesifikasi: aktif)
