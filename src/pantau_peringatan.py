@@ -140,18 +140,42 @@ def _baris(r):
             f"> MFE {r['mfe']} / MAE {r['mae']} pip · {r['cek']} cek")
 
 
+def _hasil_gaya(r):
+    """Label, ikon, dan warna untuk satu hasil: PROFIT, RUGI, atau IMPAS."""
+    pip = round(r["pip"], 1)
+    if pip > 0:
+        return "PROFIT", "✅", 5763719      # hijau
+    if pip < 0:
+        return "RUGI", "❌", 15548997       # merah
+    return "IMPAS", "➖", 9807270           # abu-abu
+
+
 def kirim(url, selesai, aktif):
+    """Kirim hasil 6 jam: satu notifikasi dan satu embed per pair yang sudah selesai."""
     if not url:
         return "Pemantauan: tidak dikirim (webhook kosong)"
     if not selesai:
         return f"Pemantauan: tidak ada yang selesai, aktif {aktif}"
-    isi = "\n".join(["**Hasil pemantauan peringatan**", "-# Berhenti saat TP, SL, 6 jam, atau 24 cek", ""]
-                    + [_baris(r) + "\n" for r in selesai]).strip()[:1900]
-    try:
-        r = requests.post(url, json={"content": isi}, timeout=15)
-        return f"Pemantauan Discord: HTTP {r.status_code}, aktif {aktif}"
-    except requests.RequestException as e:
-        return f"Pemantauan Discord: gagal kirim ({type(e).__name__})"
+    terkirim = 0
+    for r in selesai:
+        label, ikon, warna = _hasil_gaya(r)
+        pip = round(r["pip"], 1)
+        pip_teks = f"{pip:+}"
+        judul_hasil = "HASIL 6 JAM" if r["hasil"] == "selesai 6 jam" else f"HASIL {r['hasil'].upper()}"
+        notif = f"{ikon} {label} {pip_teks} pip · {r['pair']} {r['arah']} · {r['hasil']}"
+        embed = {
+            "title": f"📊 {judul_hasil} · {label}",
+            "description": (f"**{r['pair']}** · {r['arah']} · entry {r['entry']} · keluar {r['harga_keluar']}\n\n"
+                            f"{label.capitalize()} {abs(pip)} pip"),
+            "color": warna,
+        }
+        try:
+            res = requests.post(url, json={"content": notif, "embeds": [embed]}, timeout=15)
+            if res.status_code < 300:
+                terkirim += 1
+        except requests.RequestException:
+            pass
+    return f"Pemantauan Discord: {terkirim}/{len(selesai)} hasil terkirim, aktif {aktif}"
 
 
 def kirim_pergerakan(url, aktif):
@@ -167,8 +191,7 @@ def kirim_pergerakan(url, aktif):
         selisih = w["harga_terakhir"] - w["entry"] if buy else w["entry"] - w["harga_terakhir"]
         fields.append({
             "name": f"{w['pair']} · {w['arah']} · entry {w['entry']}",
-            "value": (f"harga {w['harga_terakhir']} · {round(selisih / pip, 1):+} pip\n"
-                      f"MFE {w['mfe']} / MAE {w['mae']} pip · {w['cek']} cek"),
+            "value": f"harga {w['harga_terakhir']} · {round(selisih / pip, 1):+} pip",
             "inline": False,
         })
     embed = {
