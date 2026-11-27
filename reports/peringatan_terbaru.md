@@ -2,12 +2,12 @@
 
 | Pair | Waktu (UTC) | Harga | Level | Tipe | Tren | Arah | Label | SL (pip) | TP baseline | TP ke level lawan |
 |---|---|---|---|---|---|---|---|---|---|---|
-| GBPUSD | 2026-11-27 14:00:00+00:00 | 1.31113 | 1.31234 | resisten | lemah | SELL | netral | 12.0 | 10 | 14.9 |
-| USDCAD | 2026-11-27 14:00:00+00:00 | 1.42462 | 1.42516 | resisten | lemah | SELL | netral | 10.0 | 10 | 40.2 |
-| USDCHF | 2026-11-27 14:00:00+00:00 | 0.83563 | 0.83489 | resisten | lemah | SELL | netral | 10.0 | 10 | 47.3 |
+| AUDUSD | 2026-11-27 14:00:00+00:00 | 0.66542 | 0.66507 | resisten | lemah | SELL | netral | 10.0 | 10 | 26.5 |
+| GBPUSD | 2026-11-27 14:00:00+00:00 | 1.3116 | 1.31234 | resisten | lemah | SELL | netral | 10.0 | 10 | 19.6 |
+| USDCAD | 2026-11-27 14:00:00+00:00 | 1.42452 | 1.42516 | resisten | lemah | SELL | netral | 10.0 | 10 | 39.2 |
+| USDCHF | 2026-11-27 14:00:00+00:00 | 0.83505 | 0.83489 | resisten | lemah | SELL | netral | 10.0 | 10 | 41.5 |
 
 Pair lain tidak menyentuh level kemarin:
-- AUDUSD: tidak ada sentuhan
 - EURAUD: tidak ada sentuhan
 - EURCAD: tidak ada sentuhan
 - EURGBP: tidak ada sentuhan
