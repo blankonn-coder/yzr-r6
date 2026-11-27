@@ -326,6 +326,8 @@ def main():
             if res["entri"]:
                 PT.tambah(now, res["entri"])
         C.append_jsonl(C.SIGNAL_LOG, [_baris_log(now, status, res)])
+        C.pangkas_log(C.SIGNAL_LOG)
+        C.pangkas_jsonl(C.SIGNAL_LOG, now.timestamp() - C.SIGNAL_LOG_HARI * 86400)
 
     os.makedirs(os.path.dirname(C.REPORT_MD), exist_ok=True)
     with open(C.REPORT_MD, "w", encoding="utf-8") as f:

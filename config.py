@@ -87,6 +87,7 @@ PANTAU_ARSIP = "database/pemantauan.jsonl"
 SKOR_PATH = "state/score_history.json"
 CANDLE_PATH = "state/candles.json"       # histori candle tersimpan: tiap run menambah bar baru, dipangkas ke M15_COUNT / H4_COUNT
 SIGNAL_LOG = "database/signal_log.jsonl"
+SIGNAL_LOG_HARI = 7                      # log sinyal hanya menyimpan 7 hari terakhir
 REPORT_MD = "reports/scanner_latest.md"
 REPORT_JSON = "scanner/latest.json"
 
@@ -139,6 +140,44 @@ def save_json(path, data):
         os.makedirs(d, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def pangkas_jsonl(path, sejak_epoch, kunci="waktu"):
+    """Buang baris JSONL yang kunci waktunya lebih lama dari sejak_epoch. Baris rusak ikut dibuang."""
+    if not os.path.exists(path):
+        return 0
+    with open(path, encoding="utf-8") as f:
+        baris = f.readlines()
+    simpan = []
+    for b in baris:
+        try:
+            if to_epoch(json.loads(b)[kunci]) >= sejak_epoch:
+                simpan.append(b)
+        except (ValueError, KeyError, TypeError):
+            continue
+    with open(path, "w", encoding="utf-8") as f:
+        f.writelines(simpan)
+    return len(baris) - len(simpan)
+
+
+LOG_MAKS_BYTE = 250 * 1024               # signal_log dipangkas bila melebihi batas ini (baris terlama dibuang)
+
+
+def pangkas_log(path, maks=LOG_MAKS_BYTE):
+    """Jika file melebihi maks byte, buang baris paling lama sampai muat. Baris terbaru selalu dipertahankan."""
+    if not os.path.exists(path) or os.path.getsize(path) <= maks:
+        return False
+    with open(path, encoding="utf-8") as f:
+        lines = f.readlines()
+    total, keep = 0, []
+    for ln in reversed(lines):
+        total += len(ln.encode("utf-8"))
+        if total > maks and keep:
+            break
+        keep.append(ln)
+    with open(path, "w", encoding="utf-8") as f:
+        f.writelines(reversed(keep))
+    return True
 
 
 def append_jsonl(path, records):
