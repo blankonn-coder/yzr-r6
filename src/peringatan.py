@@ -93,10 +93,11 @@ def kirim_discord(hasil):
         return "Discord: tidak dikirim (DISCORD_WEBHOOK_URL kosong)"
     if not sent:
         return "Discord: tidak ada sentuhan, tidak dikirim"
-    baris = [f"PERINGATAN 1 jam (belum tervalidasi, bukan sinyal entry)"]
+    baris = ["🔔 PERINGATAN 1 jam", "belum tervalidasi, bukan sinyal entry", ""]
     for r in sent:
-        baris.append(f"{r['pair']} | {r['tipe']} {r['lvl']} | tren {r['tren']} | {r['arah']} | {r['label']} | SL {r['sl_pip']} pip | TP {r['tp_base']} pip | TP lawan {r['tp_lawan']} pip")
-    isi = "```\n" + "\n".join(baris)[:1900] + "\n```"
+        baris.append(f"📍 {r['pair']}  {r['tipe']} {r['lvl']}  ·  tren {r['tren']}  ·  {r['arah']}  ·  {r['label']}")
+        baris.append(f"   🛑 SL {r['sl_pip']} pip   🎯 TP {r['tp_base']} pip   🏁 TP lawan {r['tp_lawan']} pip")
+    isi = "\n".join(baris)[:1900]
     try:
         r = requests.post(url, json={"content": isi}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
