@@ -275,3 +275,34 @@ def test_main_data_invalid_tidak_entry(tmp_path, monkeypatch):
     monkeypatch.setattr(M, "market_open", lambda now: True)
     assert M.main() == 1
     assert "DATA INVALID" in (tmp_path / C.REPORT_MD).read_text(encoding="utf-8")
+
+
+def test_persentil_atr_sliding_sama_dengan_brute_force():
+    """Sliding window persentil harus sama dengan perhitungan langsung."""
+    rnd = random.Random(3)
+    atr_s = [None] * 5 + [rnd.uniform(0.0001, 0.002) for _ in range(400)]
+    fast = E.persentil_atr(atr_s, 200)
+    for i in range(len(atr_s)):
+        win = [v for v in atr_s[max(0, i - 199):i + 1] if v is not None]
+        if i < 5 + 199:
+            assert fast[i] is None
+        else:
+            slow = 100.0 * sum(v <= atr_s[i] for v in win) / len(win)
+            assert abs(fast[i] - slow) < 1e-9
+
+
+def test_trigger_pakai_ema20_saat_volatilitas_tinggi():
+    prep = _prep()
+    p = prep["p"][C.PEMICU]
+    i = len(prep["t"]) - 1
+    p["pct"][i] = 90.0                       # volatilitas tinggi -> EMA 20
+    p["ema_cepat"][i] = p["c"][i] - 1.0      # close di atas EMA20 -> BUY
+    p["ema"][i] = p["c"][i] + 1.0            # EMA50 justru di atas close: tidak boleh dipakai
+    k, d = p["k"], p["d"]
+    k[i], d[i], k[i - 1], d[i - 1] = 30.0, 20.0, 10.0, 15.0   # cross up dari bawah 20
+    p["atr"][i] = 0.01                       # di atas median ATR
+    arah, det = E.trigger(prep, i)
+    assert arah == 1 and det["ema_len"] == C.EMA_TRIGGER_CEPAT
+    p["pct"][i] = 40.0                       # volatilitas rendah -> EMA 50, dan close di bawah EMA50
+    arah, det = E.trigger(prep, i)
+    assert arah == 0 and det["alasan"]
