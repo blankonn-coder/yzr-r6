@@ -1,4 +1,4 @@
-name: Peringatan 1 jam
+name: Note 1 jam
 
 # Dipicu oleh cron-job.org (repository_dispatch, tipe forex-scanner), sama seperti sebelumnya.
 # Atur jadwal di cron-job.org: disarankan 1 jam sekali (menit ke-5). Tidak membuka entry: hanya peringatan + Discord.
