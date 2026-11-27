@@ -387,11 +387,11 @@ def target_check(prep, i, d, pair):
         detail.update(logika="generik", pair_konfirmasi="return sendiri")
     detail.update(arah_konfirmasi=cnt, syarat_ok=dir_ok, ema_ok=ema_ok)
     # Aturan generik (non-spesifikasi): syarat EMA50 tidak dipakai, agar entry lebih sering (keputusan pengguna).
-    ema_wajib = pair in C.TARGET_RULES
+    ema_wajib = pair in C.TARGET_RULES and C.EMA_WAJIB_SPESIFIKASI
     detail["ema_wajib"] = ema_wajib
     ema_lolos = ema_ok or not ema_wajib
     persist_ok = True
-    if pair in C.CORR_PERSIST_PAIRS and dir_ok and ema_lolos:   # syarat mahal hanya bila syarat murah lolos
+    if C.CORR_PERSIST_AKTIF and pair in C.CORR_PERSIST_PAIRS and dir_ok and ema_lolos:   # syarat mahal hanya bila syarat murah lolos
         persist_ok = corr_bertahan(prep, pair, i)
         detail["corr_bertahan"] = persist_ok
     return dir_ok and ema_lolos and persist_ok, detail

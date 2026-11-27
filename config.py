@@ -22,6 +22,9 @@ TARGET_RULES = {"EUR_JPY": ("USD_JPY", 1), "EUR_GBP": ("GBP_USD", -1)}
 # Pair dengan syarat korelasi bertahan (§10D): corr_adapt > CORR_PERSIST_MIN selama CORR_PERSIST_BAR bar.
 CORR_PERSIST_PAIRS = ("EUR_CAD", "EUR_AUD")
 CORR_PERSIST_BAR, CORR_PERSIST_MIN = 50, 0.3   # diturunkan dari 200 agar muat 3 hari (ASUMSI, perlu persetujuan)
+# Pelonggaran per pair (keputusan pengguna). False = syarat dilonggarkan, True = syarat spesifikasi dipakai lagi.
+EMA_WAJIB_SPESIFIKASI = False            # True: EUR/JPY dan EUR/GBP wajib close di sisi EMA50 arah trade
+CORR_PERSIST_AKTIF = False               # True: EUR/CAD dan EUR/AUD wajib corr_adapt bertahan CORR_PERSIST_BAR bar
 # Pair di luar spesifikasi (ASUMSI, disetujui): arah = eksposur mata uang. EUR +1, USD -1, lainnya 0.
 EKSPOSUR = {"EUR": 1, "USD": -1}
 LIKUIDITAS = {"EUR_JPY": 1.0, "GBP_USD": 1.0, "USD_JPY": 1.0, "EUR_GBP": 0.8,
