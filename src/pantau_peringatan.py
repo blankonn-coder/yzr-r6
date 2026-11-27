@@ -153,8 +153,38 @@ def kirim(url, selesai, aktif):
         return f"Pemantauan Discord: gagal kirim ({type(e).__name__})"
 
 
+def kirim_pergerakan(url, aktif):
+    """Kirim pergerakan semua pair yang sedang dipantau. Dipanggil setiap run, agar pemantauan terlihat di Discord."""
+    if not url:
+        return "Pergerakan: tidak dikirim (webhook kosong)"
+    if not aktif:
+        return "Pergerakan: tidak ada pair yang dipantau"
+    fields = []
+    for w in aktif:
+        pip = _pip(w["pair"])
+        buy = w["arah"] == "BUY"
+        selisih = w["harga_terakhir"] - w["entry"] if buy else w["entry"] - w["harga_terakhir"]
+        fields.append({
+            "name": f"{w['pair']} · {w['arah']} · entry {w['entry']}",
+            "value": (f"harga {w['harga_terakhir']} · {round(selisih / pip, 1):+} pip\n"
+                      f"MFE {w['mfe']} / MAE {w['mae']} pip · {w['cek']} cek"),
+            "inline": False,
+        })
+    embed = {
+        "title": "Pergerakan pair yang di-note",
+        "description": f"{len(aktif)} pair dipantau",
+        "color": 5793266,
+        "fields": fields[:25],
+    }
+    try:
+        r = requests.post(url, json={"embeds": [embed]}, timeout=15)
+        return f"Pergerakan Discord: HTTP {r.status_code}"
+    except requests.RequestException as e:
+        return f"Pergerakan Discord: gagal kirim ({type(e).__name__})"
+
+
 def jalankan(hasil, data, url, now=None):
-    """Satu run: cek pemantauan lama, catat pair baru, simpan state, arsipkan yang selesai, kirim hasil."""
+    """Satu run: cek pemantauan lama, catat pair baru, simpan state, arsipkan yang selesai, kirim hasil dan pergerakan."""
     now = now or datetime.now(timezone.utc)
     state = _muat()
     state, selesai = cek(state, data, now)
@@ -162,4 +192,5 @@ def jalankan(hasil, data, url, now=None):
     state = buka(state, sent, now)
     _simpan(state)
     _arsip(selesai)
-    return kirim(url, selesai, len(state["aktif"]))
+    msg = kirim(url, selesai, len(state["aktif"]))
+    return msg + "\n" + kirim_pergerakan(url, state["aktif"])
