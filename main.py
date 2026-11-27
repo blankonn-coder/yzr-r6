@@ -269,15 +269,44 @@ def notify(now, status, res):
         return f"Discord: gagal kirim ({type(e).__name__})"
 
 
+def _embed_hasil(now, r):
+    """Embed hasil satu entry yang selesai dipantau: TP, SL, atau selesai 60 menit."""
+    h = r["hasil"]
+    warna = 0x2ECC71 if h == "TP kena" else (0xE74C3C if h == "SL kena" else 0x95A5A6)
+    titik = " · ".join(f"{k} mnt {v + 0.0:+}" for k, v in (r.get("titik") or {}).items()) or "-"
+    e = _embed(f"HASIL {r['pair']} {r['arah']}: {h}", warna,
+               f"Entry {r['entry']} · SL {r['sl']} · TP {r['tp']}", C.fmt(now))
+    e["fields"] = [{"name": "Pip akhir", "value": "-" if r.get("pip") is None else f"{r['pip'] + 0.0:+}", "inline": True},
+                   {"name": "MFE / MAE (pip)", "value": f"{r.get('mfe')} / {r.get('mae')}", "inline": True},
+                   {"name": "Umur", "value": f"{r.get('umur_menit')} menit", "inline": True},
+                   {"name": "Titik pemantauan (pip)", "value": titik}]
+    return e
+
+
+def notify_hasil(now, selesai):
+    """Kirim hasil entry yang selesai dipantau. Dilewati jika mode off, tanpa webhook, atau tidak ada yang selesai."""
+    mode = os.environ.get("DISCORD_NOTIFY_MODE", "").strip().lower() or "signal"
+    url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+    if mode == "off" or not url or not selesai:
+        return None
+    try:
+        r = requests.post(url, json={"embeds": [_embed_hasil(now, x) for x in selesai[:10]]}, timeout=15)
+        return f"Discord hasil: HTTP {r.status_code}"
+    except Exception as e:
+        return f"Discord hasil: gagal kirim ({type(e).__name__})"
+
+
 # ---------------- siklus ----------------
 
 def main():
     now = C.utc_now()
     status, res, pem, news_bersih, news_err = "PASAR TUTUP, tidak ada analisa", None, None, None, None
+    kirim_hasil = None
     if market_open(now):
         raw, h4, news, news_err, gagal = fetch_all()
         news_bersih = news_clean(news, now)
         pem = PT.perbarui_state(now, lambda p: (raw or {}).get(p))   # candle yang sudah diambil, tanpa unduh ulang
+        kirim_hasil = notify_hasil(now, pem["selesai"])
         prep, gagal = check(raw, h4, gagal)
         if prep is None:
             status = f"DATA INVALID: {gagal}"
@@ -300,6 +329,8 @@ def main():
         f.write(report_md(now, status, res, pem, news_bersih, news_err))
     C.save_json(C.REPORT_JSON, {"waktu": C.fmt(now), "status": status, "hasil": res, "pemantauan": pem})
     print(notify(now, status, res))
+    if kirim_hasil:
+        print(kirim_hasil)
     print(f"Selesai: {status}")
     return 0 if res is not None or not market_open(now) else 1
 
