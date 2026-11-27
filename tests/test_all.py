@@ -365,3 +365,20 @@ def test_kalender_menerima_objek_dan_daftar(monkeypatch):
         M.fetch_news(); assert False, "harus error"
     except RuntimeError as e:
         assert "bentuk JSON" in str(e)
+
+
+def test_gabung_histori_dedupe_dan_potong(tmp_path, monkeypatch):
+    lama = [{"t": 1000 + 900 * j, "o": 1, "h": 1, "l": 1, "c": 1.0} for j in range(5)]
+    baru = [{"t": 1000 + 900 * j, "o": 1, "h": 1, "l": 1, "c": 2.0} for j in range(3, 8)]
+    out = M.gabung(lama, baru, 6)
+    assert len(out) == 6 and [c["t"] for c in out] == sorted(c["t"] for c in out)
+    assert out[-1]["c"] == 2.0 and out[0]["t"] == 1000 + 900 * 2       # data baru menang, dipotong ke 6 bar terakhir
+
+
+def test_simpan_candle_hanya_yang_valid(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    ok = [{"t": 1000 + 900 * j, "o": 1.0, "h": 1.1, "l": 0.9, "c": 1.0} for j in range(3)]
+    bad = [{"t": 1000, "o": 1.0, "h": 0.5, "l": 0.9, "c": 1.0}]
+    M._simpan_candle({"EUR_USD": ok, "GBP_USD": bad}, ok)
+    st = M.load_store()
+    assert "M15:EUR_USD" in st and "M15:GBP_USD" not in st and "H4:EUR_USD" in st
