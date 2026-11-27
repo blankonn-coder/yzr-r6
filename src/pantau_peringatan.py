@@ -20,6 +20,7 @@ MAKS_JAM = 6
 MAKS_CEK = 24
 TP_PIP = 10
 TERCATAT_SIMPAN_JAM = 48
+NOTE_COOLDOWN_JAM = 6
 
 
 def _pip(pair):
@@ -181,6 +182,26 @@ def kirim_pergerakan(url, aktif):
         return f"Pergerakan Discord: HTTP {r.status_code}"
     except requests.RequestException as e:
         return f"Pergerakan Discord: gagal kirim ({type(e).__name__})"
+
+
+def saring_note(hasil, now=None, path=STATE):
+    """Pair yang sudah muncul di note tidak dimunculkan lagi selama NOTE_COOLDOWN_JAM jam.
+    Mengembalikan daftar hasil baru untuk note Discord; pemantauan tetap memakai hasil asli."""
+    now = now or datetime.now(timezone.utc)
+    state = _muat(path)
+    terakhir = {p: t for p, t in state.get("note_terakhir", {}).items()
+                if now - datetime.fromisoformat(t) < timedelta(hours=NOTE_COOLDOWN_JAM)}
+    keluar = []
+    for r in hasil:
+        if r.get("status") == "SENTUH":
+            if r["pair"] in terakhir:
+                r = {**r, "status": "sudah dinote"}
+            else:
+                terakhir[r["pair"]] = now.isoformat()
+        keluar.append(r)
+    state["note_terakhir"] = terakhir
+    _simpan(state, path)
+    return keluar
 
 
 def jalankan(hasil, data, url, now=None):
