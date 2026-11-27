@@ -2,9 +2,10 @@
 
 | Pair | Waktu (UTC) | Harga | Level | Tipe | Tren | Arah | Label | SL (pip) | TP baseline | TP ke level lawan |
 |---|---|---|---|---|---|---|---|---|---|---|
-| AUDUSD | 2026-11-27 18:00:00+00:00 | 0.66489 | 0.66507 | resisten | lemah | SELL | netral | 10.0 | 10 | 21.2 |
-| EURCAD | 2026-11-27 18:00:00+00:00 | 1.55757 | 1.55786 | support | kuat | SELL | BERLAWANAN OS/OB (peringatan) | 30.0 | 10 | 10.0 |
-| GBPUSD | 2026-11-27 18:00:00+00:00 | 1.30955 | 1.30964 | support | lemah | BUY | searah OS/OB | 10.0 | 10 | 27.8 |
+| AUDUSD | 2026-11-27 18:00:00+00:00 | 0.66472 | 0.66507 | resisten | lemah | SELL | netral | 10.0 | 10 | 19.4 |
+| EURCAD | 2026-11-27 18:00:00+00:00 | 1.55758 | 1.55786 | support | kuat | SELL | BERLAWANAN OS/OB (peringatan) | 30.0 | 10 | 10.0 |
+| GBPUSD | 2026-11-27 18:00:00+00:00 | 1.30931 | 1.30964 | support | lemah | BUY | searah OS/OB | 10.0 | 10 | 30.2 |
+| USDCAD | 2026-11-27 18:00:00+00:00 | 1.42469 | 1.42516 | resisten | lemah | SELL | netral | 10.0 | 10 | 40.9 |
 
 Pair lain tidak menyentuh level kemarin:
 - EURAUD: tidak ada sentuhan
@@ -13,6 +14,5 @@ Pair lain tidak menyentuh level kemarin:
 - EURNZD: tidak ada sentuhan
 - EURUSD: tidak ada sentuhan
 - NZDUSD: tidak ada sentuhan
-- USDCAD: tidak ada sentuhan
 - USDCHF: tidak ada sentuhan
 - USDJPY: tidak ada sentuhan
