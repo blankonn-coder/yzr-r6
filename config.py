@@ -80,6 +80,7 @@ PANTAU_ARSIP = "database/pemantauan.jsonl"
 
 # Keluaran
 SKOR_PATH = "state/score_history.json"
+CANDLE_PATH = "state/candles.json"       # histori candle tersimpan: tiap run menambah bar baru, dipangkas ke M15_COUNT / H4_COUNT
 SIGNAL_LOG = "database/signal_log.jsonl"
 REPORT_MD = "reports/scanner_latest.md"
 REPORT_JSON = "scanner/latest.json"

@@ -4,6 +4,7 @@ Satu siklus per bar M15 yang sudah tutup:
 pemantauan -> ambil data (biquote) -> validasi -> analisa -> catat entry -> laporan + Discord.
 Kegagalan data menghasilkan DATA INVALID (tanpa entry). Tidak ada error yang keluar dari fungsi ini.
 """
+import json
 import math
 import os
 import sys
@@ -73,9 +74,30 @@ def validate(cs):
     return sorted(set(errs))
 
 
+def gabung(lama, baru, maks):
+    """Gabungkan histori tersimpan dengan candle baru (timestamp sama: data baru menang), urut, potong ke maks bar terakhir."""
+    by = {c["t"]: c for c in lama}
+    for c in baru:
+        by[c["t"]] = c
+    return sorted(by.values(), key=lambda c: c["t"])[-maks:]
+
+
+def load_store():
+    return C.load_json(C.CANDLE_PATH, {})
+
+
+def simpan_store(store):
+    """Simpan histori dalam format ringkas (bukan indent) agar file tidak membengkak."""
+    os.makedirs(os.path.dirname(C.CANDLE_PATH), exist_ok=True)
+    with open(C.CANDLE_PATH, "w", encoding="utf-8") as f:
+        json.dump(store, f, separators=(",", ":"))
+
+
 def fetch_all():
     """Semua candle dan kalender diambil paralel (satu gelombang request, bukan berurutan).
-    Return (raw, h4, news, news_err, gagal). Kegagalan kalender tidak menghentikan siklus."""
+    Candle baru digabung dengan histori tersimpan. Return (raw, h4, news, news_err, gagal).
+    Kegagalan kalender tidak menghentikan siklus."""
+    store = load_store()
     with ThreadPoolExecutor(max_workers=len(C.PAIRS) + 2) as ex:
         m15 = {p: ex.submit(fetch_candles, p, C.TF, C.M15_COUNT) for p in C.PAIRS}
         h4_f = ex.submit(fetch_candles, C.PEMICU, C.TF_H4, C.H4_COUNT)
@@ -83,18 +105,30 @@ def fetch_all():
         raw, gagal = {}, None
         for p, f in m15.items():
             try:
-                raw[p] = f.result()
+                raw[p] = gabung(store.get(f"M15:{p}", []), f.result(), C.M15_COUNT)
             except Exception as e:
                 gagal = gagal or f"{C.disp(p)} M15: {e}"
         try:
-            h4 = h4_f.result()
+            h4 = gabung(store.get(f"H4:{C.PEMICU}", []), h4_f.result(), C.H4_COUNT)
         except Exception as e:
             h4, gagal = None, gagal or f"{C.disp(C.PEMICU)} H4: {e}"
         try:
             news, news_err = news_f.result(), None
         except Exception as e:
             news, news_err = None, (str(e)[:200] or type(e).__name__)
+    _simpan_candle(raw, h4)
     return raw, h4, news, news_err, gagal
+
+
+def _simpan_candle(raw, h4):
+    """Simpan hanya data yang lolos validasi, supaya data rusak tidak ikut tersimpan."""
+    store = load_store()
+    for p, cs in (raw or {}).items():
+        if cs and not validate(cs):
+            store[f"M15:{p}"] = cs
+    if h4 and not validate(h4):
+        store[f"H4:{C.PEMICU}"] = h4
+    simpan_store(store)
 
 
 def check(raw, h4, gagal):
