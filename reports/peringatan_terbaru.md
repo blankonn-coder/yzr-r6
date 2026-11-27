@@ -2,11 +2,11 @@
 
 | Pair | Waktu (UTC) | Harga | Level | Tipe | Tren | Arah | Label | SL (pip) | TP baseline | TP ke level lawan |
 |---|---|---|---|---|---|---|---|---|---|---|
-| EURGBP | 2026-11-27 07:00:00+00:00 | 0.83647 | 0.83627 | support | kuat | SELL | BERLAWANAN OS/OB (peringatan) | 14.5 | 10 | 10.0 |
-| EURJPY | 2026-11-27 07:00:00+00:00 | 174.912 | 174.924 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 55.1 |
-| GBPUSD | 2026-11-27 07:00:00+00:00 | 1.31254 | 1.31234 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 29.1 |
-| NZDUSD | 2026-11-27 07:00:00+00:00 | 0.54909 | 0.5493 | resisten | lemah | SELL | netral | 10.0 | 10 | 20.7 |
-| USDJPY | 2026-11-27 07:00:00+00:00 | 159.312 | 159.338 | resisten | lemah | SELL | netral | 10.0 | 10 | 36.6 |
+| EURGBP | 2026-11-27 07:00:00+00:00 | 0.83627 | 0.83627 | support | kuat | SELL | BERLAWANAN OS/OB (peringatan) | 16.5 | 10 | 10.0 |
+| EURJPY | 2026-11-27 07:00:00+00:00 | 174.85699 | 174.924 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 49.6 |
+| GBPUSD | 2026-11-27 07:00:00+00:00 | 1.31223 | 1.31234 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 26.0 |
+| NZDUSD | 2026-11-27 07:00:00+00:00 | 0.54894 | 0.5493 | resisten | lemah | SELL | netral | 10.0 | 10 | 19.2 |
+| USDJPY | 2026-11-27 07:00:00+00:00 | 159.328 | 159.338 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 38.2 |
 
 Pair lain tidak menyentuh level kemarin:
 - AUDUSD: tidak ada sentuhan

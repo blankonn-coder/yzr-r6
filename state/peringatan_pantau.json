@@ -1,0 +1,116 @@
+{
+  "aktif": [
+    {
+      "pair": "EURGBP",
+      "arah": "SELL",
+      "tipe": "support",
+      "lvl": 0.83627,
+      "entry": 0.83627,
+      "sl": 0.83792,
+      "tp": 0.83527,
+      "sl_pip": 16.5,
+      "mulai": "2026-11-27T07:30:49.631199+00:00",
+      "cek": 0,
+      "bar_sumber": "2026-11-27 07:00:00+00:00",
+      "bar_terakhir": "2026-11-27 07:00:00+00:00",
+      "harga_terakhir": 0.83627,
+      "mfe": 0.0,
+      "mae": 0.0
+    },
+    {
+      "pair": "EURJPY",
+      "arah": "SELL",
+      "tipe": "resisten",
+      "lvl": 174.924,
+      "entry": 174.857,
+      "sl": 174.957,
+      "tp": 174.757,
+      "sl_pip": 10.0,
+      "mulai": "2026-11-27T07:30:49.631199+00:00",
+      "cek": 0,
+      "bar_sumber": "2026-11-27 07:00:00+00:00",
+      "bar_terakhir": "2026-11-27 07:00:00+00:00",
+      "harga_terakhir": 174.857,
+      "mfe": 0.0,
+      "mae": 0.0
+    },
+    {
+      "pair": "GBPUSD",
+      "arah": "SELL",
+      "tipe": "resisten",
+      "lvl": 1.31234,
+      "entry": 1.31223,
+      "sl": 1.31323,
+      "tp": 1.31123,
+      "sl_pip": 10.0,
+      "mulai": "2026-11-27T07:30:49.631199+00:00",
+      "cek": 0,
+      "bar_sumber": "2026-11-27 07:00:00+00:00",
+      "bar_terakhir": "2026-11-27 07:00:00+00:00",
+      "harga_terakhir": 1.31223,
+      "mfe": 0.0,
+      "mae": 0.0
+    },
+    {
+      "pair": "NZDUSD",
+      "arah": "SELL",
+      "tipe": "resisten",
+      "lvl": 0.5493,
+      "entry": 0.54894,
+      "sl": 0.54994,
+      "tp": 0.54794,
+      "sl_pip": 10.0,
+      "mulai": "2026-11-27T07:30:49.631199+00:00",
+      "cek": 0,
+      "bar_sumber": "2026-11-27 07:00:00+00:00",
+      "bar_terakhir": "2026-11-27 07:00:00+00:00",
+      "harga_terakhir": 0.54894,
+      "mfe": 0.0,
+      "mae": 0.0
+    },
+    {
+      "pair": "USDJPY",
+      "arah": "SELL",
+      "tipe": "resisten",
+      "lvl": 159.338,
+      "entry": 159.328,
+      "sl": 159.428,
+      "tp": 159.228,
+      "sl_pip": 10.0,
+      "mulai": "2026-11-27T07:30:49.631199+00:00",
+      "cek": 0,
+      "bar_sumber": "2026-11-27 07:00:00+00:00",
+      "bar_terakhir": "2026-11-27 07:00:00+00:00",
+      "harga_terakhir": 159.328,
+      "mfe": 0.0,
+      "mae": 0.0
+    }
+  ],
+  "tercatat": [
+    {
+      "pair": "USDJPY",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "NZDUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "EURGBP",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "GBPUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "EURJPY",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    }
+  ]
+}
