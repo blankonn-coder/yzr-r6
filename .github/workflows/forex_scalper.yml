@@ -37,7 +37,7 @@ jobs:
           if [ ! -f reports/peringatan_terbaru.md ]; then echo "Tidak ada laporan"; exit 0; fi
           git config user.name "forex-bot"
           git config user.email "forex-bot@users.noreply.github.com"
-          git add reports/peringatan_terbaru.md
+          git add reports/peringatan_terbaru.md state/peringatan_pantau.json database/peringatan_pemantauan.jsonl
           if git diff --cached --quiet; then echo "Tidak ada perubahan"; exit 0; fi
           git commit -m "peringatan $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
