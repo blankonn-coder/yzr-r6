@@ -1,9 +1,9 @@
 {
-  "waktu": "2026-11-27T04:45:24Z",
-  "status": "OK, bar 2026-11-27T04:30:00Z: NO SIGNAL",
+  "waktu": "2026-11-27T05:00:52Z",
+  "status": "OK, bar 2026-11-27T04:45:00Z: NO SIGNAL",
   "hasil": {
-    "bar_terakhir": "2026-11-27T04:30:00Z",
-    "harga_pemicu": 1.09714,
+    "bar_terakhir": "2026-11-27T04:45:00Z",
+    "harga_pemicu": 1.09713,
     "label": "NO SIGNAL",
     "decision": "NO_SIGNAL",
     "status": "Trigger EUR/USD tidak ada",

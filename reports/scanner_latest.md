@@ -1,13 +1,13 @@
 # Laporan Run Skema Final (EUR/USD pemantik + konfirmasi)
 
-- Waktu: 2026-11-27T04:45:24Z
-- Status: OK, bar 2026-11-27T04:30:00Z: NO SIGNAL
+- Waktu: 2026-11-27T05:00:52Z
+- Status: OK, bar 2026-11-27T04:45:00Z: NO SIGNAL
 - Kalender: bersih
 - Spread: tidak tersedia (filter spread dilewati)
 
 ## Keputusan
 
-- Label: **NO SIGNAL** · bar M15: 2026-11-27T04:30:00Z · EUR/USD: 1.09714
+- Label: **NO SIGNAL** · bar M15: 2026-11-27T04:45:00Z · EUR/USD: 1.09713
 - Alasan bersama: trigger tidak terpenuhi (EMA/stochastic)
 - Risiko 1.0% equity per entry (lot tidak dihitung, tidak ada data equity)
 - Bar M15 terpakai: 698 (persentil ATR butuh minimal ~215)
