@@ -1,6 +1,6 @@
 # Laporan Run Skema Final (EUR/USD pemantik + konfirmasi)
 
-- Waktu: 2026-11-27T03:46:29Z
+- Waktu: 2026-11-27T03:49:19Z
 - Status: OK, bar 2026-11-27T03:30:00Z: NO SIGNAL
 - Kalender: bersih
 - Spread: tidak tersedia (filter spread dilewati)
