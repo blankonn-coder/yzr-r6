@@ -11,15 +11,22 @@ TF_H4, TF_H4_SEC = "4h", 14400
 M15_COUNT, H4_COUNT = 700, 300          # 500 return (corr_500) + warm-up
 SPREAD_TERSEDIA = False                  # biquote tidak memberi spread -> filter spread dilewati (§9.3)
 
-# Pair (§2-3). Konfirmasi mengikuti pseudocode §13. Target = EUR/JPY (aligned, §10A).
+# Pair. Pemicu tunggal EUR/USD. Target = semua pair yang memuat EUR atau USD, KECUALI EUR/CHF.
 PEMICU = "EUR_USD"
-KONFIRMASI = ["EUR_JPY", "EUR_GBP", "GBP_USD", "USD_JPY"]
-# Target dan aturan konfirmasinya: (pair pembanding, +1 aligned / -1 divergent). §10.
+TARGETS = ["EUR_USD", "EUR_JPY", "EUR_GBP", "EUR_CAD", "EUR_AUD", "EUR_NZD",
+           "GBP_USD", "USD_JPY", "USD_CHF", "USD_CAD", "AUD_USD", "NZD_USD"]
+KONFIRMASI = [p for p in TARGETS if p != PEMICU]     # pair pembanding untuk korelasi dan skor
+PAIRS = list(TARGETS)                                # semua pair yang diambil datanya
+# Aturan konfirmasi spesifikasi (§10): pair -> (pair pembanding, +1 aligned / -1 divergent).
 TARGET_RULES = {"EUR_JPY": ("USD_JPY", 1), "EUR_GBP": ("GBP_USD", -1)}
-TARGET = "EUR_JPY"
-PAIRS = [PEMICU] + KONFIRMASI
+# Pair dengan syarat korelasi bertahan (§10D): corr_adapt > CORR_PERSIST_MIN selama CORR_PERSIST_BAR bar.
+CORR_PERSIST_PAIRS = ("EUR_CAD", "EUR_AUD")
+CORR_PERSIST_BAR, CORR_PERSIST_MIN = 200, 0.3
+# Pair di luar spesifikasi (ASUMSI, disetujui): arah = eksposur mata uang. EUR +1, USD -1, lainnya 0.
+EKSPOSUR = {"EUR": 1, "USD": -1}
 LIKUIDITAS = {"EUR_JPY": 1.0, "GBP_USD": 1.0, "USD_JPY": 1.0, "EUR_GBP": 0.8,
-              "EUR_CAD": 0.7, "EUR_AUD": 0.6, "USD_CHF": 0.7}
+              "EUR_CAD": 0.7, "EUR_AUD": 0.6, "USD_CHF": 0.7,
+              "USD_CAD": 0.7, "AUD_USD": 0.8, "NZD_USD": 0.6, "EUR_NZD": 0.6}   # nilai non-spesifikasi: ASUMSI
 LIKUIDITAS_DEFAULT = 0.5
 
 # Indikator (§4-5)
@@ -102,6 +109,11 @@ def disp(pair):
 
 def pip_size(pair):
     return 0.01 if "JPY" in pair else 0.0001
+
+
+def desimal(pair):
+    """Jumlah desimal harga: 3 untuk pair JPY, 5 untuk lainnya."""
+    return 3 if "JPY" in pair else 5
 
 
 def spread_pip(pair):

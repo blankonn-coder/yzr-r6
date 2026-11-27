@@ -1,10 +1,10 @@
 """Backtest skema final (§12): python backtest.py
 
 Butuh BACKTEST_CACHE_DIR berisi {PAIR}_M15.csv (kolom time, open, high, low, close) untuk semua pair.
-Memakai engine.analyze yang sama dengan live, bar demi bar tanpa look-ahead.
+Memakai engine.analyze yang sama dengan live, bar demi bar tanpa look-ahead. Semua target (C.TARGETS) diuji.
 
 Aturan simulasi:
-- Entry = close M15 bar sinyal pada pair target. Keluar = SL atau TP pertama kali kena, tanpa batas waktu.
+- Entry = close M15 bar sinyal pada tiap pair target. Keluar = SL atau TP pertama kali kena, tanpa batas waktu.
   Jika SL dan TP kena di bar yang sama, dihitung SL.
 - Biaya per trade = spread + slippage (pip), dikurangkan dari hasil.
 - Batas posisi (MAKS_PER_PAIR, MAKS_TOTAL) dihitung dari trade yang belum keluar.
@@ -49,9 +49,12 @@ def resample(m15, sec):
 
 # ---------------- simulasi ----------------
 
-def _trade(prep, i, lv, d):
-    t = prep["p"][C.TARGET]
-    pip = C.pip_size(C.TARGET)
+def _trade(prep, i, row):
+    """Simulasi satu entry pada pair target row['key'] dengan arah row['dir']."""
+    pair, lv = row["key"], row["levels"]
+    d = 1 if row["arah"] == "BUY" else -1
+    t = prep["p"][pair]
+    pip = C.pip_size(pair)
     outcome, exit_i, exit_p = "BELUM SELESAI", len(prep["t"]) - 1, t["c"][-1]
     for j in range(i + 1, len(prep["t"])):
         sl_kena = t["l"][j] <= lv["sl"] if d > 0 else t["h"][j] >= lv["sl"]
@@ -59,9 +62,9 @@ def _trade(prep, i, lv, d):
         if sl_kena or tp_kena:
             outcome, exit_i, exit_p = ("SL", j, lv["sl"]) if sl_kena else ("TP", j, lv["tp"])
             break
-    net = d * (exit_p - lv["entry"]) / pip - (C.spread_pip(C.TARGET) + C.SLIPPAGE_PIP)
+    net = d * (exit_p - lv["entry"]) / pip - (C.spread_pip(pair) + C.SLIPPAGE_PIP)
     return {"entry_i": i, "exit_i": exit_i, "waktu": prep["t"][i], "arah": "BUY" if d > 0 else "SELL",
-            "pair": C.disp(C.TARGET), "hasil": outcome, "entry": lv["entry"], "sl": lv["sl"], "tp": lv["tp"],
+            "pair": C.disp(pair), "key": pair, "hasil": outcome, "entry": lv["entry"], "sl": lv["sl"], "tp": lv["tp"],
             "sl_pip": lv["sl_pip"], "net_pip": round(net, 2), "R": round(net / lv["sl_pip"], 4)}
 
 
@@ -75,12 +78,11 @@ def run(prep, warmup=None):
         d, _ = E.trigger(prep, i)
         if d == 0:                                       # cepat: analisa penuh hanya saat trigger
             continue
-        posisi_pair = C.TARGET if any(x["pair"] == C.disp(C.TARGET) for x in buka) else None
-        res, skor = E.analyze(prep, i, riwayat, True, posisi_pair, len(buka))
+        res, skor = E.analyze(prep, i, riwayat, True, {x["key"] for x in buka}, len(buka))
         if skor is not None:
             riwayat.append(skor)
-        if res["label"].startswith("ENTRY"):
-            tr = _trade(prep, i, res["levels"], d)
+        for row in res["entri"]:
+            tr = _trade(prep, i, row)
             trades.append(tr)
             buka.append(tr)
     return trades
@@ -142,7 +144,8 @@ def tulis_md(h):
                 f"DD {m['dd_R']}R (~{m['dd_persen']}%) · {m['trade_per_bulan']} trade/bulan")
 
     lines = ["# Backtest Skema Final", "", f"- Periode: {h['periode']} · bar M15: {h['bar']}",
-             f"- Biaya: spread {C.spread_pip(C.TARGET)} pip + slippage {C.SLIPPAGE_PIP} pip",
+             f"- Biaya: spread per pair (default {C.SPREAD_PIP_DEFAULT} pip, EUR/USD {C.SPREAD_PIP['EUR_USD']} pip) "
+             f"+ slippage {C.SLIPPAGE_PIP} pip",
              "- **Berita tidak diuji**: hasil cenderung optimistis. Tidak ada parameter yang dioptimasi.", "",
              f"## In-sample (60%, hanya dicatat)\n- {fmt(h['in_sample'])}", "",
              f"## Out-of-sample (20% berikutnya)\n- {fmt(h['out_of_sample'])}", "",

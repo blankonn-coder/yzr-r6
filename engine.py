@@ -332,30 +332,58 @@ def thresholds(riwayat):
     return round(quantile(s, C.SKOR_Q_BUY), 6), round(quantile(s, C.SKOR_Q_SELL), 6), True
 
 
-def target_check(prep, i, d):
-    """Konfirmasi pair target. Aligned (EUR/JPY): pembanding tidak berlawanan arah trigger.
-    Divergent (EUR/GBP): pembanding tidak searah trigger. Keduanya: close target di sisi EMA50 yang sesuai."""
-    pair, sgn = C.TARGET_RULES[C.TARGET]
-    cnt = _sign(prep["p"][pair]["lr"][i])
-    dir_ok = cnt * d * sgn >= 0
-    t = prep["p"][C.TARGET]
+def sisi(pair):
+    """Arah pair terhadap EUR/USD dari eksposur mata uang: +1 searah EUR/USD, -1 berlawanan, 0 tidak ada eksposur.
+    EUR/USD -> +1, EUR/JPY -> +1, GBP/USD -> +1, USD/JPY -> -1, USD/CHF -> -1, EUR/CHF tidak dipakai."""
+    base, quote = pair.split("_")
+    return _sign(C.EKSPOSUR.get(base, 0) - C.EKSPOSUR.get(quote, 0))
+
+
+def corr_bertahan(prep, pair, i):
+    """Syarat §10D: corr_adapt > CORR_PERSIST_MIN di setiap bar dari CORR_PERSIST_BAR bar terakhir."""
+    for j in range(i - C.CORR_PERSIST_BAR + 1, i + 1):
+        ca = corr_adapt(prep, pair, j)
+        if ca is None or ca["adapt"] <= C.CORR_PERSIST_MIN:
+            return False
+    return True
+
+
+def target_check(prep, i, d, pair):
+    """Konfirmasi satu target. d = arah trigger. Return (ok, detail).
+    Spesifikasi: EUR/JPY aligned (USD/JPY tidak berlawanan), EUR/GBP divergent (GBP/USD tidak searah).
+    Pair lain (aturan generik): return terakhir pair searah arah trade. Semua: close di sisi EMA50 arah trade."""
+    ds = d * sisi(pair)
+    t = prep["p"][pair]
     ema_v = t["ema"][i]
-    ema_ok = ema_v is not None and ((t["c"][i] > ema_v) if d > 0 else (t["c"][i] < ema_v))
-    return dir_ok and ema_ok, {"target": C.disp(C.TARGET), "logika": "aligned" if sgn > 0 else "divergent",
-                               "pair_konfirmasi": C.disp(pair), "arah_konfirmasi": cnt,
-                               "syarat_ok": dir_ok, "ema50_target": None if ema_v is None else round(ema_v, 5),
-                               "ema_ok": ema_ok}
+    ema_ok = ema_v is not None and ((t["c"][i] > ema_v) if ds > 0 else (t["c"][i] < ema_v))
+    detail = {"target": C.disp(pair), "arah_trade": ds,
+              "ema50": None if ema_v is None else round(ema_v, C.desimal(pair))}
+    if pair in C.TARGET_RULES:
+        ref, sgn = C.TARGET_RULES[pair]
+        cnt = _sign(prep["p"][ref]["lr"][i])
+        dir_ok = cnt * d * sgn >= 0
+        detail.update(logika="aligned" if sgn > 0 else "divergent", pair_konfirmasi=C.disp(ref))
+    else:
+        cnt = _sign(t["lr"][i])
+        dir_ok = cnt * ds >= 0
+        detail.update(logika="generik", pair_konfirmasi=C.disp(pair))
+    detail.update(arah_konfirmasi=cnt, syarat_ok=dir_ok, ema_ok=ema_ok)
+    persist_ok = True
+    if pair in C.CORR_PERSIST_PAIRS:
+        persist_ok = corr_bertahan(prep, pair, i)
+        detail["corr_bertahan"] = persist_ok
+    return dir_ok and ema_ok and persist_ok, detail
 
 
-def entry_levels(prep, i, d):
-    """Entry = close M15 target. SL = clamp(1.5 x ATR, 10, 15) pip. TP = 10 pip."""
-    t = prep["p"][C.TARGET]
-    pip = C.pip_size(C.TARGET)
+def entry_levels(prep, i, d, pair):
+    """Entry = close M15 pair. SL = clamp(1.5 x ATR, 10, 15) pip. TP = 10 pip. d = arah trade pair itu."""
+    t = prep["p"][pair]
+    pip, dec = C.pip_size(pair), C.desimal(pair)
     if t["atr"][i] is None:
         return None
     sl_pip = round(min(C.SL_MAX_PIP, max(C.SL_MIN_PIP, C.SL_ATR_MULT * t["atr"][i] / pip)), 1)
-    entry = round(t["c"][i], 5)
-    return {"entry": entry, "sl": round(entry - d * sl_pip * pip, 5), "tp": round(entry + d * C.TP_PIP * pip, 5),
+    entry = round(t["c"][i], dec)
+    return {"entry": entry, "sl": round(entry - d * sl_pip * pip, dec), "tp": round(entry + d * C.TP_PIP * pip, dec),
             "sl_pip": sl_pip, "tp_pip": C.TP_PIP, "atr_pip": round(t["atr"][i] / pip, 1)}
 
 
@@ -365,55 +393,82 @@ def bar_time(t):
     return C.fmt(datetime.fromtimestamp(t, timezone.utc))
 
 
-def analyze(prep, i, riwayat, news_bersih, posisi_pair=None, posisi_total=0):
-    """Return (hasil, skor). skor None jika tidak ada trigger atau bobot nol (riwayat tidak berubah)."""
+def analyze(prep, i, riwayat, news_bersih, posisi_pairs=(), posisi_total=0):
+    """Return (hasil, skor). skor None jika tidak ada trigger atau bobot nol (riwayat tidak berubah).
+
+    Trigger, skor, dan regime dihitung sekali (gerbang bersama). Tiap target dicek sendiri.
+    Batas posisi dihitung dari posisi aktif plus entry yang sudah diterima pada bar ini,
+    urut sesuai C.TARGETS. posisi_pairs berisi kunci pair seperti 'EUR_JPY'.
+    hasil["entri"] berisi target yang lolos semua syarat; hasil["targets"] berisi semua target untuk laporan."""
     res = {"bar_terakhir": bar_time(prep["t"][i]), "harga_pemicu": round(prep["p"][C.PEMICU]["c"][i], 5),
            "label": "NO SIGNAL", "decision": "NO_SIGNAL", "status": "Trigger EUR/USD tidak ada",
-           "alasan": [], "entry": None, "sl": None, "tp": None, "arah": None,
-           "target": C.disp(C.TARGET)}
+           "alasan": [], "targets": [], "entri": []}
     d, tdet = trigger(prep, i)
     res["trigger"] = {"arah": {1: "BUY", -1: "SELL"}.get(d, "-"), **tdet}
     if d == 0:
         res["alasan"].append(tdet["alasan"])
         return res, None
 
-    res.update(label="NO TRADE", decision="NO_TRADE", arah="BUY" if d > 0 else "SELL")
+    res.update(label="NO TRADE", decision="NO_TRADE", status="Trigger ada - ditahan")
     wd = weights(prep, i)
     res["bobot"] = {"rata_c50": wd["rata_c50"], "kolaps": wd["kolaps"],
                     "pair": {k.replace("_", "/"): v for k, v in wd["pairs"].items()}}
+    sc = None
     if not wd["ok"]:
-        res.update(status="Bobot nol: korelasi silang tidak dipakai")
         res["alasan"].append("sum bobot = 0 (korelasi runtuh atau corr_adapt negatif)")
-        return res, None
-
-    sc = score(wd, prep, i)
-    tb, ts, aktif = thresholds(riwayat)
-    skor_ok = sc >= tb if d > 0 else sc <= ts
-    res["skor"] = {"nilai": sc, "threshold_buy": tb, "threshold_sell": ts,
-                   "riwayat": len(riwayat), "threshold_aktif": aktif, "lulus": skor_ok}
-    if not skor_ok:
-        res["alasan"].append(f"skor {sc} {'<' if d > 0 else '>'} threshold {tb if d > 0 else ts}")
-
-    regime_ok, cek = regime(prep, i, d, news_bersih, wd)
-    res["regime"] = {"lulus": regime_ok, "cek": cek}
-    res["alasan"] += [f"{c['nama']}: {c['detail']}" for c in cek if not c["lulus"]]
-
-    t_ok, tc = target_check(prep, i, d)
-    res["target_cek"] = tc
-    if not t_ok:
-        res["alasan"].append("konfirmasi target USD/JPY / EMA50 EUR/JPY tidak mendukung")
-    if posisi_pair == C.TARGET:
-        res["alasan"].append(f"posisi {C.disp(C.TARGET)} masih dipantau (maks {C.MAKS_PER_PAIR} per pair)")
-    if posisi_total >= C.MAKS_TOTAL:
-        res["alasan"].append(f"posisi terbuka {posisi_total} (maks {C.MAKS_TOTAL})")
-
-    lv = entry_levels(prep, i, d)
-    if lv is None:
-        res["alasan"].append("ATR target belum tersedia")
-    if not res["alasan"] and lv is not None:
-        res.update(label=f"ENTRY {'LONG' if d > 0 else 'SHORT'}", decision="BUY" if d > 0 else "SELL",
-                   status="Semua syarat terpenuhi", entry=lv["entry"], sl=lv["sl"], tp=lv["tp"],
-                   levels=lv, metode="TRIGGER M15 + KONFIRMASI", leadlag=leadlag_summary(prep, i))
     else:
-        res["status"] = "Trigger ada - ditahan"
+        sc = score(wd, prep, i)
+        tb, ts, aktif = thresholds(riwayat)
+        skor_ok = sc >= tb if d > 0 else sc <= ts
+        res["skor"] = {"nilai": sc, "threshold_buy": tb, "threshold_sell": ts,
+                       "riwayat": len(riwayat), "threshold_aktif": aktif, "lulus": skor_ok}
+        if not skor_ok:
+            res["alasan"].append(f"skor {sc} {'<' if d > 0 else '>'} threshold {tb if d > 0 else ts}")
+        regime_ok, cek = regime(prep, i, d, news_bersih, wd)
+        res["regime"] = {"lulus": regime_ok, "cek": cek}
+        res["alasan"] += [f"{c['nama']}: {c['detail']}" for c in cek if not c["lulus"]]
+
+    terbuka, total = set(posisi_pairs), posisi_total
+    for pair in C.TARGETS:
+        ok, tc = target_check(prep, i, d, pair)
+        ds = tc["arah_trade"]
+        alasan = []
+        if not ok:
+            gagal = []
+            if not tc["syarat_ok"]:
+                gagal.append(f"arah vs {tc['pair_konfirmasi']}")
+            if not tc["ema_ok"]:
+                gagal.append("close vs EMA50")
+            if tc.get("corr_bertahan") is False:
+                gagal.append(f"corr_adapt > {C.CORR_PERSIST_MIN} tidak bertahan {C.CORR_PERSIST_BAR} bar")
+            alasan.append("konfirmasi tidak mendukung: " + ", ".join(gagal))
+        if pair in terbuka:
+            alasan.append(f"posisi {C.disp(pair)} masih dipantau (maks {C.MAKS_PER_PAIR} per pair)")
+        if total >= C.MAKS_TOTAL:
+            alasan.append(f"posisi terbuka {total} (maks {C.MAKS_TOTAL})")
+        lv = entry_levels(prep, i, ds, pair) if ds != 0 else None
+        if lv is None:
+            alasan.append("ATR target belum tersedia atau arah tidak ada (EUR/USD tidak memuat mata uang ini)")
+        row = {"pair": C.disp(pair), "key": pair, "arah": "BUY" if ds > 0 else ("SELL" if ds < 0 else "-"),
+               "harga": round(prep["p"][pair]["c"][i], C.desimal(pair)), "bar_terakhir": res["bar_terakhir"],
+               "entry": lv["entry"] if lv else None, "sl": lv["sl"] if lv else None,
+               "tp": lv["tp"] if lv else None, "levels": lv, "alasan": alasan, "target_cek": tc}
+        if not res["alasan"] and not alasan:
+            row.update(label=f"ENTRY {'LONG' if ds > 0 else 'SHORT'}", decision=row["arah"],
+                       metode="TRIGGER M15 + KONFIRMASI")
+            terbuka.add(pair)
+            total += 1
+            res["entri"].append(row)
+        else:
+            row.update(label="NO TRADE", decision="NO_TRADE", metode=None)
+        res["targets"].append(row)
+
+    if res["entri"]:
+        res.update(label="ENTRY", decision=", ".join(r["pair"] + " " + r["decision"] for r in res["entri"]),
+                   status=f"Semua syarat terpenuhi untuk {len(res['entri'])} target",
+                   leadlag=leadlag_summary(prep, i))
+    elif res["alasan"]:
+        res["status"] = "Trigger ada - ditahan (gerbang bersama)"
+    else:
+        res["status"] = "Trigger ada - tidak ada target yang lolos"
     return res, sc

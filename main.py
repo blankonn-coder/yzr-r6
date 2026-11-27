@@ -132,14 +132,17 @@ def report_md(now, status, res, pem, news_bersih, news_err):
     if res is None:
         return "\n".join(lines) + "\n"
     lines += ["## Keputusan", "",
-              f"- Label: **{res['label']}** · decision: `{res['decision']}`",
-              f"- Bar M15: {res['bar_terakhir']} · EUR/USD: {res['harga_pemicu']} · target: {res['target']}"]
-    if res.get("entry") is not None:
-        lv = res["levels"]
-        lines += [f"- Entry / SL / TP: **{res['entry']} / {res['sl']} / {res['tp']}** "
-                  f"(SL {lv['sl_pip']} pip, TP {lv['tp_pip']} pip, ATR {lv['atr_pip']} pip)",
-                  f"- Risiko {C.RISIKO_PERSEN}% equity (lot tidak dihitung, tidak ada data equity)"]
-    lines += [f"- Alasan: {'; '.join(res['alasan']) or '-'}", ""]
+              f"- Label: **{res['label']}** · bar M15: {res['bar_terakhir']} · EUR/USD: {res['harga_pemicu']}",
+              f"- Alasan bersama: {'; '.join(res['alasan']) or '-'}",
+              f"- Risiko {C.RISIKO_PERSEN}% equity per entry (lot tidak dihitung, tidak ada data equity)", ""]
+    if res["targets"]:
+        lines += ["## Target", "", "| Pair | Arah | Harga | Keputusan | Entry / SL / TP | Alasan |",
+                  "|---|---|---|---|---|---|"]
+        for r in res["targets"]:
+            niv = f"{r['entry']} / {r['sl']} / {r['tp']}" if r["entry"] is not None else "-"
+            lines.append(f"| {r['pair']} | {r['arah']} | {r['harga']} | {r['decision']} | {niv} | "
+                         f"{'; '.join(r['alasan']) or '-'} |")
+        lines.append("")
     t = res["trigger"]
     lines += ["## Trigger EUR/USD M15", "",
               f"- Arah: {t.get('arah')} · EMA{t.get('ema_len')} {t.get('ema')} (persentil ATR {t.get('persentil_atr')}) · stoch {t.get('stoch')} · "
@@ -179,35 +182,41 @@ def _kalender(news_bersih, news_err):
     return "bersih" if news_bersih else "ADA news high-impact ±30 menit"
 
 
+def _embed(judul, warna, status, ts):
+    return {"title": judul[:250], "color": warna, "description": status[:1000], "timestamp": ts}
+
+
 def notify(now, status, res):
-    """Kirim ke Discord sesuai DISCORD_NOTIFY_MODE: signal (default) | always | off."""
+    """Kirim ke Discord sesuai DISCORD_NOTIFY_MODE: signal (default) | always | off.
+    Satu embed per target yang masuk (ENTRY). Jika tidak ada, satu embed untuk trigger ditahan atau tidak ada sinyal."""
     mode = os.environ.get("DISCORD_NOTIFY_MODE", "").strip().lower() or "signal"
     url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if mode == "off" or not url:
         return "Discord: tidak dikirim"
-    ada_sinyal = res is not None and res["trigger"]["arah"] != "-"   # ENTRY atau trigger yang ditahan
-    if mode == "signal" and not (status.startswith("DATA INVALID") or ada_sinyal):
+    trig = res is not None and res["trigger"]["arah"] != "-"   # trigger ada, entry atau ditahan
+    if mode == "signal" and not (status.startswith("DATA INVALID") or trig):
         return "Discord: tidak ada yang perlu dikirim (mode signal)"
+    ts = C.fmt(now)
     if res is None:
-        color, judul = 0xE74C3C, "DATA INVALID"
-    elif res["label"].startswith("ENTRY"):
-        color, judul = 0x2ECC71, f"ENTRY {C.disp(C.TARGET)} {res['decision']}"
-    elif res["trigger"]["arah"] != "-":
-        color, judul = 0xF1C40F, f"Trigger {res['trigger']['arah']} ditahan"
+        embeds = [_embed("DATA INVALID", 0xE74C3C, status, ts)]
+    elif res["entri"]:
+        embeds = []
+        for r in res["entri"]:
+            lv = r["levels"]
+            e = _embed(f"ENTRY {r['pair']} {r['decision']}", 0x2ECC71, status, ts)
+            e["fields"] = [{"name": "Entry / SL / TP", "value": f"{r['entry']} / {r['sl']} / {r['tp']}"},
+                           {"name": "SL / TP (pip)", "value": f"{lv['sl_pip']} / {lv['tp_pip']}", "inline": True},
+                           {"name": "Risiko", "value": f"{C.RISIKO_PERSEN}% equity", "inline": True}]
+            embeds.append(e)
+    elif trig:
+        alasan = res["alasan"] + [f"{r['pair']}: {r['alasan'][0]}" for r in res["targets"] if r["alasan"]]
+        e = _embed(f"Trigger {res['trigger']['arah']} ditahan", 0xF1C40F, status, ts)
+        e["fields"] = [{"name": "Alasan", "value": ("\n".join(f"• {a}" for a in alasan))[:1000] or "-"}]
+        embeds = [e]
     else:
-        color, judul = 0x95A5A6, "Tidak ada sinyal"
-    embed = {"title": judul[:250], "color": color, "description": status[:1000], "timestamp": C.fmt(now), "fields": []}
-    if res and res["label"].startswith("ENTRY"):
-        lv = res["levels"]
-        embed["fields"].append({"name": "Entry / SL / TP", "value": f"{res['entry']} / {res['sl']} / {res['tp']}"})
-        embed["fields"].append({"name": "SL / TP (pip)", "value": f"{lv['sl_pip']} / {lv['tp_pip']}", "inline": True})
-        embed["fields"].append({"name": "Risiko", "value": f"{C.RISIKO_PERSEN}% equity", "inline": True})
-    if res and res.get("alasan"):
-        embed["fields"].append({"name": "Alasan", "value": "\n".join(f"• {a}" for a in res["alasan"])[:1000]})
-    if not embed["fields"]:
-        del embed["fields"]
+        embeds = [_embed("Tidak ada sinyal", 0x95A5A6, status, ts)]
     try:
-        r = requests.post(url, json={"embeds": [embed]}, timeout=15)
+        r = requests.post(url, json={"embeds": embeds[:10]}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
     except Exception as e:
         return f"Discord: gagal kirim ({type(e).__name__})"
@@ -229,14 +238,14 @@ def main():
             state = C.load_json(C.SKOR_PATH, {"skor": [], "bar_terakhir": None})
             riwayat = state["skor"]
             posisi = PT.aktif_saat_ini()
-            posisi_pair = C.TARGET if any(s["pair"] == C.disp(C.TARGET) for s in posisi) else None
-            res, skor = E.analyze(prep, len(prep["t"]) - 1, riwayat, news_bersih, posisi_pair, len(posisi))
+            posisi_pairs = {s["pair"].replace("/", "_") for s in posisi}
+            res, skor = E.analyze(prep, len(prep["t"]) - 1, riwayat, news_bersih, posisi_pairs, len(posisi))
             status = f"OK, bar {res['bar_terakhir']}: {res['label']}"
             if skor is not None and state["bar_terakhir"] != res["bar_terakhir"]:
                 riwayat = (riwayat + [skor])[-C.SKOR_RIWAYAT_MAKS:]
                 C.save_json(C.SKOR_PATH, {"skor": riwayat, "bar_terakhir": res["bar_terakhir"]})
-            if res["label"].startswith("ENTRY"):
-                PT.tambah(now, [{**res, "pair": C.disp(C.TARGET)}])
+            if res["entri"]:
+                PT.tambah(now, res["entri"])
         C.append_jsonl(C.SIGNAL_LOG, [_baris_log(now, status, res)])
 
     os.makedirs(os.path.dirname(C.REPORT_MD), exist_ok=True)
@@ -255,9 +264,11 @@ def _baris_log(now, status, res):
     s = res.get("skor") or {}
     return {"waktu": C.fmt(now), "bar": res["bar_terakhir"], "trigger": res["trigger"]["arah"],
             "skor": s.get("nilai"), "threshold_buy": s.get("threshold_buy"), "threshold_sell": s.get("threshold_sell"),
-            "regime_ok": (res.get("regime") or {}).get("lulus"), "target": res["target"],
-            "decision": res["decision"], "reason": "; ".join(res["alasan"]),
-            "entry": res["entry"], "tp": res["tp"], "sl": res["sl"]}
+            "regime_ok": (res.get("regime") or {}).get("lulus"),
+            "keputusan": {r["pair"]: r["decision"] for r in res["targets"]},
+            "entry": [{"pair": r["pair"], "arah": r["decision"], "entry": r["entry"], "sl": r["sl"], "tp": r["tp"]}
+                      for r in res["entri"]],
+            "reason": "; ".join(res["alasan"])}
 
 
 if __name__ == "__main__":
