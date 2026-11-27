@@ -272,15 +272,17 @@ def trigger(prep, i):
     cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > C.STOCH_OB and close < ema_v
     if not (cross_up or cross_dn):
         return 0, {"alasan": "trigger tidak terpenuhi (EMA/stochastic)"}
-    win = p["atr"][max(0, i - C.ATR_MED_N + 1):i + 1]
-    if None in win or len(win) < C.ATR_MED_N:
-        return 0, {"alasan": "warm-up median ATR"}
-    med = statistics.median(win)
     detail = {"ema": round(ema_v, 5), "ema_len": C.EMA_TRIGGER_CEPAT if cepat else C.EMA_TRIGGER_LAMBAT,
               "persentil_atr": round(pct, 1), "stoch": {"k": round(k[i], 2), "d": round(d[i], 2)},
-              "atr": round(p["atr"][i], 6), "atr_median": round(med, 6)}
-    if p["atr"][i] <= med:
-        return 0, {**detail, "alasan": "trigger tidak terpenuhi (ATR di bawah median)"}
+              "atr": round(p["atr"][i], 6), "atr_median": None}
+    if C.ATR_MEDIAN_AKTIF:
+        win = p["atr"][max(0, i - C.ATR_MED_N + 1):i + 1]
+        if None in win or len(win) < C.ATR_MED_N:
+            return 0, {"alasan": "warm-up median ATR"}
+        med = statistics.median(win)
+        detail["atr_median"] = round(med, 6)
+        if p["atr"][i] <= med:
+            return 0, {**detail, "alasan": "trigger tidak terpenuhi (ATR di bawah median)"}
     return (1 if cross_up else -1), detail
 
 
@@ -368,11 +370,15 @@ def target_check(prep, i, d, pair):
         dir_ok = cnt * ds >= 0
         detail.update(logika="generik", pair_konfirmasi="return sendiri")
     detail.update(arah_konfirmasi=cnt, syarat_ok=dir_ok, ema_ok=ema_ok)
+    # Aturan generik (non-spesifikasi): syarat EMA50 tidak dipakai, agar entry lebih sering (keputusan pengguna).
+    ema_wajib = pair in C.TARGET_RULES
+    detail["ema_wajib"] = ema_wajib
+    ema_lolos = ema_ok or not ema_wajib
     persist_ok = True
-    if pair in C.CORR_PERSIST_PAIRS and dir_ok and ema_ok:   # syarat mahal hanya bila syarat murah lolos
+    if pair in C.CORR_PERSIST_PAIRS and dir_ok and ema_lolos:   # syarat mahal hanya bila syarat murah lolos
         persist_ok = corr_bertahan(prep, pair, i)
         detail["corr_bertahan"] = persist_ok
-    return dir_ok and ema_ok and persist_ok, detail
+    return dir_ok and ema_lolos and persist_ok, detail
 
 
 def entry_levels(prep, i, d, pair):
@@ -438,7 +444,7 @@ def analyze(prep, i, riwayat, news_bersih, posisi_pairs=(), posisi_total=0):
             if not tc["syarat_ok"]:
                 gagal.append(f"arah {tc['pair_konfirmasi']}" if tc["logika"] == "generik"
                              else f"arah vs {tc['pair_konfirmasi']}")
-            if not tc["ema_ok"]:
+            if not tc["ema_ok"] and tc["ema_wajib"]:
                 gagal.append("close vs EMA50")
             if tc.get("corr_bertahan") is False:
                 gagal.append(f"corr_adapt > {C.CORR_PERSIST_MIN} tidak bertahan {C.CORR_PERSIST_BAR} bar")
