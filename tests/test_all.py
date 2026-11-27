@@ -18,8 +18,12 @@ START = 1767225600  # 2026-01-01T00:00Z (kelipatan 4 jam)
 
 def synthetic(n, seed=1):
     rnd = random.Random(seed)
-    beta = {"EUR_USD": 1.0, "EUR_JPY": 0.7, "EUR_GBP": 0.5, "GBP_USD": -0.6, "USD_JPY": -0.4}
-    base = {"EUR_USD": 1.1, "EUR_JPY": 174.0, "EUR_GBP": 0.87, "GBP_USD": 1.3, "USD_JPY": 150.0}
+    beta = {"EUR_USD": 1.0, "EUR_JPY": 0.7, "EUR_GBP": 0.5, "GBP_USD": -0.6, "USD_JPY": -0.4,
+            "EUR_CAD": 0.6, "EUR_AUD": 0.5, "EUR_NZD": 0.4, "USD_CHF": -0.5, "USD_CAD": -0.4,
+            "AUD_USD": 0.5, "NZD_USD": 0.4}
+    base = {"EUR_USD": 1.1, "EUR_JPY": 174.0, "EUR_GBP": 0.87, "GBP_USD": 1.3, "USD_JPY": 150.0,
+            "EUR_CAD": 1.5, "EUR_AUD": 1.6, "EUR_NZD": 1.8, "USD_CHF": 0.9, "USD_CAD": 1.35,
+            "AUD_USD": 0.67, "NZD_USD": 0.6}
     raw = {p: [] for p in C.PAIRS}
     price = dict(base)
     for j in range(n):
@@ -76,26 +80,26 @@ def test_quantile_dan_threshold():
 
 
 def test_sl_dibatasi_10_sampai_15_pip():
-    prep = {"p": {C.TARGET: {"c": [174.0], "atr": [0.0001]}}}
-    lv = E.entry_levels(prep, 0, 1)
+    prep = {"p": {"EUR_JPY": {"c": [174.0], "atr": [0.0001]}}}
+    lv = E.entry_levels(prep, 0, 1, "EUR_JPY")
     assert lv["sl_pip"] == 10.0 and lv["sl"] < lv["entry"] < lv["tp"]
-    prep["p"][C.TARGET]["atr"] = [2.0]          # 200 pip -> dibatasi 15
-    lv = E.entry_levels(prep, 0, -1)
+    prep["p"]["EUR_JPY"]["atr"] = [2.0]          # 200 pip -> dibatasi 15
+    lv = E.entry_levels(prep, 0, -1, "EUR_JPY")
     assert lv["sl_pip"] == 15.0 and lv["sl"] > lv["entry"] > lv["tp"]
 
 
 def test_konfirmasi_target_aligned_dan_divergent(monkeypatch):
-    prep = {"p": {C.TARGET: {"c": [174.0, 174.1, 174.2], "ema": [None, 174.0, 174.05], "atr": [None] * 3},
+    prep = {"p": {"EUR_JPY": {"c": [174.0, 174.1, 174.2], "ema": [None, 174.0, 174.05], "atr": [None] * 3, "lr": [0.0, 0.001, 0.001]},
                   "USD_JPY": {"lr": [0.0, 0.001, -0.001]}, "GBP_USD": {"lr": [0.0, 0.001, -0.001]}}}
-    assert E.target_check(prep, 2, 1)[0] is False          # USD/JPY turun -> BUY ditolak
+    assert E.target_check(prep, 2, 1, "EUR_JPY")[0] is False          # USD/JPY turun -> BUY ditolak
     prep["p"]["USD_JPY"]["lr"][2] = 0.002
-    ok, det = E.target_check(prep, 2, 1)
+    ok, det = E.target_check(prep, 2, 1, "EUR_JPY")
     assert ok and det["logika"] == "aligned"
-    monkeypatch.setitem(C.TARGET_RULES, C.TARGET, ("GBP_USD", -1))   # divergent
+    monkeypatch.setitem(C.TARGET_RULES, "EUR_JPY", ("GBP_USD", -1))   # divergent
     prep["p"]["GBP_USD"]["lr"][2] = 0.002                  # GBP/USD naik searah trigger -> BUY ditolak
-    assert E.target_check(prep, 2, 1)[0] is False
+    assert E.target_check(prep, 2, 1, "EUR_JPY")[0] is False
     prep["p"]["GBP_USD"]["lr"][2] = -0.002
-    ok, det = E.target_check(prep, 2, 1)
+    ok, det = E.target_check(prep, 2, 1, "EUR_JPY")
     assert ok and det["logika"] == "divergent"
 
 
@@ -113,34 +117,73 @@ def test_trigger_warmup_tanpa_sinyal():
 def test_analisa_struktur_keputusan():
     prep = _prep()
     res, skor = E.analyze(prep, len(prep["t"]) - 1, [], True)
-    assert res["decision"] in {"NO_SIGNAL", "NO_TRADE", "BUY", "SELL"}
-    if res["decision"] == "NO_SIGNAL":
+    assert res["label"] in {"NO SIGNAL", "NO TRADE", "ENTRY"}
+    assert [r["key"] for r in res["targets"]] in ([], list(C.TARGETS))
+    if res["label"] == "NO SIGNAL":
         assert skor is None
-    if res["label"].startswith("ENTRY"):
-        assert res["alasan"] == [] and res["entry"] is not None
+    assert len(res["entri"]) <= C.MAKS_TOTAL
+    for r in res["entri"]:
+        assert r["alasan"] == [] and r["entry"] is not None and r["decision"] in {"BUY", "SELL"}
 
 
-def test_berita_tidak_tersedia_menahan_entry(monkeypatch):
-    prep = _prep()
-    monkeypatch.setattr(E, "trigger", lambda p, i: (1, {}))
-    monkeypatch.setattr(E, "weights", lambda p, i: {"pairs": {}, "rata_c50": 0.5, "kolaps": False, "ok": True})
-    monkeypatch.setattr(E, "score", lambda wd, p, i: 0.5)
-    monkeypatch.setattr(E, "target_check", lambda *a: (True, {}))
-    res, _ = E.analyze(prep, len(prep["t"]) - 1, [], None)     # regime asli: kalender gagal -> ditahan
-    assert any("kalender" in a for a in res["alasan"])
-    assert not res["label"].startswith("ENTRY")
+REGIME_ASLI = E.regime
 
 
-def test_jalur_entry_terbentuk(monkeypatch):
-    prep = _prep()
+def _gerbang_lulus(monkeypatch):
     monkeypatch.setattr(E, "trigger", lambda p, i: (1, {}))
     monkeypatch.setattr(E, "weights", lambda p, i: {"pairs": {}, "rata_c50": 0.5, "kolaps": False, "ok": True})
     monkeypatch.setattr(E, "score", lambda wd, p, i: 0.5)
     monkeypatch.setattr(E, "regime", lambda *a: (True, []))
-    monkeypatch.setattr(E, "target_check", lambda *a: (True, {}))
+    monkeypatch.setattr(E, "target_check",
+                        lambda p, i, d, pair: (True, {"arah_trade": d * E.sisi(pair), "syarat_ok": True, "ema_ok": True}))
+
+
+def test_berita_tidak_tersedia_menahan_entry(monkeypatch):
+    prep = _prep()
+    _gerbang_lulus(monkeypatch)
+    monkeypatch.setattr(E, "regime", REGIME_ASLI)               # regime asli: kalender gagal -> ditahan
+    res, _ = E.analyze(prep, len(prep["t"]) - 1, [], None)
+    assert any("kalender" in a for a in res["alasan"])
+    assert res["entri"] == [] and res["label"] == "NO TRADE"
+
+
+def test_jalur_entry_terbentuk(monkeypatch):
+    prep = _prep()
+    _gerbang_lulus(monkeypatch)
     res, skor = E.analyze(prep, len(prep["t"]) - 1, [], True)
-    assert res["label"] == "ENTRY LONG" and res["decision"] == "BUY"
-    assert res["sl"] < res["entry"] < res["tp"] and res["alasan"] == [] and skor == 0.5
+    assert res["label"] == "ENTRY" and res["alasan"] == [] and skor == 0.5
+    assert len(res["entri"]) == C.MAKS_TOTAL                     # 3 target pertama lolos, sisanya kena batas total
+    r = res["entri"][0]
+    assert r["pair"] == "EUR/USD" and r["label"] == "ENTRY LONG" and r["decision"] == "BUY"
+    assert r["sl"] < r["entry"] < r["tp"]
+
+
+def test_batas_posisi_per_pair_dan_total(monkeypatch):
+    prep = _prep()
+    _gerbang_lulus(monkeypatch)
+    res, _ = E.analyze(prep, len(prep["t"]) - 1, [], True, {"EUR_USD"}, 1)
+    assert "EUR/USD" not in [r["pair"] for r in res["entri"]]    # sudah ada posisi di pair itu
+    assert len(res["entri"]) == C.MAKS_TOTAL - 1                 # sisa kuota total 2 dari 3
+    res, _ = E.analyze(prep, len(prep["t"]) - 1, [], True, set(), C.MAKS_TOTAL)
+    assert res["entri"] == []                                    # total penuh
+
+
+def test_eksposur_sisi_pair():
+    for pair, s in {"EUR_USD": 1, "EUR_JPY": 1, "EUR_GBP": 1, "GBP_USD": 1, "AUD_USD": 1, "NZD_USD": 1,
+                    "EUR_NZD": 1, "EUR_CAD": 1, "EUR_AUD": 1, "USD_JPY": -1, "USD_CHF": -1, "USD_CAD": -1}.items():
+        assert E.sisi(pair) == s, pair
+
+
+def test_eur_chf_dikecualikan_dan_semua_pair_euro_usd():
+    assert "EUR_CHF" not in C.TARGETS and C.PEMICU in C.TARGETS
+    assert all("EUR" in p or "USD" in p for p in C.TARGETS)
+    assert set(C.KONFIRMASI) == set(C.TARGETS) - {C.PEMICU}
+
+
+def test_jpy_tiga_desimal():
+    prep = {"p": {"EUR_JPY": {"c": [174.12345], "atr": [0.02]}}}
+    lv = E.entry_levels(prep, 0, 1, "EUR_JPY")
+    assert lv["entry"] == round(lv["entry"], 3) and lv["sl"] == round(lv["sl"], 3)
 
 # ---------------- pemantauan ----------------
 BAR = "2026-11-24T10:00:00Z"
