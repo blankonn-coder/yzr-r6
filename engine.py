@@ -366,7 +366,7 @@ def target_check(prep, i, d, pair):
     else:
         cnt = _sign(t["lr"][i])
         dir_ok = cnt * ds >= 0
-        detail.update(logika="generik", pair_konfirmasi=C.disp(pair))
+        detail.update(logika="generik", pair_konfirmasi="return sendiri")
     detail.update(arah_konfirmasi=cnt, syarat_ok=dir_ok, ema_ok=ema_ok)
     persist_ok = True
     if pair in C.CORR_PERSIST_PAIRS and dir_ok and ema_ok:   # syarat mahal hanya bila syarat murah lolos
@@ -402,7 +402,7 @@ def analyze(prep, i, riwayat, news_bersih, posisi_pairs=(), posisi_total=0):
     hasil["entri"] berisi target yang lolos semua syarat; hasil["targets"] berisi semua target untuk laporan."""
     res = {"bar_terakhir": bar_time(prep["t"][i]), "harga_pemicu": round(prep["p"][C.PEMICU]["c"][i], 5),
            "label": "NO SIGNAL", "decision": "NO_SIGNAL", "status": "Trigger EUR/USD tidak ada",
-           "alasan": [], "targets": [], "entri": []}
+           "alasan": [], "targets": [], "entri": [], "bar_terpakai": len(prep["t"])}
     d, tdet = trigger(prep, i)
     res["trigger"] = {"arah": {1: "BUY", -1: "SELL"}.get(d, "-"), **tdet}
     if d == 0:
@@ -436,7 +436,8 @@ def analyze(prep, i, riwayat, news_bersih, posisi_pairs=(), posisi_total=0):
         if not ok:
             gagal = []
             if not tc["syarat_ok"]:
-                gagal.append(f"arah vs {tc['pair_konfirmasi']}")
+                gagal.append(f"arah {tc['pair_konfirmasi']}" if tc["logika"] == "generik"
+                             else f"arah vs {tc['pair_konfirmasi']}")
             if not tc["ema_ok"]:
                 gagal.append("close vs EMA50")
             if tc.get("corr_bertahan") is False:

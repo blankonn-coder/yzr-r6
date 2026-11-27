@@ -41,12 +41,17 @@ def fetch_candles(pair, interval, count, retry=5):
 
 
 def fetch_news():
-    """Waktu epoch event high-impact. ASUMSI: endpoint dan skema JSON belum diverifikasi."""
+    """Waktu epoch event high-impact. ASUMSI: endpoint dan skema JSON belum diverifikasi.
+    Menerima objek {"events": [...]} atau langsung daftar [...]. Bentuk lain menghasilkan pesan error yang jelas."""
     r = requests.get(C.BIQUOTE_HOST + C.CALENDAR_PATH, timeout=20)
     if r.status_code != 200:
         raise RuntimeError(f"kalender HTTP {r.status_code}")
-    return sorted(C.to_epoch(e["time"]) for e in r.json().get("events", [])
-                  if str(e.get("impact", "")).lower() == "high")
+    data = r.json()
+    evs = data if isinstance(data, list) else (data.get("events") if isinstance(data, dict) else None)
+    if not isinstance(evs, list):
+        raise RuntimeError(f"bentuk JSON tidak dikenal ({type(data).__name__}): {r.text[:120]!r}")
+    return sorted(C.to_epoch(e["time"]) for e in evs
+                  if isinstance(e, dict) and str(e.get("impact", "")).lower() == "high")
 
 
 def validate(cs):
@@ -88,7 +93,7 @@ def fetch_all():
         try:
             news, news_err = news_f.result(), None
         except Exception as e:
-            news, news_err = None, type(e).__name__
+            news, news_err = None, (str(e)[:200] or type(e).__name__)
     return raw, h4, news, news_err, gagal
 
 
@@ -134,7 +139,8 @@ def report_md(now, status, res, pem, news_bersih, news_err):
     lines += ["## Keputusan", "",
               f"- Label: **{res['label']}** · bar M15: {res['bar_terakhir']} · EUR/USD: {res['harga_pemicu']}",
               f"- Alasan bersama: {'; '.join(res['alasan']) or '-'}",
-              f"- Risiko {C.RISIKO_PERSEN}% equity per entry (lot tidak dihitung, tidak ada data equity)", ""]
+              f"- Risiko {C.RISIKO_PERSEN}% equity per entry (lot tidak dihitung, tidak ada data equity)",
+              f"- Bar M15 terpakai: {res.get('bar_terpakai')} (persentil ATR butuh minimal ~{C.ATR_PCT_WIN + C.ATR_N + 1})", ""]
     if res["targets"]:
         lines += ["## Target", "", "| Pair | Arah | Harga | Keputusan | Entry / SL / TP | Alasan |",
                   "|---|---|---|---|---|---|"]
@@ -145,8 +151,11 @@ def report_md(now, status, res, pem, news_bersih, news_err):
         lines.append("")
     t = res["trigger"]
     lines += ["## Trigger EUR/USD M15", "",
-              f"- Arah: {t.get('arah')} · EMA{t.get('ema_len')} {t.get('ema')} (persentil ATR {t.get('persentil_atr')}) · stoch {t.get('stoch')} · "
-              f"ATR {t.get('atr')} vs median {t.get('atr_median')}", ""]
+              f"- Arah: {t.get('arah')} · EMA{t.get('ema_len', '-')} {_v(t.get('ema'))} (persentil ATR {_v(t.get('persentil_atr'))}) · "
+              f"stoch K {_v((t.get('stoch') or {}).get('k'))} / D {_v((t.get('stoch') or {}).get('d'))} · "
+              f"ATR {_v(t.get('atr'))} vs median {_v(t.get('atr_median'))}", ""]
+    if t.get("alasan"):
+        lines += [f"- Catatan: {t['alasan']}", ""]
     if res.get("skor"):
         s = res["skor"]
         lines += ["## Confirmation score", "",
@@ -174,6 +183,10 @@ def report_md(now, status, res, pem, news_bersih, news_err):
     else:
         lines.append("Tidak ada catatan yang dipantau.")
     return "\n".join(lines) + "\n"
+
+
+def _v(x):
+    return "-" if x is None else x
 
 
 def _kalender(news_bersih, news_err):
