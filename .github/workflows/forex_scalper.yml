@@ -1,8 +1,8 @@
-name: Adaptive Forex Scanner
+name: Peringatan 1 jam
 
-# Dipicu oleh cron-job.org (repository_dispatch, tiap 15 menit) atau manual.
-# Skema final: satu siklus per bar M15 yang sudah tutup. Jadwal cron-job.org harus diset 15 menit.
-# Trigger schedule dihapus agar tidak ada run ganda.
+# Dipicu oleh cron-job.org (repository_dispatch, tipe forex-scanner), sama seperti sebelumnya.
+# Atur jadwal di cron-job.org: disarankan 1 jam sekali (menit ke-5). Tidak membuka entry: hanya peringatan + Discord.
+# Trigger schedule tidak dipakai agar tidak ada run ganda.
 on:
   repository_dispatch:
     types: [forex-scanner]
@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: forex-scanner
+  group: peringatan-1jam
   cancel-in-progress: false
 
 jobs:
@@ -25,41 +25,20 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - name: Jalankan scanner
+      - name: Ambil data 1 jam
+        run: python fetch_1h.py
+      - name: Jalankan peringatan
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          DISCORD_NOTIFY_MODE: ${{ vars.DISCORD_NOTIFY_MODE }}
-        run: python main.py
-      - name: Commit state, database, laporan
+        run: python src/peringatan.py data/1h reports/peringatan_terbaru.md
+      - name: Commit laporan
         if: always()
         run: |
-          mkdir -p state database reports scanner
+          if [ ! -f reports/peringatan_terbaru.md ]; then echo "Tidak ada laporan"; exit 0; fi
           git config user.name "forex-bot"
           git config user.email "forex-bot@users.noreply.github.com"
-          git add -A state database reports scanner
-          if git diff --cached --quiet; then
-            echo "Tidak ada perubahan untuk di-commit"
-            exit 0
-          fi
-          git commit -m "update $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do
-            git fetch origin main
-            if ! git rebase origin/main; then
-              # Konflik hanya pada file hasil bot: pakai versi run ini
-              for f in $(git diff --name-only --diff-filter=U); do
-                case "$f" in
-                  state/*|database/*|reports/*|scanner/*) git checkout --theirs -- "$f"; git add "$f" ;;
-                  *) echo "Konflik di luar file bot: $f"; git rebase --abort; exit 1 ;;
-                esac
-              done
-              GIT_EDITOR=true git rebase --continue
-            fi
-            if git push origin HEAD:main; then
-              echo "Push berhasil"
-              exit 0
-            fi
-            echo "Push ditolak, mencoba ulang ($i/3)"
-            sleep 5
-          done
-          echo "Gagal push setelah 3 percobaan"
-          exit 1
+          git add reports/peringatan_terbaru.md
+          if git diff --cached --quiet; then echo "Tidak ada perubahan"; exit 0; fi
+          git commit -m "peringatan $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push origin HEAD:main
