@@ -14,3 +14,4 @@
 {"waktu": "2026-11-27T03:15:28Z", "bar": "2026-11-27T03:00:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "warm-up indikator"}
 {"waktu": "2026-11-27T03:30:42Z", "bar": "2026-11-27T03:15:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
 {"waktu": "2026-11-27T03:45:37Z", "bar": "2026-11-27T03:30:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
+{"waktu": "2026-11-27T03:46:29Z", "bar": "2026-11-27T03:30:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
