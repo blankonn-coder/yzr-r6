@@ -23,7 +23,10 @@ LIKUIDITAS = {"EUR_JPY": 1.0, "GBP_USD": 1.0, "USD_JPY": 1.0, "EUR_GBP": 0.8,
 LIKUIDITAS_DEFAULT = 0.5
 
 # Indikator (§4-5)
-EMA_N = 50
+EMA_N = 50                              # EMA target (EUR/JPY) dan EMA H4
+EMA_TRIGGER_CEPAT = 20                  # EMA trigger saat volatilitas tinggi
+EMA_TRIGGER_LAMBAT = 50                 # EMA trigger selain itu
+EMA_PCT_SWITCH = 65                     # persentil ATR > 65 -> EMA 20 (adaptif 2 bin)
 STOCH_K, STOCH_SMOOTH, STOCH_D = 14, 3, 3
 STOCH_OS, STOCH_OB = 20, 80
 ATR_N = 14

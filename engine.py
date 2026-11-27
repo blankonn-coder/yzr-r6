@@ -91,6 +91,23 @@ def h4_trend(t_m15, h4):
     return out
 
 
+def persentil_atr(atr_s, win):
+    """Persentil tiap bar ATR terhadap win nilai ATR terakhir (termasuk bar itu). None jika belum cukup.
+    Sliding window dengan daftar terurut: O(n log win), tidak mengulang loop per bar."""
+    out, buf, ordered = [None] * len(atr_s), [], []
+    for i, a in enumerate(atr_s):
+        if a is None:
+            continue
+        buf.append(a)
+        bisect.insort(ordered, a)
+        if len(buf) > win:
+            old = buf.pop(0)
+            del ordered[bisect.bisect_left(ordered, old)]
+        if len(buf) == win:
+            out[i] = 100.0 * bisect.bisect_right(ordered, a) / win
+    return out
+
+
 def build(raw, h4):
     """raw: {pair: candle M15}. h4: candle H4 pemicu. Semua pair disejajarkan ke timestamp yang sama."""
     common = None
@@ -112,6 +129,8 @@ def build(raw, h4):
         q = p[pair]
         q["s1"], q["s2"], q["sxy"] = _prefix(q["lr"], e["lr"], pair != C.PEMICU)
     e["k"], e["d"] = stoch([{"h": a, "l": b, "c": c} for a, b, c in zip(e["h"], e["l"], e["c"])])
+    e["ema_cepat"] = ema(e["c"], C.EMA_TRIGGER_CEPAT)
+    e["pct"] = persentil_atr(e["atr"], C.ATR_PCT_WIN)
     return {"t": t, "p": p, "h4": h4_trend(t, h4),
             "sinkron": bool(t) and t[-1] == max(c["t"] for c in raw[C.PEMICU])}
 
@@ -243,10 +262,12 @@ def leadlag_summary(prep, i):
 def trigger(prep, i):
     """+1 BUY, -1 SELL, 0 tidak ada. Syarat murah dicek dulu, median ATR baru dihitung bila perlu."""
     p = prep["p"][C.PEMICU]
-    k, d = p["k"], p["d"]
-    if i < 1 or None in (p["ema"][i], p["atr"][i], k[i], d[i], k[i - 1], d[i - 1]):
+    k, d, pct = p["k"], p["d"], p["pct"][i]
+    cepat = pct is not None and pct > C.EMA_PCT_SWITCH
+    ema_v = p["ema_cepat"][i] if cepat else p["ema"][i]
+    if i < 1 or pct is None or ema_v is None or None in (p["atr"][i], k[i], d[i], k[i - 1], d[i - 1]):
         return 0, {"alasan": "warm-up indikator"}
-    close, ema_v = p["c"][i], p["ema"][i]
+    close = p["c"][i]
     cross_up = k[i - 1] <= d[i - 1] and k[i] > d[i] and k[i - 1] < C.STOCH_OS and close > ema_v
     cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > C.STOCH_OB and close < ema_v
     if not (cross_up or cross_dn):
@@ -255,7 +276,8 @@ def trigger(prep, i):
     if None in win or len(win) < C.ATR_MED_N:
         return 0, {"alasan": "warm-up median ATR"}
     med = statistics.median(win)
-    detail = {"ema50": round(ema_v, 5), "stoch": {"k": round(k[i], 2), "d": round(d[i], 2)},
+    detail = {"ema": round(ema_v, 5), "ema_len": C.EMA_TRIGGER_CEPAT if cepat else C.EMA_TRIGGER_LAMBAT,
+              "persentil_atr": round(pct, 1), "stoch": {"k": round(k[i], 2), "d": round(d[i], 2)},
               "atr": round(p["atr"][i], 6), "atr_median": round(med, 6)}
     if p["atr"][i] <= med:
         return 0, {**detail, "alasan": "trigger tidak terpenuhi (ATR di bawah median)"}
@@ -265,11 +287,7 @@ def trigger(prep, i):
 # ---------------- regime (§9) ----------------
 
 def atr_percentile(prep, i):
-    atr_s = prep["p"][C.PEMICU]["atr"]
-    win = atr_s[max(0, i - C.ATR_PCT_WIN + 1):i + 1]
-    if len(win) < C.ATR_PCT_WIN or None in win:
-        return None
-    return 100.0 * sum(v <= atr_s[i] for v in win) / len(win)
+    return prep["p"][C.PEMICU]["pct"][i]
 
 
 def regime(prep, i, d, news_bersih, wd):

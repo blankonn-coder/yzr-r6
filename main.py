@@ -142,7 +142,7 @@ def report_md(now, status, res, pem, news_bersih, news_err):
     lines += [f"- Alasan: {'; '.join(res['alasan']) or '-'}", ""]
     t = res["trigger"]
     lines += ["## Trigger EUR/USD M15", "",
-              f"- Arah: {t.get('arah')} · EMA50 {t.get('ema50')} · stoch {t.get('stoch')} · "
+              f"- Arah: {t.get('arah')} · EMA{t.get('ema_len')} {t.get('ema')} (persentil ATR {t.get('persentil_atr')}) · stoch {t.get('stoch')} · "
               f"ATR {t.get('atr')} vs median {t.get('atr_median')}", ""]
     if res.get("skor"):
         s = res["skor"]
@@ -188,13 +188,24 @@ def notify(now, status, res):
     ada_sinyal = res is not None and res["trigger"]["arah"] != "-"   # ENTRY atau trigger yang ditahan
     if mode == "signal" and not (status.startswith("DATA INVALID") or ada_sinyal):
         return "Discord: tidak ada yang perlu dikirim (mode signal)"
-    if res is None or not res["label"].startswith("ENTRY"):
-        color, judul = (0xE74C3C, "DATA INVALID") if res is None else (0xF1C40F, "Trigger ditahan")
-    else:
+    if res is None:
+        color, judul = 0xE74C3C, "DATA INVALID"
+    elif res["label"].startswith("ENTRY"):
         color, judul = 0x2ECC71, f"ENTRY {C.disp(C.TARGET)} {res['decision']}"
-    embed = {"title": judul[:250], "color": color, "description": status[:1000], "timestamp": C.fmt(now)}
+    elif res["trigger"]["arah"] != "-":
+        color, judul = 0xF1C40F, f"Trigger {res['trigger']['arah']} ditahan"
+    else:
+        color, judul = 0x95A5A6, "Tidak ada sinyal"
+    embed = {"title": judul[:250], "color": color, "description": status[:1000], "timestamp": C.fmt(now), "fields": []}
+    if res and res["label"].startswith("ENTRY"):
+        lv = res["levels"]
+        embed["fields"].append({"name": "Entry / SL / TP", "value": f"{res['entry']} / {res['sl']} / {res['tp']}"})
+        embed["fields"].append({"name": "SL / TP (pip)", "value": f"{lv['sl_pip']} / {lv['tp_pip']}", "inline": True})
+        embed["fields"].append({"name": "Risiko", "value": f"{C.RISIKO_PERSEN}% equity", "inline": True})
     if res and res.get("alasan"):
-        embed["fields"] = [{"name": "Alasan", "value": "\n".join(f"• {a}" for a in res["alasan"])[:1000]}]
+        embed["fields"].append({"name": "Alasan", "value": "\n".join(f"• {a}" for a in res["alasan"])[:1000]})
+    if not embed["fields"]:
+        del embed["fields"]
     try:
         r = requests.post(url, json={"embeds": [embed]}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
