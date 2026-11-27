@@ -2,7 +2,7 @@
 
 | Pair | Waktu (UTC) | Harga | Level | Tipe | Tren | Arah | Label | SL (pip) | TP baseline | TP ke level lawan |
 |---|---|---|---|---|---|---|---|---|---|---|
-| USDCHF | 2026-11-27 12:00:00+00:00 | 0.83415 | 0.83489 | resisten | lemah | SELL | netral | 10.0 | 10 | 32.5 |
+| USDCHF | 2026-11-27 13:00:00+00:00 | 0.83481 | 0.83489 | resisten | lemah | SELL | netral | 10.0 | 10 | 39.1 |
 
 Pair lain tidak menyentuh level kemarin:
 - AUDUSD: tidak ada sentuhan
