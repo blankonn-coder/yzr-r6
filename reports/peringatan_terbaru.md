@@ -2,8 +2,7 @@
 
 | Pair | Waktu (UTC) | Harga | Level | Tipe | Tren | Arah | Label | SL (pip) | TP baseline | TP ke level lawan |
 |---|---|---|---|---|---|---|---|---|---|---|
-| GBPUSD | 2026-11-27 09:00:00+00:00 | 1.31246 | 1.31234 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 28.2 |
-| NZDUSD | 2026-11-27 08:00:00+00:00 | 0.5487 | 0.5493 | resisten | lemah | SELL | netral | 10.0 | 10 | 16.8 |
+| GBPUSD | 2026-11-27 09:00:00+00:00 | 1.31247 | 1.31234 | resisten | lemah | SELL | searah OS/OB | 10.0 | 10 | 28.4 |
 
 Pair lain tidak menyentuh level kemarin:
 - AUDUSD: tidak ada sentuhan
@@ -13,6 +12,7 @@ Pair lain tidak menyentuh level kemarin:
 - EURJPY: tidak ada sentuhan
 - EURNZD: tidak ada sentuhan
 - EURUSD: tidak ada sentuhan
+- NZDUSD: tidak ada sentuhan
 - USDCAD: tidak ada sentuhan
 - USDCHF: tidak ada sentuhan
 - USDJPY: tidak ada sentuhan
