@@ -1,36 +1,7 @@
 {
-  "waktu": "2026-11-27T06:00:44Z",
-  "status": "OK, bar 2026-11-27T05:45:00Z: NO SIGNAL",
-  "hasil": {
-    "bar_terakhir": "2026-11-27T05:45:00Z",
-    "harga_pemicu": 1.09785,
-    "label": "NO SIGNAL",
-    "decision": "NO_SIGNAL",
-    "status": "Trigger EUR/USD tidak ada",
-    "alasan": [
-      "trigger tidak terpenuhi (EMA/stochastic)"
-    ],
-    "targets": [],
-    "entri": [],
-    "bar_terpakai": 300,
-    "trigger": {
-      "arah": "-",
-      "ema": 1.09734,
-      "ema_len": 50,
-      "persentil_atr": 47.5,
-      "stoch": {
-        "k": 65.94,
-        "d": 61.22,
-        "k_prev": 65.75,
-        "zona_os": 28.5,
-        "zona_ob": 48.6
-      },
-      "atr": 0.000412,
-      "atr_median": null,
-      "close": 1.09785,
-      "alasan": "trigger tidak terpenuhi (EMA/stochastic)"
-    }
-  },
+  "waktu": "2026-11-27T06:15:23Z",
+  "status": "DATA INVALID: bar terakhir antar pair tidak sinkron dengan EUR/USD",
+  "hasil": null,
   "pemantauan": {
     "aktif": [],
     "tampil": [],
