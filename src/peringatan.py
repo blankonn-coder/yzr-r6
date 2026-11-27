@@ -104,7 +104,7 @@ def kirim_discord(hasil):
         return f"Discord: gagal kirim ({type(e).__name__})"
 
 if __name__ == "__main__":
-    folder = sys.argv[1] if len(sys.argv)>1 else "data"
+    folder = sys.argv[1] if len(sys.argv)>1 else "data/1h"
     out = sys.argv[2] if len(sys.argv)>2 else "reports/peringatan_terbaru.md"
     hasil=[]
     for p in PAIRS:
