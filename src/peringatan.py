@@ -113,6 +113,7 @@ def kirim_discord(hasil):
         return f"Discord: gagal kirim ({type(e).__name__})"
 
 if __name__ == "__main__":
+    import pantau_peringatan as PP   # src/ ada di sys.path karena skrip dijalankan dari src/peringatan.py
     folder = sys.argv[1] if len(sys.argv)>1 else "data/1h"
     out = sys.argv[2] if len(sys.argv)>2 else "reports/peringatan_terbaru.md"
     hasil, data = [], {}
@@ -124,6 +125,6 @@ if __name__ == "__main__":
         r = analisa(p, h)
         hasil.append(r or dict(pair=p, status="data tidak cukup"))
     print(tulis(hasil, out))
-    print(kirim_discord(hasil))
-    import pantau_peringatan as PP   # src/ ada di sys.path karena skrip dijalankan dari src/peringatan.py
+    hasil_note = PP.saring_note(hasil)          # pair yang sudah dinote tidak dinote lagi selama 6 jam
+    print(kirim_discord(hasil_note))
     print(PP.jalankan(hasil, data, os.environ.get("DISCORD_WEBHOOK_URL", "").strip()))
