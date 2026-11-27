@@ -334,7 +334,8 @@ def test_persentil_atr_sliding_sama_dengan_brute_force():
             assert abs(fast[i] - slow) < 1e-9
 
 
-def test_trigger_pakai_ema20_saat_volatilitas_tinggi():
+def test_trigger_pakai_ema20_saat_volatilitas_tinggi(monkeypatch):
+    monkeypatch.setattr(C, "TRIGGER_EMA_WAJIB", True)     # tes ini menguji syarat close vs EMA
     prep = _prep()
     p = prep["p"][C.PEMICU]
     i = len(prep["t"]) - 1
