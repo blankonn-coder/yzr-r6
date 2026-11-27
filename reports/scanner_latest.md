@@ -1,14 +1,14 @@
 # Laporan Run Skema Final (EUR/USD pemantik + konfirmasi)
 
-- Waktu: 2026-11-27T00:15:26Z
-- Status: OK, bar 2026-11-27T00:00:00Z: NO SIGNAL
+- Waktu: 2026-11-27T00:30:42Z
+- Status: OK, bar 2026-11-27T00:15:00Z: NO SIGNAL
 - Kalender: gagal diperiksa (AttributeError), entry ditahan
 - Spread: tidak tersedia (filter spread dilewati)
 
 ## Keputusan
 
 - Label: **NO SIGNAL** · decision: `NO_SIGNAL`
-- Bar M15: 2026-11-27T00:00:00Z · EUR/USD: 1.09639 · target: EUR/JPY
+- Bar M15: 2026-11-27T00:15:00Z · EUR/USD: 1.09633 · target: EUR/JPY
 - Alasan: warm-up indikator
 
 ## Trigger EUR/USD M15
