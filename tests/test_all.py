@@ -349,3 +349,19 @@ def test_trigger_pakai_ema20_saat_volatilitas_tinggi():
     p["pct"][i] = 40.0                       # volatilitas rendah -> EMA 50, dan close di bawah EMA50
     arah, det = E.trigger(prep, i)
     assert arah == 0 and det["alasan"]
+
+
+def test_kalender_menerima_objek_dan_daftar(monkeypatch):
+    class Resp:
+        def __init__(self, body): self.status_code, self._b, self.text = 200, body, str(body)
+        def json(self): return self._b
+    ev = {"time": "2026-11-27T10:00:00Z", "impact": "High"}
+    monkeypatch.setattr(M.requests, "get", lambda *a, **k: Resp({"events": [ev]}))
+    assert len(M.fetch_news()) == 1
+    monkeypatch.setattr(M.requests, "get", lambda *a, **k: Resp([ev]))
+    assert len(M.fetch_news()) == 1
+    monkeypatch.setattr(M.requests, "get", lambda *a, **k: Resp("rusak"))
+    try:
+        M.fetch_news(); assert False, "harus error"
+    except RuntimeError as e:
+        assert "bentuk JSON" in str(e)
