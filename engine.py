@@ -183,7 +183,8 @@ def corr_adapt(prep, pair, i):
     if any(v is None for v in cs.values()):
         return None
     adapt = sum(b * cs[w] for b, w in zip(C.CORR_BOBOT, C.CORR_WIN))
-    return {"c50": cs[50], "c200": cs[200], "c500": cs[500], "adapt": adapt}
+    w0, w1, w2 = C.CORR_WIN
+    return {"c50": cs[w0], "c200": cs[w1], "c500": cs[w2], "adapt": adapt}   # kunci nama lama, nilai ikut CORR_WIN
 
 
 def stability(prep, pair, i):
@@ -279,13 +280,17 @@ def trigger(prep, i):
         return 0, {"alasan": "warm-up indikator"}
     close = p["c"][i]
     os_lvl, ob_lvl = zona_stoch(k, i)
-    cross_up = k[i - 1] <= d[i - 1] and k[i] > d[i] and k[i - 1] < os_lvl and close > ema_v
-    cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > ob_lvl and close < ema_v
-    if not (cross_up or cross_dn):
-        return 0, {"alasan": "trigger tidak terpenuhi (EMA/stochastic)"}
+    ema_up = close > ema_v or not C.TRIGGER_EMA_WAJIB
+    ema_dn = close < ema_v or not C.TRIGGER_EMA_WAJIB
+    cross_up = k[i - 1] <= d[i - 1] and k[i] > d[i] and k[i - 1] < os_lvl and ema_up
+    cross_dn = k[i - 1] >= d[i - 1] and k[i] < d[i] and k[i - 1] > ob_lvl and ema_dn
     detail = {"ema": round(ema_v, 5), "ema_len": C.EMA_TRIGGER_CEPAT if cepat else C.EMA_TRIGGER_LAMBAT,
-              "persentil_atr": round(pct, 1), "stoch": {"k": round(k[i], 2), "d": round(d[i], 2)},
-              "atr": round(p["atr"][i], 6), "atr_median": None}
+              "persentil_atr": round(pct, 1),
+              "stoch": {"k": round(k[i], 2), "d": round(d[i], 2), "k_prev": round(k[i - 1], 2),
+                        "zona_os": round(os_lvl, 1), "zona_ob": round(ob_lvl, 1)},
+              "atr": round(p["atr"][i], 6), "atr_median": None, "close": round(close, 5)}
+    if not (cross_up or cross_dn):
+        return 0, {**detail, "alasan": "trigger tidak terpenuhi (EMA/stochastic)"}
     if C.ATR_MEDIAN_AKTIF:
         win = p["atr"][max(0, i - C.ATR_MED_N + 1):i + 1]
         if None in win or len(win) < C.ATR_MED_N:

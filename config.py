@@ -8,7 +8,7 @@ BIQUOTE_HOST = "https://biquote.io"
 CALENDAR_PATH = "/api/calendar"
 TF, TF_SEC = "15m", 900
 TF_H4, TF_H4_SEC = "4h", 14400
-M15_COUNT, H4_COUNT = 700, 300          # 500 return (corr_500) + warm-up
+M15_COUNT, H4_COUNT = 300, 300          # ~3 hari bursa: korelasi terpanjang 200 + persentil ATR 200 + warm-up
 SPREAD_TERSEDIA = False                  # biquote tidak memberi spread -> filter spread dilewati (§9.3)
 
 # Pair. Pemicu tunggal EUR/USD. Target = semua pair yang memuat EUR atau USD, KECUALI EUR/CHF.
@@ -21,7 +21,7 @@ PAIRS = list(TARGETS)                                # semua pair yang diambil d
 TARGET_RULES = {"EUR_JPY": ("USD_JPY", 1), "EUR_GBP": ("GBP_USD", -1)}
 # Pair dengan syarat korelasi bertahan (§10D): corr_adapt > CORR_PERSIST_MIN selama CORR_PERSIST_BAR bar.
 CORR_PERSIST_PAIRS = ("EUR_CAD", "EUR_AUD")
-CORR_PERSIST_BAR, CORR_PERSIST_MIN = 200, 0.3
+CORR_PERSIST_BAR, CORR_PERSIST_MIN = 50, 0.3   # diturunkan dari 200 agar muat 3 hari (ASUMSI, perlu persetujuan)
 # Pair di luar spesifikasi (ASUMSI, disetujui): arah = eksposur mata uang. EUR +1, USD -1, lainnya 0.
 EKSPOSUR = {"EUR": 1, "USD": -1}
 LIKUIDITAS = {"EUR_JPY": 1.0, "GBP_USD": 1.0, "USD_JPY": 1.0, "EUR_GBP": 0.8,
@@ -38,16 +38,17 @@ STOCH_K, STOCH_SMOOTH, STOCH_D = 14, 3, 3
 STOCH_OS, STOCH_OB = 30, 70               # dipakai bila STOCH_ADAPTIF False atau data belum cukup
 STOCH_ADAPTIF = True                     # zona stochastic = persentil K terakhir (adaptif terhadap pasar)
 STOCH_WIN = 200
-STOCH_Q_OS, STOCH_Q_OB = 0.30, 0.70               # zona cross (disetujui pengguna: lebih sering untuk scalping; spesifikasi 20/80)
+STOCH_Q_OS, STOCH_Q_OB = 0.40, 0.60               # zona cross (disetujui pengguna: lebih sering untuk scalping; spesifikasi 20/80)
 ATR_N = 14
 ATR_MED_N = 100
+TRIGGER_EMA_WAJIB = False                # False: trigger hanya cross stochastic, tanpa syarat close vs EMA
 ATR_MEDIAN_AKTIF = False                 # filter ATR > median 100 bar dimatikan (disetujui pengguna; spesifikasi: aktif)
-CORR_WIN = (50, 200, 500)
+CORR_WIN = (50, 100, 200)               # diturunkan dari (50, 200, 500) agar muat 3 hari (ASUMSI, perlu persetujuan)
 CORR_BOBOT = (0.5, 0.3, 0.2)
 
 # Lead-lag, bobot, dan skor (§6-8)
 LAGS = range(-3, 4)
-LEADLAG_WIN = 200                        # ASUMSI
+LEADLAG_WIN = 100                        # ASUMSI (informasi saja)
 STAB_WIN = 20
 KORELASI_MIN = 0.2
 SKOR_MIN_SAMPEL = 500

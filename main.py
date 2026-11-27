@@ -185,8 +185,11 @@ def report_md(now, status, res, pem, news_bersih, news_err):
         lines.append("")
     t = res["trigger"]
     lines += ["## Trigger EUR/USD M15", "",
-              f"- Arah: {t.get('arah')} · EMA{t.get('ema_len', '-')} {_v(t.get('ema'))} (persentil ATR {_v(t.get('persentil_atr'))}) · "
-              f"stoch K {_v((t.get('stoch') or {}).get('k'))} / D {_v((t.get('stoch') or {}).get('d'))} · "
+              f"- Arah: {t.get('arah')} · close {_v(t.get('close'))} · EMA{t.get('ema_len', '-')} {_v(t.get('ema'))} "
+              f"(persentil ATR {_v(t.get('persentil_atr'))}) · "
+              f"stoch K {_v((t.get('stoch') or {}).get('k'))} (sebelumnya {_v((t.get('stoch') or {}).get('k_prev'))}) "
+              f"/ D {_v((t.get('stoch') or {}).get('d'))} · zona jual >{_v((t.get('stoch') or {}).get('zona_ob'))}, "
+              f"beli <{_v((t.get('stoch') or {}).get('zona_os'))} · "
               f"ATR {_v(t.get('atr'))} vs median {_v(t.get('atr_median'))}", ""]
     if t.get("alasan"):
         lines += [f"- Catatan: {t['alasan']}", ""]
