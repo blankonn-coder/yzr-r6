@@ -1,8 +1,8 @@
 {
-  "waktu": "2026-11-27T03:00:44Z",
-  "status": "OK, bar 2026-11-27T02:45:00Z: NO SIGNAL",
+  "waktu": "2026-11-27T03:15:28Z",
+  "status": "OK, bar 2026-11-27T03:00:00Z: NO SIGNAL",
   "hasil": {
-    "bar_terakhir": "2026-11-27T02:45:00Z",
+    "bar_terakhir": "2026-11-27T03:00:00Z",
     "harga_pemicu": 1.09805,
     "label": "NO SIGNAL",
     "decision": "NO_SIGNAL",
@@ -12,7 +12,7 @@
     ],
     "targets": [],
     "entri": [],
-    "bar_terpakai": 196,
+    "bar_terpakai": 197,
     "trigger": {
       "arah": "-",
       "alasan": "warm-up indikator"
