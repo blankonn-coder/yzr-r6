@@ -70,7 +70,7 @@ def analisa(pair, h):
 
 def tulis(hasil, out):
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-    L = ["# Peringatan 1 jam (belum tervalidasi, bukan sinyal entry)", ""]
+    L = ["# Note 1 jam (belum tervalidasi, bukan sinyal entry)", ""]
     sent = [r for r in hasil if r.get("status")=="SENTUH"]
     if not sent:
         L.append("Tidak ada pair yang menyentuh level kemarin pada jam terakhir.")
@@ -87,22 +87,27 @@ def tulis(hasil, out):
     return "\n".join(L)
 
 def kirim_discord(hasil):
-    """Kirim peringatan ke Discord hanya jika ada pair yang menyentuh level. Tanpa DISCORD_WEBHOOK_URL: dilewati."""
+    """Kirim note 1 jam sebagai embed terpisah, hanya jika ada pair yang menyentuh level. Tanpa DISCORD_WEBHOOK_URL: dilewati."""
     url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     sent = [r for r in hasil if r.get("status") == "SENTUH"]
     if not url:
         return "Discord: tidak dikirim (DISCORD_WEBHOOK_URL kosong)"
     if not sent:
         return "Discord: tidak ada sentuhan, tidak dikirim"
-    baris = ["**Peringatan 1 jam**", "-# Belum tervalidasi, bukan sinyal entry", ""]
-    for r in sent:
-        baris.append(f"**{r['pair']}** · {r['tipe']} {r['lvl']} · {r['arah']}")
-        baris.append(f"> tren {r['tren']} · {r['label']}")
-        baris.append(f"> SL {r['sl_pip']} pip · TP {r['tp_base']} pip · TP lawan {r['tp_lawan']} pip")
-        baris.append("")
-    isi = "\n".join(baris).strip()[:1900]
+    fields = [{
+        "name": f"{r['pair']} · {r['tipe']} {r['lvl']} · {r['arah']}",
+        "value": f"tren {r['tren']} · {r['label']}\nSL {r['sl_pip']} pip · TP {r['tp_base']} pip · TP lawan {r['tp_lawan']} pip",
+        "inline": False,
+    } for r in sent]
+    embed = {
+        "title": "Note 1 jam",
+        "description": "Belum tervalidasi, bukan sinyal entry",
+        "color": 5793266,
+        "fields": fields[:25],
+        "footer": {"text": "Pemantauan pergerakan pair"},
+    }
     try:
-        r = requests.post(url, json={"content": isi}, timeout=15)
+        r = requests.post(url, json={"embeds": [embed]}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
     except requests.RequestException as e:
         return f"Discord: gagal kirim ({type(e).__name__})"
