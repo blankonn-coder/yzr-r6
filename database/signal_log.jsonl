@@ -28,3 +28,4 @@
 {"waktu": "2026-11-27T05:45:26Z", "bar": "2026-11-27T05:30:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
 {"waktu": "2026-11-27T06:00:44Z", "bar": "2026-11-27T05:45:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
 {"waktu": "2026-11-27T06:15:23Z", "status": "DATA INVALID: bar terakhir antar pair tidak sinkron dengan EUR/USD", "decision": "DATA_INVALID"}
+{"waktu": "2026-11-27T06:30:44Z", "bar": "2026-11-27T06:15:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "keputusan": {}, "entry": [], "reason": "trigger tidak terpenuhi (EMA/stochastic)"}
