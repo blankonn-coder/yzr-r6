@@ -100,14 +100,17 @@ def kirim_discord(hasil):
         "inline": False,
     } for r in sent]
     embed = {
-        "title": "Note 1 jam",
+        "title": "🔔 NOTE",
         "description": "Belum tervalidasi, bukan sinyal entry",
         "color": 5793266,
         "fields": fields[:25],
         "footer": {"text": "Pemantauan pergerakan pair"},
     }
+    pertama = sent[0]
+    sisa = f" dan {len(sent) - 1} pair lain" if len(sent) > 1 else ""
+    notif = f"🔔 NOTE · {pertama['pair']} {pertama['arah']} · {pertama['tipe']} {pertama['lvl']}{sisa}"
     try:
-        r = requests.post(url, json={"embeds": [embed]}, timeout=15)
+        r = requests.post(url, json={"content": notif, "embeds": [embed]}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
     except requests.RequestException as e:
         return f"Discord: gagal kirim ({type(e).__name__})"
