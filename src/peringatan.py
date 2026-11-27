@@ -5,6 +5,7 @@ Aturan (belum tervalidasi di luar sampel, hanya untuk dianalisa manual):
 - Menyentuh resisten kemarin: tren kuat -> BUY, tren lemah -> SELL
 - Label OS/OB: searah / berlawanan / netral (berlawanan tetap ditampilkan, tidak dilarang)
 - SL di sisi level kemarin (10-30 pip). TP baseline 10 pip, dan TP ke level berlawanan sebagai info.
+- Pemantauan hasil per pair ada di src/pantau_peringatan.py (berhenti di TP, SL, 6 jam, atau 24 cek).
 """
 import sys, os, numpy as np, pandas as pd
 import requests
@@ -109,12 +110,15 @@ def kirim_discord(hasil):
 if __name__ == "__main__":
     folder = sys.argv[1] if len(sys.argv)>1 else "data/1h"
     out = sys.argv[2] if len(sys.argv)>2 else "reports/peringatan_terbaru.md"
-    hasil=[]
+    hasil, data = [], {}
     for p in PAIRS:
         h = muat(folder, p)
         if h is None:
             hasil.append(dict(pair=p, status="file tidak ada")); continue
+        data[p] = h
         r = analisa(p, h)
         hasil.append(r or dict(pair=p, status="data tidak cukup"))
     print(tulis(hasil, out))
     print(kirim_discord(hasil))
+    import pantau_peringatan as PP   # src/ ada di sys.path karena skrip dijalankan dari src/peringatan.py
+    print(PP.jalankan(hasil, data, os.environ.get("DISCORD_WEBHOOK_URL", "").strip()))
