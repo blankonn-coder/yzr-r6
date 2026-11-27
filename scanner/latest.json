@@ -1,9 +1,9 @@
 {
-  "waktu": "2026-11-27T05:15:23Z",
-  "status": "OK, bar 2026-11-27T05:00:00Z: NO SIGNAL",
+  "waktu": "2026-11-27T05:30:35Z",
+  "status": "OK, bar 2026-11-27T05:15:00Z: NO SIGNAL",
   "hasil": {
-    "bar_terakhir": "2026-11-27T05:00:00Z",
-    "harga_pemicu": 1.09753,
+    "bar_terakhir": "2026-11-27T05:15:00Z",
+    "harga_pemicu": 1.09808,
     "label": "NO SIGNAL",
     "decision": "NO_SIGNAL",
     "status": "Trigger EUR/USD tidak ada",
@@ -12,9 +12,22 @@
     ],
     "targets": [],
     "entri": [],
-    "bar_terpakai": 698,
+    "bar_terpakai": 300,
     "trigger": {
       "arah": "-",
+      "ema": 1.09728,
+      "ema_len": 50,
+      "persentil_atr": 28.5,
+      "stoch": {
+        "k": 51.99,
+        "d": 44.02,
+        "k_prev": 38.71,
+        "zona_os": 27.7,
+        "zona_ob": 48.0
+      },
+      "atr": 0.000376,
+      "atr_median": null,
+      "close": 1.09808,
       "alasan": "trigger tidak terpenuhi (EMA/stochastic)"
     }
   },
