@@ -233,7 +233,8 @@ def _kalender(news_bersih, news_err):
 
 
 def _embed(judul, warna, status, ts):
-    return {"title": judul[:250], "color": warna, "description": status[:1000], "timestamp": ts}
+    return {"title": judul[:250], "color": warna, "description": status[:1000], "timestamp": ts,
+            "footer": {"text": "yzr-r6 · EUR/USD M15"}}
 
 
 def notify(now, status, res):
@@ -248,23 +249,23 @@ def notify(now, status, res):
         return "Discord: tidak ada yang perlu dikirim (mode signal)"
     ts = C.fmt(now)
     if res is None:
-        embeds = [_embed("DATA INVALID", 0xE74C3C, status, ts)]
+        embeds = [_embed("⛔ DATA INVALID", 0xE74C3C, status, ts)]
     elif res["entri"]:
         embeds = []
         for r in res["entri"]:
             lv = r["levels"]
-            e = _embed(f"ENTRY {r['pair']} {r['decision']}", 0x2ECC71, status, ts)
-            e["fields"] = [{"name": "Entry / SL / TP", "value": f"{r['entry']} / {r['sl']} / {r['tp']}"},
-                           {"name": "SL / TP (pip)", "value": f"{lv['sl_pip']} / {lv['tp_pip']}", "inline": True},
-                           {"name": "Risiko", "value": f"{C.RISIKO_PERSEN}% equity", "inline": True}]
+            e = _embed(f"🟢 ENTRY {r['pair']} {r['decision']}", 0x2ECC71, status, ts)
+            e["fields"] = [{"name": "🎯 Entry / SL / TP", "value": f"`{r['entry']}` / `{r['sl']}` / `{r['tp']}`"},
+                           {"name": "📏 SL / TP (pip)", "value": f"{lv['sl_pip']} / {lv['tp_pip']}", "inline": True},
+                           {"name": "💰 Risiko", "value": f"{C.RISIKO_PERSEN}% equity", "inline": True}]
             embeds.append(e)
     elif trig:
         alasan = res["alasan"] + [f"{r['pair']}: {r['alasan'][0]}" for r in res["targets"] if r["alasan"]]
-        e = _embed(f"Trigger {res['trigger']['arah']} ditahan", 0xF1C40F, status, ts)
-        e["fields"] = [{"name": "Alasan", "value": ("\n".join(f"• {a}" for a in alasan))[:1000] or "-"}]
+        e = _embed(f"🟡 Trigger {res['trigger']['arah']} ditahan", 0xF1C40F, status, ts)
+        e["fields"] = [{"name": "🔎 Alasan", "value": ("\n".join(f"▸ {a}" for a in alasan))[:1000] or "-"}]
         embeds = [e]
     else:
-        embeds = [_embed("Tidak ada sinyal", 0x95A5A6, status, ts)]
+        embeds = [_embed("⚪ Tidak ada sinyal", 0x95A5A6, status, ts)]
     try:
         r = requests.post(url, json={"embeds": embeds[:10]}, timeout=15)
         return f"Discord: HTTP {r.status_code}"
@@ -277,12 +278,13 @@ def _embed_hasil(now, r):
     h = r["hasil"]
     warna = 0x2ECC71 if h == "TP kena" else (0xE74C3C if h == "SL kena" else 0x95A5A6)
     titik = " · ".join(f"{k} mnt {v + 0.0:+}" for k, v in (r.get("titik") or {}).items()) or "-"
-    e = _embed(f"HASIL {r['pair']} {r['arah']}: {h}", warna,
+    ikon = "✅" if h == "TP kena" else ("❌" if h == "SL kena" else "⏱️")
+    e = _embed(f"{ikon} HASIL {r['pair']} {r['arah']}: {h}", warna,
                f"Entry {r['entry']} · SL {r['sl']} · TP {r['tp']}", C.fmt(now))
-    e["fields"] = [{"name": "Pip akhir", "value": "-" if r.get("pip") is None else f"{r['pip'] + 0.0:+}", "inline": True},
-                   {"name": "MFE / MAE (pip)", "value": f"{r.get('mfe')} / {r.get('mae')}", "inline": True},
-                   {"name": "Umur", "value": f"{r.get('umur_menit')} menit", "inline": True},
-                   {"name": "Titik pemantauan (pip)", "value": titik}]
+    e["fields"] = [{"name": "📊 Pip akhir", "value": "-" if r.get("pip") is None else f"{r['pip'] + 0.0:+}", "inline": True},
+                   {"name": "📈 MFE / MAE (pip)", "value": f"{r.get('mfe')} / {r.get('mae')}", "inline": True},
+                   {"name": "⏳ Umur", "value": f"{r.get('umur_menit')} menit", "inline": True},
+                   {"name": "🧭 Titik pemantauan (pip)", "value": titik}]
     return e
 
 
