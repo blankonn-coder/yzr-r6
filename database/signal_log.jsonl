@@ -1,1 +1,2 @@
 {"waktu": "2026-11-27T00:00:45Z", "bar": "2026-11-26T23:45:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "target": "EUR/JPY", "decision": "NO_SIGNAL", "reason": "trigger tidak terpenuhi (EMA/stochastic)", "entry": null, "tp": null, "sl": null}
+{"waktu": "2026-11-27T00:15:26Z", "bar": "2026-11-27T00:00:00Z", "trigger": "-", "skor": null, "threshold_buy": null, "threshold_sell": null, "regime_ok": null, "target": "EUR/JPY", "decision": "NO_SIGNAL", "reason": "warm-up indikator", "entry": null, "tp": null, "sl": null}

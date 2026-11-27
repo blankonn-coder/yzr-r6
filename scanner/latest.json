@@ -1,14 +1,14 @@
 {
-  "waktu": "2026-11-27T00:00:45Z",
-  "status": "OK, bar 2026-11-26T23:45:00Z: NO SIGNAL",
+  "waktu": "2026-11-27T00:15:26Z",
+  "status": "OK, bar 2026-11-27T00:00:00Z: NO SIGNAL",
   "hasil": {
-    "bar_terakhir": "2026-11-26T23:45:00Z",
-    "harga_pemicu": 1.09697,
+    "bar_terakhir": "2026-11-27T00:00:00Z",
+    "harga_pemicu": 1.09639,
     "label": "NO SIGNAL",
     "decision": "NO_SIGNAL",
     "status": "Trigger EUR/USD tidak ada",
     "alasan": [
-      "trigger tidak terpenuhi (EMA/stochastic)"
+      "warm-up indikator"
     ],
     "entry": null,
     "sl": null,
@@ -17,7 +17,7 @@
     "target": "EUR/JPY",
     "trigger": {
       "arah": "-",
-      "alasan": "trigger tidak terpenuhi (EMA/stochastic)"
+      "alasan": "warm-up indikator"
     }
   },
   "pemantauan": {
