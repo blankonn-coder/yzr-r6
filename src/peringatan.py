@@ -7,6 +7,7 @@ Aturan (belum tervalidasi di luar sampel, hanya untuk dianalisa manual):
 - SL di sisi level kemarin (10-30 pip). TP baseline 10 pip, dan TP ke level berlawanan sebagai info.
 """
 import sys, os, numpy as np, pandas as pd
+import requests
 
 PIP_TOUCH = 3              # jarak menyentuh level (pip)
 TP_BASE, SL_MIN, SL_MAX = 10, 10, 30
@@ -84,6 +85,24 @@ def tulis(hasil, out):
     open(out,"w",encoding="utf-8").write("\n".join(L)+"\n")
     return "\n".join(L)
 
+def kirim_discord(hasil):
+    """Kirim peringatan ke Discord hanya jika ada pair yang menyentuh level. Tanpa DISCORD_WEBHOOK_URL: dilewati."""
+    url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+    sent = [r for r in hasil if r.get("status") == "SENTUH"]
+    if not url:
+        return "Discord: tidak dikirim (DISCORD_WEBHOOK_URL kosong)"
+    if not sent:
+        return "Discord: tidak ada sentuhan, tidak dikirim"
+    baris = [f"PERINGATAN 1 jam (belum tervalidasi, bukan sinyal entry)"]
+    for r in sent:
+        baris.append(f"{r['pair']} | {r['tipe']} {r['lvl']} | tren {r['tren']} | {r['arah']} | {r['label']} | SL {r['sl_pip']} pip | TP {r['tp_base']} pip | TP lawan {r['tp_lawan']} pip")
+    isi = "```\n" + "\n".join(baris)[:1900] + "\n```"
+    try:
+        r = requests.post(url, json={"content": isi}, timeout=15)
+        return f"Discord: HTTP {r.status_code}"
+    except requests.RequestException as e:
+        return f"Discord: gagal kirim ({type(e).__name__})"
+
 if __name__ == "__main__":
     folder = sys.argv[1] if len(sys.argv)>1 else "data"
     out = sys.argv[2] if len(sys.argv)>2 else "reports/peringatan_terbaru.md"
@@ -95,3 +114,4 @@ if __name__ == "__main__":
         r = analisa(p, h)
         hasil.append(r or dict(pair=p, status="data tidak cukup"))
     print(tulis(hasil, out))
+    print(kirim_discord(hasil))
