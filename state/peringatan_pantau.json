@@ -2,12 +2,17 @@
   "aktif": [],
   "tercatat": [
     {
-      "pair": "EURJPY",
+      "pair": "EURGBP",
       "arah": "SELL",
       "bar": "2026-11-27 07:00:00+00:00"
     },
     {
-      "pair": "AUDUSD",
+      "pair": "EURNZD",
+      "arah": "SELL",
+      "bar": "2026-11-27 11:00:00+00:00"
+    },
+    {
+      "pair": "USDCAD",
       "arah": "SELL",
       "bar": "2026-11-27 14:00:00+00:00"
     },
@@ -15,6 +20,56 @@
       "pair": "USDJPY",
       "arah": "SELL",
       "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "EURJPY",
+      "arah": "SELL",
+      "bar": "2026-11-27 08:00:00+00:00"
+    },
+    {
+      "pair": "GBPUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 22:00:00+00:00"
+    },
+    {
+      "pair": "EURAUD",
+      "arah": "SELL",
+      "bar": "2026-11-27 16:00:00+00:00"
+    },
+    {
+      "pair": "EURJPY",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "NZDUSD",
+      "arah": "BUY",
+      "bar": "2026-11-27 16:00:00+00:00"
+    },
+    {
+      "pair": "NZDUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 07:00:00+00:00"
+    },
+    {
+      "pair": "NZDUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 21:00:00+00:00"
+    },
+    {
+      "pair": "USDCHF",
+      "arah": "SELL",
+      "bar": "2026-11-27 11:00:00+00:00"
+    },
+    {
+      "pair": "EURNZD",
+      "arah": "BUY",
+      "bar": "2026-11-27 08:00:00+00:00"
+    },
+    {
+      "pair": "AUDUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 16:00:00+00:00"
     },
     {
       "pair": "AUDUSD",
@@ -22,89 +77,9 @@
       "bar": "2026-11-27 23:00:00+00:00"
     },
     {
-      "pair": "GBPUSD",
-      "arah": "SELL",
-      "bar": "2026-11-27 07:00:00+00:00"
-    },
-    {
-      "pair": "EURCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 22:00:00+00:00"
-    },
-    {
-      "pair": "EURNZD",
-      "arah": "BUY",
-      "bar": "2026-11-27 08:00:00+00:00"
-    },
-    {
-      "pair": "EURCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 16:00:00+00:00"
-    },
-    {
-      "pair": "EURGBP",
-      "arah": "SELL",
-      "bar": "2026-11-27 07:00:00+00:00"
-    },
-    {
-      "pair": "AUDUSD",
-      "arah": "SELL",
-      "bar": "2026-11-27 16:00:00+00:00"
-    },
-    {
       "pair": "AUDUSD",
       "arah": "SELL",
       "bar": "2026-11-27 22:00:00+00:00"
-    },
-    {
-      "pair": "NZDUSD",
-      "arah": "BUY",
-      "bar": "2026-11-27 13:00:00+00:00"
-    },
-    {
-      "pair": "EURCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 17:00:00+00:00"
-    },
-    {
-      "pair": "GBPUSD",
-      "arah": "SELL",
-      "bar": "2026-11-27 21:00:00+00:00"
-    },
-    {
-      "pair": "USDCHF",
-      "arah": "SELL",
-      "bar": "2026-11-27 11:00:00+00:00"
-    },
-    {
-      "pair": "EURUSD",
-      "arah": "SELL",
-      "bar": "2026-11-27 09:00:00+00:00"
-    },
-    {
-      "pair": "EURAUD",
-      "arah": "BUY",
-      "bar": "2026-11-27 16:00:00+00:00"
-    },
-    {
-      "pair": "EURAUD",
-      "arah": "SELL",
-      "bar": "2026-11-27 16:00:00+00:00"
-    },
-    {
-      "pair": "EURJPY",
-      "arah": "SELL",
-      "bar": "2026-11-27 08:00:00+00:00"
-    },
-    {
-      "pair": "NZDUSD",
-      "arah": "BUY",
-      "bar": "2026-11-27 16:00:00+00:00"
-    },
-    {
-      "pair": "EURUSD",
-      "arah": "BUY",
-      "bar": "2026-11-27 10:00:00+00:00"
     },
     {
       "pair": "USDJPY",
@@ -112,49 +87,34 @@
       "bar": "2026-11-27 08:00:00+00:00"
     },
     {
-      "pair": "USDCHF",
-      "arah": "SELL",
-      "bar": "2026-11-27 12:00:00+00:00"
-    },
-    {
-      "pair": "USDCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 13:00:00+00:00"
-    },
-    {
-      "pair": "USDCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 14:00:00+00:00"
-    },
-    {
       "pair": "GBPUSD",
       "arah": "SELL",
       "bar": "2026-11-27 13:00:00+00:00"
     },
     {
-      "pair": "NZDUSD",
+      "pair": "GBPUSD",
       "arah": "SELL",
       "bar": "2026-11-27 07:00:00+00:00"
     },
     {
-      "pair": "USDCHF",
-      "arah": "BUY",
-      "bar": "2026-11-27 08:00:00+00:00"
-    },
-    {
-      "pair": "USDCAD",
-      "arah": "SELL",
-      "bar": "2026-11-27 18:00:00+00:00"
-    },
-    {
-      "pair": "EURNZD",
-      "arah": "SELL",
-      "bar": "2026-11-27 11:00:00+00:00"
-    },
-    {
-      "pair": "NZDUSD",
+      "pair": "GBPUSD",
       "arah": "SELL",
       "bar": "2026-11-27 21:00:00+00:00"
+    },
+    {
+      "pair": "EURAUD",
+      "arah": "BUY",
+      "bar": "2026-11-27 16:00:00+00:00"
+    },
+    {
+      "pair": "USDCHF",
+      "arah": "SELL",
+      "bar": "2026-11-27 12:00:00+00:00"
+    },
+    {
+      "pair": "EURCAD",
+      "arah": "SELL",
+      "bar": "2026-11-27 16:00:00+00:00"
     },
     {
       "pair": "GBPUSD",
@@ -162,9 +122,49 @@
       "bar": "2026-11-27 16:00:00+00:00"
     },
     {
-      "pair": "GBPUSD",
+      "pair": "NZDUSD",
+      "arah": "BUY",
+      "bar": "2026-11-27 13:00:00+00:00"
+    },
+    {
+      "pair": "EURUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 09:00:00+00:00"
+    },
+    {
+      "pair": "EURCAD",
+      "arah": "SELL",
+      "bar": "2026-11-27 17:00:00+00:00"
+    },
+    {
+      "pair": "USDCAD",
+      "arah": "SELL",
+      "bar": "2026-11-27 18:00:00+00:00"
+    },
+    {
+      "pair": "USDCHF",
+      "arah": "BUY",
+      "bar": "2026-11-27 08:00:00+00:00"
+    },
+    {
+      "pair": "AUDUSD",
+      "arah": "SELL",
+      "bar": "2026-11-27 14:00:00+00:00"
+    },
+    {
+      "pair": "EURUSD",
+      "arah": "BUY",
+      "bar": "2026-11-27 10:00:00+00:00"
+    },
+    {
+      "pair": "EURCAD",
       "arah": "SELL",
       "bar": "2026-11-27 22:00:00+00:00"
+    },
+    {
+      "pair": "USDCAD",
+      "arah": "SELL",
+      "bar": "2026-11-27 13:00:00+00:00"
     }
   ],
   "note_terakhir": {
